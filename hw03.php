@@ -66,7 +66,7 @@
         continue;
         
     }
-    
+    //var_dump 顯示陣列的所有資訊
     /*for($i=0;$i<6;$i++)
     {
         $q[$i] = rand(1,49);
