@@ -2,7 +2,7 @@
     //樂透作業
     header("Content-Type:text/html; charset=utf-8");
     echo "最笨的方法，檢查重複的再重新產生一次<br>";
-    for($i=0;$i<7;$i++)
+    for($i=0;$i<6;$i++)
     {
         $x = rand(1,49);
         for($j=0;$j<$i;$j++)
@@ -13,8 +13,8 @@
                 $j = 0; 
             }
             
-            $y[$i] = $x;
         }
+        $y[$i] = $x;
     }
         foreach($y as $value){  //把陣列內的亂數讀出
         echo $value . " ";
