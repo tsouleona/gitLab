@@ -19,10 +19,10 @@
 
   <body>
     <div class="col-md-4"></div>
-    <div class="col-md-4 " border="1" style="border:1px #000 solid;border-radius:10px;">
+    <div class="col-md-4 " border="1" style="background-image:url('001.jpg');border:1px #000 solid;border-radius:10px;">
 
-      <h7 align="center" valign="center"><strong>中佑花會</strong></h7>
-      <table class="table table-hover" background="001.jpg" width="300" cellpadding="5">
+      <h7 align="center" valign="center" style="visibility:hidden"><strong>中佑花會</strong></h7>
+      <table class="table table-hover"  width="300" cellpadding="5">
         <thead>
           <td align="center">
             <h4 color="#FFFFFF"><strong>會員系統 - 首頁</strong></h4></td>
@@ -46,10 +46,10 @@
         </tr>
         <?php }?>
 
-        <tr>
+        <thead>
           <td align="center">
             <h4>Hello!!<?php echo $username;?></h4></td>
-        </tr>
+        </thead>
 
       </table>
     </div>

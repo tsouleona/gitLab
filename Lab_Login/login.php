@@ -33,9 +33,9 @@
   <body>
     <div class="col-md-4"></div>
     <form id="form1" name="form1" method="post" action="login.php">
-    <div class="col-md-4 " border="1" style="border:1px #000 solid;border-radius:10px;">
-      <h7 align="center" valign="center"><strong>中佑花會</strong></h7>
-      <table class="table table-hover" background="001.jpg" width="300" cellpadding="5">
+    <div class="col-md-4 " border="1" style="background-image:url('001.jpg');border:1px #000 solid;border-radius:10px;">
+      <h7 align="center" valign="center" style="visibility:hidden"><strong>中佑花會</strong></h7>
+      <table class="table table-hover" width="300" cellpadding="5">
         <thead>
           <td colspan="2" align="center">
             <h4 color="#FFFFFF"><strong>會員系統 - 首頁</strong></h4></td>
@@ -48,13 +48,13 @@
           <td align="center">密碼</td>
           <td><input type="password" name="txtPassword" id="txtPassword" /></td>
         </tr>
-        <tr>
+        <thead>
           <td colspan="2" align="center">
-            <input type="submit" name="btnOK" id="btnOK" value="登入" />
-            <input type="reset" name="btnReset" id="btnReset" value="重設" />
-            <input type="submit" name="btnHome" id="btnHome" value="回首頁" />
+            <input type="submit" class="btn btn-primary" name="btnOK" id="btnOK" value="登入" />
+            <input type="reset"  class="btn btn-primary" name="btnReset" id="btnReset" value="重設" />
+            <input type="submit" class="btn btn-primary" name="btnHome" id="btnHome" value="回首頁" />
           </td>
-        </tr>
+        </thead>
       </table>
     </div>
    </form> 

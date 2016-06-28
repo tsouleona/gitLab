@@ -17,18 +17,18 @@
 
   <body>
     <div class="col-md-4"></div>
-    <div class="col-md-4 " border="1" style="border:1px #000 solid;border-radius:10px;">
-      <h7 align="center" valign="center"><strong>中佑花會</strong></h7>
-      <table class="table table-hover" background="001.jpg" width="300" cellpadding="5">
+    <div class="col-md-4 " border="1" style="background-image:url('001.jpg');border:1px #000 solid;border-radius:10px;">
+      <h7 align="center" valign="center" style="visibility:hidden"><strong>中佑花會</strong></h7>
+      <table class="table table-hover"  width="300" cellpadding="5">
 
         <thead>
           <td align="center">
             <h4 color="#FFFFFF"><strong>會員專用</strong></h4></td>
         </thead>
 
-        <tr>
+        <thead>
           <td align="center" >This page for member only.</td>
-        </tr>
+        </thead>
         <tr>
           <td align="center" ><a href="login.php?sign=1" style="color:black;"><h5><strong>登出</strong></h5></a></td>
         </tr>
