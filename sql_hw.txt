@@ -1,0 +1,71 @@
+//創資料庫
+create database family default character set utf8;
+
+//使用這個資料庫
+use family;
+
+//創資料表與欄位
+create table income(
+    time timestamp,
+    item varchar(15) not null,
+    price int(5) not null,
+    count int(5) not null,
+    subtotal int(6) not null
+);
+
+create table outcome(
+    date timestamp,
+    item varchar(15) not null,
+    price int(5) not null,
+    count int(5) not null,
+    subtotal int(6) not null
+);
+
+insert into income (item,price,count,subtotal) values ('薪資1',50000,1,50000);
+insert into income (item,price,count,subtotal) values ('薪資2',30000,1,30000);
+select * from income;
++---------------------+---------+-------+-------+----------+
+| time                | item    | price | count | subtotal |
++---------------------+---------+-------+-------+----------+
+| 2016-06-30 01:19:52 | 薪資1   | 50000 |     1 |    50000 |
+| 2016-06-30 01:19:52 | 薪資2   | 30000 |     1 |    30000 |
++---------------------+---------+-------+-------+----------+
+
+insert into outcome (item,price,count,subtotal) values ('烏龍麵',55,1,55);
+insert into outcome (item,price,count,subtotal) values ('杯子',35,1,35);
+select * from outcome;
++---------------------+-----------+-------+-------+----------+
+| date                | item      | price | count | subtotal |
++---------------------+-----------+-------+-------+----------+
+| 2016-06-30 01:20:09 | 烏龍麵    |    55 |     1 |       55 |
+| 2016-06-30 01:20:09 | 杯子      |    35 |     1 |       35 |
++---------------------+-----------+-------+-------+----------+
+
+update income set price = '70000' where item = '薪資2';
+update outcome set price = '60' where item = '烏龍麵';
+update income set subtotal = '70000' where item = '薪資2';
+update outcome set subtotal = '60' where item = '烏龍麵';
+select * from income;
+select * from outcome;
++---------------------+---------+-------+-------+----------+
+| time                | item    | price | count | subtotal |
++---------------------+---------+-------+-------+----------+
+| 2016-06-30 01:19:52 | 薪資1   | 50000 |     1 |    50000 |
+| 2016-06-30 01:20:42 | 薪資2   | 70000 |     1 |    70000 |
++---------------------+---------+-------+-------+----------+
+
++---------------------+-----------+-------+-------+----------+
+| date                | item      | price | count | subtotal |
++---------------------+-----------+-------+-------+----------+
+| 2016-06-30 01:15:08 | 烏龍麵    |    60 |     1 |       60 |
+| 2016-06-30 01:14:48 | 杯子      |    35 |     1 |       35 |
++---------------------+-----------+-------+-------+----------+
+
+delete from income where price='70000';
+select * from income;
++---------------------+---------+-------+-------+----------+
+| time                | item    | price | count | subtotal |
++---------------------+---------+-------+-------+----------+
+| 2016-06-30 01:19:52 | 薪資1   | 50000 |     1 |    50000 |
++---------------------+---------+-------+-------+----------+
+
