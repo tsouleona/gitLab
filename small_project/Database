@@ -1,0 +1,51 @@
+create table introduction(
+    intro_data varchar(200) not null
+);
+
+create table news(
+    news_id char(12) not null,
+    news_date date not null,
+    news_msg varchar(50) not null
+);
+alter table news add primary key (news_id);
+
+create table contact(
+    con_address varchar(50) not null,
+    con_phone varchar(20) not null,
+    con_tax varchar(20) not null,
+    con_email varchar(25) not null
+);
+
+create table display(
+    display_id char(12) not null,
+    display_data varchar(500) not null
+);
+alter table display add primary key (display_id);
+
+create table factory(
+    fac_id char(12) not null,
+    fac_name varchar(50) not null,
+    fac_people varchar(20) not null,
+    fac_phone varchar(10) not null,
+    fac_address varchar(50),
+    fac_url varchar(50),
+    fac_email varchar(25) not null,
+    fac_cellphone varchar(15) not null, 
+    fac_tax varchar(10),
+    fac_data varchar(100) not null 
+);
+alter table factory add primary key (fac_id);
+
+create table joinus(
+    join_id char(12) not null,
+    join_name varchar(20) not null,
+    join_email varchar(25),
+    join_cellphone varchar(15) not null
+);
+alter table joinus add primary key (join_id);
+
+create table signin(
+    username char(6) not null,
+    password varchar(20) not null
+);
+alter table signin add primary key (username);
