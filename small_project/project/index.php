@@ -165,11 +165,10 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading"><strong>公司簡介</strong></h2>
                     <hr>
-                    <p>公司創立於_____年，......................................</p>
+                    <h3>公司創立於2001年，秉持著專業、負責、誠信的理念，<br>
+                        對於建築材料要求高品質，並與客戶保持緊密聯繫相互溝通想法，<br>
+                        希望能實現客戶對建築的理想。<br></h3>
                     <br>
-                    <p>......................................</p>
-                    <br>
-                    <p>......................................</p>
                     <!--<a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>-->
                 </div>
             </div>
@@ -206,7 +205,7 @@
                     <div class="service-box">
                         <i class="fa fa-4x text-primary sr-icons"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></i>
                         <h3>土木工程</h3>
-                        <p class="text-muted">.......</p>
+                        <!--<p class="text-muted">.......</p>-->
                     </div>
                 </div>
 
@@ -214,7 +213,7 @@
                     <div class="service-box">
                         <i class="fa fa-4x text-primary sr-icons"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></i>
                         <h3>維修保固</h3>
-                        <p class="text-muted">......</p>
+                        <!--<p class="text-muted">.......</p>-->
                     </div>
                 </div>
 
@@ -222,13 +221,35 @@
                     <div class="service-box">
                         <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
                         <h3>鋼構工程</h3>
-                        <p class="text-muted">......</p>
+                        <!--<p class="text-muted">.......</p>-->
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
+    <div class="modal fade" id="change_sever" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+           <form action="index.php" method="POST" id="form1">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel" style="color:#f05f40"><strong>管理員登錄</strong></h3>
+                  </div>
+                  <div class="modal-body">
+                        
+                    <h4><strong>帳號 </strong><input type="text" name="username" /></h4>
+                    <h4><strong>密碼 </strong><input type="password"  name="password" /></h4>
+                   
+                  </div>
+                  <div class="modal-footer">
+                    
+                    <input type="button" onclick="check()"class="btn btn-primary" name="login" value="確認">
+                  </div>
+                </div>
+           </form>
+      </div>
+    </div>
     
     <section class="bg-primary" id="contact">
         <div class="container">
