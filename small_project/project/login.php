@@ -5,15 +5,15 @@
     header("Content-Type:text/html; charset=utf-8");
     
     $uname = $_POST["username"];
-    $_SESSION["username"] = $uname;
     $pwd = $_POST["password"];
     
     $sql="select * from signin where username='$uname'";
     $result = mysql_query($sql);
-    $row = @mysql_fetch_row($result);
+    $row = mysql_fetch_row($result);
     
     if($uname == $row[0] && $pwd == $row[1])
     {
+        $_SESSION["username"] = $uname;
         echo '<strong><h1 style="color:#ff94b6" >登入成功</h1></strong>';
         //echo $uname;
         //echo $pwd;

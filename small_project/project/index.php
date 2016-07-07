@@ -6,7 +6,7 @@
 <html lang="en">
 
 <head>
-    
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,8 +30,8 @@
     <link href="css/creative.min.css" rel="stylesheet">
     <link href="css/creative.css" rel="stylesheet">
     <!-- Jquery-->
-    <script src="vendor/bootstrap/jquery/jquery.js"></script>
-    
+    <script src="vendor/jquery/jquery.js"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -50,18 +50,13 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">沅淯駿營造有限公司</a>
+                <a class="navbar-brand page-scroll" href="index.php">沅淯駿營造有限公司</a>
             </div>
-            
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#about">公司簡介</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">服務項目</a>
-                    </li>
+
                     <li>
                         <a class="page-scroll" href="#contact">聯絡我們</a>
                     </li>
@@ -74,24 +69,24 @@
                     <li>
                         <a class="page-scroll" href="joinus.php">加入我們</a>
                     </li>
-                    <!--登錄判斷-->
+<!--------------------------------------------登錄判斷------------------------------------------------------------------------>
                     <?php 
-                        $id=$_SESSION["username"];
+                        $id=$_SESSION['username'];
                         
                         $sql="select * from signin where username='$id'";
                         $result = mysql_query($sql);
                         $row = mysql_fetch_row($result);
                     ?>
                     <?php 
-                        if( $id==$row[0] &&  $id!=NULL) { 
+                        if( $id==$row[0] &&  $id!=NULL ) { 
                     ?>
                     <li>
-                        <button type="button" class="btn btn-primary btn-lg" ><a style="color:white" href="logout.php" >管理員登出<a></button>
+                        <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="logout.php">管理員登出</a></button>
                     </li>
                     <?php } ?>
-                    
+
                     <?php 
-                        if( $id==NULL || $id!=$row[0]) { 
+                        if( $id==NULL || $id!=$row[0] ) { 
                     ?>
                     <li>
                         <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal">管理員登錄</button>
@@ -103,64 +98,62 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <!-- Modal -->
-    
-    
+
+<!--------------------------------------------登錄帳號密碼------------------------------------------------------------------------>
     <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-           <form action="login.php" method="POST" id="form1">
+        <div class="modal-dialog" role="document">
+            <form action="login.php" method="POST" id="form1">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h3 class="modal-title" id="myModalLabel" style="color:#white"><strong>管理員登錄</strong></h3>
-                  </div>
-                  <div class="modal-body">
-                        
-                    <h4><strong>帳號 </strong><input type="text" name="username" /></h4>
-                    <h4><strong>密碼 </strong><input type="password"  name="password" /></h4>
-                   
-                  </div>
-                  <div class="modal-footer">
-                    
-                    <input type="button" onclick="check()" class="btn btn-primary" name="login" value="確認">
-                  </div>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h3 class="modal-title" id="myModalLabel" style="color:#f05f40"><strong>管理員登錄</strong></h3>
+                    </div>
+                    <div class="modal-body">
+
+                        <h4><strong>帳號 </strong><input type="text" name="username" /></h4>
+                        <h4><strong>密碼 </strong><input  type="password" name="password" /></h4>
+
+                    </div>
+                    <div class="modal-footer">
+
+                        <input type="submit" onclick="check()" class="btn btn-primary" name="login" value="確認">
+                    </div>
                 </div>
-           </form>
-      </div>
+            </form>
+        </div>
     </div>
-    <!--判斷 帳號密碼是否為空-->
+<!--------------------------------------------判斷 帳號密碼是否為空------------------------------------------------------------------------>
     <script type="text/javascript">
-    function check()
-    {
-        if(form1.username.value == "")
-        {
-            alert("尚未輸入帳號");
+        function check() {
+            if (form1.username.value == "") {
+                alert("尚未輸入帳號");
+            }
+            if (form1.password.value == "") {
+                alert("尚未輸入密碼");
+            }
+            else {
+                form1.submit();
+            }
         }
-        if(form1.password.value == "")
-        {
-            alert("尚未輸入密碼");
-        }
-        else
-        {
-            form1.submit();
-        }
-    }
     </script>
-    <!-- modal end-->
+
+<!--------------------------------------------header(顯示)------------------------------------------------------------------------>    
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h2 id="homeHeading"><strong>專業 負責 誠信</strong></h2>
+                <h1 ><strong>專業&nbsp;&nbsp;&nbsp;負責&nbsp;&nbsp;&nbsp;誠信</strong></h1>
                 <hr>
 
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">find out more</a>
+                <a href="#portfolio" class="btn btn-primary btn-xl page-scroll">find out more</a>
             </div>
         </div>
     </header>
+    
+<!--------------------------------------------公司簡介(顯示)------------------------------------------------------------------------>
     <?php
         $sql2="select * from introduction";
         $result2 = mysql_query($sql2);
-        $row2 = @mysql_fetch_row($result2);
+        $row2 = mysql_fetch_row($result2);
     ?>
     <section class="bg-primary" id="about">
         <div class="container">
@@ -171,7 +164,7 @@
                     <h3><?php echo $row2[0];?></h3>
                     <br>
                     <br>
-                    
+<!--------------------------------------------管理員畫面[公司簡介(編輯)]------------------------------------------------------------------------>    
                     <?php 
                         if( $id==$row[0] && $id!=NULL ) { 
                     ?>
@@ -212,7 +205,8 @@
                 </script>
       </div>
     </div>
-    <!-- modal end-->
+    
+<!--------------------------------------------服務項目(顯示)------------------------------------------------------------------------>    
     <section id="services">
         <div class="container">
             <div class="row">
@@ -228,7 +222,7 @@
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x text-primary sr-icons"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></i>
-                        <h3>土木工程</h3>
+                        <h3><strong>土木工程</strong></h3>
                         <!--<p class="text-muted">.......</p>-->
                     </div>
                 </div>
@@ -236,7 +230,7 @@
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x text-primary sr-icons"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></i>
-                        <h3>維修保固</h3>
+                        <h3><strong>維修保固</strong></h3>
                         <!--<p class="text-muted">.......</p>-->
                     </div>
                 </div>
@@ -244,7 +238,7 @@
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                        <h3>鋼構工程</h3>
+                        <h3><strong>鋼構工程</strong></h3>
                         <!--<p class="text-muted">.......</p>-->
                     </div>
                 </div>
@@ -252,10 +246,12 @@
             </div>
         </div>
     </section>
+    
+<!--------------------------------------------聯絡我們(顯示)------------------------------------------------------------------------>    
     <?php
         $sql3="select * from contact";
         $result3 = mysql_query($sql3);
-        $row3 = @mysql_fetch_row($result3);
+        $row3 = mysql_fetch_row($result3);
     ?>
     <section class="bg-primary" id="contact">
         <div class="container">
@@ -269,7 +265,7 @@
         <br>
         <div class="row">    
             <div class="col-lg-2"></div>
-            <div class="col-lg-8">
+            <div class="col-lg-8" align="center">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.218590882442!2d121.07314621465075!3d24.753693339318758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346848016c097263%3A0x2a171f1f83f3bac7!2zMzEw5Y-w54Gj5paw56u557ij56u55p2x6Y6u5Lit6IiI6Lev5LiA5q61MTA45be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1467621946714" width="900" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
@@ -295,6 +291,7 @@
             </div>
             <div class="col-lg-5"></div>
             <div class="col-lg-5">
+<!--------------------------------------------管理員畫面[聯絡我們(編輯)]------------------------------------------------------------------------>    
                 <?php 
                     if( $id==$row[0] && $id!=NULL ) { 
                 ?>
@@ -333,20 +330,19 @@
                     <br>
                   </div>
                   <div class="modal-footer">
-                    <input type="submit" onclick="submit2();" class="btn btn-primary"  value="確認">
+                    <input type="submit" onclick="submit3();" class="btn btn-primary"  value="確認">
                   </div>
                 </div>
                 
            </form>
            <script>
-                    function submit2(){
+                    function submit3(){
                         
                         form3.submit();
                     }
                 </script>
       </div>
     </div>
-    <!-- modal end-->
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>

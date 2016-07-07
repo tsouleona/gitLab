@@ -16,7 +16,7 @@
     <title>Creative - Start Bootstrap Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -30,7 +30,7 @@
     <link href="css/creative.min.css" rel="stylesheet">
     <link href="css/creative.css" rel="stylesheet">
     <!-- Jquery-->
-    <script src="vendor/bootstrap/jquery/jquery.js"></script>
+    <script src="vendor/jquery/jquery.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -50,20 +50,20 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">沅淯駿營造有限公司</a>
+                <a class="navbar-brand page-scroll" href="index.php">沅淯駿營造有限公司</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="index.php">首頁</a>
-                    </li>
+
                     <li>
                         <a class="page-scroll" href="#contact">聯絡我們</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="display.php">實績展示</a>
+                        <a class="page-scroll" href="display.php">
+                            <font color="#ffbed3">實績展示</font>
+                        </a>
                     </li>
                     <li>
                         <a class="page-scroll" href="factory.php">廠商招募</a>
@@ -71,22 +71,22 @@
                     <li>
                         <a class="page-scroll" href="joinus.php">加入我們</a>
                     </li>
-                    <!--登錄判斷-->
+<!--------------------------------------------登錄判斷------------------------------------------------------------------------>
                     <?php 
                         $id=$_SESSION['username'];
                         
                         $sql="select * from signin where username='$id'";
                         $result = mysql_query($sql);
-                        $row = @mysql_fetch_row($result);
+                        $row = mysql_fetch_row($result);
                     ?>
                     <?php 
                         if( $id==$row[0] &&  $id!=NULL ) { 
                     ?>
                     <li>
-                        <button type="button" class="btn btn-primary btn-lg" ><a style="color:white" href="logout.php">管理員登出</a></button>
+                        <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="logout.php">管理員登出</a></button>
                     </li>
                     <?php } ?>
-                    
+
                     <?php 
                         if( $id==NULL || $id!=$row[0] ) { 
                     ?>
@@ -100,227 +100,247 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <!-- Modal -->
-    
-    <!-- Modal -->
+
+<!--------------------------------------------登錄帳號密碼------------------------------------------------------------------------>
     <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-           <form action="login.php" method="POST" id="form1">
+        <div class="modal-dialog" role="document">
+            <form action="login.php" method="POST" id="form1">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h3 class="modal-title" id="myModalLabel" style="color:#f05f40"><strong>管理員登錄</strong></h3>
-                  </div>
-                  <div class="modal-body">
-                        
-                    <h4><strong>帳號 </strong><input type="text" name="username" /></h4>
-                    <h4><strong>密碼 </strong><input  type="password" name="password" /></h4>
-                   
-                  </div>
-                  <div class="modal-footer">
-                    
-                    <input type="submit" onclick="check()" class="btn btn-primary" name="login" value="確認">
-                  </div>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h3 class="modal-title" id="myModalLabel" style="color:#f05f40"><strong>管理員登錄</strong></h3>
+                    </div>
+                    <div class="modal-body">
+
+                        <h4><strong>帳號 </strong><input type="text" name="username" /></h4>
+                        <h4><strong>密碼 </strong><input  type="password" name="password" /></h4>
+
+                    </div>
+                    <div class="modal-footer">
+
+                        <input type="submit" onclick="check()" class="btn btn-primary" name="login" value="確認">
+                    </div>
                 </div>
-           </form>
-      </div>
+            </form>
+        </div>
     </div>
-    <!--判斷 帳號密碼是否為空-->
+<!--------------------------------------------判斷 帳號密碼是否為空------------------------------------------------------------------------>
     <script type="text/javascript">
-    function check()
-    {
-        if(form1.username.value == "")
-        {
-            alert("尚未輸入帳號");
+        function check() {
+            if (form1.username.value == "") {
+                alert("尚未輸入帳號");
+            }
+            if (form1.password.value == "") {
+                alert("尚未輸入密碼");
+            }
+            else {
+                form1.submit();
+            }
         }
-        if(form1.password.value == "")
-        {
-            alert("尚未輸入密碼");
-        }
-        else
-        {
-            form1.submit();
-        }
-    }
     </script>
-    <!-- modal end-->
+
+<!--------------------------------------------header(顯示)------------------------------------------------------------------------>    
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h2 id="homeHeading"><strong>專業 負責 誠信</strong></h2>
+                <h1 ><strong>專業&nbsp;&nbsp;&nbsp;負責&nbsp;&nbsp;&nbsp;誠信</strong></h1>
                 <hr>
 
                 <a href="#portfolio" class="btn btn-primary btn-xl page-scroll">find out more</a>
             </div>
         </div>
     </header>
+    
+<!--------------------------------------------實績展示(顯示)------------------------------------------------------------------------>    
+    <?php 
+        $sql2="select * from display ;";
+        $result2 = mysql_query($sql2);
+        //$row2 = mysql_fetch_row($result2);
+    ?>
+    
     <section class="no-padding" id="portfolio">
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
+                <?php
+                    while($row2 = mysql_fetch_row($result2)){
+                ?>
+                        <div class="col-lg-4 col-sm-6">
+                            <a href="ok_photo/<?php echo $row2[0];?>.jpg" class="portfolio-box" id="img_big">
+                                <img src="ok_photo/<?php echo $row2[0];?>.jpg" onerror="this.src='ok_photo/add2.jpg'" class="img-responsive" alt="">
+                                <div class="portfolio-box-caption">
+                                    <div class="portfolio-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            
+                                        </div>
+                                        <div class="project-name">
+                                            <strong><?php echo $row2[1];?></strong>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
+                            </a>
+<!--------------------------------------------管理員畫面[實績展示(編輯)]------------------------------------------------------------------------>    
+                             <?php 
+                                if( $id==$row[0] &&  $id!=NULL ) { 
+                            ?>
+                                <button class="btn btn-primary btn-xl" data-toggle="modal" data-target="#change<?php echo $row2[0];?>">編輯</button>
+                            <?php }?>    
+                        </div>
+                        <div class="modal fade" id="change<?php echo $row2[0];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <form action="dis_process.php" method="POST" id="form2">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h3 class="modal-title"  style="color:#f05f40"><strong>變更專案內容</strong></h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            
+                                            <input style="visibility:hidden" type="text" name="id" value="<?php echo $row2[0];?>"/><!-- 傳輸id-->
+                                            <input type="text" class="form-control" name="data" value="<?php echo $row2[1];?>"/>
+                    
+                                        </div>
+                                        <div class="modal-footer">
+                    
+                                            <input type="submit" onclick="submit2();" class="btn btn-primary" name="login" value="確認">
+                                        </div>
+                                    </div>
+                                </form>
+                                <script>
+                                    function submit2(){
+                                        
+                                        form2.submit();
+                                    }
+                                </script>
                             </div>
                         </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                <?php  } ?>
             </div>
+            
+<!--------------------------------------------管理員畫面[實績展示(新增)]------------------------------------------------------------------------>    
+            <?php 
+                    if( $id==$row[0] &&  $id!=NULL ) { 
+                ?>    
+                    <div class="col-lg-6 col-sm-6"></div>
+                    <div class="col-lg-1 col-sm-6" >
+                        <button class="btn btn-success btn-xl" data-toggle="modal" data-target="#add">新增專案</button>
+                    </div>
+                    <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <form action="dis_add.php" method="POST" id="form4">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h3 class="modal-title"  style="color:#f05f40"><strong>新增專案內容</strong></h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        
+                                        <h4><strong>內容: </strong><h4/><input type="text" class="form-control" name="add_data" />
+                
+                                    </div>
+                                    <div class="modal-footer">
+                
+                                        <input type="submit" onclick="submit4();" class="btn btn-primary" name="login" value="確認">
+                                    </div>
+                                </div>
+                            </form>
+                            <script>
+                                function submit4(){
+                                    
+                                    form4.submit();
+                                }
+                            </script>
+                        </div>
+                    </div>
+                <?php }?>
         </div>
+        
     </section>
+    
 
+<!--------------------------------------------聯絡我們(顯示)------------------------------------------------------------------------>
     <?php
         $sql3="select * from contact";
         $result3 = mysql_query($sql3);
         $row3 = @mysql_fetch_row($result3);
     ?>
-    <section class="bg-primary" id="contact">
-        <div class="container">
+        <section class="bg-primary" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12  text-center">
+                        <h2 class="section-heading">聯絡我們</h2>
+                        <hr class="light">
+                    </div>
+                </div>
+            </div>
+            <br>
             <div class="row">
-                <div class="col-lg-12  text-center">
-                    <h2 class="section-heading">聯絡我們</h2>
-                    <hr class="light">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8" align="center">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.218590882442!2d121.07314621465075!3d24.753693339318758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346848016c097263%3A0x2a171f1f83f3bac7!2zMzEw5Y-w54Gj5paw56u557ij56u55p2x6Y6u5Lit6IiI6Lev5LiA5q61MTA45be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1467621946714"
+                        width="900" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
-        </div>
-        <br>
-        <div class="row">    
-            <div class="col-lg-2"></div>
-            <div class="col-lg-8">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.218590882442!2d121.07314621465075!3d24.753693339318758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346848016c097263%3A0x2a171f1f83f3bac7!2zMzEw5Y-w54Gj5paw56u557ij56u55p2x6Y6u5Lit6IiI6Lev5LiA5q61MTA45be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1467621946714" width="900" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-        </div>
-        <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3  text-center">
-                    <i class="fa  fa-3x sr-contact"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></i>
-                    <p><?php echo $row3[0];?></p>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3  text-center">
+                        <i class="fa  fa-3x sr-contact"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></i>
+                        <p>
+                            <?php echo $row3[0];?>
+                        </p>
+                    </div>
+                    <div class="col-lg-3  text-center">
+                        <i class="fa fa-phone fa-3x sr-contact"></i>
+                        <p>
+                            <?php echo $row3[1];?>
+                        </p>
+                    </div>
+                    <div class="col-lg-3  text-center">
+                        <i class="fa  fa-3x sr-contact"><span class="glyphicon glyphicon-print" aria-hidden="true"></span></i>
+                        <p>
+                            <?php echo $row3[2];?>
+                        </p>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                        <p>
+                            <a style="color:#FFFFFF" href="mailto:<?php echo $row3[3];?>">
+                                <?php echo $row3[3];?>
+                            </a>
+                        </p>
+                    </div>
                 </div>
-                <div class="col-lg-3  text-center">
-                    <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <p><?php echo $row3[1];?></p>
-                </div>
-                <div class="col-lg-3  text-center">
-                    <i class="fa  fa-3x sr-contact"><span class="glyphicon glyphicon-print" aria-hidden="true"></span></i>
-                    <p><?php echo $row3[2];?></p>
-                </div>
-                <div class="col-lg-3 text-center">
-                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                    <p><a  style="color:#FFFFFF" href="mailto:<?php echo $row3[3];?>"><?php echo $row3[3];?></a></p>
-                </div>
-            </div>
-            <div class="col-lg-5"></div>
-            <div class="col-lg-5">
-                <?php 
+                <div class="col-lg-5"></div>
+                <div class="col-lg-5" align="center">
+                    <?php 
                     if( $id==$row[0] && $id!=NULL ) { 
                 ?>
-                <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#contact_modal" >編輯</button>
-                <?php }?>
-            </div>
-            <div class="row">
-                <div class="col-lg-3"></div>
-                <div class="col-lg-6 text-center">
-                <p>Chungyo Leona © 2016 / <a  style="color:#FFFFFF" href="mailto:srt459vn31@gmail.com">srt459vn31@gmail.com</a></p>
+                    <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#contact_modal">編輯</button>
+                    <?php }?>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6 text-center">
+                        <p>Chungyo Leona © 2016 / <a style="color:#FFFFFF" href="mailto:srt459vn31@gmail.com">srt459vn31@gmail.com</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-           <form action="contact_process.php" method="POST" id="form2">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h3 class="modal-title" id="myModalLabel" style="color:#white"><strong>修改簡介</strong></h3>
-                  </div>
-                  <div class="modal-body">
-                        
-                    <h3 class="section-heading"><strong>聯絡我們</strong></h3>
-                    <hr>
-                    <h4>地址<h4>
+        </section>
+        
+<!--------------------------------------------管理員畫面[聯絡我們(編輯)]------------------------------------------------------------------------>       
+        <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <form action="contact_process.php" method="POST" id="form3">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h3 class="modal-title" id="myModalLabel" style="color:#white"><strong>修改簡介</strong></h3>
+                        </div>
+                        <div class="modal-body">
+
+                            <h3 class="section-heading"><strong>聯絡我們</strong></h3>
+                            <hr>
+                            <h4>地址<h4>
                     <input class="form-control" type="text" name="ab_address" value="<?php echo $row3[0];?>" />
                     <h4>電話<h4>
                     <input class="form-control" type="text" name="ab_phone" value="<?php echo $row3[1];?>" />
@@ -332,15 +352,15 @@
                     <br>
                   </div>
                   <div class="modal-footer">
-                    <input type="submit" onclick="submit2();" class="btn btn-primary"  value="確認">
+                    <input type="submit" onclick="submit3();" class="btn btn-primary"  value="確認">
                   </div>
                 </div>
                 
            </form>
            <script>
-                    function submit2(){
+                    function submit3(){
                         
-                        form2.submit();
+                        form3.submit();
                     }
                 </script>
       </div>
