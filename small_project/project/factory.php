@@ -143,10 +143,10 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 ><strong>專業&nbsp;&nbsp;&nbsp;負責&nbsp;&nbsp;&nbsp;誠信</strong></h1>
-                <hr>
+                <h1 ><strong>專業&nbsp;&nbsp;&nbsp;勤懇&nbsp;&nbsp;&nbsp;誠信</strong></h1>
+                <!--<hr>-->
 
-                <a href="#portfolio" class="btn btn-primary btn-xl page-scroll">find out more</a>
+                <!--<a href="#factory" class="btn btn-primary btn-xl page-scroll">find out more</a>-->
             </div>
         </div>
     </header>
@@ -155,11 +155,11 @@
     <?php 
         if( $id==NULL || $id!=$row[0] ) { 
     ?>
-    <section id="factory">
+    <section>
         <div class="container">
             <div class="row">
-                <div class="col-lg-1"></div>
-                <div class="col-lg-10  text-center" border="1">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6  text-center" border="1">
                     <form action="fa_process.php" method="POST" id="form2">
                         <table class="table table-hover">
                             <thead>
@@ -168,17 +168,37 @@
                             </thead>
                             <tr>
                                 <td align="center">
-                                    <h4><strong><font color="#ff94b6">公司名稱 </font></strong><input type="text" name="name" id="name" />|<strong>電子郵件 </strong><input type="text" name="email" id="email" /></h4>
+                                    <h4><strong><font color="#ff94b6">公司名稱 </font></strong></h4>
+                                    <input class="form-control" type="text" name="name" id="name" />
                                 </td>
                             </tr>
                             <tr>
                                 <td align="center">
-                                    <h4><strong><font color="#ff94b6">公司電話 </font></strong><input type="text" name="phone" id="phone" />|<strong>公司傳真 </strong><input type="text" name="tax" id="tax" /></h4>
+                                    <h4><strong>電子郵件 </strong></h4>
+                                    <input class="form-control" type="text" name="email" id="email" />
                                 </td>
                             </tr>
                             <tr>
                                 <td align="center">
-                                    <h4><strong><font color="#ff94b6">聯絡人 </font></strong><input type="text" name="people" id="people" />|<strong><font color="#ff94b6">聯絡電話 </font></strong><input type="text" name="cellphone" id="cellphone" /></h4>
+                                    <h4><strong><font color="#ff94b6">公司電話 </font></strong></h4>
+                                    <input class="form-control" type="text" name="phone" id="phone" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <h4><strong>公司傳真 </strong></h4>
+                                    <input class="form-control" type="text" name="tax" id="tax" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <h4><strong><font color="#ff94b6">聯絡人 </font></strong></h4>
+                                    <input class="form-control" type="text" name="people" id="people" />
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <h4><strong><font color="#ff94b6">聯絡電話 </font></strong></h4>
+                                    <input class="form-control" type="text" name="cellphone" id="cellphone" />
                                 </td>
                             </tr>
                             <tr>
@@ -196,7 +216,8 @@
                             <tr>
                                 <td align="center">
                                     <h4><strong><font color="#ff94b6">經營項目 </font></strong></h4>
-                                    <input class="form-control" type="text" name="data" id="data" />
+                                    <!--<input class="form-control" type="text" name="data" id="data" />-->
+                                    <textarea cols="50" class="form-control" name="data" id="data"></textarea>
                                 </td>
                             </tr>
                         </table>
@@ -230,67 +251,122 @@
 
 <!--------------------------------------------管理員畫面[廠商招募(顯示並且可以刪除)]------------------------------------------------------------------------>    
     <?php
-    $sql2="select * from factory ;";
+    $sql2="select * from factory;";
     $result2 = mysql_query($sql2);
-    //$row2 = mysql_fetch_array($result2);
     
     if( $id==$row[0] && $id!=NULL ) { 
     ?>
-        <section id="factory">
-            <?php while($row2 = mysql_fetch_assoc($result2)){ ?>
-
+        <section >
+            
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-10  text-center" border="1">
-                        <form>
+                    <div class="col-lg-12  text-center" border="1">
                             <table class="table table-hover">
                                 <thead>
                                     <td align="center">
-                                        <h4><strong><span class="glyphicon glyphicon-bell" aria-hidden="true"></span>&nbsp;<?php echo $row2['date']?></strong></h4>
-                                        <button class="btn btn-primary btn-xl" type="button" id="del" name="del"><a style="color:white" href="fa_del.php?fa_id=<?php echo $row2['fac_id'];?>">刪除</a></button>
+                                       <h4><strong><span class="glyphicon glyphicon-bell" aria-hidden="true"></span>&nbsp;時間</strong></h4>
                                     </td>
+                                    <td align="center">
+                                       <h4><strong><font color="#ff94b6"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;公司名稱</font></strong></h4>
+                                    </td>
+                                    <td align="center">
+                                       <h4><strong><font color="#ff94b6"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;聯絡人</font></strong></h4>
+                                    </td>
+                                    <td align="center">
+                                       <h4><strong><font color="#ff94b6"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;聯絡電話</font></strong></h4>
+                                    </td>
+                                    <td align="center">
+                                       <h4><strong><font color="#ff94b6"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>&nbsp;公司電話</font></strong></h4>
+                                    </td>
+                                    <td align="center">
+                                       <h4><strong><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;刪除</strong></h4>
+                                    </td>
+                                    
                                 </thead>
-                                <tr>
-                                    <td align="center">
-                                        <h4><strong><font color="#ff94b6">公司名稱 <span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;</font></strong><strong name="name2" id="name2" ><?php echo $row2['fac_name'];?></strong>|<strong>電子郵件 <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;</strong><strong name="email2" id="email2" ><?php echo $row2['fac_email'];?></strong></h4>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="center">
-                                        <h4><strong><font color="#ff94b6">公司電話 <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>&nbsp;</font></strong><strong name="phone2" id="phone2" ><?php echo $row2['fac_phone'];?></strong>|<strong>公司傳真 <span class="glyphicon glyphicon-print" aria-hidden="true"></span>&nbsp;</strong><strong name="tax2" id="tax2" ><?php echo $row2['fac_tax'];?></strong></h4>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="center">
-                                        <h4><strong><font color="#ff94b6">聯絡人 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;</font></strong><strong name="people2" id="people2" ><?php echo $row2['fac_people'];?></strong>|<strong><font color="#ff94b6">聯絡電話 <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;</font></strong><strong name="cellphone2" id="cellphone2" ><?php echo $row2['fac_cellphone'];?></strong></h4>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="center">
-                                        <h4><strong>公司地址 <span class="glyphicon glyphicon-road" aria-hidden="true"></span>&nbsp;</strong></h4>
-                                        <h4><strong name="address2" id="address2" ><?php echo $row2['fac_address'];?></strong></h4>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="center">
-                                        <h4><strong>公司網址 <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;</strong></h4>
-                                        <h4><strong name="url2" id="url2" ><?php echo $row2['fac_url'];?></strong></h4>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="center">
-                                        <h4><strong><font color="#ff94b6">經營項目 <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;</font></strong></h4>
-                                        <h4><strong name="data2" id="data2" ><?php echo $row2['fac_data'];?></strong></h4>
-                                    </td>
-                                </tr>
-                            </table>
-
-                        </form>
+                                <?php while($row2 = mysql_fetch_assoc($result2)){ ?>
+                                    <tr>
+                                        <td align="center">
+                                           <h4><?php echo $row2['fac_date'];?></h4>
+                                        </td>
+                                    
+                                        <td align="center">
+                                           <button class="btn btn-success" data-toggle="modal" data-target="#look<?php echo $row2['fac_id'];?>"><?php echo $row2['fac_name'];?></button>
+                                        </td>
+                                    
+                                        <td align="center">
+                                            <h4><?php echo $row2['fac_people'];?></h4>
+                                        </td>
+                                        <td align="center">
+                                            <h4><?php echo $row2['fac_cellphone'];?></h4>
+                                        </td>
+                                        <td align="center">
+                                            <h4><?php echo $row2['fac_phone'];?></h4>
+                                        </td>
+                                        <td align="center">
+                                            <button class="btn btn-primary " type="button" id="del" name="del"><a style="color:white" href="fa_del.php?fa_id=<?php echo $row2['fac_id'];?>">刪除</a></button>
+                                        </td>
+                                    </tr>
+                                <?php }?>
+                                </table>
+                                
+<!--------------------------------------------管理員畫面[廠商招募(顯示細節 model)]------------------------------------------------------------------------>    
+                                <?php
+                                    $sql4="select * from factory ;";
+                                    $result4 = mysql_query($sql4);
+                                ?>
+                                <?php while($row4 = mysql_fetch_assoc($result4)){ ?>
+                                <div class="modal fade" id="look<?php echo $row4['fac_id'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h3 class="modal-title" ><strong>相關內容</strong></h3>
+                                            </div>
+                                            <div class="modal-body">
+                                                <table class="table table-hover">
+                                                    <thread>
+                                                        <td align="center">
+                                                            <h4><strong><?php echo $row4['fac_name'];?></strong></h4>
+                                                        </td>
+                                                    </thread>
+                                                    <tr>
+                                                        <td align="center">
+                                                            <h4><strong><span class="glyphicon glyphicon-print" aria-hidden="true"></span>&nbsp;公司傳真</strong></h4>
+                                                            <h4 name="tax2" id="tax2" ><?php echo $row4['fac_tax'];?></h4>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h4><strong><span class="glyphicon glyphicon-road" aria-hidden="true"></span>&nbsp;公司地址</strong></h4>
+                                                            <h4 name="address2" id="address2" ><?php echo $row4['fac_address'];?></h4>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h4><strong><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;公司網址</strong></h4>
+                                                            <h4 name="url2" id="url2" ><?php echo $row4['fac_url'];?></h4>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h4><strong><font color="#ff94b6">經營項目 <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;</font></strong></h4>
+                                                            <textarea cols="50" cols="50" class="form-control" ><?php echo $row4['fac_data'];?></textarea>
+                                                        </td>
+                                                    </tr>
+                                                </table>    
+                        
+                                            </div>
+                                            <div class="modal-footer">    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                            <?php }?> <!--model end-->
+                            
                     </div>
                 </div>
             </div>
-            <?php }?>
+            
         </section>
 
         <?php } ?>

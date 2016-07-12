@@ -6,6 +6,10 @@
     $name = $_POST["name"];
     $email = $_POST["email"];
     $phone = $_POST["cellphone"];
+    if($email == "")
+    {
+        $email = "沒有留下資料";
+    }
     
     $date = date("Y-m-d");
     $date2 = date("Ymd");

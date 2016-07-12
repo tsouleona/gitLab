@@ -141,10 +141,10 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 ><strong>專業&nbsp;&nbsp;&nbsp;負責&nbsp;&nbsp;&nbsp;誠信</strong></h1>
+                <h1 ><strong>專業&nbsp;&nbsp;&nbsp;勤懇&nbsp;&nbsp;&nbsp;誠信</strong></h1>
                 <hr>
 
-                <a href="#portfolio" class="btn btn-primary btn-xl page-scroll">find out more</a>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">find out more</a>
             </div>
         </div>
     </header>
@@ -158,7 +158,8 @@
     <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10 " align="center">
                     <h2 class="section-heading"><strong>公司簡介</strong></h2>
                     <hr>
                     <h3><?php echo $row2[0];?></h3>

@@ -1,7 +1,6 @@
 <?php
     session_start();
     include_once("mysql_connect.inc.php");
-    
     header("Content-Type:text/html; charset=utf-8");
     
     $uname = $_POST["username"];

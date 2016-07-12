@@ -4,11 +4,10 @@
     header("Content-Type:text/html; charset=utf-8");
     
     $data = $_POST["add_data"];
-    
+        
     $date = date("Y-m-d");
     $date2 = date("Ymd");
-    //echo $date;
-    //factory的id處理
+ 
     $sql="select `display_id` from `display` where `display_id` like '%$date2%';";
     $result = mysql_query($sql);
     $row = mysql_fetch_array($result);
@@ -27,8 +26,28 @@
         $ans = $date2.$ans;
     }
     
-    $sql2 = "insert into `display` (`display_id`,`display_data`,`display_date`) VALUES ('".$ans."','".$data."','".$date."');";
-    mysql_query($sql2);
+    // $ex = explode(".",$p);
+    //  echo $ex[1];
+    $ex = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
+    $path = array("jpg","png","jpeg","JPG","PNG","JPEG");
+    if($_FILES['file']['error']>0){
+        echo '<h1 style="color:#ff94b6">檔案上傳失敗</h1>';
+        echo '<meta http-equiv=REFRESH CONTENT=1;url=display.php>';
+    }
+    if(!in_array($ex,$path))
+    {
+        echo '<h1 style="color:#ff94b6">副檔名不合格</h1>';
+        //echo '<a href="ok_photo/'.$_FILES['file']['name'].'">ok_photo/'.$ans.'.'.$ex.'</a>';
+        echo '<meta http-equiv=REFRESH CONTENT=1;url=display.php>';
+    }
+    else{
+         move_uploaded_file($_FILES['file']['tmp_name'],'ok_photo/'.$ans.'.'.$ex);
+         
+         //echo '<meta http-equiv=REFRESH CONTENT=1;url=display.php>';
+        
+        $sql2 = "insert into `display` (`display_id`,`display_data`,`display_date`) VALUES ('".$ans."','".$data."','".$date."');";
+        mysql_query($sql2);
+        header("Location:display.php");
+    }
     
-    header("Location:display.php");
 ?>

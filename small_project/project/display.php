@@ -31,7 +31,7 @@
     <link href="css/creative.css" rel="stylesheet">
     <!-- Jquery-->
     <script src="vendor/jquery/jquery.js"></script>
-
+    <script src="js/jquery.mu.image.resize.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -143,10 +143,10 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 ><strong>專業&nbsp;&nbsp;&nbsp;負責&nbsp;&nbsp;&nbsp;誠信</strong></h1>
-                <hr>
+                <h1 ><strong>專業&nbsp;&nbsp;&nbsp;勤懇&nbsp;&nbsp;&nbsp;誠信</strong></h1>
+                <!--<hr>-->
 
-                <a href="#portfolio" class="btn btn-primary btn-xl page-scroll">find out more</a>
+                <!--<a href="#portfolio" class="btn btn-primary btn-xl page-scroll">find out more</a>-->
             </div>
         </div>
     </header>
@@ -166,7 +166,8 @@
                 ?>
                         <div class="col-lg-4 col-sm-6">
                             <a href="ok_photo/<?php echo $row2[0];?>.jpg" class="portfolio-box" id="img_big">
-                                <img src="ok_photo/<?php echo $row2[0];?>.jpg" onerror="this.src='ok_photo/add2.jpg'" class="img-responsive" alt="">
+                                <img style="width:650px;height:320px" src="ok_photo/<?php echo $row2[0];?>.jpg" onerror="this.src='ok_photo/add2.jpg'" class="img-responsive" alt="">
+                                
                                 <div class="portfolio-box-caption">
                                     <div class="portfolio-box-caption-content">
                                         <div class="project-category text-faded">
@@ -187,7 +188,7 @@
                         </div>
                         <div class="modal fade" id="change<?php echo $row2[0];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
-                                <form action="dis_process.php" method="POST" id="form2">
+                                <form enctype="multipart/form-data" accept="image/jpeg,image/jpg,image/gif,image/png" action="dis_process.php" method="POST" id="form2">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -197,7 +198,8 @@
                                             
                                             <input style="visibility:hidden" type="text" name="id" value="<?php echo $row2[0];?>"/><!-- 傳輸id-->
                                             <input type="text" class="form-control" name="data" value="<?php echo $row2[1];?>"/>
-                    
+                                            <h4><strong>上傳檔案&nbsp;</strong><h4/><input id="file" name="file" type="file">
+                                            <p style="color:red"><strong>請使用jpeg、jpg、png檔</strong><p>
                                         </div>
                                         <div class="modal-footer">
                     
@@ -226,7 +228,7 @@
                     </div>
                     <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
-                            <form action="dis_add.php" method="POST" id="form4">
+                            <form enctype="multipart/form-data"  action="dis_add.php" method="POST" id="form4">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -234,20 +236,29 @@
                                     </div>
                                     <div class="modal-body">
                                         
-                                        <h4><strong>內容: </strong><h4/><input type="text" class="form-control" name="add_data" />
-                
+                                        <h4><strong>專案內容&nbsp;</strong><h4/><input type="text" class="form-control" name="add_data" id="add_data"/>
+                                        <div id="danger"></div>
+                                        <h4><strong>上傳檔案&nbsp;</strong><h4/><input id="file" name="file" type="file">
+                                        <p style="color:red"><strong>請使用jpeg、jpg、png檔</strong><p>
                                     </div>
                                     <div class="modal-footer">
                 
-                                        <input type="submit" onclick="submit4();" class="btn btn-primary" name="login" value="確認">
+                                        <input type="button" class="btn btn-primary" name="ok" id="ok" value="確認">
                                     </div>
                                 </div>
                             </form>
                             <script>
-                                function submit4(){
+                                $("#ok").on("click",function(){
                                     
-                                    form4.submit();
-                                }
+                                    if($("#add_data").val() == "")
+                                    {
+                                        $("#danger").html('<h4 style="color:red"><strong>專案內容不能為空!!!</strong></h4>');
+                                    }
+                                    else{
+                                        $("#form4").submit();
+                                    }
+                                    
+                                })
                             </script>
                         </div>
                     </div>
@@ -311,7 +322,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5"></div>
-                <div class="col-lg-5" align="center">
+                <div class="col-lg-5" >
                     <?php 
                     if( $id==$row[0] && $id!=NULL ) { 
                 ?>

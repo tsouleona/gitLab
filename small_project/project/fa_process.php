@@ -13,16 +13,22 @@
     $cellphone = $_POST["cellphone"];
     $tax = $_POST["tax"];
     $data = $_POST["data"];
-    
-    // echo $name,"<br>";
-    // echo $people,"<br>";
-    // echo $phone,"<br>";
-    // echo $address,"<br>";
-    // echo $url,"<br>";
-    // echo $email,"<br>";
-    // echo $cellphone,"<br>";
-    // echo $tax,"<br>";
-    // echo $data,"<br>";
+    if($email == "")
+    {
+        $email = "沒有留下資料";
+    }
+    if($tax == "")
+    {
+        $tax = "沒有留下資料";
+    }
+    if($address == "")
+    {
+        $address = "沒有留下資料";
+    }
+    if($url == "")
+    {
+        $url = "沒有留下資料";
+    }
     
     //存取當天日期
     $date = date("Y-m-d");
