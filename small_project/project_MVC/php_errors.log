@@ -1,0 +1,1096 @@
+[12-Jul-2016 05:51:06 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:51:06 UTC] PHP Stack trace:
+[12-Jul-2016 05:51:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:51:06 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:51:06 UTC] PHP Stack trace:
+[12-Jul-2016 05:51:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:51:06 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:51:06 UTC] PHP Stack trace:
+[12-Jul-2016 05:51:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:51:06 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:51:06 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:51:06 UTC] PHP Stack trace:
+[12-Jul-2016 05:51:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:51:06 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:51:06 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 78
+[12-Jul-2016 05:51:06 UTC] PHP Stack trace:
+[12-Jul-2016 05:51:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:51:06 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:78
+[12-Jul-2016 05:51:06 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:51:06 UTC] PHP Stack trace:
+[12-Jul-2016 05:51:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:51:06 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:51:06 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:51:06 UTC] PHP Stack trace:
+[12-Jul-2016 05:51:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:51:06 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:51:06 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 156
+[12-Jul-2016 05:51:06 UTC] PHP Stack trace:
+[12-Jul-2016 05:51:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:51:06 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:156
+[12-Jul-2016 05:51:06 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:51:06 UTC] PHP Stack trace:
+[12-Jul-2016 05:51:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:51:06 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:51:06 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:51:06 UTC] PHP Stack trace:
+[12-Jul-2016 05:51:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:51:06 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:51:06 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 255
+[12-Jul-2016 05:51:06 UTC] PHP Stack trace:
+[12-Jul-2016 05:51:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:51:06 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:255
+[12-Jul-2016 05:52:00 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:52:00 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:00 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:52:00 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:00 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:52:00 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:00 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:52:00 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:52:00 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:00 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:52:00 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 78
+[12-Jul-2016 05:52:00 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:00 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:78
+[12-Jul-2016 05:52:00 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:52:00 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:00 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:52:00 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:52:00 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:00 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:52:00 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 156
+[12-Jul-2016 05:52:00 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:00 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:156
+[12-Jul-2016 05:52:00 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:52:00 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:00 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:52:00 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:52:00 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:00 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:52:00 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 255
+[12-Jul-2016 05:52:00 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:00 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:255
+[12-Jul-2016 05:52:15 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:52:15 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:15 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:52:15 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:15 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:52:15 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:15 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:52:15 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:52:15 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:15 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:52:15 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 78
+[12-Jul-2016 05:52:15 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:15 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:78
+[12-Jul-2016 05:52:15 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:52:15 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:15 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:52:15 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:52:15 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:15 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:52:15 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 156
+[12-Jul-2016 05:52:15 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:15 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:156
+[12-Jul-2016 05:52:15 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:52:15 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:15 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:52:15 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:52:15 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:15 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:52:15 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 255
+[12-Jul-2016 05:52:15 UTC] PHP Stack trace:
+[12-Jul-2016 05:52:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:52:15 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:255
+[12-Jul-2016 05:54:11 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:54:11 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:11 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:54:11 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:11 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:54:11 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:11 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:54:11 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:54:11 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:11 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:54:11 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 78
+[12-Jul-2016 05:54:11 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:11 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:78
+[12-Jul-2016 05:54:11 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:54:11 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:11 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:54:11 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:54:11 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:11 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:54:11 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 156
+[12-Jul-2016 05:54:11 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:11 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:156
+[12-Jul-2016 05:54:11 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:54:11 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:11 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:54:11 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:54:11 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:11 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:54:11 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 255
+[12-Jul-2016 05:54:11 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:11 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:255
+[12-Jul-2016 05:54:51 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:54:51 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:51 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:54:51 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:51 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:54:51 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:51 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:54:51 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:54:51 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:51 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:54:51 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 78
+[12-Jul-2016 05:54:51 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:51 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:78
+[12-Jul-2016 05:54:51 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:54:51 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:51 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:54:51 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:54:51 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:51 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:54:51 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 156
+[12-Jul-2016 05:54:51 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:51 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:156
+[12-Jul-2016 05:54:51 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:54:51 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:51 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:54:51 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:54:51 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:51 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:54:51 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 255
+[12-Jul-2016 05:54:51 UTC] PHP Stack trace:
+[12-Jul-2016 05:54:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:54:51 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:255
+[12-Jul-2016 05:56:16 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:56:16 UTC] PHP Stack trace:
+[12-Jul-2016 05:56:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:56:16 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:56:16 UTC] PHP Stack trace:
+[12-Jul-2016 05:56:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:56:16 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:56:16 UTC] PHP Stack trace:
+[12-Jul-2016 05:56:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:56:16 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:56:16 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:56:16 UTC] PHP Stack trace:
+[12-Jul-2016 05:56:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:56:16 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:56:16 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 78
+[12-Jul-2016 05:56:16 UTC] PHP Stack trace:
+[12-Jul-2016 05:56:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:56:16 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:78
+[12-Jul-2016 05:56:16 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:56:16 UTC] PHP Stack trace:
+[12-Jul-2016 05:56:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:56:16 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:56:16 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:56:16 UTC] PHP Stack trace:
+[12-Jul-2016 05:56:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:56:16 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:56:16 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 156
+[12-Jul-2016 05:56:16 UTC] PHP Stack trace:
+[12-Jul-2016 05:56:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:56:16 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:156
+[12-Jul-2016 05:56:16 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:56:16 UTC] PHP Stack trace:
+[12-Jul-2016 05:56:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:56:16 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:56:16 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:56:16 UTC] PHP Stack trace:
+[12-Jul-2016 05:56:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:56:16 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:56:16 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 255
+[12-Jul-2016 05:56:16 UTC] PHP Stack trace:
+[12-Jul-2016 05:56:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:56:16 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:255
+[12-Jul-2016 05:58:05 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:58:05 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:05 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:58:05 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:05 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:58:05 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:05 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:58:05 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:58:05 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:05 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:58:05 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 78
+[12-Jul-2016 05:58:05 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:05 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:78
+[12-Jul-2016 05:58:05 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:58:05 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:05 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:58:05 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:58:05 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:05 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:58:05 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 156
+[12-Jul-2016 05:58:05 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:05 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:156
+[12-Jul-2016 05:58:05 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:58:05 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:05 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:58:05 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:58:05 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:05 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:58:05 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 255
+[12-Jul-2016 05:58:05 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:05 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:255
+[12-Jul-2016 05:58:18 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:58:18 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:18 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:58:18 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:18 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:58:18 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:18 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:58:18 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:58:18 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:18 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:58:18 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 78
+[12-Jul-2016 05:58:18 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:18 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:78
+[12-Jul-2016 05:58:18 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:58:18 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:18 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:58:18 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:58:18 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:18 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:58:18 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 156
+[12-Jul-2016 05:58:18 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:18 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:156
+[12-Jul-2016 05:58:18 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:58:18 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:18 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:58:18 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:58:18 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:18 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:58:18 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 255
+[12-Jul-2016 05:58:18 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:18 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:255
+[12-Jul-2016 05:58:40 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:58:40 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:40 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:58:40 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:40 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:58:40 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:40 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:58:40 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:58:40 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:40 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:58:40 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 78
+[12-Jul-2016 05:58:40 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:40 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:78
+[12-Jul-2016 05:58:40 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:58:40 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:40 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:58:40 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:58:40 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:40 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:58:40 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 156
+[12-Jul-2016 05:58:40 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:40 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:156
+[12-Jul-2016 05:58:40 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:58:40 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:40 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:58:40 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:58:40 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:40 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:58:40 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 255
+[12-Jul-2016 05:58:40 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:40 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:255
+[12-Jul-2016 05:58:48 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:58:48 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:48 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 05:58:48 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:48 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:58:48 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:48 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:58:48 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 05:58:48 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:48 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 05:58:48 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 78
+[12-Jul-2016 05:58:48 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:48 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:78
+[12-Jul-2016 05:58:48 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:58:48 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:48 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:58:48 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 05:58:48 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:48 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 05:58:48 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 156
+[12-Jul-2016 05:58:48 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:48 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:156
+[12-Jul-2016 05:58:48 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:58:48 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:48 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:58:48 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 05:58:48 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:48 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 05:58:48 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 255
+[12-Jul-2016 05:58:48 UTC] PHP Stack trace:
+[12-Jul-2016 05:58:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 05:58:48 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:255
+[12-Jul-2016 06:01:04 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 06:01:04 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:04 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 06:01:04 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:04 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 06:01:04 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:04 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 06:01:04 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 06:01:04 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:04 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 06:01:04 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 78
+[12-Jul-2016 06:01:04 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:04 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:78
+[12-Jul-2016 06:01:04 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 06:01:04 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:04 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 06:01:04 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 06:01:04 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:04 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 06:01:04 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 156
+[12-Jul-2016 06:01:04 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:04 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:156
+[12-Jul-2016 06:01:04 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 06:01:04 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:04 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 06:01:04 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 06:01:04 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:04 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 06:01:04 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 255
+[12-Jul-2016 06:01:04 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:04 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:255
+[12-Jul-2016 06:01:43 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 06:01:43 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:43 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 06:01:43 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:43 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 06:01:43 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:43 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 06:01:43 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 06:01:43 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:43 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 06:01:43 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 78
+[12-Jul-2016 06:01:43 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:43 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:78
+[12-Jul-2016 06:01:43 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 06:01:43 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:43 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 06:01:43 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 06:01:43 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:43 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 06:01:43 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 156
+[12-Jul-2016 06:01:43 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:43 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:156
+[12-Jul-2016 06:01:43 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 06:01:43 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:43 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 06:01:43 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 06:01:43 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:43 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 06:01:43 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 255
+[12-Jul-2016 06:01:43 UTC] PHP Stack trace:
+[12-Jul-2016 06:01:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:01:43 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:255
+[12-Jul-2016 06:04:11 UTC] PHP Warning:  include_once(../mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 06:04:11 UTC] PHP Stack trace:
+[12-Jul-2016 06:04:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:04:11 UTC] PHP Warning:  include_once(): Failed opening '../mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 4
+[12-Jul-2016 06:04:11 UTC] PHP Stack trace:
+[12-Jul-2016 06:04:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:04:11 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 06:04:11 UTC] PHP Stack trace:
+[12-Jul-2016 06:04:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:04:11 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 06:04:11 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 77
+[12-Jul-2016 06:04:11 UTC] PHP Stack trace:
+[12-Jul-2016 06:04:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:04:11 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:77
+[12-Jul-2016 06:04:11 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 78
+[12-Jul-2016 06:04:11 UTC] PHP Stack trace:
+[12-Jul-2016 06:04:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:04:11 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:78
+[12-Jul-2016 06:04:11 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 06:04:11 UTC] PHP Stack trace:
+[12-Jul-2016 06:04:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:04:11 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 06:04:11 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 155
+[12-Jul-2016 06:04:11 UTC] PHP Stack trace:
+[12-Jul-2016 06:04:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:04:11 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:155
+[12-Jul-2016 06:04:11 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 156
+[12-Jul-2016 06:04:11 UTC] PHP Stack trace:
+[12-Jul-2016 06:04:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:04:11 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:156
+[12-Jul-2016 06:04:11 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 06:04:11 UTC] PHP Stack trace:
+[12-Jul-2016 06:04:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:04:11 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 06:04:11 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 254
+[12-Jul-2016 06:04:11 UTC] PHP Stack trace:
+[12-Jul-2016 06:04:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:04:11 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:254
+[12-Jul-2016 06:04:11 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 255
+[12-Jul-2016 06:04:11 UTC] PHP Stack trace:
+[12-Jul-2016 06:04:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 06:04:11 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:255
+[12-Jul-2016 06:05:37 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_login.php on line 6
+[12-Jul-2016 06:05:37 UTC] PHP Stack trace:
+[12-Jul-2016 06:05:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/login.php:0
+[12-Jul-2016 06:14:51 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/login_out.php on line 3
+[12-Jul-2016 06:14:51 UTC] PHP Stack trace:
+[12-Jul-2016 06:14:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/login_out.php:0
+[12-Jul-2016 06:14:51 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/login_out.php on line 3
+[12-Jul-2016 06:14:51 UTC] PHP Stack trace:
+[12-Jul-2016 06:14:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/login_out.php:0
+[12-Jul-2016 06:14:51 UTC] PHP Fatal error:  Class 'login' not found in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/login_out.php on line 6
+[12-Jul-2016 06:14:51 UTC] PHP Stack trace:
+[12-Jul-2016 06:14:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/login_out.php:0
+[12-Jul-2016 06:33:51 UTC] PHP Fatal error:  Class 'login' not found in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/login.php on line 7
+[12-Jul-2016 06:33:52 UTC] PHP Stack trace:
+[12-Jul-2016 06:33:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/login.php:0
+[12-Jul-2016 06:36:20 UTC] PHP Warning:  include_once(../mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 3
+[12-Jul-2016 06:36:20 UTC] PHP Stack trace:
+[12-Jul-2016 06:36:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:36:20 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:4
+[12-Jul-2016 06:36:20 UTC] PHP Warning:  include_once(): Failed opening '../mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 3
+[12-Jul-2016 06:36:20 UTC] PHP Stack trace:
+[12-Jul-2016 06:36:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:36:20 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:4
+[12-Jul-2016 06:36:20 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 8
+[12-Jul-2016 06:36:20 UTC] PHP Stack trace:
+[12-Jul-2016 06:36:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:36:20 UTC] PHP   2. about() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:8
+[12-Jul-2016 06:36:20 UTC] PHP   3. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php:8
+[12-Jul-2016 06:36:20 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 8
+[12-Jul-2016 06:36:20 UTC] PHP Stack trace:
+[12-Jul-2016 06:36:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:36:20 UTC] PHP   2. about() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:8
+[12-Jul-2016 06:36:20 UTC] PHP   3. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php:8
+[12-Jul-2016 06:36:57 UTC] PHP Warning:  include_once(../mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 3
+[12-Jul-2016 06:36:57 UTC] PHP Stack trace:
+[12-Jul-2016 06:36:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:36:57 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:4
+[12-Jul-2016 06:36:57 UTC] PHP Warning:  include_once(): Failed opening '../mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 3
+[12-Jul-2016 06:36:57 UTC] PHP Stack trace:
+[12-Jul-2016 06:36:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:36:57 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:4
+[12-Jul-2016 06:39:11 UTC] PHP Warning:  include_once(../mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 3
+[12-Jul-2016 06:39:11 UTC] PHP Stack trace:
+[12-Jul-2016 06:39:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:39:11 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:4
+[12-Jul-2016 06:39:11 UTC] PHP Warning:  include_once(): Failed opening '../mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 3
+[12-Jul-2016 06:39:11 UTC] PHP Stack trace:
+[12-Jul-2016 06:39:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:39:11 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:4
+[12-Jul-2016 06:39:11 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 8
+[12-Jul-2016 06:39:11 UTC] PHP Stack trace:
+[12-Jul-2016 06:39:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:39:11 UTC] PHP   2. about() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:7
+[12-Jul-2016 06:39:11 UTC] PHP   3. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php:8
+[12-Jul-2016 06:39:11 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 8
+[12-Jul-2016 06:39:11 UTC] PHP Stack trace:
+[12-Jul-2016 06:39:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:39:11 UTC] PHP   2. about() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:7
+[12-Jul-2016 06:39:11 UTC] PHP   3. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php:8
+[12-Jul-2016 06:42:26 UTC] PHP Warning:  include_once(../mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 3
+[12-Jul-2016 06:42:26 UTC] PHP Stack trace:
+[12-Jul-2016 06:42:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:42:26 UTC] PHP   2. include() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:4
+[12-Jul-2016 06:42:26 UTC] PHP Warning:  include_once(): Failed opening '../mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 3
+[12-Jul-2016 06:42:26 UTC] PHP Stack trace:
+[12-Jul-2016 06:42:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:42:26 UTC] PHP   2. include() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:4
+[12-Jul-2016 06:42:26 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 11
+[12-Jul-2016 06:42:26 UTC] PHP Stack trace:
+[12-Jul-2016 06:42:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:42:26 UTC] PHP   2. about->ab_update() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:8
+[12-Jul-2016 06:42:26 UTC] PHP   3. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php:11
+[12-Jul-2016 06:42:26 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 11
+[12-Jul-2016 06:42:26 UTC] PHP Stack trace:
+[12-Jul-2016 06:42:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:42:26 UTC] PHP   2. about->ab_update() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:8
+[12-Jul-2016 06:42:26 UTC] PHP   3. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php:11
+[12-Jul-2016 06:43:35 UTC] PHP Warning:  include_once(../mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 3
+[12-Jul-2016 06:43:35 UTC] PHP Stack trace:
+[12-Jul-2016 06:43:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:43:35 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:4
+[12-Jul-2016 06:43:35 UTC] PHP Warning:  include_once(): Failed opening '../mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 3
+[12-Jul-2016 06:43:35 UTC] PHP Stack trace:
+[12-Jul-2016 06:43:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:43:35 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:4
+[12-Jul-2016 06:43:35 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 11
+[12-Jul-2016 06:43:35 UTC] PHP Stack trace:
+[12-Jul-2016 06:43:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:43:35 UTC] PHP   2. about->ab_update() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:9
+[12-Jul-2016 06:43:35 UTC] PHP   3. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php:11
+[12-Jul-2016 06:43:35 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 11
+[12-Jul-2016 06:43:35 UTC] PHP Stack trace:
+[12-Jul-2016 06:43:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:43:35 UTC] PHP   2. about->ab_update() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:9
+[12-Jul-2016 06:43:35 UTC] PHP   3. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php:11
+[12-Jul-2016 06:44:41 UTC] PHP Warning:  include_once(../mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 3
+[12-Jul-2016 06:44:41 UTC] PHP Stack trace:
+[12-Jul-2016 06:44:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:44:41 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:3
+[12-Jul-2016 06:44:41 UTC] PHP Warning:  include_once(): Failed opening '../mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 3
+[12-Jul-2016 06:44:41 UTC] PHP Stack trace:
+[12-Jul-2016 06:44:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:44:41 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:3
+[12-Jul-2016 06:44:41 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 11
+[12-Jul-2016 06:44:41 UTC] PHP Stack trace:
+[12-Jul-2016 06:44:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:44:41 UTC] PHP   2. about->ab_update() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:10
+[12-Jul-2016 06:44:41 UTC] PHP   3. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php:11
+[12-Jul-2016 06:44:41 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php on line 11
+[12-Jul-2016 06:44:41 UTC] PHP Stack trace:
+[12-Jul-2016 06:44:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:0
+[12-Jul-2016 06:44:41 UTC] PHP   2. about->ab_update() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about.php:10
+[12-Jul-2016 06:44:41 UTC] PHP   3. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/mo_about.php:11
+[12-Jul-2016 06:54:02 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 4
+[12-Jul-2016 06:54:02 UTC] PHP Stack trace:
+[12-Jul-2016 06:54:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 06:54:02 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 4
+[12-Jul-2016 06:54:02 UTC] PHP Stack trace:
+[12-Jul-2016 06:54:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 06:54:02 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 79
+[12-Jul-2016 06:54:02 UTC] PHP Stack trace:
+[12-Jul-2016 06:54:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 06:54:02 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:79
+[12-Jul-2016 06:54:02 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 79
+[12-Jul-2016 06:54:02 UTC] PHP Stack trace:
+[12-Jul-2016 06:54:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 06:54:02 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:79
+[12-Jul-2016 06:54:02 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 80
+[12-Jul-2016 06:54:02 UTC] PHP Stack trace:
+[12-Jul-2016 06:54:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 06:54:02 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:80
+[12-Jul-2016 06:54:02 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 157
+[12-Jul-2016 06:54:02 UTC] PHP Stack trace:
+[12-Jul-2016 06:54:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 06:54:02 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:157
+[12-Jul-2016 06:54:02 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 157
+[12-Jul-2016 06:54:02 UTC] PHP Stack trace:
+[12-Jul-2016 06:54:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 06:54:02 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:157
+[12-Jul-2016 06:54:02 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 165
+[12-Jul-2016 06:54:02 UTC] PHP Stack trace:
+[12-Jul-2016 06:54:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 06:54:02 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:165
+[12-Jul-2016 06:54:02 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 274
+[12-Jul-2016 06:54:02 UTC] PHP Stack trace:
+[12-Jul-2016 06:54:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 06:54:02 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:274
+[12-Jul-2016 06:54:02 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 274
+[12-Jul-2016 06:54:02 UTC] PHP Stack trace:
+[12-Jul-2016 06:54:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 06:54:02 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:274
+[12-Jul-2016 07:19:25 UTC] PHP Fatal error:  Call to undefined function select_ike() in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 13
+[12-Jul-2016 07:19:25 UTC] PHP Stack trace:
+[12-Jul-2016 07:19:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 07:21:53 UTC] PHP Fatal error:  Call to undefined function select_ike() in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 13
+[12-Jul-2016 07:21:53 UTC] PHP Stack trace:
+[12-Jul-2016 07:21:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 07:34:13 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 26
+[12-Jul-2016 07:34:13 UTC] PHP Stack trace:
+[12-Jul-2016 07:34:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 07:34:13 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:26
+[12-Jul-2016 07:34:13 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpbVASZw' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 26
+[12-Jul-2016 07:34:13 UTC] PHP Stack trace:
+[12-Jul-2016 07:34:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 07:34:13 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:26
+[12-Jul-2016 07:40:47 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 28
+[12-Jul-2016 07:40:47 UTC] PHP Stack trace:
+[12-Jul-2016 07:40:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 07:40:47 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:28
+[12-Jul-2016 07:40:47 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpyGW08R' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 28
+[12-Jul-2016 07:40:47 UTC] PHP Stack trace:
+[12-Jul-2016 07:40:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 07:40:47 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:28
+[12-Jul-2016 07:41:29 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 07:41:29 UTC] PHP Stack trace:
+[12-Jul-2016 07:41:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 07:41:29 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 07:41:29 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpydKwl9' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 07:41:29 UTC] PHP Stack trace:
+[12-Jul-2016 07:41:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 07:41:29 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 07:42:08 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 23
+[12-Jul-2016 07:42:08 UTC] PHP Stack trace:
+[12-Jul-2016 07:42:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 07:42:08 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:23
+[12-Jul-2016 07:42:08 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpgSpLcr' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 23
+[12-Jul-2016 07:42:08 UTC] PHP Stack trace:
+[12-Jul-2016 07:42:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 07:42:08 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:23
+[12-Jul-2016 07:45:07 UTC] PHP Warning:  move_uploaded_file(ok_photo/.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 44
+[12-Jul-2016 07:45:07 UTC] PHP Stack trace:
+[12-Jul-2016 07:45:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 07:45:07 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:44
+[12-Jul-2016 07:45:07 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpkq6nCw' to 'ok_photo/.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 44
+[12-Jul-2016 07:45:07 UTC] PHP Stack trace:
+[12-Jul-2016 07:45:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 07:45:07 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:44
+[12-Jul-2016 07:46:45 UTC] PHP Warning:  move_uploaded_file(ok_photo/.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 42
+[12-Jul-2016 07:46:45 UTC] PHP Stack trace:
+[12-Jul-2016 07:46:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 07:46:45 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:42
+[12-Jul-2016 07:46:45 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpNfDv7k' to 'ok_photo/.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 42
+[12-Jul-2016 07:46:45 UTC] PHP Stack trace:
+[12-Jul-2016 07:46:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 07:46:45 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:42
+[12-Jul-2016 07:55:28 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 07:55:28 UTC] PHP Stack trace:
+[12-Jul-2016 07:55:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 07:55:28 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 07:55:28 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php7VVhLL' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 07:55:28 UTC] PHP Stack trace:
+[12-Jul-2016 07:55:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 07:55:28 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 07:56:59 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 07:56:59 UTC] PHP Stack trace:
+[12-Jul-2016 07:56:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 07:56:59 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 07:56:59 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpEusrWX' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 07:56:59 UTC] PHP Stack trace:
+[12-Jul-2016 07:56:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 07:56:59 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 07:58:19 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 07:58:19 UTC] PHP Stack trace:
+[12-Jul-2016 07:58:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 07:58:19 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 07:58:19 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpUYl4yg' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 07:58:19 UTC] PHP Stack trace:
+[12-Jul-2016 07:58:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 07:58:19 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 07:58:37 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 07:58:37 UTC] PHP Stack trace:
+[12-Jul-2016 07:58:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 07:58:37 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 07:58:37 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php4tVfaY' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 07:58:37 UTC] PHP Stack trace:
+[12-Jul-2016 07:58:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 07:58:37 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 08:00:08 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 08:00:08 UTC] PHP Stack trace:
+[12-Jul-2016 08:00:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 08:00:08 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 08:00:08 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpfsLmZg' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 08:00:08 UTC] PHP Stack trace:
+[12-Jul-2016 08:00:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 08:00:08 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 08:00:43 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 08:00:43 UTC] PHP Stack trace:
+[12-Jul-2016 08:00:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 08:00:43 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 08:00:43 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpfIHiK0' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 08:00:43 UTC] PHP Stack trace:
+[12-Jul-2016 08:00:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 08:00:43 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 08:04:21 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 08:04:21 UTC] PHP Stack trace:
+[12-Jul-2016 08:04:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 08:04:21 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 08:04:21 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpDfXoRD' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 08:04:21 UTC] PHP Stack trace:
+[12-Jul-2016 08:04:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 08:04:21 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 08:04:32 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 08:04:32 UTC] PHP Stack trace:
+[12-Jul-2016 08:04:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 08:04:32 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 08:04:32 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phplN9xvw' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 08:04:32 UTC] PHP Stack trace:
+[12-Jul-2016 08:04:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 08:04:32 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 08:06:10 UTC] PHP Warning:  move_uploaded_file(ok_photo/.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 42
+[12-Jul-2016 08:06:10 UTC] PHP Stack trace:
+[12-Jul-2016 08:06:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 08:06:10 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:42
+[12-Jul-2016 08:06:10 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpx97TsO' to 'ok_photo/.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 42
+[12-Jul-2016 08:06:10 UTC] PHP Stack trace:
+[12-Jul-2016 08:06:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 08:06:10 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:42
+[12-Jul-2016 08:08:15 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607123.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 42
+[12-Jul-2016 08:08:15 UTC] PHP Stack trace:
+[12-Jul-2016 08:08:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 08:08:15 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:42
+[12-Jul-2016 08:08:15 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpViAAtf' to 'ok_photo/201607123.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 42
+[12-Jul-2016 08:08:15 UTC] PHP Stack trace:
+[12-Jul-2016 08:08:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 08:08:15 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:42
+[12-Jul-2016 08:14:35 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 08:14:35 UTC] PHP Stack trace:
+[12-Jul-2016 08:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 08:14:35 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 08:14:35 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpeVeDVf' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 08:14:35 UTC] PHP Stack trace:
+[12-Jul-2016 08:14:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 08:14:35 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 08:19:13 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607123.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 41
+[12-Jul-2016 08:19:13 UTC] PHP Stack trace:
+[12-Jul-2016 08:19:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 08:19:13 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:41
+[12-Jul-2016 08:19:13 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpK87LnM' to 'ok_photo/201607123.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 41
+[12-Jul-2016 08:19:13 UTC] PHP Stack trace:
+[12-Jul-2016 08:19:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 08:19:13 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:41
+[12-Jul-2016 08:23:39 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 42
+[12-Jul-2016 08:23:39 UTC] PHP Stack trace:
+[12-Jul-2016 08:23:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 08:23:39 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:42
+[12-Jul-2016 08:23:39 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpmyp8SS' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 42
+[12-Jul-2016 08:23:39 UTC] PHP Stack trace:
+[12-Jul-2016 08:23:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 08:23:39 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:42
+[12-Jul-2016 08:26:17 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 43
+[12-Jul-2016 08:26:17 UTC] PHP Stack trace:
+[12-Jul-2016 08:26:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 08:26:17 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:43
+[12-Jul-2016 08:26:17 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpkLqPYn' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 43
+[12-Jul-2016 08:26:17 UTC] PHP Stack trace:
+[12-Jul-2016 08:26:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 08:26:17 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:43
+[12-Jul-2016 08:26:52 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 08:26:52 UTC] PHP Stack trace:
+[12-Jul-2016 08:26:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 08:26:52 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 08:26:52 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php1W8krk' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 25
+[12-Jul-2016 08:26:52 UTC] PHP Stack trace:
+[12-Jul-2016 08:26:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[12-Jul-2016 08:26:52 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:25
+[12-Jul-2016 08:37:58 UTC] PHP Warning:  move_uploaded_file(ok_photo/201607121.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 43
+[12-Jul-2016 08:37:58 UTC] PHP Stack trace:
+[12-Jul-2016 08:37:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 08:37:58 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:43
+[12-Jul-2016 08:37:58 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php8FmMxn' to 'ok_photo/201607121.jpg' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 43
+[12-Jul-2016 08:37:58 UTC] PHP Stack trace:
+[12-Jul-2016 08:37:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 08:37:58 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:43
+[12-Jul-2016 08:39:58 UTC] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 43
+[12-Jul-2016 08:39:58 UTC] PHP Stack trace:
+[12-Jul-2016 08:39:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[12-Jul-2016 08:39:58 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:43
+[12-Jul-2016 09:11:04 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_delete.php on line 3
+[12-Jul-2016 09:11:04 UTC] PHP Stack trace:
+[12-Jul-2016 09:11:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_delete.php:0
+[12-Jul-2016 09:11:04 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_delete.php on line 3
+[12-Jul-2016 09:11:04 UTC] PHP Stack trace:
+[12-Jul-2016 09:11:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_delete.php:0
+[12-Jul-2016 09:11:04 UTC] PHP Fatal error:  Call to undefined function delete_fa() in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_delete.php on line 8
+[12-Jul-2016 09:11:04 UTC] PHP Stack trace:
+[12-Jul-2016 09:11:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_delete.php:0
+[12-Jul-2016 09:11:38 UTC] PHP Fatal error:  Call to undefined function delete_fa() in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_delete.php on line 8
+[12-Jul-2016 09:11:38 UTC] PHP Stack trace:
+[12-Jul-2016 09:11:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_delete.php:0
+[12-Jul-2016 09:24:39 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php on line 3
+[12-Jul-2016 09:24:39 UTC] PHP Stack trace:
+[12-Jul-2016 09:24:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php:0
+[12-Jul-2016 09:24:39 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php on line 3
+[12-Jul-2016 09:24:39 UTC] PHP Stack trace:
+[12-Jul-2016 09:24:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php:0
+[12-Jul-2016 09:24:39 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php on line 9
+[12-Jul-2016 09:24:39 UTC] PHP Stack trace:
+[12-Jul-2016 09:24:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php:0
+[12-Jul-2016 09:24:39 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php:9
+[12-Jul-2016 09:24:39 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php on line 9
+[12-Jul-2016 09:24:39 UTC] PHP Stack trace:
+[12-Jul-2016 09:24:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php:0
+[12-Jul-2016 09:24:39 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php:9
+[12-Jul-2016 09:26:56 UTC] PHP Warning:  include_once(mysql_connect.inc.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php on line 3
+[12-Jul-2016 09:26:56 UTC] PHP Stack trace:
+[12-Jul-2016 09:26:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php:0
+[12-Jul-2016 09:26:56 UTC] PHP Warning:  include_once(): Failed opening 'mysql_connect.inc.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php on line 3
+[12-Jul-2016 09:26:56 UTC] PHP Stack trace:
+[12-Jul-2016 09:26:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php:0
+[12-Jul-2016 09:26:56 UTC] PHP Fatal error:  Call to undefined function delete_jo() in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php on line 8
+[12-Jul-2016 09:26:56 UTC] PHP Stack trace:
+[12-Jul-2016 09:26:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php:0
+[12-Jul-2016 09:27:38 UTC] PHP Warning:  include_once(../models/selete_like_joinus.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_insert.php on line 3
+[12-Jul-2016 09:27:38 UTC] PHP Stack trace:
+[12-Jul-2016 09:27:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_insert.php:0
+[12-Jul-2016 09:27:38 UTC] PHP Warning:  include_once(): Failed opening '../models/selete_like_joinus.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_insert.php on line 3
+[12-Jul-2016 09:27:38 UTC] PHP Stack trace:
+[12-Jul-2016 09:27:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_insert.php:0
+[12-Jul-2016 09:27:38 UTC] PHP Warning:  include_once(../models/selete_desc_joinus.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_insert.php on line 4
+[12-Jul-2016 09:27:38 UTC] PHP Stack trace:
+[12-Jul-2016 09:27:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_insert.php:0
+[12-Jul-2016 09:27:38 UTC] PHP Warning:  include_once(): Failed opening '../models/selete_desc_joinus.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_insert.php on line 4
+[12-Jul-2016 09:27:38 UTC] PHP Stack trace:
+[12-Jul-2016 09:27:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_insert.php:0
+[12-Jul-2016 09:27:38 UTC] PHP Fatal error:  Call to undefined function select_like() in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_insert.php on line 20
+[12-Jul-2016 09:27:38 UTC] PHP Stack trace:
+[12-Jul-2016 09:27:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_insert.php:0
+[12-Jul-2016 10:00:24 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 31
+[12-Jul-2016 10:00:24 UTC] PHP Stack trace:
+[12-Jul-2016 10:00:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[12-Jul-2016 10:00:24 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[12-Jul-2016 10:00:24 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:31
+[12-Jul-2016 10:03:04 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 31
+[12-Jul-2016 10:03:04 UTC] PHP Stack trace:
+[12-Jul-2016 10:03:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[12-Jul-2016 10:03:04 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[12-Jul-2016 10:03:04 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:31
+[12-Jul-2016 10:04:38 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 31
+[12-Jul-2016 10:04:38 UTC] PHP Stack trace:
+[12-Jul-2016 10:04:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[12-Jul-2016 10:04:38 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[12-Jul-2016 10:04:38 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:31
+[12-Jul-2016 10:05:10 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 31
+[12-Jul-2016 10:05:10 UTC] PHP Stack trace:
+[12-Jul-2016 10:05:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[12-Jul-2016 10:05:10 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[12-Jul-2016 10:05:10 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:31
+[12-Jul-2016 10:05:11 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 31
+[12-Jul-2016 10:05:11 UTC] PHP Stack trace:
+[12-Jul-2016 10:05:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[12-Jul-2016 10:05:11 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[12-Jul-2016 10:05:11 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:31
+[12-Jul-2016 11:56:07 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 31
+[12-Jul-2016 11:56:07 UTC] PHP Stack trace:
+[12-Jul-2016 11:56:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[12-Jul-2016 11:56:07 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[12-Jul-2016 11:56:07 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:31
+[12-Jul-2016 12:57:19 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 31
+[12-Jul-2016 12:57:19 UTC] PHP Stack trace:
+[12-Jul-2016 12:57:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[12-Jul-2016 12:57:19 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[12-Jul-2016 12:57:19 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:31
+[12-Jul-2016 13:27:08 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:151) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_index.php on line 4
+[12-Jul-2016 13:27:08 UTC] PHP Stack trace:
+[12-Jul-2016 13:27:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 13:27:08 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:152
+[12-Jul-2016 13:27:08 UTC] PHP   3. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php:3
+[12-Jul-2016 13:27:08 UTC] PHP   4. header() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_index.php:4
+[12-Jul-2016 13:27:08 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:151) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php on line 4
+[12-Jul-2016 13:27:08 UTC] PHP Stack trace:
+[12-Jul-2016 13:27:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 13:27:08 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:152
+[12-Jul-2016 13:27:08 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php:4
+[12-Jul-2016 13:27:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:151) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_index.php on line 4
+[12-Jul-2016 13:27:43 UTC] PHP Stack trace:
+[12-Jul-2016 13:27:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 13:27:43 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:153
+[12-Jul-2016 13:27:43 UTC] PHP   3. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php:3
+[12-Jul-2016 13:27:43 UTC] PHP   4. header() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_index.php:4
+[12-Jul-2016 13:27:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:151) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php on line 4
+[12-Jul-2016 13:27:43 UTC] PHP Stack trace:
+[12-Jul-2016 13:27:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 13:27:43 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:153
+[12-Jul-2016 13:27:43 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php:4
+[12-Jul-2016 13:30:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:151) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_index.php on line 4
+[12-Jul-2016 13:30:40 UTC] PHP Stack trace:
+[12-Jul-2016 13:30:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 13:30:40 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:153
+[12-Jul-2016 13:30:40 UTC] PHP   3. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php:3
+[12-Jul-2016 13:30:40 UTC] PHP   4. header() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_index.php:4
+[12-Jul-2016 13:30:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:151) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php on line 4
+[12-Jul-2016 13:30:40 UTC] PHP Stack trace:
+[12-Jul-2016 13:30:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 13:30:40 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:153
+[12-Jul-2016 13:30:40 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php:4
+[12-Jul-2016 13:31:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:151) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_index.php on line 4
+[12-Jul-2016 13:31:01 UTC] PHP Stack trace:
+[12-Jul-2016 13:31:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 13:31:01 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:153
+[12-Jul-2016 13:31:01 UTC] PHP   3. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php:3
+[12-Jul-2016 13:31:01 UTC] PHP   4. header() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_index.php:4
+[12-Jul-2016 13:31:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:151) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php on line 4
+[12-Jul-2016 13:31:01 UTC] PHP Stack trace:
+[12-Jul-2016 13:31:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 13:31:01 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:153
+[12-Jul-2016 13:31:01 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php:4
+[12-Jul-2016 13:31:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:151) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php on line 3
+[12-Jul-2016 13:31:21 UTC] PHP Stack trace:
+[12-Jul-2016 13:31:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 13:31:21 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:153
+[12-Jul-2016 13:31:21 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php:3
+[12-Jul-2016 13:31:21 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:151) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_index.php on line 4
+[12-Jul-2016 13:31:21 UTC] PHP Stack trace:
+[12-Jul-2016 13:31:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 13:31:21 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:153
+[12-Jul-2016 13:31:21 UTC] PHP   3. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php:4
+[12-Jul-2016 13:31:21 UTC] PHP   4. header() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_index.php:4
+[12-Jul-2016 13:31:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:151) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php on line 3
+[12-Jul-2016 13:31:40 UTC] PHP Stack trace:
+[12-Jul-2016 13:31:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 13:31:40 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:153
+[12-Jul-2016 13:31:40 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php:3
+[12-Jul-2016 13:31:40 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:151) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_index.php on line 3
+[12-Jul-2016 13:31:40 UTC] PHP Stack trace:
+[12-Jul-2016 13:31:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 13:31:40 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:153
+[12-Jul-2016 13:31:40 UTC] PHP   3. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php:4
+[12-Jul-2016 13:31:40 UTC] PHP   4. header() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_index.php:3
+[12-Jul-2016 13:32:35 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:151) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php on line 2
+[12-Jul-2016 13:32:35 UTC] PHP Stack trace:
+[12-Jul-2016 13:32:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 13:32:35 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:153
+[12-Jul-2016 13:32:35 UTC] PHP   3. header() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php:2
+[12-Jul-2016 13:32:35 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:151) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_index.php on line 3
+[12-Jul-2016 13:32:35 UTC] PHP Stack trace:
+[12-Jul-2016 13:32:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[12-Jul-2016 13:32:35 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:153
+[12-Jul-2016 13:32:35 UTC] PHP   3. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/index_about_select.php:5
+[12-Jul-2016 13:32:35 UTC] PHP   4. header() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_index.php:3
+[12-Jul-2016 13:51:53 UTC] PHP Warning:  include_once(../models/process_diaplay.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_select.php on line 3
+[12-Jul-2016 13:51:53 UTC] PHP Stack trace:
+[12-Jul-2016 13:51:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 13:51:53 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:153
+[12-Jul-2016 13:51:53 UTC] PHP Warning:  include_once(): Failed opening '../models/process_diaplay.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_select.php on line 3
+[12-Jul-2016 13:51:53 UTC] PHP Stack trace:
+[12-Jul-2016 13:51:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 13:51:53 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:153
+[12-Jul-2016 13:51:53 UTC] PHP Fatal error:  Call to undefined function display_select() in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 154
+[12-Jul-2016 13:51:53 UTC] PHP Stack trace:
+[12-Jul-2016 13:51:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 13:53:23 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 161
+[12-Jul-2016 13:53:31 UTC] PHP Warning:  include_once(../models/process_diaplay.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_select.php on line 3
+[12-Jul-2016 13:53:31 UTC] PHP Stack trace:
+[12-Jul-2016 13:53:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 13:53:31 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:153
+[12-Jul-2016 13:53:31 UTC] PHP Warning:  include_once(): Failed opening '../models/process_diaplay.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_select.php on line 3
+[12-Jul-2016 13:53:31 UTC] PHP Stack trace:
+[12-Jul-2016 13:53:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 13:53:31 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:153
+[12-Jul-2016 13:53:31 UTC] PHP Fatal error:  Call to undefined function display_select() in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 161
+[12-Jul-2016 13:53:31 UTC] PHP Stack trace:
+[12-Jul-2016 13:53:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 13:54:56 UTC] PHP Warning:  include_once(../models/process_disaplay.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_select.php on line 3
+[12-Jul-2016 13:54:56 UTC] PHP Stack trace:
+[12-Jul-2016 13:54:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 13:54:56 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:153
+[12-Jul-2016 13:54:56 UTC] PHP Warning:  include_once(): Failed opening '../models/process_disaplay.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_select.php on line 3
+[12-Jul-2016 13:54:56 UTC] PHP Stack trace:
+[12-Jul-2016 13:54:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 13:54:56 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:153
+[12-Jul-2016 13:54:56 UTC] PHP Fatal error:  Call to undefined function display_select() in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 161
+[12-Jul-2016 13:54:56 UTC] PHP Stack trace:
+[12-Jul-2016 13:54:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 13:55:19 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:152) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 4
+[12-Jul-2016 13:55:19 UTC] PHP Stack trace:
+[12-Jul-2016 13:55:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 13:55:19 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:154
+[12-Jul-2016 13:55:19 UTC] PHP   3. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_select.php:3
+[12-Jul-2016 13:55:19 UTC] PHP   4. header() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:4
+[12-Jul-2016 13:55:19 UTC] PHP Fatal error:  Call to undefined function display_select() in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 162
+[12-Jul-2016 13:55:19 UTC] PHP Stack trace:
+[12-Jul-2016 13:55:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 13:55:40 UTC] PHP Fatal error:  Call to undefined function display_select() in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 162
+[12-Jul-2016 13:55:40 UTC] PHP Stack trace:
+[12-Jul-2016 13:55:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[12-Jul-2016 13:56:38 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 162
+[12-Jul-2016 14:07:39 UTC] PHP Fatal error:  Class 'factory' not found in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_select.php on line 6
+[12-Jul-2016 14:07:39 UTC] PHP Stack trace:
+[12-Jul-2016 14:07:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/factory.php:0
+[12-Jul-2016 14:07:39 UTC] PHP   2. factory_select() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/factory.php:254
