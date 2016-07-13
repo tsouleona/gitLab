@@ -40,7 +40,7 @@
     }
     elseif($_FILES['file']['error'] != 4 || $_FILES['file']['error'] == 4){
         
-        move_uploaded_file($_FILES['file']['tmp_name'],'../views/ok_photo/'.$ans.'.'.$ex);
+        move_uploaded_file($_FILES['file']['tmp_name'],'../views/ok_photo/'.$ans.'.'.'jpg');
         
         $display->insert_dis($ans,$data,$date);
         

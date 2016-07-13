@@ -1094,3 +1094,123 @@
 [12-Jul-2016 14:07:39 UTC] PHP Stack trace:
 [12-Jul-2016 14:07:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/factory.php:0
 [12-Jul-2016 14:07:39 UTC] PHP   2. factory_select() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/factory.php:254
+[13-Jul-2016 01:11:17 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 36
+[13-Jul-2016 01:11:17 UTC] PHP Stack trace:
+[13-Jul-2016 01:11:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 01:11:17 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[13-Jul-2016 01:11:17 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:36
+[13-Jul-2016 01:13:10 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 36
+[13-Jul-2016 01:13:10 UTC] PHP Stack trace:
+[13-Jul-2016 01:13:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 01:13:10 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[13-Jul-2016 01:13:10 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:36
+[13-Jul-2016 01:13:14 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 36
+[13-Jul-2016 01:13:14 UTC] PHP Stack trace:
+[13-Jul-2016 01:13:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 01:13:14 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[13-Jul-2016 01:13:14 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:36
+[13-Jul-2016 01:13:58 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 36
+[13-Jul-2016 01:13:58 UTC] PHP Stack trace:
+[13-Jul-2016 01:13:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 01:13:58 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[13-Jul-2016 01:13:58 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:36
+[13-Jul-2016 01:17:13 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 36
+[13-Jul-2016 01:17:13 UTC] PHP Stack trace:
+[13-Jul-2016 01:17:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 01:17:13 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[13-Jul-2016 01:17:13 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:36
+[13-Jul-2016 01:28:16 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 36
+[13-Jul-2016 01:28:16 UTC] PHP Stack trace:
+[13-Jul-2016 01:28:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 01:28:16 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[13-Jul-2016 01:28:16 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:36
+[13-Jul-2016 01:47:36 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 36
+[13-Jul-2016 01:47:36 UTC] PHP Stack trace:
+[13-Jul-2016 01:47:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 01:47:36 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[13-Jul-2016 01:47:36 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:36
+[13-Jul-2016 05:29:04 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 36
+[13-Jul-2016 05:29:04 UTC] PHP Stack trace:
+[13-Jul-2016 05:29:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 05:29:04 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[13-Jul-2016 05:29:04 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:36
+[13-Jul-2016 05:29:04 UTC] PHP Warning:  unlink(ok_photo/201607131jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[13-Jul-2016 05:29:04 UTC] PHP Stack trace:
+[13-Jul-2016 05:29:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 05:29:04 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[13-Jul-2016 05:32:48 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 36
+[13-Jul-2016 05:32:48 UTC] PHP Stack trace:
+[13-Jul-2016 05:32:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 05:32:48 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[13-Jul-2016 05:32:48 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:36
+[13-Jul-2016 05:32:48 UTC] PHP Warning:  unlink('ok_photo/'.201607131.'.jpg'): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[13-Jul-2016 05:32:48 UTC] PHP Stack trace:
+[13-Jul-2016 05:32:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 05:32:48 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[13-Jul-2016 05:34:49 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 36
+[13-Jul-2016 05:34:49 UTC] PHP Stack trace:
+[13-Jul-2016 05:34:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 05:34:49 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[13-Jul-2016 05:34:49 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:36
+[13-Jul-2016 05:34:49 UTC] PHP Warning:  unlink('ok_photo/'201607131'.jpg'): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[13-Jul-2016 05:34:49 UTC] PHP Stack trace:
+[13-Jul-2016 05:34:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 05:34:49 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[13-Jul-2016 05:35:58 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 36
+[13-Jul-2016 05:35:58 UTC] PHP Stack trace:
+[13-Jul-2016 05:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 05:35:58 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[13-Jul-2016 05:35:58 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:36
+[13-Jul-2016 05:35:58 UTC] PHP Warning:  unlink('ok_photo/'201607131'.jpg'): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[13-Jul-2016 05:35:58 UTC] PHP Stack trace:
+[13-Jul-2016 05:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 05:35:58 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[13-Jul-2016 05:36:30 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php on line 36
+[13-Jul-2016 05:36:30 UTC] PHP Stack trace:
+[13-Jul-2016 05:36:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 05:36:30 UTC] PHP   2. display->delete_dis() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:8
+[13-Jul-2016 05:36:30 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/models/process_display.php:36
+[13-Jul-2016 05:36:30 UTC] PHP Warning:  unlink(ok_photo/201607131.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[13-Jul-2016 05:36:30 UTC] PHP Stack trace:
+[13-Jul-2016 05:36:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 05:36:30 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[13-Jul-2016 05:38:16 UTC] PHP Warning:  unlink(ok_photo/201607131.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[13-Jul-2016 05:38:16 UTC] PHP Stack trace:
+[13-Jul-2016 05:38:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 05:38:16 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[13-Jul-2016 05:39:10 UTC] PHP Warning:  unlink(./ok_photo/201607131.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[13-Jul-2016 05:39:10 UTC] PHP Stack trace:
+[13-Jul-2016 05:39:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 05:39:10 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[13-Jul-2016 05:47:49 UTC] PHP Warning:  unlink(ok_photo/201607131.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[13-Jul-2016 05:47:49 UTC] PHP Stack trace:
+[13-Jul-2016 05:47:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 05:47:49 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[13-Jul-2016 06:09:54 UTC] PHP Warning:  unlink(../views/ok_photo/201607011.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[13-Jul-2016 06:09:54 UTC] PHP Stack trace:
+[13-Jul-2016 06:09:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 06:09:54 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[13-Jul-2016 06:10:24 UTC] PHP Warning:  unlink(../views/ok_photo/201607131.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[13-Jul-2016 06:10:24 UTC] PHP Stack trace:
+[13-Jul-2016 06:10:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 06:10:24 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[13-Jul-2016 06:10:27 UTC] PHP Warning:  unlink(../views/ok_photo/201607131.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[13-Jul-2016 06:10:27 UTC] PHP Stack trace:
+[13-Jul-2016 06:10:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 06:10:27 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[13-Jul-2016 06:16:40 UTC] PHP Warning:  unlink(../views/ok_photo/201607131.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[13-Jul-2016 06:16:40 UTC] PHP Stack trace:
+[13-Jul-2016 06:16:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 06:16:40 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[13-Jul-2016 06:16:44 UTC] PHP Warning:  unlink(../views/ok_photo/201607131.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[13-Jul-2016 06:16:44 UTC] PHP Stack trace:
+[13-Jul-2016 06:16:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 06:16:44 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[13-Jul-2016 06:16:47 UTC] PHP Warning:  unlink(../views/ok_photo/201607131.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[13-Jul-2016 06:16:47 UTC] PHP Stack trace:
+[13-Jul-2016 06:16:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 06:16:47 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[13-Jul-2016 06:17:14 UTC] PHP Warning:  unlink(../views/ok_photo/201607131.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[13-Jul-2016 06:17:14 UTC] PHP Stack trace:
+[13-Jul-2016 06:17:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[13-Jul-2016 06:17:14 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9

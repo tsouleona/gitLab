@@ -31,6 +31,9 @@
     <link href="css/creative.css" rel="stylesheet">
     <!-- Jquery-->
     <script src="vendor/jquery/jquery.js"></script>
+    
+    
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -197,7 +200,7 @@
                                             <input style="visibility:hidden" type="text" name="id" value="<?php echo $row2[0];?>"/><!-- 傳輸id-->
                                             <input type="text" class="form-control" name="data" value="<?php echo $row2[1];?>"/>
                                             <h4><strong>上傳檔案&nbsp;</strong><h4/><input id="file" name="file" type="file">
-                                            <p style="color:red"><strong>請使用jpeg、jpg、png檔</strong><p>
+                                            <p style="color:red"><strong>請使用jpeg、jpg、png檔(建議像素設為650*320)</strong><p>
                                         </div>
                                         <div class="modal-footer">
                     
@@ -375,20 +378,18 @@
       </div>
     </div>
     <!-- modal end-->
-
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
+    <script src="vendor/scrollreveal/scrollreveal.js"></script>
+    
+    <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
     <!-- Theme JavaScript -->
-    <script src="js/creative.min.js"></script>
+    <script src="js/creative.js"></script>
+    
+   
 
 </body>
 

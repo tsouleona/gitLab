@@ -22,7 +22,7 @@
     }
     elseif($_FILES['file']['error'] != 4 || $_FILES['file']['error'] == 4){
         
-        move_uploaded_file($_FILES['file']['tmp_name'],'../views/ok_photo/'.$id.'.'.$ex);
+        move_uploaded_file($_FILES['file']['tmp_name'],'../views/ok_photo/'.$id.'.'.'jpg');
         $display->update_dis($data,$id);
         header("Location:../views/display.php");
     }

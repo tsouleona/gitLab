@@ -6,6 +6,7 @@
     $id = $_GET["dis_id"];
     $display = new display();
     $display->delete_dis($id);
+    unlink("../views/ok_photo/$id.jpg");
     
     header("Location:../views/display.php");
 ?>

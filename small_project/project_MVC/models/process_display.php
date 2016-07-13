@@ -32,8 +32,7 @@
         }
         function delete_dis($id){
             $sql="delete from `display` where `display_id` = '".$id."'";
-            $result = mysql_query($sql);
-            $row = mysql_fetch_array($result);
+            mysql_query($sql);
         }
         
     }
