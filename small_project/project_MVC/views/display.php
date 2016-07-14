@@ -180,6 +180,7 @@
                                             
                                         </div>
                                         <div class="project-name">
+                                            <strong><?php echo $row2[2];?></strong><br>
                                             <strong><?php echo $row2[1];?></strong>
                                         </div>
                                     </div>

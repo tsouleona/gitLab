@@ -21,7 +21,7 @@
         //echo '<a href="ok_photo/'.$_FILES['file']['tmp_name'].'">ok_photo/'.$id.'.'.$ex.'</a>';
         echo '<meta http-equiv=REFRESH CONTENT=1;url=display.php>';
     }
-    elseif($_FILES['file']['error'] == 4){
+    elseif($_FILES['file']['error'] != 4 || $_FILES['file']['error'] == 4){
         move_uploaded_file($_FILES['file']['tmp_name'],'ok_photo/'.$id.'.'.$ex);
         
         

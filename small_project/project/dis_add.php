@@ -30,21 +30,21 @@
     //  echo $ex[1];
     $ex = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
     $path = array("jpg","png","jpeg","JPG","PNG","JPEG");
-    if($_FILES['file']['error']>0){
+    if($_FILES['file']['error'] != 4 && $_FILES['file']['error']>0){
         echo '<h1 style="color:#ff94b6">檔案上傳失敗</h1>';
         echo '<meta http-equiv=REFRESH CONTENT=1;url=display.php>';
     }
-    if(!in_array($ex,$path))
+    if(!in_array($ex,$path)&& $_FILES['file']['error'] != 4)
     {
         echo '<h1 style="color:#ff94b6">副檔名不合格</h1>';
         //echo '<a href="ok_photo/'.$_FILES['file']['name'].'">ok_photo/'.$ans.'.'.$ex.'</a>';
         echo '<meta http-equiv=REFRESH CONTENT=1;url=display.php>';
     }
-    else{
-         move_uploaded_file($_FILES['file']['tmp_name'],'ok_photo/'.$ans.'.'.$ex);
-         
-         //echo '<meta http-equiv=REFRESH CONTENT=1;url=display.php>';
+    elseif($_FILES['file']['error'] != 4 || $_FILES['file']['error'] == 4){
         
+        
+        move_uploaded_file($_FILES['file']['tmp_name'],'ok_photo/'.$ans.'.'.$ex);
+         
         $sql2 = "insert into `display` (`display_id`,`display_data`,`display_date`) VALUES ('".$ans."','".$data."','".$date."');";
         mysql_query($sql2);
         header("Location:display.php");

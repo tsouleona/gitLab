@@ -12,7 +12,7 @@
         }
         
         function select_limit($p){
-            $sql2="select `display_id`,`display_data` from `display`  limit ". ($p*9).",9";
+            $sql2="select * from `display`  limit ". ($p*9).",9";
             $result4 = mysql_query($sql2);
             return $result4;
         }
