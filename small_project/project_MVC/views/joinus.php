@@ -32,17 +32,7 @@
     <!-- Jquery-->
     <script src="vendor/jquery/jquery.js"></script>
     
-     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.js"></script>
-    
-    <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/creative.js"></script>
+     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -69,18 +59,20 @@
                 <ul class="nav navbar-nav navbar-right">
 
                     <li>
-                        <a class="page-scroll" href="#contact">聯絡我們</a>
+                        <a class="page-scroll" href="#contact">
+                            <h4><strong>聯絡我們</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="display.php">實績展示</a>
+                        <a class="page-scroll" href="display.php">
+                            <h4><strong>實績展示</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="factory.php">廠商招募</a>
+                        <a class="page-scroll" href="factory.php">
+                            <h4><strong>廠商招募</strong></h4></a>
                     </li>
                     <li>
                         <a class="page-scroll" href="joinus.php">
-                            <font color="#ffbed3">加入我們</font>
-                        </a>
+                            <font color="#01aae8"><h4><strong>加入我們</strong></h4></a></font>
                     </li>
 <!--------------------------------------------登錄判斷------------------------------------------------------------------------>
                     <?php 
@@ -234,10 +226,15 @@
     <?php } ?>
     <?php 
         include_once("../controllers/joinus_select.php");
-        $result2 = joinus_select();
+        include_once("../controllers/joinus_page.php");
+        $p = $_GET['p'];
         
-        if( $id==$row[0] && $id!=NULL) { 
+        $page = new joinus_page();
+        $result2 = $page->page($p);
+        $pagecount = $page->page_count();
         
+        
+        if( $id==$row[0] && $id!=NULL) {
     ?>
     <section >
         
@@ -245,50 +242,69 @@
             <div class="row">
                 <div class="col-lg-1"></div>
                 <div class="col-lg-10  text-center">
-                    <table class="table table-hover">
-                        <thead>
-                            <td align="center">
-                                <h4><strong><span class="glyphicon glyphicon-bell" aria-hidden="true"></span>&nbsp;時間</strong></h4>
-                            </td>
-                            <td align="center">
-                                <h4><strong><font color="#ff94b6"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;您的姓名</font></strong></h4>
-                            </td>
-                            <td align="center">
-                                <h4><strong><font color="#ff94b6"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;連絡電話</font></strong></h4>
-                            </td>
-                            <td align="center">
-                                <h4><strong><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;電子郵件</strong></h4>
-                            </td>
-                            <td align="center">
-                                <h4><strong><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;刪除</strong></h4>
-                            </td>
-                        </thead>
-                        <?php while($row2 = mysql_fetch_assoc($result2)){ ?>
-                        <tr>
-                            <td align="center">
-                                <h4><?php echo $row2['join_date'];?></h4>
-                            </td>
-                            <td align="center">
-                                <h4 type="text" name="name"><?php echo $row2['join_name'];?></h4>
-                            </td>
-                        
-                        
-                            <td align="center">
-                                <h4 type="text" name="email"><?php echo $row2["join_cellphone"];?></h4>
-                            </td>
-                        
-                        
-                            <td align="center">
-                                <h4 type="text" name="cellphone"><?php echo $row2["join_email"];?></h4>
-                            </td>
-                            
-                            <td align="center">
-                                <button class="btn btn-primary" type="button" id="del" name="del"><a style="color:white" href="../controllers/joinus_delete.php?jo_id=<?php echo $row2['join_id'];?>">刪除</a></button>
-                            </td>
-                        </tr>
-                    <?php }?>    
-                    </table>
+                    <?php
+                    $result4 = $page->page($p);
                     
+                    $row4 = mysql_fetch_assoc($result4);
+                    if(empty($row4)){?>
+                    <h3 style="color:#ff94b6"><strong>目前沒有資料</strong></h3>
+                    <?php }?>
+                    <?php if(!empty($row4)){?>
+                        <table class="table table-hover">
+                            <thead>
+                                <td align="center">
+                                    <h4><strong><span class="glyphicon glyphicon-bell" aria-hidden="true"></span>&nbsp;時間</strong></h4>
+                                </td>
+                                <td align="center">
+                                    <h4><strong><font color="#ff94b6"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;您的姓名</font></strong></h4>
+                                </td>
+                                <td align="center">
+                                    <h4><strong><font color="#ff94b6"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;連絡電話</font></strong></h4>
+                                </td>
+                                <td align="center">
+                                    <h4><strong><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;電子郵件</strong></h4>
+                                </td>
+                                <td align="center">
+                                    <h4><strong><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;刪除</strong></h4>
+                                </td>
+                            </thead>
+                            <?php while($row2 = mysql_fetch_array($result2)){ ?>
+                            <tr>
+                                <td align="center">
+                                    <h4><?php echo $row2[0];?></h4>
+                                </td>
+                                <td align="center">
+                                    <h4 type="text" name="name"><?php echo $row2[1];?></h4>
+                                </td>
+                            
+                            
+                                <td align="center">
+                                    <h4 type="text" name="email"><?php echo $row2[3];?></h4>
+                                </td>
+                            
+                            
+                                <td align="center">
+                                    <h4 type="text" name="cellphone"><?php echo $row2[2];?></h4>
+                                </td>
+                                
+                                <td align="center">
+                                    <button class="btn btn-warning" type="button" id="del" name="del"><a style="color:white" href="../controllers/joinus_delete.php?jo_id=<?php echo $row2['join_id'];?>">刪除</a></button>
+                                </td>
+                            </tr>
+                        <?php }?>    
+                        </table>
+                        <br>
+                                
+                            <div>
+                            <?php for($i = 0;$i < $pagecount;$i++){?>
+                                
+                                <button class="btn btn-danger btn-xl"><a style="color:white" href="?p=<?php echo $i;?>"><?php echo $i + 1;?></a></button></li>
+                                    
+                                
+                            <?php }?>
+                            </div>
+                            <br>
+                    <?php }?>
                 </div>
             </div>
         </div>
@@ -403,7 +419,17 @@
                 </script>
       </div>
     </div>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
 
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.js"></script>
+    
+    <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.js"></script>
 
 </body>
 

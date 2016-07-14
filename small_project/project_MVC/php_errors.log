@@ -1214,3 +1214,160 @@
 [13-Jul-2016 06:17:14 UTC] PHP Stack trace:
 [13-Jul-2016 06:17:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
 [13-Jul-2016 06:17:14 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[13-Jul-2016 08:10:03 UTC] PHP Fatal error:  Class 'join' not found in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php on line 7
+[13-Jul-2016 08:10:03 UTC] PHP Stack trace:
+[13-Jul-2016 08:10:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_delete.php:0
+[13-Jul-2016 08:43:07 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/myProject/Test/check_loginTest.php on line 5
+[13-Jul-2016 08:43:07 UTC] PHP Stack trace:
+[13-Jul-2016 08:43:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/phpunit:0
+[13-Jul-2016 08:43:07 UTC] PHP   2. PHPUnit_TextUI_Command::main() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/phpunit:36
+[13-Jul-2016 08:43:07 UTC] PHP   3. PHPUnit_TextUI_Command->run() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/TextUI/Command.php:99
+[13-Jul-2016 08:43:07 UTC] PHP   4. PHPUnit_TextUI_Command->handleArguments() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/TextUI/Command.php:109
+[13-Jul-2016 08:43:07 UTC] PHP   5. PHPUnit_Util_Configuration->getTestSuiteConfiguration() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/TextUI/Command.php:622
+[13-Jul-2016 08:43:07 UTC] PHP   6. PHPUnit_Util_Configuration->getTestSuite() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/Util/Configuration.php:853
+[13-Jul-2016 08:43:07 UTC] PHP   7. PHPUnit_Framework_TestSuite->addTestFiles() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/Util/Configuration.php:940
+[13-Jul-2016 08:43:07 UTC] PHP   8. PHPUnit_Framework_TestSuite->addTestFile() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/Framework/TestSuite.php:406
+[13-Jul-2016 08:43:07 UTC] PHP   9. PHPUnit_Util_Fileloader::checkAndLoad() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/Framework/TestSuite.php:334
+[13-Jul-2016 08:43:07 UTC] PHP  10. PHPUnit_Util_Fileloader::load() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/Util/Fileloader.php:36
+[13-Jul-2016 08:46:49 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/myProject/Test/check_loginTest.php on line 6
+[13-Jul-2016 08:46:49 UTC] PHP Stack trace:
+[13-Jul-2016 08:46:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/phpunit:0
+[13-Jul-2016 08:46:49 UTC] PHP   2. PHPUnit_TextUI_Command::main() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/phpunit:36
+[13-Jul-2016 08:46:49 UTC] PHP   3. PHPUnit_TextUI_Command->run() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/TextUI/Command.php:99
+[13-Jul-2016 08:46:49 UTC] PHP   4. PHPUnit_TextUI_Command->handleArguments() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/TextUI/Command.php:109
+[13-Jul-2016 08:46:49 UTC] PHP   5. PHPUnit_Util_Configuration->getTestSuiteConfiguration() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/TextUI/Command.php:622
+[13-Jul-2016 08:46:49 UTC] PHP   6. PHPUnit_Util_Configuration->getTestSuite() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/Util/Configuration.php:853
+[13-Jul-2016 08:46:49 UTC] PHP   7. PHPUnit_Framework_TestSuite->addTestFiles() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/Util/Configuration.php:940
+[13-Jul-2016 08:46:49 UTC] PHP   8. PHPUnit_Framework_TestSuite->addTestFile() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/Framework/TestSuite.php:406
+[13-Jul-2016 08:46:49 UTC] PHP   9. PHPUnit_Util_Fileloader::checkAndLoad() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/Framework/TestSuite.php:334
+[13-Jul-2016 08:46:49 UTC] PHP  10. PHPUnit_Util_Fileloader::load() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/Util/Fileloader.php:36
+[13-Jul-2016 08:52:25 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement in the script in /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/myProject/Test/check_loginTest.php on line 5
+[13-Jul-2016 08:52:25 UTC] PHP Stack trace:
+[13-Jul-2016 08:52:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/phpunit:0
+[13-Jul-2016 08:52:25 UTC] PHP   2. PHPUnit_TextUI_Command::main() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/phpunit:36
+[13-Jul-2016 08:52:25 UTC] PHP   3. PHPUnit_TextUI_Command->run() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/TextUI/Command.php:99
+[13-Jul-2016 08:52:25 UTC] PHP   4. PHPUnit_TextUI_Command->handleArguments() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/TextUI/Command.php:109
+[13-Jul-2016 08:52:25 UTC] PHP   5. PHPUnit_Util_Configuration->getTestSuiteConfiguration() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/TextUI/Command.php:622
+[13-Jul-2016 08:52:25 UTC] PHP   6. PHPUnit_Util_Configuration->getTestSuite() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/Util/Configuration.php:853
+[13-Jul-2016 08:52:25 UTC] PHP   7. PHPUnit_Framework_TestSuite->addTestFiles() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/Util/Configuration.php:940
+[13-Jul-2016 08:52:25 UTC] PHP   8. PHPUnit_Framework_TestSuite->addTestFile() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/Framework/TestSuite.php:406
+[13-Jul-2016 08:52:25 UTC] PHP   9. PHPUnit_Util_Fileloader::checkAndLoad() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/Framework/TestSuite.php:334
+[13-Jul-2016 08:52:25 UTC] PHP  10. PHPUnit_Util_Fileloader::load() /home/ubuntu/workspace/gitlab/small_project/project_MVC/Lab_unitTest/vendor/phpunit/phpunit/src/Util/Fileloader.php:36
+[14-Jul-2016 03:15:39 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 165
+[14-Jul-2016 03:15:39 UTC] PHP Stack trace:
+[14-Jul-2016 03:15:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:15:39 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:165
+[14-Jul-2016 03:28:39 UTC] PHP Fatal error:  Call to a member function select_limit() on a non-object in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_page.php on line 18
+[14-Jul-2016 03:28:39 UTC] PHP Stack trace:
+[14-Jul-2016 03:28:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:28:39 UTC] PHP   2. display_page->display_page() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:157
+[14-Jul-2016 03:29:20 UTC] PHP Fatal error:  Call to a member function select_limit() on a non-object in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_page.php on line 18
+[14-Jul-2016 03:29:20 UTC] PHP Stack trace:
+[14-Jul-2016 03:29:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:29:20 UTC] PHP   2. display_page->page() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:158
+[14-Jul-2016 03:35:16 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 167
+[14-Jul-2016 03:35:16 UTC] PHP Stack trace:
+[14-Jul-2016 03:35:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:35:16 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:167
+[14-Jul-2016 03:38:30 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 167
+[14-Jul-2016 03:38:30 UTC] PHP Stack trace:
+[14-Jul-2016 03:38:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:38:30 UTC] PHP   2. mysql_fetch_row(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:167
+[14-Jul-2016 03:38:30 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 167
+[14-Jul-2016 03:38:30 UTC] PHP Stack trace:
+[14-Jul-2016 03:38:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:38:30 UTC] PHP   2. mysql_fetch_row(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:167
+[14-Jul-2016 03:40:03 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 167
+[14-Jul-2016 03:40:03 UTC] PHP Stack trace:
+[14-Jul-2016 03:40:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:40:03 UTC] PHP   2. mysql_fetch_row(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:167
+[14-Jul-2016 03:40:31 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 167
+[14-Jul-2016 03:40:31 UTC] PHP Stack trace:
+[14-Jul-2016 03:40:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:40:31 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:167
+[14-Jul-2016 03:41:59 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 171
+[14-Jul-2016 03:41:59 UTC] PHP Stack trace:
+[14-Jul-2016 03:41:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:41:59 UTC] PHP   2. mysql_fetch_row() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:171
+[14-Jul-2016 03:44:40 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 171
+[14-Jul-2016 03:44:40 UTC] PHP Stack trace:
+[14-Jul-2016 03:44:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:44:40 UTC] PHP   2. mysql_fetch_row(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:171
+[14-Jul-2016 03:44:40 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 171
+[14-Jul-2016 03:44:40 UTC] PHP Stack trace:
+[14-Jul-2016 03:44:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:44:40 UTC] PHP   2. mysql_fetch_row(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:171
+[14-Jul-2016 03:46:45 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 171
+[14-Jul-2016 03:46:45 UTC] PHP Stack trace:
+[14-Jul-2016 03:46:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:46:45 UTC] PHP   2. mysql_fetch_row(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:171
+[14-Jul-2016 03:46:45 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 171
+[14-Jul-2016 03:46:45 UTC] PHP Stack trace:
+[14-Jul-2016 03:46:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:46:45 UTC] PHP   2. mysql_fetch_row(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:171
+[14-Jul-2016 03:48:10 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 171
+[14-Jul-2016 03:48:10 UTC] PHP Stack trace:
+[14-Jul-2016 03:48:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:48:10 UTC] PHP   2. mysql_fetch_row(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:171
+[14-Jul-2016 03:48:10 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 171
+[14-Jul-2016 03:48:10 UTC] PHP Stack trace:
+[14-Jul-2016 03:48:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:48:10 UTC] PHP   2. mysql_fetch_row(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:171
+[14-Jul-2016 03:49:37 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 171
+[14-Jul-2016 03:49:37 UTC] PHP Stack trace:
+[14-Jul-2016 03:49:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:49:37 UTC] PHP   2. mysql_fetch_row(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:171
+[14-Jul-2016 03:49:37 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 171
+[14-Jul-2016 03:49:37 UTC] PHP Stack trace:
+[14-Jul-2016 03:49:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:49:37 UTC] PHP   2. mysql_fetch_row(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:171
+[14-Jul-2016 03:50:14 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 171
+[14-Jul-2016 03:50:14 UTC] PHP Stack trace:
+[14-Jul-2016 03:50:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:50:14 UTC] PHP   2. mysql_fetch_row(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:171
+[14-Jul-2016 03:50:14 UTC] PHP Warning:  mysql_fetch_row() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php on line 171
+[14-Jul-2016 03:50:14 UTC] PHP Stack trace:
+[14-Jul-2016 03:50:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[14-Jul-2016 03:50:14 UTC] PHP   2. mysql_fetch_row(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:171
+[14-Jul-2016 04:57:17 UTC] PHP Fatal error:  Class 'display_page' not found in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/factory.php on line 257
+[14-Jul-2016 04:57:17 UTC] PHP Stack trace:
+[14-Jul-2016 04:57:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/factory.php:0
+[14-Jul-2016 04:58:36 UTC] PHP Fatal error:  Class 'factroy_page' not found in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/factory.php on line 257
+[14-Jul-2016 04:58:36 UTC] PHP Stack trace:
+[14-Jul-2016 04:58:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/factory.php:0
+[14-Jul-2016 05:07:37 UTC] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php on line 269
+[14-Jul-2016 05:07:37 UTC] PHP Stack trace:
+[14-Jul-2016 05:07:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:0
+[14-Jul-2016 05:07:37 UTC] PHP   2. mysql_fetch_assoc() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:269
+[14-Jul-2016 05:08:04 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php on line 269
+[14-Jul-2016 05:08:04 UTC] PHP Stack trace:
+[14-Jul-2016 05:08:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:0
+[14-Jul-2016 05:08:04 UTC] PHP   2. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:269
+[14-Jul-2016 05:08:58 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php on line 269
+[14-Jul-2016 05:08:58 UTC] PHP Stack trace:
+[14-Jul-2016 05:08:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:0
+[14-Jul-2016 05:08:58 UTC] PHP   2. mysql_fetch_array() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:269
+[14-Jul-2016 05:13:04 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php on line 269
+[14-Jul-2016 05:13:04 UTC] PHP Stack trace:
+[14-Jul-2016 05:13:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:0
+[14-Jul-2016 05:13:04 UTC] PHP   2. mysql_fetch_array(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:269
+[14-Jul-2016 05:13:04 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php on line 269
+[14-Jul-2016 05:13:04 UTC] PHP Stack trace:
+[14-Jul-2016 05:13:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:0
+[14-Jul-2016 05:13:04 UTC] PHP   2. mysql_fetch_array(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:269
+[14-Jul-2016 05:13:47 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php on line 269
+[14-Jul-2016 05:13:47 UTC] PHP Stack trace:
+[14-Jul-2016 05:13:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:0
+[14-Jul-2016 05:13:47 UTC] PHP   2. mysql_fetch_array(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:269
+[14-Jul-2016 05:13:47 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php on line 269
+[14-Jul-2016 05:13:47 UTC] PHP Stack trace:
+[14-Jul-2016 05:13:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:0
+[14-Jul-2016 05:13:47 UTC] PHP   2. mysql_fetch_array(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:269
+[14-Jul-2016 05:15:30 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php on line 269
+[14-Jul-2016 05:15:30 UTC] PHP Stack trace:
+[14-Jul-2016 05:15:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:0
+[14-Jul-2016 05:15:30 UTC] PHP   2. mysql_fetch_array(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:269
+[14-Jul-2016 05:15:30 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php on line 269
+[14-Jul-2016 05:15:30 UTC] PHP Stack trace:
+[14-Jul-2016 05:15:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:0
+[14-Jul-2016 05:15:30 UTC] PHP   2. mysql_fetch_array(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:269

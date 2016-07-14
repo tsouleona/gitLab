@@ -60,16 +60,20 @@
                 <ul class="nav navbar-nav navbar-right">
 
                     <li>
-                        <a class="page-scroll" href="#contact">聯絡我們</a>
+                        <a class="page-scroll" href="#contact">
+                            <h4><strong>聯絡我們</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="display.php">實績展示</a>
+                        <a class="page-scroll" href="display.php">
+                            <h4><strong>實績展示</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="factory.php">廠商招募</a>
+                        <a class="page-scroll" href="factory.php">
+                            <h4><strong>廠商招募</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="joinus.php">加入我們</a>
+                        <a class="page-scroll" href="joinus.php">
+                            <h4><strong>加入我們</strong></h4></a>
                     </li>
 <!--------------------------------------------登錄判斷------------------------------------------------------------------------>
                     <?php 

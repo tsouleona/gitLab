@@ -60,18 +60,21 @@
                 <ul class="nav navbar-nav navbar-right">
 
                     <li>
-                        <a class="page-scroll" href="#contact">聯絡我們</a>
+                        <a class="page-scroll" href="#contact">
+                            <h4><strong>聯絡我們</strong></h4></a>
                     </li>
                     <li>
                         <a class="page-scroll" href="display.php">
-                            <font color="#ffbed3">實績展示</font>
+                            <font color="#01aae8"><h4><strong>實績展示</strong></h4></a></font>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="factory.php">
+                            <h4><strong>廠商招募</strong></h4>
                         </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="factory.php">廠商招募</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="joinus.php">加入我們</a>
+                        <a class="page-scroll" href="joinus.php">
+                            <h4><strong>加入我們</strong></h4></a>
                     </li>
 <!--------------------------------------------登錄判斷------------------------------------------------------------------------>
                     <?php
@@ -153,9 +156,12 @@
     
 <!--------------------------------------------實績展示(顯示)------------------------------------------------------------------------>    
     <?php 
-    
-        include_once("../controllers/display_select.php");
-        $result2 = display_select();
+        include_once("../controllers/display_page.php");
+        $p = $_GET['p'];
+        
+        $page = new display_page();
+        $result2 = $page->page($p);
+        $pagecount = $page->page_count();
     ?>
     
     <section class="no-padding" id="portfolio">
@@ -179,12 +185,15 @@
                                     </div>
                                 </div>
                             </a>
+                            
 <!--------------------------------------------管理員畫面[實績展示(編輯)]------------------------------------------------------------------------>    
                              <?php 
                                 if( $id==$row[0] &&  $id!=NULL ) { 
                             ?>
-                                <button class="btn btn-primary btn-xl" data-toggle="modal" data-target="#change<?php echo $row2[0];?>">編輯</button>
-                                <button class="btn btn-primary btn-xl"><a style="color:white" href="../controllers/display_delete.php?dis_id=<?php echo $row2[0];?>">刪除</a></button>
+                                <div class="row" align="center">
+                                <button class="btn btn-warning btn-xl" data-toggle="modal" data-target="#change<?php echo $row2[0];?>">編輯</button>
+                                <button class="btn btn-warning btn-xl"><a style="color:white" href="../controllers/display_delete.php?dis_id=<?php echo $row2[0];?>">刪除</a></button>
+                                </div>
                             <?php }?>    
                         </div>
                         <div class="modal fade" id="change<?php echo $row2[0];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -218,13 +227,23 @@
                         </div>
                 <?php  } ?>
             </div>
+            <br>
             
+            <div class="row" align="center">
+            <?php for($i = 0;$i < $pagecount;$i++){?>
+                
+                <button class="btn btn-danger btn-xl"><a style="color:white" href="?p=<?php echo $i;?>">第<?php echo $i + 1;?>頁</a></button></li>
+                    
+                
+            <?php }?>
+            </div>
+            <br>
 <!--------------------------------------------管理員畫面[實績展示(新增)]------------------------------------------------------------------------>    
             <?php 
                     if( $id==$row[0] &&  $id!=NULL ) { 
                 ?>    
-                    <div class="col-lg-6 col-sm-6"></div>
-                    <div class="col-lg-1 col-sm-6" >
+                    
+                    <div class="row" align="center">
                         <button class="btn btn-success btn-xl" data-toggle="modal" data-target="#add">新增專案</button>
                     </div>
                     <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

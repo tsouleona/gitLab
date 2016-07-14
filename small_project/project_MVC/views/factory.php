@@ -31,17 +31,7 @@
     <link href="css/creative.css" rel="stylesheet">
     <!-- Jquery-->
     <script src="vendor/jquery/jquery.js"></script>
-     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.js"></script>
     
-    <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/creative.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -61,7 +51,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.php">沅淯駿營造有限公司</a>
+                <a class="navbar-brand page-scroll" href="index.php"></h4>沅淯駿營造有限公司</h4></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -69,18 +59,18 @@
                 <ul class="nav navbar-nav navbar-right">
 
                     <li>
-                        <a class="page-scroll" href="#contact">聯絡我們</a>
+                        <a class="page-scroll" href="#contact"><h4><strong>聯絡我們</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="display.php">實績展示</a>
+                        <a class="page-scroll" href="display.php"><h4><strong>實績展示</strong></h4></a>
                     </li>
                     <li>
                         <a class="page-scroll" href="factory.php">
-                            <font color="#ffbed3">廠商招募</font>
+                            <font color="#01aae8"><h4><strong>廠商招募</strong></h4></font>
                         </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="joinus.php">加入我們</a>
+                        <a class="page-scroll" href="joinus.php"><h4><strong>加入我們</strong></h4></a>
                     </li>
 <!--------------------------------------------登錄判斷------------------------------------------------------------------------>
                     <?php 
@@ -261,8 +251,13 @@
 <!--------------------------------------------管理員畫面[廠商招募(顯示並且可以刪除)]------------------------------------------------------------------------>    
     <?php
     include_once("../controllers/factory_select.php");
-
-    $result2 = factory_select();
+    include_once("../controllers/factory_page.php");
+    $p = $_GET['p'];
+        
+        $page = new factory_page();
+        $result2 = $page->page($p);
+        $pagecount = $page->page_count();
+    
     
     if( $id==$row[0] && $id!=NULL ) { 
     ?>
@@ -271,6 +266,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12  text-center" border="1">
+                        <?php 
+                        $result4 = $page->page($p);
+                        $row4 = mysql_fetch_array($result4);
+                        if(empty($row4)){ ?>
+                            <h3 style="color:#ff94b6"><strong>目前沒有資料</strong></h3>
+                        <?php }?>
+                        <?php 
+                            if(!empty($row4)){?>
+                            
                             <table class="table table-hover">
                                 <thead>
                                     <td align="center">
@@ -293,14 +297,17 @@
                                     </td>
                                     
                                 </thead>
-                                <?php while($row2 = mysql_fetch_assoc($result2)){ ?>
+                                
+                                <?php 
+                            
+                                while($row2 = mysql_fetch_assoc($result2)){ ?>
                                     <tr>
                                         <td align="center">
                                            <h4><?php echo $row2['fac_date'];?></h4>
                                         </td>
                                     
                                         <td align="center">
-                                           <button class="btn btn-success" data-toggle="modal" data-target="#look<?php echo $row2['fac_id'];?>"><?php echo $row2['fac_name'];?></button>
+                                           <button class="btn btn-info" data-toggle="modal" data-target="#look<?php echo $row2['fac_id'];?>"><?php echo $row2['fac_name'];?></button>
                                         </td>
                                     
                                         <td align="center">
@@ -313,12 +320,23 @@
                                             <h4><?php echo $row2['fac_phone'];?></h4>
                                         </td>
                                         <td align="center">
-                                            <button class="btn btn-primary " type="button" id="del" name="del"><a style="color:white" href="../controllers/factory_delete.php?fa_id=<?php echo $row2['fac_id'];?>">刪除</a></button>
+                                            <button class="btn btn-warning " type="button" id="del" name="del"><a style="color:white" href="../controllers/factory_delete.php?fa_id=<?php echo $row2['fac_id'];?>">刪除</a></button>
                                             
                                         </td>
                                     </tr>
                                 <?php }?>
                                 </table>
+                                <br>
+                                
+                                <div>
+                                <?php for($i = 0;$i < $pagecount;$i++){?>
+                                    
+                                    <button class="btn btn-danger btn-xl"><a style="color:white" href="?p=<?php echo $i;?>"><?php echo $i + 1;?></a></button></li>
+                                        
+                                    
+                                <?php }?>
+                                </div>
+                                <br>
                                 
 <!--------------------------------------------管理員畫面[廠商招募(顯示細節 model)]------------------------------------------------------------------------>    
                                 <?php
@@ -371,11 +389,13 @@
                                         </div>
                                     </div>
                                 </div>   
-                            <?php }?> <!--model end-->
+                            <?php }?><!--model end-->
+                        <?php }?>
                             
                     </div>
                 </div>
             </div>
+            
             
         </section>
 
@@ -489,7 +509,17 @@
                 </script>
       </div>
     </div>
+     <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.js"></script>
     
+    <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.js"></script>
     
     
 

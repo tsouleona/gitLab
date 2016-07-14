@@ -18,9 +18,10 @@
             
             return $row;
         }
+        
         function login_out(){
             unset($_SESSION["username"]);
-            
+            session_destroy();
         }
     }
     

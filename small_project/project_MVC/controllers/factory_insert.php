@@ -31,25 +31,26 @@
     }
     
     $factory = new factory();
-    //存取當天日期
+    
     $date = date("Y-m-d");
     $date2 = date("Ymd");
-    //echo $date;
     //factory的id處理
-    $factory->select_like($date2);
+    $result = $factory->select_like($date2);
+    $row = mysql_fetch_array($result);
     $one="1";
-    if($row["fac_id"] == NULL)
+    if($row[0] == NULL)
     {
         $ans = $date2.$one;
+        
     }
     else{
-        $factory->select_desc();
+        $result2 = $factory->select_desc();
+        $row2 = mysql_fetch_array($result2);
+        $ans = substr($row2[0],8);
         
-        $ans = substr($row2['fac_id'],8);
         $ans = (int)($ans) + 1;
         $ans = $date2.$ans;
     }
-    
     $factory->insert_fa($ans,$name,$people,$phone,$address,$url,$email,$cellphone,$tax,$data,$date);
     
     header("Location:../views/factory.php");

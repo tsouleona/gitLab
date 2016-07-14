@@ -18,16 +18,18 @@
     $date2 = date("Ymd");
     //echo $date;
     //factory的id處理
-    $joinus->select_like($date2);
+    $joinus = new joinus();
+    $result = $joinus->select_like($date2);
+    $row = mysql_fetch_array($result);
     $one="1";
-    if($row["join_id"] == NULL)
+    if($row[0] == NULL)
     {
         $ans = $date2.$one;
     }
     else{
-        $joinus->select_desc();
-        
-        $ans = substr($row2['join_id'],8);
+        $result2 = $joinus->select_desc();
+        $row2 = mysql_fetch_array($result2);
+        $ans = substr($row2[0],8);
         $ans = (int)($ans) + 1;
         $ans = $date2.$ans;
     }
