@@ -18,12 +18,14 @@
         }
         
         function update_dis($data,$id){
-            $sql = "UPDATE `display` SET `display_data`='".$data."' where `display_id`='".$id."';";
+            $sql = "UPDATE `display` SET `display_data`='".$data."' 
+            where `display_id`='".$id."';";
             mysql_query($sql);
         }
         
         function insert_dis($ans,$data,$date){
-            $sql2 = "insert into `display` (`display_id`,`display_data`,`display_date`) VALUES ('".$ans."','".$data."','".$date."');";
+            $sql2 = "insert into `display` (`display_id`,`display_data`,`display_date`) 
+            VALUES ('".$ans."','".$data."','".$date."');";
             mysql_query($sql2);
         }
         

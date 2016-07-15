@@ -23,14 +23,12 @@
         }
         function contact($address,$phone,$tax,$email){
         
-            $sql  = "UPDATE `contact` SET `con_address`= '".$address."';";
+            $sql  = "UPDATE `contact` SET `con_address`= '".$address."',
+            `con_phone`= '".$phone."',
+            `con_tax`= '".$tax."',
+            `con_email`= '".$email."';";
             mysql_query($sql);
-            $sql2 = "UPDATE `contact` SET `con_phone`= '".$phone."';";
-            mysql_query($sql2);
-            $sql3 = "UPDATE `contact` SET `con_tax`= '".$tax."';";
-            mysql_query($sql3);
-            $sql4 = "UPDATE `contact` SET `con_email`= '".$email."';";
-            mysql_query($sql4);
+            
         }
     }
         

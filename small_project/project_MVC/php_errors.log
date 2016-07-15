@@ -1371,3 +1371,67 @@
 [14-Jul-2016 05:15:30 UTC] PHP Stack trace:
 [14-Jul-2016 05:15:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:0
 [14-Jul-2016 05:15:30 UTC] PHP   2. mysql_fetch_array(*uninitialized*) /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:269
+[15-Jul-2016 06:50:04 UTC] PHP Warning:  imagecreatefromjpeg(): Filename cannot be empty in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 44
+[15-Jul-2016 06:50:04 UTC] PHP Stack trace:
+[15-Jul-2016 06:50:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[15-Jul-2016 06:50:04 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:44
+[15-Jul-2016 06:50:04 UTC] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 47
+[15-Jul-2016 06:50:04 UTC] PHP Stack trace:
+[15-Jul-2016 06:50:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[15-Jul-2016 06:50:04 UTC] PHP   2. imagesx() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:47
+[15-Jul-2016 06:50:04 UTC] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 50
+[15-Jul-2016 06:50:04 UTC] PHP Stack trace:
+[15-Jul-2016 06:50:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[15-Jul-2016 06:50:04 UTC] PHP   2. imagesy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:50
+[15-Jul-2016 06:50:04 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 69
+[15-Jul-2016 06:50:04 UTC] PHP Stack trace:
+[15-Jul-2016 06:50:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[15-Jul-2016 06:50:04 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:69
+[15-Jul-2016 06:50:04 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 72
+[15-Jul-2016 06:50:04 UTC] PHP Stack trace:
+[15-Jul-2016 06:50:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[15-Jul-2016 06:50:04 UTC] PHP   2. imagecopy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:72
+[15-Jul-2016 06:50:04 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 75
+[15-Jul-2016 06:50:04 UTC] PHP Stack trace:
+[15-Jul-2016 06:50:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[15-Jul-2016 06:50:04 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:75
+[15-Jul-2016 06:50:04 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 78
+[15-Jul-2016 06:50:04 UTC] PHP Stack trace:
+[15-Jul-2016 06:50:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[15-Jul-2016 06:50:04 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:78
+[15-Jul-2016 06:50:04 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 81
+[15-Jul-2016 06:50:04 UTC] PHP Stack trace:
+[15-Jul-2016 06:50:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[15-Jul-2016 06:50:04 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:81
+[15-Jul-2016 06:50:38 UTC] PHP Warning:  unlink(../views/ok_photo/201607152.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[15-Jul-2016 06:50:38 UTC] PHP Stack trace:
+[15-Jul-2016 06:50:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[15-Jul-2016 06:50:38 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[15-Jul-2016 06:50:43 UTC] PHP Warning:  unlink(../views/ok_photo/201607151.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[15-Jul-2016 06:50:43 UTC] PHP Stack trace:
+[15-Jul-2016 06:50:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[15-Jul-2016 06:50:43 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[15-Jul-2016 06:51:11 UTC] PHP Warning:  imagejpeg(): Unable to open 'ok_photo/201607151.' for writing: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 81
+[15-Jul-2016 06:51:11 UTC] PHP Stack trace:
+[15-Jul-2016 06:51:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[15-Jul-2016 06:51:11 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:81
+[15-Jul-2016 06:54:48 UTC] PHP Warning:  unlink(../views/ok_photo/201607151.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[15-Jul-2016 06:54:48 UTC] PHP Stack trace:
+[15-Jul-2016 06:54:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[15-Jul-2016 06:54:48 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[15-Jul-2016 06:55:04 UTC] PHP Warning:  imagejpeg(): Unable to open 'ok_photo/201607151.jpg' for writing: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 81
+[15-Jul-2016 06:55:04 UTC] PHP Stack trace:
+[15-Jul-2016 06:55:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[15-Jul-2016 06:55:04 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:81
+[15-Jul-2016 07:02:18 UTC] PHP Warning:  imagejpeg(): Unable to open 'ok_photo/201607152..' for writing: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 81
+[15-Jul-2016 07:02:18 UTC] PHP Stack trace:
+[15-Jul-2016 07:02:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[15-Jul-2016 07:02:18 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:81
+[15-Jul-2016 07:03:43 UTC] PHP Warning:  unlink(../views/ok_photo/201607152.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[15-Jul-2016 07:03:43 UTC] PHP Stack trace:
+[15-Jul-2016 07:03:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[15-Jul-2016 07:03:43 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9
+[15-Jul-2016 07:03:47 UTC] PHP Warning:  unlink(../views/ok_photo/201607151.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 9
+[15-Jul-2016 07:03:47 UTC] PHP Stack trace:
+[15-Jul-2016 07:03:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[15-Jul-2016 07:03:47 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:9

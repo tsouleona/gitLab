@@ -271,7 +271,7 @@
                             <?php while($row2 = mysql_fetch_array($result2)){ ?>
                             <tr>
                                 <td align="center">
-                                    <h4><?php echo $row2[0];?></h4>
+                                    <h4><?php echo $row2[4];?></h4>
                                 </td>
                                 <td align="center">
                                     <h4 type="text" name="name"><?php echo $row2[1];?></h4>

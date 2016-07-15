@@ -13,16 +13,41 @@
     if($_FILES['file']['error'] != 4 && $_FILES['file']['error'] > 0)
     {
         echo '<h1 style="color:#ff94b6">檔案上傳失敗</h1>';
-        echo '<meta http-equiv=REFRESH CONTENT=1;url=display.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=1;url=../views/display.php>';
     }
     if(!in_array($ex,$path) && $_FILES['file']['error'] != 4)
     {
         echo '<h1 style="color:#ff94b6">副檔名不合格</h1>' ;
-        echo '<meta http-equiv=REFRESH CONTENT=1;url=display.php>';
+        echo '<meta http-equiv=REFRESH CONTENT=1;url=../views/display.php>';
     }
     elseif($_FILES['file']['error'] != 4 || $_FILES['file']['error'] == 4){
+        // 取得上傳的圖片
+        $src = imagecreatefromjpeg($_FILES['file']['tmp_name']);
         
-        move_uploaded_file($_FILES['file']['tmp_name'],'../views/ok_photo/'.$id.'.'.'jpg');
+        // 取得圖片的寬
+        $src_w = imagesx($src);
+        
+        // 取得圖片的長
+        $src_h = imagesy($src);
+        
+        $new_w = $src_w;
+        $new_h = $src_h;
+        
+        // 定義一個圖形
+        $newpc = imagecreatetruecolor($new_w,$new_h);
+        
+        // 抓取截圖
+        imagecopy($newpc, $src, 0, 0,$srt_w,$srt_h,$new_w,$new_h );
+        
+        // 建立縮圖
+        $finpic = imagecreatetruecolor($new_w,$new_h);
+        
+        // 開始縮圖
+        imagecopyresampled($finpic,$newpc, 0, 0, 0, 0, 650,490,$new_w,$new_h);
+        
+        // 儲存縮圖到指定的目錄存放
+        imagejpeg($finpic,'../views/ok_photo/'.$id.'.'.$ex);
+        
         $display->update_dis($data,$id);
         header("Location:../views/display.php");
     }

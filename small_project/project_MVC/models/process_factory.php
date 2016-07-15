@@ -27,11 +27,6 @@
             mysql_query($sql3);
         }
         
-        function delete_fa($id){
-            $sql=" DELETE FROM `factory` where `fac_id` = '".$id."';";
-            mysql_query($sql);
-        }
-        
         function select_desc(){
             $sql2="select `fac_id` from `factory` ORDER BY `fac_id` DESC limit 0,1";
             $result2 = mysql_query($sql2);
@@ -44,6 +39,10 @@
             return $result;
         }
         
+        function delete_fa($id){
+            $sql=" DELETE FROM `factory` where `fac_id` = '".$id."';";
+            mysql_query($sql);
+        }
     }
     
     
