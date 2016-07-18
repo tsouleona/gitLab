@@ -252,12 +252,6 @@
     <?php
     include_once("../controllers/factory_select.php");
     include_once("../controllers/factory_page.php");
-    $p = $_GET['p'];
-        
-        $page = new factory_page();
-        $result2 = $page->page($p);
-        $pagecount = $page->page_count();
-    
     
     if( $id==$row[0] && $id!=NULL ) { 
     ?>
@@ -267,7 +261,7 @@
                 <div class="row">
                     <div class="col-lg-12  text-center" border="1">
                         <?php 
-                        $result4 = $page->page($p);
+                        $result4 = factory_select($p); 
                         $row4 = mysql_fetch_array($result4);
                         if(empty($row4)){ ?>
                             <h3 style="color:#ff94b6"><strong>目前沒有資料</strong></h3>
@@ -324,26 +318,13 @@
                                             
                                         </td>
                                     </tr>
-                                <?php }?>
-                                </table>
-                                <br>
                                 
-                                <div>
-                                <?php for($i = 0;$i < $pagecount;$i++){?>
-                                    
-                                    <button class="btn btn-danger btn-xl"><a style="color:white" href="?p=<?php echo $i;?>"><?php echo $i + 1;?></a></button></li>
-                                        
-                                    
-                                <?php }?>
-                                </div>
-                                <br>
+                                </table>
+                                
                                 
 <!--------------------------------------------管理員畫面[廠商招募(顯示細節 model)]------------------------------------------------------------------------>    
-                                <?php
-                                    $result4 = factory_select();
-                                ?>
-                                <?php while($row4 = mysql_fetch_assoc($result4)){ ?>
-                                <div class="modal fade" id="look<?php echo $row4['fac_id'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                                <div class="modal fade" id="look<?php echo $row2['fac_id'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -354,31 +335,31 @@
                                                 <table class="table table-hover">
                                                     <thread>
                                                         <td align="center">
-                                                            <h4><strong><?php echo $row4['fac_name'];?></strong></h4>
+                                                            <h4><strong><?php echo $row2['fac_name'];?></strong></h4>
                                                         </td>
                                                     </thread>
                                                     <tr>
                                                         <td align="center">
                                                             <h4><strong><span class="glyphicon glyphicon-print" aria-hidden="true"></span>&nbsp;公司傳真</strong></h4>
-                                                            <h4 name="tax2" id="tax2" ><?php echo $row4['fac_tax'];?></h4>
+                                                            <h4 name="tax2" id="tax2" ><?php echo $row2['fac_tax'];?></h4>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             <h4><strong><span class="glyphicon glyphicon-road" aria-hidden="true"></span>&nbsp;公司地址</strong></h4>
-                                                            <h4 name="address2" id="address2" ><?php echo $row4['fac_address'];?></h4>
+                                                            <h4 name="address2" id="address2" ><?php echo $row2['fac_address'];?></h4>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             <h4><strong><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;公司網址</strong></h4>
-                                                            <h4 name="url2" id="url2" ><?php echo $row4['fac_url'];?></h4>
+                                                            <h4 name="url2" id="url2" ><?php echo $row2['fac_url'];?></h4>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             <h4><strong><font color="#ff94b6">經營項目 <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;</font></strong></h4>
-                                                            <textarea cols="50" cols="50" class="form-control" ><?php echo $row4['fac_data'];?></textarea>
+                                                            <textarea cols="50" cols="50" class="form-control" ><?php echo $row2['fac_data'];?></textarea>
                                                         </td>
                                                     </tr>
                                                 </table>    
@@ -390,6 +371,17 @@
                                     </div>
                                 </div>   
                             <?php }?><!--model end-->
+                            <br>
+                                
+                            <div>
+                            <?php for($i = 0;$i < $pagecount;$i++){?>
+                                
+                                <button class="btn btn-danger btn-xl"><a style="color:white" href="?p=<?php echo $i;?>"><?php echo $i + 1;?></a></button></li>
+                                    
+                                
+                            <?php }?>
+                            </div>
+                            <br>
                         <?php }?>
                             
                     </div>

@@ -5,14 +5,8 @@
     
     class factory{
         
-        function select_fa(){
-            $sql2="select * from factory;";
-            $result2 = mysql_query($sql2);
-            return $result2;
-        }
-        
         function select_limit($p){
-            $sql2="select `fac_id`,`fac_date`,`fac_name`,`fac_people`,`fac_cellphone`,`fac_phone`
+            $sql2="select *
             from `factory` limit ". ($p*10).",10";
             $result4 = mysql_query($sql2);
             return $result4;

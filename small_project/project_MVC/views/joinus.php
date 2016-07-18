@@ -227,12 +227,6 @@
     <?php 
         include_once("../controllers/joinus_select.php");
         include_once("../controllers/joinus_page.php");
-        $p = $_GET['p'];
-        
-        $page = new joinus_page();
-        $result2 = $page->page($p);
-        $pagecount = $page->page_count();
-        
         
         if( $id==$row[0] && $id!=NULL) {
     ?>
@@ -243,7 +237,7 @@
                 <div class="col-lg-1"></div>
                 <div class="col-lg-10  text-center">
                     <?php
-                    $result4 = $page->page($p);
+                    $result4 = joinus_select($p);
                     
                     $row4 = mysql_fetch_assoc($result4);
                     if(empty($row4)){?>

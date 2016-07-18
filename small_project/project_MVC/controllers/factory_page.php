@@ -3,24 +3,18 @@
     include_once("../models/process_factory.php");
     
     
-    class factory_page{
-        
-        function page_count(){
-            
-            $fa = new factory();
-            $result = $fa->select_fa();
-            $total = mysql_num_rows($result);
-            return ceil($total/10);
-        }
-        function page($p){
-            if($p=="")
-            {
-                $p = 0;
-            }
-            $fa = new factory();
-            return $fa->select_limit($p);
-        }
-        
+    $p = $_GET['p'];    
+    $fa = new factory();
+    $result = $fa->select_fa();
+    $total = mysql_num_rows($result);
+    $pagecount =  ceil($total/10);
+
+
+    if($p=="")
+    {
+        $p = 0;
     }
+    
+    $result2 = $fa->select_limit($p);
     
 ?>

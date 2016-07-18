@@ -157,11 +157,6 @@
 <!--------------------------------------------實績展示(顯示)------------------------------------------------------------------------>    
     <?php 
         include_once("../controllers/display_page.php");
-        $p = $_GET['p'];
-        
-        $page = new display_page();
-        $result2 = $page->page($p);
-        $pagecount = $page->page_count();
     ?>
     
     <section class="no-padding" id="portfolio">

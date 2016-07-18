@@ -3,26 +3,19 @@
     include_once("../models/process_display.php");
     
     
-    class display_page
-    {
-        
-        function page_count(){
-            $table = new display();
-            $result = $table->select_data();
-            $total = mysql_num_rows($result);
-            return ceil($total/9);
+        $p = $_GET['p'];
+        $table = new display();
+        $result = $table->select_data();
+        $total = mysql_num_rows($result);
+        $pagecount = ceil($total/9);
+    
+        if($p=="")
+        {
+            $p = 0;
         }
-        
-        function page($p){
-            if($p=="")
-            {
-                $p = 0;
-            }
-            $table = new display();
-            return $table->select_limit($p);
+        $result2 = $table->select_limit($p);
         
         
-        }
-    }
+
     
 ?>
