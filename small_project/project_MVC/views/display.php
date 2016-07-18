@@ -126,7 +126,7 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div><!--model end-->
 <!--------------------------------------------判斷 帳號密碼是否為空------------------------------------------------------------------------>
     <script type="text/javascript">
         function check() {
@@ -220,7 +220,7 @@
                                     }
                                 </script>
                             </div>
-                        </div>
+                        </div><!--model end-->
                 <?php  } ?>
             </div>
             <br>
@@ -277,7 +277,7 @@
                                 })
                             </script>
                         </div>
-                    </div>
+                    </div><!--model end-->
                 <?php }?>
         </div>
         
@@ -368,30 +368,30 @@
                             <h3 class="section-heading"><strong>聯絡我們</strong></h3>
                             <hr>
                             <h4>地址<h4>
-                    <input class="form-control" type="text" name="ab_address" value="<?php echo $row3[0];?>" />
-                    <h4>電話<h4>
-                    <input class="form-control" type="text" name="ab_phone" value="<?php echo $row3[1];?>" />
-                    <h4>傳真<h4>
-                    <input class="form-control" type="text" name="ab_tax" value="<?php echo $row3[2];?>" />
-                    <h4>Email<h4>
-                    <input class="form-control" type="text" name="ab_email" value="<?php echo $row3[3];?>" />
-                    <br>
-                    <br>
-                  </div>
-                  <div class="modal-footer">
-                    <input type="submit" onclick="submit3();" class="btn btn-primary"  value="確認">
-                  </div>
-                </div>
+                            <input class="form-control" type="text" name="ab_address" value="<?php echo $row3[0];?>" />
+                            <h4>電話<h4>
+                            <input class="form-control" type="text" name="ab_phone" value="<?php echo $row3[1];?>" />
+                            <h4>傳真<h4>
+                            <input class="form-control" type="text" name="ab_tax" value="<?php echo $row3[2];?>" />
+                            <h4>Email<h4>
+                            <input class="form-control" type="text" name="ab_email" value="<?php echo $row3[3];?>" />
+                            <br>
+                            <br>
+                          </div>
+                          <div class="modal-footer">
+                            <input type="submit" onclick="submit3();" class="btn btn-primary"  value="確認">
+                          </div>
+                        </div>
                 
-           </form>
-           <script>
+               </form>
+               <script>
                     function submit3(){
                         
                         form3.submit();
                     }
                 </script>
-      </div>
-    </div>
+          </div>
+        </div><!--model end-->
     <!-- modal end-->
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.js"></script>

@@ -125,7 +125,7 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div><!--model end-->
 <!--------------------------------------------判斷 帳號密碼是否為空------------------------------------------------------------------------>
     <script type="text/javascript">
         function check() {
@@ -210,7 +210,7 @@
                     }
                 </script>
       </div>
-    </div>
+    </div><!--model end-->
     
 <!--------------------------------------------服務項目(顯示)------------------------------------------------------------------------>    
     <section id="services">
@@ -349,7 +349,7 @@
                     }
                 </script>
       </div>
-    </div>
+    </div><!--model end-->
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.js"></script>
 

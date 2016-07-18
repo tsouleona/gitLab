@@ -122,7 +122,7 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div><!--model end-->
 <!--------------------------------------------判斷 帳號密碼是否為空------------------------------------------------------------------------>
     <script type="text/javascript">
         function check() {
@@ -292,9 +292,7 @@
                                     
                                 </thead>
                                 
-                                <?php 
-                            
-                                while($row2 = mysql_fetch_assoc($result2)){ ?>
+                                <?php while($row2 = mysql_fetch_assoc($result2)){ ?>
                                     <tr>
                                         <td align="center">
                                            <h4><?php echo $row2['fac_date'];?></h4>
@@ -318,13 +316,16 @@
                                             
                                         </td>
                                     </tr>
-                                
+                                <?php }?>
                                 </table>
                                 
                                 
 <!--------------------------------------------管理員畫面[廠商招募(顯示細節 model)]------------------------------------------------------------------------>    
-
-                                <div class="modal fade" id="look<?php echo $row2['fac_id'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                               <?php $result5 = factory_select($p);
+                                     
+                                     while($row5 = mysql_fetch_array($result5)){?>
+                                    
+                                <div class="modal fade" id="look<?php echo $row5['fac_id'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -335,31 +336,31 @@
                                                 <table class="table table-hover">
                                                     <thread>
                                                         <td align="center">
-                                                            <h4><strong><?php echo $row2['fac_name'];?></strong></h4>
+                                                            <h4><strong><?php echo $row5['fac_name'];?></strong></h4>
                                                         </td>
                                                     </thread>
                                                     <tr>
                                                         <td align="center">
                                                             <h4><strong><span class="glyphicon glyphicon-print" aria-hidden="true"></span>&nbsp;公司傳真</strong></h4>
-                                                            <h4 name="tax2" id="tax2" ><?php echo $row2['fac_tax'];?></h4>
+                                                            <h4 name="tax2" id="tax2" ><?php echo $row5['fac_tax'];?></h4>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             <h4><strong><span class="glyphicon glyphicon-road" aria-hidden="true"></span>&nbsp;公司地址</strong></h4>
-                                                            <h4 name="address2" id="address2" ><?php echo $row2['fac_address'];?></h4>
+                                                            <h4 name="address2" id="address2" ><?php echo $row5['fac_address'];?></h4>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             <h4><strong><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;公司網址</strong></h4>
-                                                            <h4 name="url2" id="url2" ><?php echo $row2['fac_url'];?></h4>
+                                                            <h4 name="url2" id="url2" ><?php echo $row5['fac_url'];?></h4>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             <h4><strong><font color="#ff94b6">經營項目 <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;</font></strong></h4>
-                                                            <textarea cols="50" cols="50" class="form-control" ><?php echo $row2['fac_data'];?></textarea>
+                                                            <textarea cols="50" cols="50" class="form-control" ><?php echo $row5['fac_data'];?></textarea>
                                                         </td>
                                                     </tr>
                                                 </table>    
@@ -369,8 +370,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>   
-                            <?php }?><!--model end-->
+                                </div> <!--model end-->
+                                <?php }?>
+                            
                             <br>
                                 
                             <div>
@@ -477,30 +479,30 @@
                                 <h3 class="section-heading"><strong>聯絡我們</strong></h3>
                                 <hr>
                                 <h4>地址<h4>
-                    <input class="form-control" type="text" name="ab_address" value="<?php echo $row3[0];?>" />
-                    <h4>電話<h4>
-                    <input class="form-control" type="text" name="ab_phone" value="<?php echo $row3[1];?>" />
-                    <h4>傳真<h4>
-                    <input class="form-control" type="text" name="ab_tax" value="<?php echo $row3[2];?>" />
-                    <h4>Email<h4>
-                    <input class="form-control" type="text" name="ab_email" value="<?php echo $row3[3];?>" />
-                    <br>
-                    <br>
-                  </div>
-                  <div class="modal-footer">
-                    <input type="submit" onclick="submit3();" class="btn btn-primary"  value="確認">
-                  </div>
+                                <input class="form-control" type="text" name="ab_address" value="<?php echo $row3[0];?>" />
+                                <h4>電話<h4>
+                                <input class="form-control" type="text" name="ab_phone" value="<?php echo $row3[1];?>" />
+                                <h4>傳真<h4>
+                                <input class="form-control" type="text" name="ab_tax" value="<?php echo $row3[2];?>" />
+                                <h4>Email<h4>
+                                <input class="form-control" type="text" name="ab_email" value="<?php echo $row3[3];?>" />
+                                <br>
+                                <br>
+                              </div>
+                              <div class="modal-footer">
+                                <input type="submit" onclick="submit3();" class="btn btn-primary"  value="確認">
+                              </div>
+                            </div>
+                            
+                    </form>
+                    <script>
+                        function submit3(){
+                            
+                            form3.submit();
+                        }
+                    </script>
                 </div>
-                
-           </form>
-           <script>
-                    function submit3(){
-                        
-                        form3.submit();
-                    }
-                </script>
-      </div>
-    </div>
+            </div><!--model end-->
      <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.js"></script>
 

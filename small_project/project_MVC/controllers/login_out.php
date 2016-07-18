@@ -3,6 +3,7 @@
     header("Content-Type:text/html; charset=utf-8");
     include_once("../models/check_login.php");
     
+    //把session的值清掉
     $out = new login();
     $out->login_out();
     echo '<strong><h1 style="color:#ff94b6">登出中...</h1></strong>';

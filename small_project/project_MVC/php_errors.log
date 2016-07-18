@@ -1579,3 +1579,276 @@
 [18-Jul-2016 02:32:19 UTC] PHP Stack trace:
 [18-Jul-2016 02:32:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
 [18-Jul-2016 02:32:19 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:159
+[18-Jul-2016 05:48:15 UTC] PHP Warning:  imagecreatefromjpeg(): Filename cannot be empty in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 51
+[18-Jul-2016 05:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 05:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 05:48:15 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:51
+[18-Jul-2016 05:48:15 UTC] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 54
+[18-Jul-2016 05:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 05:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 05:48:15 UTC] PHP   2. imagesx() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:54
+[18-Jul-2016 05:48:15 UTC] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 57
+[18-Jul-2016 05:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 05:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 05:48:15 UTC] PHP   2. imagesy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:57
+[18-Jul-2016 05:48:15 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 63
+[18-Jul-2016 05:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 05:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 05:48:15 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:63
+[18-Jul-2016 05:48:15 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 66
+[18-Jul-2016 05:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 05:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 05:48:15 UTC] PHP   2. imagecopy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:66
+[18-Jul-2016 05:48:15 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 69
+[18-Jul-2016 05:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 05:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 05:48:15 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:69
+[18-Jul-2016 05:48:15 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 72
+[18-Jul-2016 05:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 05:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 05:48:15 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:72
+[18-Jul-2016 05:48:15 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 75
+[18-Jul-2016 05:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 05:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 05:48:15 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:75
+[18-Jul-2016 05:57:25 UTC] PHP Warning:  unlink(../views/ok_photo/201607181.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 11
+[18-Jul-2016 05:57:25 UTC] PHP Stack trace:
+[18-Jul-2016 05:57:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[18-Jul-2016 05:57:25 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:11
+[18-Jul-2016 06:01:10 UTC] PHP Warning:  unlink(../views/ok_photo/201607151.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 11
+[18-Jul-2016 06:01:10 UTC] PHP Stack trace:
+[18-Jul-2016 06:01:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[18-Jul-2016 06:01:10 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:11
+[18-Jul-2016 06:01:30 UTC] PHP Warning:  imagecreatefromjpeg(): Filename cannot be empty in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 57
+[18-Jul-2016 06:01:30 UTC] PHP Stack trace:
+[18-Jul-2016 06:01:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:01:30 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:57
+[18-Jul-2016 06:01:30 UTC] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 60
+[18-Jul-2016 06:01:30 UTC] PHP Stack trace:
+[18-Jul-2016 06:01:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:01:30 UTC] PHP   2. imagesx() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:60
+[18-Jul-2016 06:01:30 UTC] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 63
+[18-Jul-2016 06:01:30 UTC] PHP Stack trace:
+[18-Jul-2016 06:01:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:01:30 UTC] PHP   2. imagesy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:63
+[18-Jul-2016 06:01:30 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 69
+[18-Jul-2016 06:01:30 UTC] PHP Stack trace:
+[18-Jul-2016 06:01:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:01:30 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:69
+[18-Jul-2016 06:01:30 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 72
+[18-Jul-2016 06:01:30 UTC] PHP Stack trace:
+[18-Jul-2016 06:01:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:01:30 UTC] PHP   2. imagecopy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:72
+[18-Jul-2016 06:01:30 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 75
+[18-Jul-2016 06:01:30 UTC] PHP Stack trace:
+[18-Jul-2016 06:01:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:01:30 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:75
+[18-Jul-2016 06:01:30 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 78
+[18-Jul-2016 06:01:30 UTC] PHP Stack trace:
+[18-Jul-2016 06:01:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:01:30 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:78
+[18-Jul-2016 06:01:30 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 81
+[18-Jul-2016 06:01:30 UTC] PHP Stack trace:
+[18-Jul-2016 06:01:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:01:30 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:81
+[18-Jul-2016 06:01:37 UTC] PHP Warning:  unlink(../views/ok_photo/201607181.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 11
+[18-Jul-2016 06:01:37 UTC] PHP Stack trace:
+[18-Jul-2016 06:01:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[18-Jul-2016 06:01:37 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:11
+[18-Jul-2016 06:02:52 UTC] PHP Warning:  imagecreatefromjpeg(): Filename cannot be empty in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 57
+[18-Jul-2016 06:02:52 UTC] PHP Stack trace:
+[18-Jul-2016 06:02:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:02:52 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:57
+[18-Jul-2016 06:02:52 UTC] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 60
+[18-Jul-2016 06:02:52 UTC] PHP Stack trace:
+[18-Jul-2016 06:02:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:02:52 UTC] PHP   2. imagesx() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:60
+[18-Jul-2016 06:02:52 UTC] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 63
+[18-Jul-2016 06:02:52 UTC] PHP Stack trace:
+[18-Jul-2016 06:02:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:02:52 UTC] PHP   2. imagesy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:63
+[18-Jul-2016 06:02:52 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 69
+[18-Jul-2016 06:02:52 UTC] PHP Stack trace:
+[18-Jul-2016 06:02:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:02:52 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:69
+[18-Jul-2016 06:02:52 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 72
+[18-Jul-2016 06:02:52 UTC] PHP Stack trace:
+[18-Jul-2016 06:02:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:02:52 UTC] PHP   2. imagecopy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:72
+[18-Jul-2016 06:02:52 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 75
+[18-Jul-2016 06:02:52 UTC] PHP Stack trace:
+[18-Jul-2016 06:02:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:02:52 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:75
+[18-Jul-2016 06:02:52 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 78
+[18-Jul-2016 06:02:52 UTC] PHP Stack trace:
+[18-Jul-2016 06:02:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:02:52 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:78
+[18-Jul-2016 06:02:52 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 81
+[18-Jul-2016 06:02:52 UTC] PHP Stack trace:
+[18-Jul-2016 06:02:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:02:52 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:81
+[18-Jul-2016 06:02:58 UTC] PHP Warning:  unlink(../views/ok_photo/201607181.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 11
+[18-Jul-2016 06:02:58 UTC] PHP Stack trace:
+[18-Jul-2016 06:02:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[18-Jul-2016 06:02:58 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:11
+[18-Jul-2016 06:03:23 UTC] PHP Warning:  imagecreatefromjpeg(): Filename cannot be empty in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 57
+[18-Jul-2016 06:03:23 UTC] PHP Stack trace:
+[18-Jul-2016 06:03:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:03:23 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:57
+[18-Jul-2016 06:03:23 UTC] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 60
+[18-Jul-2016 06:03:23 UTC] PHP Stack trace:
+[18-Jul-2016 06:03:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:03:23 UTC] PHP   2. imagesx() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:60
+[18-Jul-2016 06:03:23 UTC] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 63
+[18-Jul-2016 06:03:23 UTC] PHP Stack trace:
+[18-Jul-2016 06:03:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:03:23 UTC] PHP   2. imagesy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:63
+[18-Jul-2016 06:03:23 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 69
+[18-Jul-2016 06:03:23 UTC] PHP Stack trace:
+[18-Jul-2016 06:03:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:03:23 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:69
+[18-Jul-2016 06:03:23 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 72
+[18-Jul-2016 06:03:23 UTC] PHP Stack trace:
+[18-Jul-2016 06:03:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:03:23 UTC] PHP   2. imagecopy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:72
+[18-Jul-2016 06:03:23 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 75
+[18-Jul-2016 06:03:23 UTC] PHP Stack trace:
+[18-Jul-2016 06:03:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:03:23 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:75
+[18-Jul-2016 06:03:23 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 78
+[18-Jul-2016 06:03:23 UTC] PHP Stack trace:
+[18-Jul-2016 06:03:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:03:23 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:78
+[18-Jul-2016 06:03:23 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 81
+[18-Jul-2016 06:03:23 UTC] PHP Stack trace:
+[18-Jul-2016 06:03:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:03:23 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:81
+[18-Jul-2016 06:31:21 UTC] PHP Warning:  imagecreatefromjpeg(): Filename cannot be empty in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 55
+[18-Jul-2016 06:31:21 UTC] PHP Stack trace:
+[18-Jul-2016 06:31:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:31:21 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:55
+[18-Jul-2016 06:31:21 UTC] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 58
+[18-Jul-2016 06:31:21 UTC] PHP Stack trace:
+[18-Jul-2016 06:31:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:31:21 UTC] PHP   2. imagesx() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:58
+[18-Jul-2016 06:31:21 UTC] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 61
+[18-Jul-2016 06:31:21 UTC] PHP Stack trace:
+[18-Jul-2016 06:31:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:31:21 UTC] PHP   2. imagesy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:61
+[18-Jul-2016 06:31:21 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 67
+[18-Jul-2016 06:31:21 UTC] PHP Stack trace:
+[18-Jul-2016 06:31:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:31:21 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:67
+[18-Jul-2016 06:31:21 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 70
+[18-Jul-2016 06:31:21 UTC] PHP Stack trace:
+[18-Jul-2016 06:31:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:31:21 UTC] PHP   2. imagecopy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:70
+[18-Jul-2016 06:31:21 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 73
+[18-Jul-2016 06:31:21 UTC] PHP Stack trace:
+[18-Jul-2016 06:31:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:31:21 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:73
+[18-Jul-2016 06:31:21 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 76
+[18-Jul-2016 06:31:21 UTC] PHP Stack trace:
+[18-Jul-2016 06:31:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:31:21 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:76
+[18-Jul-2016 06:31:21 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 79
+[18-Jul-2016 06:31:21 UTC] PHP Stack trace:
+[18-Jul-2016 06:31:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:31:21 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:79
+[18-Jul-2016 06:31:43 UTC] PHP Warning:  imagecreatefromjpeg(): Filename cannot be empty in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 55
+[18-Jul-2016 06:31:43 UTC] PHP Stack trace:
+[18-Jul-2016 06:31:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:31:43 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:55
+[18-Jul-2016 06:31:43 UTC] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 58
+[18-Jul-2016 06:31:43 UTC] PHP Stack trace:
+[18-Jul-2016 06:31:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:31:43 UTC] PHP   2. imagesx() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:58
+[18-Jul-2016 06:31:43 UTC] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 61
+[18-Jul-2016 06:31:43 UTC] PHP Stack trace:
+[18-Jul-2016 06:31:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:31:43 UTC] PHP   2. imagesy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:61
+[18-Jul-2016 06:31:43 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 67
+[18-Jul-2016 06:31:43 UTC] PHP Stack trace:
+[18-Jul-2016 06:31:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:31:43 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:67
+[18-Jul-2016 06:31:43 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 70
+[18-Jul-2016 06:31:43 UTC] PHP Stack trace:
+[18-Jul-2016 06:31:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:31:43 UTC] PHP   2. imagecopy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:70
+[18-Jul-2016 06:31:43 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 73
+[18-Jul-2016 06:31:43 UTC] PHP Stack trace:
+[18-Jul-2016 06:31:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:31:43 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:73
+[18-Jul-2016 06:31:43 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 76
+[18-Jul-2016 06:31:43 UTC] PHP Stack trace:
+[18-Jul-2016 06:31:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:31:43 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:76
+[18-Jul-2016 06:31:43 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 79
+[18-Jul-2016 06:31:43 UTC] PHP Stack trace:
+[18-Jul-2016 06:31:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:31:43 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:79
+[18-Jul-2016 06:33:09 UTC] PHP Warning:  imagecreatefromjpeg(): Filename cannot be empty in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 55
+[18-Jul-2016 06:33:09 UTC] PHP Stack trace:
+[18-Jul-2016 06:33:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:33:09 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:55
+[18-Jul-2016 06:33:09 UTC] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 58
+[18-Jul-2016 06:33:09 UTC] PHP Stack trace:
+[18-Jul-2016 06:33:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:33:09 UTC] PHP   2. imagesx() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:58
+[18-Jul-2016 06:33:09 UTC] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 61
+[18-Jul-2016 06:33:09 UTC] PHP Stack trace:
+[18-Jul-2016 06:33:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:33:09 UTC] PHP   2. imagesy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:61
+[18-Jul-2016 06:33:09 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 67
+[18-Jul-2016 06:33:09 UTC] PHP Stack trace:
+[18-Jul-2016 06:33:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:33:09 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:67
+[18-Jul-2016 06:33:09 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 70
+[18-Jul-2016 06:33:09 UTC] PHP Stack trace:
+[18-Jul-2016 06:33:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:33:09 UTC] PHP   2. imagecopy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:70
+[18-Jul-2016 06:33:09 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 73
+[18-Jul-2016 06:33:09 UTC] PHP Stack trace:
+[18-Jul-2016 06:33:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:33:09 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:73
+[18-Jul-2016 06:33:09 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 76
+[18-Jul-2016 06:33:09 UTC] PHP Stack trace:
+[18-Jul-2016 06:33:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:33:09 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:76
+[18-Jul-2016 06:33:09 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 79
+[18-Jul-2016 06:33:09 UTC] PHP Stack trace:
+[18-Jul-2016 06:33:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 06:33:09 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:79
+[18-Jul-2016 06:48:22 UTC] PHP Warning:  Missing argument 1 for check(), called in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php on line 81 and defined in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/login_check.php on line 8
+[18-Jul-2016 06:48:22 UTC] PHP Stack trace:
+[18-Jul-2016 06:48:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:0
+[18-Jul-2016 06:48:22 UTC] PHP   2. check() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:81
+[18-Jul-2016 06:48:22 UTC] PHP Fatal error:  Call to undefined method login::check() in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/login_check.php on line 10
+[18-Jul-2016 06:48:22 UTC] PHP Stack trace:
+[18-Jul-2016 06:48:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:0
+[18-Jul-2016 06:48:22 UTC] PHP   2. check() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:81
+[18-Jul-2016 06:48:29 UTC] PHP Warning:  Missing argument 1 for check(), called in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 82 and defined in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/login_check.php on line 8
+[18-Jul-2016 06:48:29 UTC] PHP Stack trace:
+[18-Jul-2016 06:48:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[18-Jul-2016 06:48:29 UTC] PHP   2. check() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:82
+[18-Jul-2016 06:48:29 UTC] PHP Fatal error:  Call to undefined method login::check() in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/login_check.php on line 10
+[18-Jul-2016 06:48:29 UTC] PHP Stack trace:
+[18-Jul-2016 06:48:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[18-Jul-2016 06:48:29 UTC] PHP   2. check() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:82
+[18-Jul-2016 06:48:30 UTC] PHP Warning:  Missing argument 1 for check(), called in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php on line 82 and defined in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/login_check.php on line 8
+[18-Jul-2016 06:48:30 UTC] PHP Stack trace:
+[18-Jul-2016 06:48:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[18-Jul-2016 06:48:30 UTC] PHP   2. check() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:82
+[18-Jul-2016 06:48:30 UTC] PHP Fatal error:  Call to undefined method login::check() in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/login_check.php on line 10
+[18-Jul-2016 06:48:30 UTC] PHP Stack trace:
+[18-Jul-2016 06:48:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:0
+[18-Jul-2016 06:48:30 UTC] PHP   2. check() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/index.php:82
+[18-Jul-2016 07:01:11 UTC] PHP Fatal error:  Call to a member function select_limit() on a non-object in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_page.php on line 19
+[18-Jul-2016 07:01:11 UTC] PHP Stack trace:
+[18-Jul-2016 07:01:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:0
+[18-Jul-2016 07:01:11 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:229
+[18-Jul-2016 07:01:18 UTC] PHP Fatal error:  Call to a member function select_limit() on a non-object in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_page.php on line 19
+[18-Jul-2016 07:01:18 UTC] PHP Stack trace:
+[18-Jul-2016 07:01:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:0
+[18-Jul-2016 07:01:18 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:229
+[18-Jul-2016 07:05:36 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/factory.php on line 394

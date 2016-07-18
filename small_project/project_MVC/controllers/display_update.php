@@ -2,24 +2,36 @@
     session_start();
     include_once("../models/process_display.php");
     header("Content-Type:text/html; charset=utf-8");
-    
+    //傳過來的專案內容
     $data = $_POST["data"];
+    //傳過來的圖片編號
     $id = $_POST["id"];
+    
     $display = new display();
+    
+    //抓副檔名
     $ex = pathinfo($_FILES['file']['name'],PATHINFO_EXTENSION);
-
+    
+    //存可以上傳的檔案類型
     $path = array("jpg","png","jpeg","JPG","PNG","JPEG");
     
-    if($_FILES['file']['error'] != 4 && $_FILES['file']['error'] > 0)
+    //error=4表示沒有上傳的檔案，但是新增可以不上傳檔案
+    if($_FILES['file']['error'] != 4)
     {
-        echo '<h1 style="color:#ff94b6">檔案上傳失敗</h1>';
-        echo '<meta http-equiv=REFRESH CONTENT=1;url=../views/display.php>';
+        if($_FILES['file']['error'] > 0)
+        {
+            echo '<h1 style="color:#ff94b6">檔案上傳失敗</h1>';
+            echo "<meta http-equiv=REFRESH CONTENT=0;url=../views/display.php?p={$_GET['p']}>";
+        }
+        //如果不是jpg png jepg檔案類型不能上傳
+        if(!in_array($ex,$path))
+        {
+            echo '<h1 style="color:#ff94b6">副檔名不合格</h1>' ;
+            echo "<meta http-equiv=REFRESH CONTENT=0;url=../views/display.php?p={$_GET['p']}>";
+        }
     }
-    if(!in_array($ex,$path) && $_FILES['file']['error'] != 4)
-    {
-        echo '<h1 style="color:#ff94b6">副檔名不合格</h1>' ;
-        echo '<meta http-equiv=REFRESH CONTENT=1;url=../views/display.php>';
-    }
+    
+    //如果檔案為空亦可上傳
     elseif($_FILES['file']['error'] != 4 || $_FILES['file']['error'] == 4){
         // 取得上傳的圖片
         $src = imagecreatefromjpeg($_FILES['file']['tmp_name']);
@@ -47,7 +59,7 @@
         
         // 儲存縮圖到指定的目錄存放
         imagejpeg($finpic,'../views/ok_photo/'.$id.'.'.$ex);
-        
+        //更新專案內容
         $display->update_dis($data,$id);
         header("Location:../views/display.php");
     }
