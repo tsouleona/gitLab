@@ -5,6 +5,12 @@
     
     class factory{
         
+        function select_fa(){
+            $sql2="select * from factory;";
+            $result2 = mysql_query($sql2);
+            return $result2;
+        }
+        
         function select_limit($p){
             $sql2="select *
             from `factory` limit ". ($p*10).",10";

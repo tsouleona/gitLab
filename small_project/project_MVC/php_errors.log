@@ -1575,3 +1575,7 @@
 [18-Jul-2016 02:22:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:0
 [18-Jul-2016 02:22:43 UTC] PHP   2. joinus_select() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:240
 [18-Jul-2016 02:22:43 UTC] PHP   3. joinus->select_limit() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/joinus_select.php:8
+[18-Jul-2016 02:32:19 UTC] PHP Fatal error:  Call to undefined method display::select_data() in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_page.php on line 8
+[18-Jul-2016 02:32:19 UTC] PHP Stack trace:
+[18-Jul-2016 02:32:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:0
+[18-Jul-2016 02:32:19 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/display.php:159

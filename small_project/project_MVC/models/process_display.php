@@ -5,6 +5,12 @@
     
     class display{
         
+        function select_data(){
+            $sql2="select * from display;";
+            $result2 = mysql_query($sql2);
+            return $result2;
+        }
+        
         function select_limit($p){
             $sql2="select * from `display`  limit ". ($p*9).",9";
             $result4 = mysql_query($sql2);

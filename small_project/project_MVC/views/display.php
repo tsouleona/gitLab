@@ -205,7 +205,7 @@
                                             <input style="visibility:hidden" type="text" name="id" value="<?php echo $row2[0];?>"/><!-- 傳輸id-->
                                             <input type="text" class="form-control" name="data" value="<?php echo $row2[1];?>"/>
                                             <h4><strong>上傳檔案&nbsp;</strong><h4/><input id="file" name="file" type="file">
-                                            <p style="color:red"><strong>請使用jpeg、jpg、png檔(建議像素設為650*320)</strong><p>
+                                            <p style="color:red"><strong>請使用jpeg、jpg、png檔</strong><p>
                                         </div>
                                         <div class="modal-footer">
                     
