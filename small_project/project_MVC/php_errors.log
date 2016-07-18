@@ -1852,3 +1852,176 @@
 [18-Jul-2016 07:01:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:0
 [18-Jul-2016 07:01:18 UTC] PHP   2. include_once() /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/joinus.php:229
 [18-Jul-2016 07:05:36 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/gitlab/small_project/project_MVC/views/factory.php on line 394
+[18-Jul-2016 07:41:12 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 42
+[18-Jul-2016 07:41:12 UTC] PHP Stack trace:
+[18-Jul-2016 07:41:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:41:12 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:42
+[18-Jul-2016 07:41:12 UTC] PHP Warning:  rsort() expects parameter 1 to be array, null given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 45
+[18-Jul-2016 07:41:12 UTC] PHP Stack trace:
+[18-Jul-2016 07:41:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:41:12 UTC] PHP   2. rsort() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:45
+[18-Jul-2016 07:43:06 UTC] PHP Parse error:  syntax error, unexpected '$count' (T_VARIABLE) in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 42
+[18-Jul-2016 07:43:23 UTC] PHP Warning:  rsort() expects parameter 1 to be array, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 48
+[18-Jul-2016 07:43:23 UTC] PHP Stack trace:
+[18-Jul-2016 07:43:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:43:23 UTC] PHP   2. rsort() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:48
+[18-Jul-2016 07:43:46 UTC] PHP Warning:  rsort() expects parameter 1 to be array, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 48
+[18-Jul-2016 07:43:46 UTC] PHP Stack trace:
+[18-Jul-2016 07:43:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:43:46 UTC] PHP   2. rsort() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:48
+[18-Jul-2016 07:47:25 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 43
+[18-Jul-2016 07:47:25 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:25 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:43
+[18-Jul-2016 07:47:25 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 43
+[18-Jul-2016 07:47:25 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:25 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:43
+[18-Jul-2016 07:47:25 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 43
+[18-Jul-2016 07:47:25 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:25 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:43
+[18-Jul-2016 07:47:25 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 43
+[18-Jul-2016 07:47:25 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:25 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:43
+[18-Jul-2016 07:47:25 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 43
+[18-Jul-2016 07:47:25 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:25 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:43
+[18-Jul-2016 07:47:25 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 43
+[18-Jul-2016 07:47:25 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:25 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:43
+[18-Jul-2016 07:47:25 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 43
+[18-Jul-2016 07:47:25 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:25 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:43
+[18-Jul-2016 07:47:25 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 43
+[18-Jul-2016 07:47:25 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:25 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:43
+[18-Jul-2016 07:47:25 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 43
+[18-Jul-2016 07:47:25 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:25 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:43
+[18-Jul-2016 07:47:25 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 43
+[18-Jul-2016 07:47:25 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:25 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:43
+[18-Jul-2016 07:47:48 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:47:48 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:48 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:47:48 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:47:48 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:48 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:47:48 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:47:48 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:48 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:47:48 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:47:48 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:48 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:47:48 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:47:48 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:48 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:47:48 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:47:48 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:48 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:47:48 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:47:48 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:48 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:47:48 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:47:48 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:48 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:47:48 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:47:48 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:48 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:47:48 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:47:48 UTC] PHP Stack trace:
+[18-Jul-2016 07:47:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:47:48 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:48:15 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 07:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:48:15 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:48:15 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 07:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:48:15 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:48:15 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 07:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:48:15 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:48:15 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 07:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:48:15 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:48:15 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 07:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:48:15 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:48:15 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 07:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:48:15 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:48:15 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 07:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:48:15 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:48:15 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 07:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:48:15 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:48:15 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 07:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:48:15 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 07:48:15 UTC] PHP Warning:  substr() expects parameter 1 to be string, array given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php on line 44
+[18-Jul-2016 07:48:15 UTC] PHP Stack trace:
+[18-Jul-2016 07:48:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:0
+[18-Jul-2016 07:48:15 UTC] PHP   2. substr() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/factory_insert.php:44
+[18-Jul-2016 08:08:49 UTC] PHP Warning:  imagecreatefromjpeg(): Filename cannot be empty in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 56
+[18-Jul-2016 08:08:49 UTC] PHP Stack trace:
+[18-Jul-2016 08:08:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 08:08:49 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:56
+[18-Jul-2016 08:08:49 UTC] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 59
+[18-Jul-2016 08:08:49 UTC] PHP Stack trace:
+[18-Jul-2016 08:08:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 08:08:49 UTC] PHP   2. imagesx() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:59
+[18-Jul-2016 08:08:49 UTC] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 62
+[18-Jul-2016 08:08:49 UTC] PHP Stack trace:
+[18-Jul-2016 08:08:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 08:08:49 UTC] PHP   2. imagesy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:62
+[18-Jul-2016 08:08:49 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 68
+[18-Jul-2016 08:08:49 UTC] PHP Stack trace:
+[18-Jul-2016 08:08:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 08:08:49 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:68
+[18-Jul-2016 08:08:49 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 71
+[18-Jul-2016 08:08:49 UTC] PHP Stack trace:
+[18-Jul-2016 08:08:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 08:08:49 UTC] PHP   2. imagecopy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:71
+[18-Jul-2016 08:08:49 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 74
+[18-Jul-2016 08:08:49 UTC] PHP Stack trace:
+[18-Jul-2016 08:08:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 08:08:49 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:74
+[18-Jul-2016 08:08:49 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 77
+[18-Jul-2016 08:08:49 UTC] PHP Stack trace:
+[18-Jul-2016 08:08:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 08:08:49 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:77
+[18-Jul-2016 08:08:49 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 80
+[18-Jul-2016 08:08:49 UTC] PHP Stack trace:
+[18-Jul-2016 08:08:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 08:08:49 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:80
+[18-Jul-2016 08:09:41 UTC] PHP Warning:  unlink(../views/ok_photo/20160718002.jpg): No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php on line 11
+[18-Jul-2016 08:09:41 UTC] PHP Stack trace:
+[18-Jul-2016 08:09:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
+[18-Jul-2016 08:09:41 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:11

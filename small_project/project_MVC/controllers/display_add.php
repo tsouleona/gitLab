@@ -23,8 +23,9 @@
     }
     //圖片編號若不為第一筆則從當天的最後一筆+1
     else{
-        $ans = substr($row['display_id'],8);
+        $ans = substr($row['display_id'],8,3);
         $ans = (int)($ans) + 1;
+        $ans = str_pad($ans,3, "0", STR_PAD_LEFT);
         $ans = $date2.$ans;
     }
     //抓副檔名
