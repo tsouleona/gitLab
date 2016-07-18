@@ -66,7 +66,7 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="factory.php">
-                            <font color="#01aae8"><h4><strong>廠商招募</strong></h4></font>
+                            <font color="#00ffff"><h4><strong>廠商招募</strong></h4></font>
                         </a>
                     </li>
                     <li>

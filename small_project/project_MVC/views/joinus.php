@@ -72,7 +72,7 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="joinus.php">
-                            <font color="#01aae8"><h4><strong>加入我們</strong></h4></a></font>
+                            <font color="#00ffff"><h4><strong>加入我們</strong></h4></a></font>
                     </li>
 <!--------------------------------------------登錄判斷------------------------------------------------------------------------>
                     <?php 

@@ -65,7 +65,7 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="display.php">
-                            <font color="#01aae8"><h4><strong>實績展示</strong></h4></a></font>
+                            <font color="#00ffff"><h4><strong>實績展示</strong></h4></a></font>
                     </li>
                     <li>
                         <a class="page-scroll" href="factory.php">
