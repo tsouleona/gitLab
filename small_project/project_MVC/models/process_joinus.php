@@ -28,7 +28,7 @@
             mysql_query($sql3);
         }
         //搜尋當天資料由大排到小
-        function select_desc(){
+        function select_desc($date2){
             $sql2="select `join_id` from `joinus` where `join_id` like '%$date2%' ORDER BY `join_id` DESC limit 0,1";
             $result2 = mysql_query($sql2);
             return $result2;

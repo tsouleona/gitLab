@@ -21,16 +21,16 @@
     $joinus = new joinus();
     $result = $joinus->select_desc($date2);
     $row = mysql_fetch_array($result);
-    $one="001";
+    $one="0001";
     //圖片編號若不為第一筆則從當天的最後一筆+1
     if($row[0] == NULL)
     {
         $ans = $date2.$one;
     }
     else{
-        $ans = substr($row[0],8,3);
+        $ans = substr($row[0],8,4);
         $ans = (int)($ans) + 1;
-        $ans = str_pad($ans,3, "0", STR_PAD_LEFT);
+        $ans = str_pad($ans,4, "0", STR_PAD_LEFT);
         $ans = $date2.$ans;
     }
     //新增資料

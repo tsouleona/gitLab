@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php 
     session_start();
-    include_once("../models/mysql_connect.inc.php");
+    
 ?>
 <html lang="en">
 
