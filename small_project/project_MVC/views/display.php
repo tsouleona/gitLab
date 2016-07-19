@@ -29,6 +29,7 @@
     <!-- Theme CSS -->
     <!--<link href="css/creative.min.css" rel="stylesheet">-->
     <link href="css/creative.css" rel="stylesheet">
+    
     <!-- Jquery-->
     <script src="vendor/jquery/jquery.js"></script>
     
@@ -205,7 +206,7 @@
                                             <input style="visibility:hidden" type="text" name="id" value="<?php echo $row2[0];?>"/><!-- 傳輸id-->
                                             <input type="text" class="form-control" name="data" value="<?php echo $row2[1];?>"/>
                                             <h4><strong>上傳檔案&nbsp;</strong><h4/><input id="file" name="file" type="file">
-                                            <p style="color:red"><strong>請使用jpeg、jpg、png檔</strong><p>
+                                            <p style="color:red"><strong>請使用jpeg、jpg檔</strong><p>
                                         </div>
                                         <div class="modal-footer">
                     
@@ -255,7 +256,7 @@
                                         <h4><strong>專案內容&nbsp;</strong><h4/><input type="text" class="form-control" name="add_data" id="add_data"/>
                                         <div id="danger"></div>
                                         <h4><strong>上傳檔案&nbsp;</strong><h4/><input id="file" name="file" type="file">
-                                        <p style="color:red"><strong>請使用jpeg、jpg、png檔</strong><p>
+                                        <p style="color:red"><strong>請使用jpeg、jpg檔</strong><p>
                                     </div>
                                     <div class="modal-footer">
                 

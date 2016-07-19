@@ -2025,3 +2025,203 @@
 [18-Jul-2016 08:09:41 UTC] PHP Stack trace:
 [18-Jul-2016 08:09:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:0
 [18-Jul-2016 08:09:41 UTC] PHP   2. unlink() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_delete.php:11
+[18-Jul-2016 08:43:28 UTC] PHP Warning:  imagecreatefromjpeg(): Filename cannot be empty in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 37
+[18-Jul-2016 08:43:28 UTC] PHP Stack trace:
+[18-Jul-2016 08:43:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[18-Jul-2016 08:43:28 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:37
+[18-Jul-2016 08:43:28 UTC] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 40
+[18-Jul-2016 08:43:28 UTC] PHP Stack trace:
+[18-Jul-2016 08:43:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[18-Jul-2016 08:43:28 UTC] PHP   2. imagesx() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:40
+[18-Jul-2016 08:43:28 UTC] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 43
+[18-Jul-2016 08:43:28 UTC] PHP Stack trace:
+[18-Jul-2016 08:43:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[18-Jul-2016 08:43:28 UTC] PHP   2. imagesy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:43
+[18-Jul-2016 08:43:28 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 49
+[18-Jul-2016 08:43:28 UTC] PHP Stack trace:
+[18-Jul-2016 08:43:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[18-Jul-2016 08:43:28 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:49
+[18-Jul-2016 08:43:28 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 52
+[18-Jul-2016 08:43:28 UTC] PHP Stack trace:
+[18-Jul-2016 08:43:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[18-Jul-2016 08:43:28 UTC] PHP   2. imagecopy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:52
+[18-Jul-2016 08:43:28 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 55
+[18-Jul-2016 08:43:28 UTC] PHP Stack trace:
+[18-Jul-2016 08:43:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[18-Jul-2016 08:43:28 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:55
+[18-Jul-2016 08:43:28 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 58
+[18-Jul-2016 08:43:28 UTC] PHP Stack trace:
+[18-Jul-2016 08:43:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[18-Jul-2016 08:43:28 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:58
+[18-Jul-2016 08:43:28 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php on line 61
+[18-Jul-2016 08:43:28 UTC] PHP Stack trace:
+[18-Jul-2016 08:43:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:0
+[18-Jul-2016 08:43:28 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_update.php:61
+[18-Jul-2016 08:49:59 UTC] PHP Warning:  imagecreatefromjpeg(): Filename cannot be empty in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 55
+[18-Jul-2016 08:49:59 UTC] PHP Stack trace:
+[18-Jul-2016 08:49:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 08:49:59 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:55
+[18-Jul-2016 08:49:59 UTC] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 58
+[18-Jul-2016 08:49:59 UTC] PHP Stack trace:
+[18-Jul-2016 08:49:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 08:49:59 UTC] PHP   2. imagesx() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:58
+[18-Jul-2016 08:49:59 UTC] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 61
+[18-Jul-2016 08:49:59 UTC] PHP Stack trace:
+[18-Jul-2016 08:49:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 08:49:59 UTC] PHP   2. imagesy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:61
+[18-Jul-2016 08:49:59 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 67
+[18-Jul-2016 08:49:59 UTC] PHP Stack trace:
+[18-Jul-2016 08:49:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 08:49:59 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:67
+[18-Jul-2016 08:49:59 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 70
+[18-Jul-2016 08:49:59 UTC] PHP Stack trace:
+[18-Jul-2016 08:49:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 08:49:59 UTC] PHP   2. imagecopy() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:70
+[18-Jul-2016 08:49:59 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 73
+[18-Jul-2016 08:49:59 UTC] PHP Stack trace:
+[18-Jul-2016 08:49:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 08:49:59 UTC] PHP   2. imagecreatetruecolor() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:73
+[18-Jul-2016 08:49:59 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 76
+[18-Jul-2016 08:49:59 UTC] PHP Stack trace:
+[18-Jul-2016 08:49:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 08:49:59 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:76
+[18-Jul-2016 08:49:59 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php on line 79
+[18-Jul-2016 08:49:59 UTC] PHP Stack trace:
+[18-Jul-2016 08:49:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:0
+[18-Jul-2016 08:49:59 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/display_add.php:79
+[19-Jul-2016 02:16:37 UTC] PHP Warning:  imagecreatefromjpeg(20160719001.'.jpg'): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 15
+[19-Jul-2016 02:16:37 UTC] PHP Stack trace:
+[19-Jul-2016 02:16:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:16:37 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:15
+[19-Jul-2016 02:16:37 UTC] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 19
+[19-Jul-2016 02:16:37 UTC] PHP Stack trace:
+[19-Jul-2016 02:16:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:16:37 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:19
+[19-Jul-2016 02:18:43 UTC] PHP Warning:  imagecreatefromjpeg(20160719001.'.jpg'): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 15
+[19-Jul-2016 02:18:43 UTC] PHP Stack trace:
+[19-Jul-2016 02:18:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:18:43 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:15
+[19-Jul-2016 02:18:43 UTC] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 19
+[19-Jul-2016 02:18:43 UTC] PHP Stack trace:
+[19-Jul-2016 02:18:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:18:43 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:19
+[19-Jul-2016 02:20:11 UTC] PHP Warning:  imagecreatefromjpeg(20160719001.'.jpg'): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 15
+[19-Jul-2016 02:20:11 UTC] PHP Stack trace:
+[19-Jul-2016 02:20:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:20:11 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:15
+[19-Jul-2016 02:20:11 UTC] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 19
+[19-Jul-2016 02:20:11 UTC] PHP Stack trace:
+[19-Jul-2016 02:20:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:20:11 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:19
+[19-Jul-2016 02:20:42 UTC] PHP Warning:  imagecreatefromjpeg(20160719001.'.jpg'): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 15
+[19-Jul-2016 02:20:42 UTC] PHP Stack trace:
+[19-Jul-2016 02:20:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:20:42 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:15
+[19-Jul-2016 02:20:42 UTC] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 19
+[19-Jul-2016 02:20:42 UTC] PHP Stack trace:
+[19-Jul-2016 02:20:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:20:42 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:19
+[19-Jul-2016 02:22:14 UTC] PHP Warning:  imagecreatefromjpeg(20160719001.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 16
+[19-Jul-2016 02:22:14 UTC] PHP Stack trace:
+[19-Jul-2016 02:22:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:22:14 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:16
+[19-Jul-2016 02:22:14 UTC] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 20
+[19-Jul-2016 02:22:14 UTC] PHP Stack trace:
+[19-Jul-2016 02:22:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:22:14 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:20
+[19-Jul-2016 02:29:23 UTC] PHP Warning:  imagecreatefromjpeg(20160719001.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 16
+[19-Jul-2016 02:29:23 UTC] PHP Stack trace:
+[19-Jul-2016 02:29:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:29:23 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:16
+[19-Jul-2016 02:29:23 UTC] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 24
+[19-Jul-2016 02:29:23 UTC] PHP Stack trace:
+[19-Jul-2016 02:29:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:29:23 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:24
+[19-Jul-2016 02:33:48 UTC] PHP Warning:  imagecreatefromjpeg(20160719001.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 16
+[19-Jul-2016 02:33:48 UTC] PHP Stack trace:
+[19-Jul-2016 02:33:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:33:48 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:16
+[19-Jul-2016 02:33:48 UTC] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 24
+[19-Jul-2016 02:33:48 UTC] PHP Stack trace:
+[19-Jul-2016 02:33:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:33:48 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:24
+[19-Jul-2016 02:34:48 UTC] PHP Warning:  imagecreatefromjpeg(20160719001.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 16
+[19-Jul-2016 02:34:48 UTC] PHP Stack trace:
+[19-Jul-2016 02:34:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:34:48 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:16
+[19-Jul-2016 02:34:48 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 24
+[19-Jul-2016 02:34:48 UTC] PHP Stack trace:
+[19-Jul-2016 02:34:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:34:48 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:24
+[19-Jul-2016 02:34:48 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 26
+[19-Jul-2016 02:34:48 UTC] PHP Stack trace:
+[19-Jul-2016 02:34:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:34:48 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:26
+[19-Jul-2016 02:35:53 UTC] PHP Warning:  imagecreatefromjpeg(20160719001.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 16
+[19-Jul-2016 02:35:53 UTC] PHP Stack trace:
+[19-Jul-2016 02:35:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:35:53 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:16
+[19-Jul-2016 02:35:53 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 24
+[19-Jul-2016 02:35:53 UTC] PHP Stack trace:
+[19-Jul-2016 02:35:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:35:53 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:24
+[19-Jul-2016 02:37:50 UTC] PHP Warning:  imagecreatefromjpeg(20160719001.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 16
+[19-Jul-2016 02:37:50 UTC] PHP Stack trace:
+[19-Jul-2016 02:37:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:37:50 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:16
+[19-Jul-2016 02:37:50 UTC] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 22
+[19-Jul-2016 02:37:50 UTC] PHP Stack trace:
+[19-Jul-2016 02:37:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:37:50 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:22
+[19-Jul-2016 02:37:50 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 24
+[19-Jul-2016 02:37:50 UTC] PHP Stack trace:
+[19-Jul-2016 02:37:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:37:50 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:24
+[19-Jul-2016 02:42:59 UTC] PHP Warning:  imagecreatefromjpeg(20160719001.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 16
+[19-Jul-2016 02:42:59 UTC] PHP Stack trace:
+[19-Jul-2016 02:42:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:42:59 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:16
+[19-Jul-2016 02:42:59 UTC] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 21
+[19-Jul-2016 02:42:59 UTC] PHP Stack trace:
+[19-Jul-2016 02:42:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:42:59 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:21
+[19-Jul-2016 02:42:59 UTC] PHP Warning:  imagejpeg() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 23
+[19-Jul-2016 02:42:59 UTC] PHP Stack trace:
+[19-Jul-2016 02:42:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:42:59 UTC] PHP   2. imagejpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:23
+[19-Jul-2016 02:44:31 UTC] PHP Warning:  imagecreatefromjpeg(20160719001.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 16
+[19-Jul-2016 02:44:31 UTC] PHP Stack trace:
+[19-Jul-2016 02:44:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:44:31 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:16
+[19-Jul-2016 02:44:31 UTC] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 21
+[19-Jul-2016 02:44:31 UTC] PHP Stack trace:
+[19-Jul-2016 02:44:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:44:31 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:21
+[19-Jul-2016 02:45:21 UTC] PHP Warning:  imagecreatefromjpeg(ok_photo/20160719001.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 16
+[19-Jul-2016 02:45:21 UTC] PHP Stack trace:
+[19-Jul-2016 02:45:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:45:21 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:16
+[19-Jul-2016 02:45:21 UTC] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 21
+[19-Jul-2016 02:45:21 UTC] PHP Stack trace:
+[19-Jul-2016 02:45:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:45:21 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:21
+[19-Jul-2016 02:47:19 UTC] PHP Warning:  imagecreatefromjpeg(k): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 16
+[19-Jul-2016 02:47:19 UTC] PHP Stack trace:
+[19-Jul-2016 02:47:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:47:19 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:16
+[19-Jul-2016 02:47:19 UTC] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 21
+[19-Jul-2016 02:47:19 UTC] PHP Stack trace:
+[19-Jul-2016 02:47:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:47:19 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:21
+[19-Jul-2016 02:49:15 UTC] PHP Warning:  imagecreatefromjpeg(ok_photo/20160719001.jpg): failed to open stream: No such file or directory in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 16
+[19-Jul-2016 02:49:15 UTC] PHP Stack trace:
+[19-Jul-2016 02:49:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:49:15 UTC] PHP   2. imagecreatefromjpeg() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:16
+[19-Jul-2016 02:49:15 UTC] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, boolean given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 21
+[19-Jul-2016 02:49:15 UTC] PHP Stack trace:
+[19-Jul-2016 02:49:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 02:49:15 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:21
+[19-Jul-2016 05:44:38 UTC] PHP Warning:  imagecopyresampled() expects parameter 5 to be long, string given in /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php on line 21
+[19-Jul-2016 05:44:38 UTC] PHP Stack trace:
+[19-Jul-2016 05:44:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:0
+[19-Jul-2016 05:44:38 UTC] PHP   2. imagecopyresampled() /home/ubuntu/workspace/gitlab/small_project/project_MVC/controllers/crop.php:21
