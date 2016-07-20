@@ -17,8 +17,7 @@
         //顯示加入我們-------------------------------------------------------------
         function joinus_page1(){
             
-            //抓頁數
-            $p = $_GET['p'];
+            
             //搜尋全部資料共幾筆
             $jo = $this->model("process_joinus");
             $result = $jo->select_jo();
@@ -28,8 +27,9 @@
         }
         
         //顯示加入我們-------------------------------------------------------------
-        function joinus_page2($p){
-            
+        function joinus_page2(){
+            //抓頁數
+            $p = $_GET['p'];
             if($p=="")
             {
                 $p = 0;
@@ -56,7 +56,7 @@
             if(str($name)==true || str($email)==true || str($phone)==true){
                 
                 echo '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
-                echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/project_MVC/joinus/joinus>';
+                echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus>';
             }
             else
             {
@@ -88,7 +88,7 @@
                 }
                 //新增資料
                 $joinus->insert_jo($ans,$name,$email,$phone,$date);
-                header("Location:https://lab1-srt459vn.c9users.io/project_MVC/joinus/joinus");
+                header("Location:https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus");
             }
                     
         }
@@ -101,7 +101,7 @@
             $joinus = $this->model("process_joinus");
             $joinus->delete_jo($id);
             
-            echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/project_MVC/joinus/joinus?p={$p}>";
+            echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus?p={$p}>";
         }
         
         

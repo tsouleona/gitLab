@@ -20,7 +20,7 @@
             if(preg_match("/'/",$data))
             {
                 echo '<h1 style="color:#ff94b6">不能輸入特殊字元</h1>';
-                echo "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/project_MVC/display/display?&p={$p}>";
+                echo "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?&p={$p}>";
             }
             else
             {
@@ -56,23 +56,23 @@
                 if( $_FILES['file']['error'] > 0 && $_FILES['file']['error'] != 4)
                 {  
                     echo '<h1 style="color:#ff94b6">檔案上傳失敗</h1>';
-                    echo "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/project_MVC/display/display?&p={$p}>";
+                    echo "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?&p={$p}>";
                 }
                 //如果不是jpg png jepg檔案類型不能上傳
                 if(!in_array($ex,$path) && $_FILES['file']['error'] != 4)
                 {
                     echo '<h1 style="color:#ff94b6">副檔名不合格</h1>';
-                    echo "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/project_MVC/display/display?&p={$p}>";
+                    echo "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?&p={$p}>";
                 }
                 
                 
                 //如果檔案為空亦可上傳
                 else{
                 
-                    move_uploaded_file($_FILES['file']['tmp_name'],'/project_MVC/views/ok_photo/'.$ans.".".$ex);//複製檔案
+                    move_uploaded_file($_FILES['file']['tmp_name'],'views/ok_photo/'.$ans.".".$ex);//複製檔案
                     //新增專案內容與圖片編號
                     $display->insert_dis($ans,$data,$date);
-                    echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/project_MVC/display_2/display_2?id={$ans}&p={$p}>";
+                    echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/display_2?id={$ans}&p={$p}>";
                     //$this->view("display_2");
                     
                 }
@@ -89,13 +89,13 @@
             $display->delete_dis($id);
             unlink("views/ok_photo/$id.jpg");
             
-            echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/project_MVC/display/display?p={$p}>";
+            echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
         }
         
         //分頁實績展示-------------------------------------------------------------
         
         function display_page1(){
-            $p = $_GET['p'];
+            
             $table = $this->model("process_display");
             //搜尋全部有幾筆資料
             $result = $table->select_data();
@@ -104,7 +104,8 @@
             return $pagecount = ceil($total/9);
         }
         
-        function display_page2($p){
+        function display_page2(){
+            $p = $_GET['p'];
             if($p=="")
             {
                 $p = 0;
@@ -118,6 +119,10 @@
         function display_update()
         {
             $p = $_POST['page'];
+            if($p=="")
+            {
+                $p = 0;
+            }
             //傳過來的專案內容
             $data = $_POST["data"];
             //傳過來的圖片編號
@@ -126,7 +131,7 @@
             if(preg_match("/'/",$data))
             {
                 echo '<h1 style="color:#ff94b6">不能輸入特殊字元</h1>';
-                echo "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/project_MVC/display/display?&p={$p}>";
+                echo "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?&p={$p}>";
             }
             else
             {
@@ -143,13 +148,13 @@
                 if($_FILES['file']['error'] > 0 && $_FILES['file']['error'] != 4 )
                 {
                     echo '<h1 style="color:#ff94b6">檔案上傳失敗</h1>';
-                    echo "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/project_MVC/display/display?&p={$p}>";
+                    echo "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?&p={$p}>";
                 }
                 //如果不是jpg png jepg檔案類型不能上傳
                 if(!in_array($ex,$path) && $_FILES['file']['error'] != 4)
                 {
                     echo '<h1 style="color:#ff94b6">副檔名不合格</h1>' ;
-                    echo "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/project_MVC/display/display?&p={$p}>";
+                    echo "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?&p={$p}>";
                 }
               
                 
@@ -159,7 +164,7 @@
                     move_uploaded_file($_FILES['file']['tmp_name'],'views/ok_photo/'.$id.".".$ex);//複製檔案
                     //更新專案內容
                     $display->update_dis($data,$id);
-                    echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/project_MVC/display_2/display_2?id={$ans}&p={$p}>";
+                    echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/display_2?id={$id}&p={$p}>";
                     
                     
                 }

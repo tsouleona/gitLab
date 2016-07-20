@@ -23,7 +23,7 @@
     		
     		imagejpeg($dst_r,'views/ok_photo/'.$id.'.jpg');
     	    //header("location:../views/display.php");
-    		echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/project_MVC/display/display?p={$p}>";
+    		echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
      	}
     }
 ?>

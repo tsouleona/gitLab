@@ -35,7 +35,7 @@
             str($cellphone) == true || str($tax) == true)
             {
                  echo '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
-                 echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/project_MVC/factory/factory>';
+                 echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory>';
             }
             else{
                 if($email == "")
@@ -80,13 +80,13 @@
                 //新增資料
                 $factory->insert_fa($ans,$name,$people,$phone,$address,$url,$email,$cellphone,$tax,$data,$date);
                 
-                header("Location:https://lab1-srt459vn.c9users.io/project_MVC/factory/factory");
+                header("Location:https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory");
             }
         }
         
         //顯示實績展示-------------------------------------------------------------
         function factory_page1(){
-            $p = $_GET['p'];    
+               
             $fa =$this->model("process_factory");
             //搜尋全部資料共幾筆
             $result = $fa->select_fa();
@@ -96,7 +96,8 @@
         }
         
         //顯示實績展示-------------------------------------------------------------
-        function factory_page2($p){
+        function factory_page2(){
+            $p = $_GET['p']; 
             if($p=="")
             {
                 $p = 0;
@@ -120,7 +121,7 @@
             //刪除該筆資料
             $factory = $this->model("process_factory");
             $factory->delete_fa($id);
-            echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/project_MVC/factory/factory?p={$p}>";
+            echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory?p={$p}>";
         }
         
     }
