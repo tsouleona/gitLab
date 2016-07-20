@@ -14,11 +14,11 @@
     
     if($uname != "" && $pwd != "")
     {
-        if(strpos($uname,"'") || strpos($pwd,"'")){
+        if(preg_match("/'/",$uname) || strpos("/'/",$pwd)){
         echo '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
         echo '<meta http-equiv=REFRESH CONTENT=1;url=../views/index.php>';
         }
-        if(!strpos($uname,"'") && !strpos($pwd,"'")){
+        if(!preg_match("/'/",$uname) && !strpos("/'/",$pwd)){
             $row = new login();
             $result2 = $row->login_data($uname);
             $row2 = mysql_fetch_array($result2);
