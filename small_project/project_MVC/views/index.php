@@ -104,7 +104,7 @@
 
 <!--------------------------------------------登錄帳號密碼------------------------------------------------------------------------>
     <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-sm" role="document">
             <form action="../controllers/login.php" method="POST" id="form1">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -113,32 +113,18 @@
                     </div>
                     <div class="modal-body">
 
-                        <h4><strong>帳號 </strong><input type="text" name="username" /></h4>
-                        <h4><strong>密碼 </strong><input  type="password" name="password" /></h4>
-
+                        <h4><strong>帳號 </strong><input type="text" name="username" id="username" /></h4>
+                        <h4><strong>密碼 </strong><input  type="password" name="password" id="password" /></h4>
+                        <div id="check_login"></div>
                     </div>
                     <div class="modal-footer">
 
-                        <input type="submit" onclick="check()" class="btn btn-primary" name="login" value="確認">
+                        <input type="submit" class="btn btn-primary" name="login" id="login" value="確認" />
                     </div>
                 </div>
             </form>
         </div>
     </div><!--model end-->
-<!--------------------------------------------判斷 帳號密碼是否為空------------------------------------------------------------------------>
-    <script type="text/javascript">
-        function check() {
-            if (form1.username.value == "") {
-                alert("尚未輸入帳號");
-            }
-            if (form1.password.value == "") {
-                alert("尚未輸入密碼");
-            }
-            else {
-                form1.submit();
-            }
-        }
-    </script>
 
 <!--------------------------------------------header(顯示)------------------------------------------------------------------------>    
     <header>
@@ -197,7 +183,7 @@
                     <br>
                   </div>
                   <div class="modal-footer">
-                    <input type="submit" onclick="submit();" class="btn btn-primary" name="login" value="確認">
+                    <button  onclick="submit();" class="btn btn-primary" name="login">確認</button>
                   </div>
                 </div>
                 
@@ -336,7 +322,7 @@
                     <br>
                   </div>
                   <div class="modal-footer">
-                    <input type="submit" onclick="submit3();" class="btn btn-primary"  value="確認">
+                    <button onclick="submit3();" class="btn btn-primary" >確認</button>
                   </div>
                 </div>
                 

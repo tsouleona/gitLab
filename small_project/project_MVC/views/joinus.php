@@ -118,26 +118,12 @@
                     </div>
                     <div class="modal-footer">
 
-                        <input type="submit" onclick="check()" class="btn btn-primary" name="login" value="確認">
+                        <input type="submit" class="btn btn-primary" name="login" id="login" value="確認" />
                     </div>
                 </div>
             </form>
         </div>
     </div><!--model end-->
-<!--------------------------------------------判斷 帳號密碼是否為空------------------------------------------------------------------------>
-    <script type="text/javascript">
-        function check() {
-            if (form1.username.value == "") {
-                alert("尚未輸入帳號");
-            }
-            if (form1.password.value == "") {
-                alert("尚未輸入密碼");
-            }
-            else {
-                form1.submit();
-            }
-        }
-    </script>
 
 <!--------------------------------------------header(顯示)------------------------------------------------------------------------>    
     <header>
@@ -281,7 +267,7 @@
                                 </td>
                                 
                                 <td align="center">
-                                    <button class="btn btn-warning" type="button" id="del" name="del"><a style="color:white" href="../controllers/joinus_delete.php?jo_id=<?php echo $row2['join_id'];?>">刪除</a></button>
+                                    <button class="btn btn-warning" type="button" id="del" name="del"><a style="color:white" href="../controllers/joinus_delete.php?jo_id=<?php echo $row2['join_id'];?>&p=<?php echo $_GET['p'];?>">刪除</a></button>
                                 </td>
                             </tr>
                         <?php }?>    
@@ -399,7 +385,7 @@
                             <br>
                           </div>
                           <div class="modal-footer">
-                            <input type="submit" onclick="submit3();" class="btn btn-primary"  value="確認">
+                            <button onclick="submit3();" class="btn btn-primary" >確認</button>
                           </div>
                         </div>
                         

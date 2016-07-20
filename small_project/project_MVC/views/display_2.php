@@ -76,7 +76,11 @@ jQuery(function($){
 <body>
 
     <div class="container">
+        <div class="row" >
+          <button class="btn btn-large btn-inverse"><a style="color:white" href="../views/display.php?p=<?php echo $_GET['p'];?>">不需要裁切</button>
+        </div>
         <div class="row">
+          
             <div class="span12">
                 <!--<div class="jc-demo-box">-->
         
@@ -88,6 +92,7 @@ jQuery(function($){
             		<!-- This is the form that our event handler fills -->
             		<form id = "coords"  action="../controllers/crop.php" method="post" onsubmit="return checkCoords();">
             			<input type="hidden" id="id" name="id" value="<?php echo $_GET['id'];?>" />
+            			<input type="hidden" id="page" name="page" value="<?php echo $_GET['p'];?>" />
             			<input type="hidden" id="x1" name="x1" />
             			<input type="hidden" id="y1" name="y1" />
             		  <input type="hidden" id="x2" name="x2" />

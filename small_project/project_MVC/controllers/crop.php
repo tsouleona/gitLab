@@ -6,7 +6,7 @@
  * @copyright 2008-2009 Kelly Hallman
  * More info: http://deepliquid.com/content/Jcrop_Implementation_Theory.html
  */
-
+	$p = $_POST['page'];
     $id = $_POST['id'];
 	$targ_w = $_POST['w'];
 	
@@ -21,8 +21,8 @@
 	imagecopyresampled($dst_r,$img_r,0,0,$_POST['x1'],$_POST['y1'],$targ_w,$targ_h,$_POST['w'],$_POST['h']);
 	
 	imagejpeg($dst_r,'../views/ok_photo/'.$id.'.jpg');
-    header("location:../views/display.php");
-
+    //header("location:../views/display.php");
+	echo "<meta http-equiv=REFRESH CONTENT=0;url=../views/display.php?p={$p}>";
 
 
 // If not a POST request, display page below:

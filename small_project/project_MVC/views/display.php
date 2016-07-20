@@ -122,26 +122,12 @@
                     </div>
                     <div class="modal-footer">
 
-                        <input type="submit" onclick="check()" class="btn btn-primary" name="login" value="確認">
+                        <input type="submit" class="btn btn-primary" name="login" id="login" value="確認" />
                     </div>
                 </div>
             </form>
         </div>
     </div><!--model end-->
-<!--------------------------------------------判斷 帳號密碼是否為空------------------------------------------------------------------------>
-    <script type="text/javascript">
-        function check() {
-            if (form1.username.value == "") {
-                alert("尚未輸入帳號");
-            }
-            if (form1.password.value == "") {
-                alert("尚未輸入密碼");
-            }
-            else {
-                form1.submit();
-            }
-        }
-    </script>
 
 <!--------------------------------------------header(顯示)------------------------------------------------------------------------>    
     <header>
@@ -189,7 +175,7 @@
                             ?>
                                 <div class="row" align="center">
                                 <button class="btn btn-warning btn-xl" data-toggle="modal" data-target="#change<?php echo $row2[0];?>">編輯</button>
-                                <button class="btn btn-warning btn-xl"><a style="color:white" href="../controllers/display_delete.php?dis_id=<?php echo $row2[0];?>">刪除</a></button>
+                                <button class="btn btn-warning btn-xl"><a style="color:white" href="../controllers/display_delete.php?dis_id=<?php echo $row2[0];?>&p=<?php echo $_GET['p'];?>">刪除</a></button>
                                 </div>
                             <?php }?>    
                         </div>
@@ -204,9 +190,10 @@
                                         <div class="modal-body">
                                             
                                             <input style="visibility:hidden" type="text" name="id" value="<?php echo $row2[0];?>"/><!-- 傳輸id-->
-                                            <input type="text" class="form-control" name="data" value="<?php echo $row2[1];?>"/>
+                                            <input type="text" class="form-control" name="data" value="<?php echo $row2[1];?>" />  
                                             <h4><strong>上傳檔案&nbsp;</strong><h4/><input id="file" name="file" type="file">
                                             <p style="color:red"><strong>請使用jpeg、jpg檔</strong><p>
+                                            <input style="visibility:hidden" name="page" value="<?php echo $_GET['p'];?>" />
                                         </div>
                                         <div class="modal-footer">
                     
@@ -257,6 +244,7 @@
                                         <div id="danger"></div>
                                         <h4><strong>上傳檔案&nbsp;</strong><h4/><input id="file" name="file" type="file">
                                         <p style="color:red"><strong>請使用jpeg、jpg檔</strong><p>
+                                        <input style="visibility:hidden" name="page" value="<?php echo $_GET['p'];?>" />
                                     </div>
                                     <div class="modal-footer">
                 
@@ -380,7 +368,7 @@
                             <br>
                           </div>
                           <div class="modal-footer">
-                            <input type="submit" onclick="submit3();" class="btn btn-primary"  value="確認">
+                            <button onclick="submit3();" class="btn btn-primary" >確認</button>
                           </div>
                         </div>
                 
