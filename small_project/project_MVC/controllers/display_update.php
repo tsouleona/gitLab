@@ -40,8 +40,8 @@
         
         //如果檔案為空亦可上傳
         else{
+
             move_uploaded_file($_FILES['file']['tmp_name'],'../views/ok_photo/'.$id.".".$ex);//複製檔案
-                    
             //更新專案內容
             $display->update_dis($data,$id);
             
