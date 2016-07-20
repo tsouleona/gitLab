@@ -15,21 +15,21 @@
     <title>Creative - Start Bootstrap Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/project_MVC/views/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/project_MVC/views/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="/project_MVC/views/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">
-    <link href="css/creative.css" rel="stylesheet">
+    <link href="/project_MVC/views/css/creative.min.css" rel="stylesheet">
+    <link href="/project_MVC/views/css/creative.css" rel="stylesheet">
     <!-- Jquery-->
-    <script src="vendor/jquery/jquery.js"></script>
+    <script src="/project_MVC/views/vendor/jquery/jquery.js"></script>
     
      
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -50,7 +50,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.php">沅淯駿營造有限公司</a>
+                <a class="navbar-brand page-scroll" href="https://lab1-srt459vn.c9users.io/project_MVC/index">沅淯駿營造有限公司</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -62,28 +62,29 @@
                             <h4><strong>聯絡我們</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="display.php">
+                        <a class="page-scroll" href="https://lab1-srt459vn.c9users.io/project_MVC/display/display">
                             <h4><strong>實績展示</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="factory.php">
+                        <a class="page-scroll" href="https://lab1-srt459vn.c9users.io/project_MVC/factory/factory">
                             <h4><strong>廠商招募</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="joinus.php">
+                        <a class="page-scroll" href="https://lab1-srt459vn.c9users.io/project_MVC/joinus/joinus">
                             <font color="#00ffff"><h4><strong>加入我們</strong></h4></a></font>
                     </li>
 <!--------------------------------------------登錄判斷------------------------------------------------------------------------>
                     <?php 
-                        include_once("../controllers/login_check.php");
+                        include_once("controllers/indexLeona.php");
                         $id = $_SESSION["username"];
-                        $row = check();
+                        $check = new indexLeona();
+                        $row = $check->check_ck();
                     ?>
                     <?php 
                         if( $id==$row[0] &&  $id!=NULL ) { 
                     ?>
                     <li>
-                        <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="../controllers/login_out.php">管理員登出</a></button>
+                        <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="https://lab1-srt459vn.c9users.io/project_MVC/index/login_out">管理員登出</a></button>
                     </li>
                     <?php } ?>
 
@@ -104,7 +105,7 @@
 <!--------------------------------------------登錄帳號密碼------------------------------------------------------------------------>
     <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <form action="../controllers/login.php" method="POST" id="form1">
+            <form action="https://lab1-srt459vn.c9users.io/project_MVC/index/login_in" method="POST" id="form1">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -161,7 +162,7 @@
                 
 <!--------------------------------------------加入我們(輸入聯絡資訊)------------------------------------------------------------------------>
                 <div class="col-lg-5  text-center">
-                    <form action="../controllers/joinus_insert.php" method="POST" id ="form2">
+                    <form action="https://lab1-srt459vn.c9users.io/project_MVC/joinus/joinus_insert" method="POST" id ="form2">
                         <table class="table table-hover">
                             <thead>
                                 <td align="center">
@@ -210,8 +211,10 @@
 <!--------------------------------------------管理員畫面[加入我們(顯示並可刪除)]------------------------------------------------------------------------>
     <?php } ?>
     <?php 
-        include_once("../controllers/joinus_select.php");
-        include_once("../controllers/joinus_page.php");
+        include_once("controllers/joinusLeona.php");
+        $r = new joinusLeona();
+        $result2 = $r->joinus_page2($_GET['p']);
+        $pagecount = $r->joinus_page1();
         
         if( $id==$row[0] && $id!=NULL) {
     ?>
@@ -222,7 +225,7 @@
                 <div class="col-lg-1"></div>
                 <div class="col-lg-10  text-center">
                     <?php
-                    $result4 = joinus_select($p);
+                    $result4 = $r->joinus_select($p);
                     
                     $row4 = mysql_fetch_assoc($result4);
                     if(empty($row4)){?>
@@ -267,7 +270,7 @@
                                 </td>
                                 
                                 <td align="center">
-                                    <button class="btn btn-warning" type="button" id="del" name="del"><a style="color:white" href="../controllers/joinus_delete.php?jo_id=<?php echo $row2['join_id'];?>&p=<?php echo $_GET['p'];?>">刪除</a></button>
+                                    <button class="btn btn-warning" type="button" id="del" name="del"><a style="color:white" href="https://lab1-srt459vn.c9users.io/project_MVC/joinus/joinus_delete?jo_id=<?php echo $row2['join_id'];?>&p=<?php echo $_GET['p'];?>">刪除</a></button>
                                 </td>
                             </tr>
                         <?php }?>    
@@ -292,9 +295,9 @@
 
 <!--------------------------------------------聯絡我們(顯示)------------------------------------------------------------------------>
     <?php
-        include_once("../controllers/index_contact_select.php");
-        
-        $row3 = contact_select();
+        include_once("controllers/indexLeona.php");
+        $t = new indexLeona;
+        $row3 = $t->select_contact();
     ?>
         <section class="bg-primary" id="contact">
             <div class="container">
@@ -363,7 +366,7 @@
 <!--------------------------------------------管理員畫面[聯絡我們(編輯)]------------------------------------------------------------------------>
         <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
-                <form action="../controllers/index_contact.php" method="POST" id="form3">
+                <form action="https://lab1-srt459vn.c9users.io/project_MVC/index/insert_contact" method="POST" id="form3">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -399,16 +402,16 @@
             </div>
         </div><!--model end-->
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="/project_MVC/views/vendor/bootstrap/js/bootstrap.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.js"></script>
+    <script src="/project_MVC/views/vendor/scrollreveal/scrollreveal.js"></script>
     
-    <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
+    <script src="/project_MVC/views/vendor/magnific-popup/jquery.magnific-popup.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/creative.js"></script>
+    <script src="/project_MVC/views/js/creative.js"></script>
 
 </body>
 

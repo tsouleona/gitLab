@@ -1,8 +1,8 @@
 <?php
     session_start();
-    include_once("../models/mysql_connect.inc.php");
+    include_once("models/mysql_connect.inc.php");
     
-    class joinus{
+    class process_joinus{
         
         //搜尋全部資料
         function select_jo(){

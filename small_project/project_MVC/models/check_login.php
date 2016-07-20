@@ -1,7 +1,7 @@
 <?php
-    include_once("../models/mysql_connect.inc.php");
+    include_once("models/mysql_connect.inc.php");
     header("Content-Type:text/html; charset=utf-8");
-    class login
+    class check_login
     {
         //搜尋資料
         function check(){

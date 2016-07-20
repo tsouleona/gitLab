@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php 
     session_start();
-    
+    // include_once("test.php");
+    // exit;
 ?>
 <html lang="en">
 
@@ -16,22 +17,22 @@
     <title>Creative - Start Bootstrap Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/project_MVC/views/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/project_MVC/views/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="/project_MVC/views/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
     <!--<link href="css/creative.min.css" rel="stylesheet">-->
-    <link href="css/creative.css" rel="stylesheet">
+    <link href="/project_MVC/views/css/creative.css" rel="stylesheet">
     
     <!-- Jquery-->
-    <script src="vendor/jquery/jquery.js"></script>
+    <script src="/project_MVC/views/vendor/jquery/jquery.js"></script>
     
     
     
@@ -53,7 +54,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.php">沅淯駿營造有限公司</a>
+                <a class="navbar-brand page-scroll" href="https://lab1-srt459vn.c9users.io/project_MVC/index">沅淯駿營造有限公司</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -65,29 +66,30 @@
                             <h4><strong>聯絡我們</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="display.php">
+                        <a class="page-scroll" href="https://lab1-srt459vn.c9users.io/project_MVC/dislpay/display">
                             <font color="#00ffff"><h4><strong>實績展示</strong></h4></a></font>
                     </li>
                     <li>
-                        <a class="page-scroll" href="factory.php">
+                        <a class="page-scroll" href="https://lab1-srt459vn.c9users.io/project_MVC/factory/factory">
                             <h4><strong>廠商招募</strong></h4>
                         </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="joinus.php">
+                        <a class="page-scroll" href="https://lab1-srt459vn.c9users.io/project_MVC/joinus/joinus">
                             <h4><strong>加入我們</strong></h4></a>
                     </li>
 <!--------------------------------------------登錄判斷------------------------------------------------------------------------>
                     <?php
-                        include_once("../controllers/login_check.php");
+                        include_once("controllers/indexLeona.php");
                         $id = $_SESSION["username"];
-                        $row = check();
+                        $check = new indexLeona();
+                        $row = $check->check_ck();
                     ?>
                     <?php 
                         if( $id==$row[0] &&  $id!=NULL ) { 
                     ?>
                     <li>
-                        <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="../controllers/login_out.php">管理員登出</a></button>
+                        <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="https://lab1-srt459vn.c9users.io/project_MVC/index/login_out">管理員登出</a></button>
                     </li>
                     <?php } ?>
 
@@ -108,7 +110,7 @@
 <!--------------------------------------------登錄帳號密碼------------------------------------------------------------------------>
     <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <form action="../controllers/login.php" method="POST" id="form1">
+            <form action="https://lab1-srt459vn.c9users.io/project_MVC/index/login_in" method="POST" id="form1">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -143,7 +145,10 @@
     
 <!--------------------------------------------實績展示(顯示)------------------------------------------------------------------------>    
     <?php 
-        include_once("../controllers/display_page.php");
+        include_once("controllers/displayLeona.php");
+        $r = new displayLeona();
+        $result2 = $r->display_page2($_GET['p']);
+        $pagecount = $r->display_page1();
     ?>
     
     <section class="no-padding" id="portfolio">
@@ -153,8 +158,8 @@
                     while($row2 = mysql_fetch_row($result2)){
                 ?>
                         <div class="col-lg-4 col-sm-6">
-                            <a href="ok_photo/<?php echo $row2[0];?>.jpg" class="portfolio-box" id="img_big">
-                                <img style="width:650px;height:320px" src="ok_photo/<?php echo $row2[0];?>.jpg" onerror="this.src='ok_photo/add2.jpg'" class="img-responsive" alt="">
+                            <a href="/project_MVC/views/ok_photo/<?php echo $row2[0];?>.jpg" class="portfolio-box" id="img_big">
+                                <img style="width:650px;height:320px" src="/project_MVC/views/ok_photo/<?php echo $row2[0];?>.jpg" onerror="this.src='/project_MVC/views/ok_photo/add2.jpg'" class="img-responsive" alt="">
                                 
                                 <div class="portfolio-box-caption">
                                     <div class="portfolio-box-caption-content">
@@ -175,13 +180,13 @@
                             ?>
                                 <div class="row" align="center">
                                 <button class="btn btn-warning btn-xl" data-toggle="modal" data-target="#change<?php echo $row2[0];?>">編輯</button>
-                                <button class="btn btn-warning btn-xl"><a style="color:white" href="../controllers/display_delete.php?dis_id=<?php echo $row2[0];?>&p=<?php echo $_GET['p'];?>">刪除</a></button>
+                                <button class="btn btn-warning btn-xl"><a style="color:white" href="https://lab1-srt459vn.c9users.io/project_MVC/display/display_delete?dis_id=<?php echo $row2[0];?>&p=<?php echo $_GET['p'];?>">刪除</a></button>
                                 </div>
                             <?php }?>    
                         </div>
                         <div class="modal fade" id="change<?php echo $row2[0];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
-                                <form enctype="multipart/form-data" accept="image/jpeg,image/jpg,image/gif,image/png" action="../controllers/display_update.php" method="POST" id="form2">
+                                <form enctype="multipart/form-data" accept="image/jpeg,image/jpg,image/gif,image/png" action="https://lab1-srt459vn.c9users.io/project_MVC/display/display_update" method="POST" id="form2">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -232,7 +237,7 @@
                     </div>
                     <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
-                            <form enctype="multipart/form-data"  action="../controllers/display_add.php" method="POST" id="form4">
+                            <form enctype="multipart/form-data"  action="https://lab1-srt459vn.c9users.io/project_MVC/display/display_add" method="POST" id="form4">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -275,9 +280,9 @@
 
 <!--------------------------------------------聯絡我們(顯示)------------------------------------------------------------------------>
     <?php
-        include_once("../controllers/index_contact_select.php");
-        
-        $row3 = contact_select();
+        include_once("controllers/indexLeona.php");
+        $t = new indexLeona;
+        $row3 = $t->select_contact();
     ?>
         <section class="bg-primary" id="contact">
             <div class="container">
@@ -346,7 +351,7 @@
 <!--------------------------------------------管理員畫面[聯絡我們(編輯)]------------------------------------------------------------------------>       
         <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
-                <form action="../controllers/index_contact.php" method="POST" id="form3">
+                <form action="https://lab1-srt459vn.c9users.io/project_MVC/index/insert_contact" method="POST" id="form3">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -383,15 +388,15 @@
         </div><!--model end-->
     <!-- modal end-->
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="/project_MVC/views/vendor/bootstrap/js/bootstrap.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.js"></script>
+    <script src="/project_MVC/views/vendor/scrollreveal/scrollreveal.js"></script>
     
-    <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
+    <script src="/project_MVC/views/vendor/magnific-popup/jquery.magnific-popup.js"></script>
     <!-- Theme JavaScript -->
-    <script src="js/creative.js"></script>
+    <script src="/project_MVC/views/js/creative.js"></script>
     
    
 

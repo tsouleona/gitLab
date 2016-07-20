@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <?php 
     session_start();
+    // include_once("controllers/test.php");
+    // exit;
 ?>
 <html lang="en">
 
@@ -15,21 +17,21 @@
     <title>Creative - Start Bootstrap Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="views/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="views/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="views/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">
-    <link href="css/creative.css" rel="stylesheet">
+    <link href="views/css/creative.min.css" rel="stylesheet">
+    <link href="views/css/creative.css" rel="stylesheet">
     <!-- Jquery-->
-    <script src="vendor/jquery/jquery.js"></script>
+    <script src="views/vendor/jquery/jquery.js"></script>
     
      
 
@@ -51,7 +53,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.php">沅淯駿營造有限公司</a>
+                <a class="navbar-brand page-scroll" href="https://lab1-srt459vn.c9users.io/project_MVC/index">沅淯駿營造有限公司</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -63,28 +65,29 @@
                             <h4><strong>聯絡我們</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="display.php">
+                        <a class="page-scroll" href="display/display">
                             <h4><strong>實績展示</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="factory.php">
+                        <a class="page-scroll" href="factory/factory">
                             <h4><strong>廠商招募</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="joinus.php">
+                        <a class="page-scroll" href="joinus/joinus">
                             <h4><strong>加入我們</strong></h4></a>
                     </li>
 <!--------------------------------------------登錄判斷------------------------------------------------------------------------>
                     <?php 
-                        include_once("../controllers/login_check.php");
+                        include_once("controllers/indexLeona.php");
                         $id = $_SESSION["username"];
-                        $row = check();
+                        $check = new indexLeona();
+                        $row = $check->check_ck();
                     ?>
                     <?php 
                         if( $id==$row[0] &&  $id!=NULL ) { 
                     ?>
                     <li>
-                        <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="../controllers/login_out.php">管理員登出</a></button>
+                        <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="index/login_out">管理員登出</a></button>
                     </li>
                     <?php } ?>
 
@@ -105,7 +108,7 @@
 <!--------------------------------------------登錄帳號密碼------------------------------------------------------------------------>
     <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm" role="document">
-            <form action="../controllers/login.php" method="POST" id="form1">
+            <form action="index/login_in" method="POST" id="form1">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -141,9 +144,9 @@
 <!--------------------------------------------公司簡介(顯示)------------------------------------------------------------------------>
     <?php
     
-        include_once("../controllers/index_about_select.php");
-        
-        $row2 = select_about();
+        include_once("controllers/indexLeona.php");
+        $t = new indexLeona;
+        $row2 = $t->select_about();
     ?>
     <section class="bg-primary" id="about">
         <div class="container">
@@ -167,7 +170,7 @@
     </section>
     <div class="modal fade" id="about_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-           <form action="../controllers/index_about.php" method="POST" id="form2">
+           <form action="index/insert_about" method="POST" id="form2">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -240,10 +243,10 @@
     
 <!--------------------------------------------聯絡我們(顯示)------------------------------------------------------------------------>    
     <?php
+        include_once("controllers/indexLeona.php");
+        $t = new indexLeona;
+        $row3 = $t->select_contact();
         
-        include_once("../controllers/index_contact_select.php");
-        
-        $row3 = contact_select();
     ?>
     <section class="bg-primary" id="contact">
         <div class="container">
@@ -300,7 +303,7 @@
     </section>
     <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-           <form action="../controllers/index_contact.php" method="POST" id="form3">
+           <form action="index/insert_contact" method="POST" id="form3">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -336,16 +339,16 @@
       </div>
     </div><!--model end-->
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="views/vendor/bootstrap/js/bootstrap.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.js"></script>
+    <script src="views/vendor/scrollreveal/scrollreveal.js"></script>
     
-    <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
+    <script src="views/vendor/magnific-popup/jquery.magnific-popup.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/creative.js"></script>
+    <script src="views/js/creative.js"></script>
 
 </body>
 

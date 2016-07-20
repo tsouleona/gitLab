@@ -1,9 +1,9 @@
 <?php 
     session_start();
-    include_once("../models/mysql_connect.inc.php");
+    include_once("models/mysql_connect.inc.php");
     
     
-    class index{
+    class process_index{
         //搜尋公司簡介的資料
         function selest_ab(){
             $sql2="select * from introduction";

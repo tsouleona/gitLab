@@ -1,9 +1,9 @@
 <?php
     session_start();
-    include_once("../models/mysql_connect.inc.php");
+    include_once("models/mysql_connect.inc.php");
     
     
-    class display{
+    class process_display{
         
         //搜尋實績展示的資料表
         function select_data(){

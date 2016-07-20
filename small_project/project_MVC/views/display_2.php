@@ -77,7 +77,7 @@ jQuery(function($){
 
     <div class="container">
         <div class="row" >
-          <button class="btn btn-large btn-inverse"><a style="color:white" href="../views/display.php?p=<?php echo $_GET['p'];?>">不需要裁切</button>
+          <button class="btn btn-large btn-inverse"><a style="color:white" href="https://lab1-srt459vn.c9users.io/project_MVC/display/display?p=<?php echo $_GET['p'];?>">不需要裁切</button>
         </div>
         <div class="row">
           
@@ -90,7 +90,7 @@ jQuery(function($){
             		<img src="<?php echo 'ok_photo/'.$_GET['id'].'.jpg';?>" id="cropbox"  />
             
             		<!-- This is the form that our event handler fills -->
-            		<form id = "coords"  action="../controllers/crop.php" method="post" onsubmit="return checkCoords();">
+            		<form id = "coords"  action="display_2/crop_photo" method="post" onsubmit="return checkCoords();">
             			<input type="hidden" id="id" name="id" value="<?php echo $_GET['id'];?>" />
             			<input type="hidden" id="page" name="page" value="<?php echo $_GET['p'];?>" />
             			<input type="hidden" id="x1" name="x1" />
