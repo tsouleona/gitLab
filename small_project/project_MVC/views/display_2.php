@@ -97,11 +97,10 @@ jQuery(function($){
             			<input type="submit" id = "ok" value="Crop Image" class="btn btn-large btn-inverse" />
             		</form>
             	<!--</div>-->
+            	
+                <button class="btn btn-large btn-inverse"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p=<?php echo $_GET['p'];?>">不需要裁切</button>
+    	        
         	</div>
-        	<div class="row" >
-            <button class="btn btn-large btn-inverse"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p=<?php echo $_GET['p'];?>">不需要裁切</button>
-          </div>
-    	</div>
 	</div>
 </body>
 
