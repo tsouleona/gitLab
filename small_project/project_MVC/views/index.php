@@ -101,7 +101,7 @@
 <!--------------------------------------------登錄帳號密碼------------------------------------------------------------------------>
     <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm" role="document">
-            <form action="index/login_in" method="POST" id="form1">
+            <form action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/login_in" method="POST" id="form1">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -110,15 +110,33 @@
                     <div class="modal-body">
 
                         <h4><strong>帳號 </strong><input type="text" name="username" id="username" /></h4>
-                        <h4><strong>密碼 </strong><input  type="password" name="password" id="password" /></h4>
-                        <div id="check_login"></div>
+                        <div id="danger1"></div>
+                        <h4><strong>密碼 </strong><input  type="password" name="password" id="password"/></h4>
+                        <div id="danger2"></div>
                     </div>
                     <div class="modal-footer">
 
-                        <input type="submit" class="btn btn-primary" name="login" id="login" value="確認" />
+                        <input type="button" class="btn btn-primary" name="login" id="login" value="確認" />
                     </div>
                 </div>
             </form>
+            <script>
+                $("#login").on("click",function(){
+                    if($("#username").val()=="")
+                    {
+                        $("#danger1").html('<h4 style="color:red"><strong>尚未輸入帳號</strong></h4>');
+                    }
+                    if($("#password").val()=="")
+                    {
+                        $("#danger2").html('<h4 style="color:red"><strong>尚未輸入密碼</strong></h4>');
+                    }
+                    else
+                    {
+                        $("#form1").submit();                
+                        
+                    }
+                })
+            </script>
         </div>
     </div><!--model end-->
 

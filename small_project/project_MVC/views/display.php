@@ -66,7 +66,7 @@
                             <h4><strong>聯絡我們</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/dislpay/display">
+                        <a class="page-scroll" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display">
                             <font color="#00ffff"><h4><strong>實績展示</strong></h4></a></font>
                     </li>
                     <li>
@@ -114,18 +114,34 @@
                     </div>
                     <div class="modal-body">
 
-                        <h4><strong>帳號 </strong><input type="text" name="username" id="username"/></h4>
+                        <h4><strong>帳號 </strong><input type="text" name="username" id="username" /></h4>
+                        <div id="danger1"></div>
                         <h4><strong>密碼 </strong><input  type="password" name="password" id="password"/></h4>
-                        <div id="check"></div>
-                        <div id="check2"></div>
+                        <div id="danger2"></div>
                     </div>
                     <div class="modal-footer">
-                    
-                        <input type="submit" class="btn btn-primary" name="login" id="login" value="確認" />
+
+                        <input type="button" class="btn btn-primary" name="login" id="login" value="確認" />
                     </div>
                 </div>
             </form>
-           
+            <script>
+                $("#login").on("click",function(){
+                    if($("#username").val()=="")
+                    {
+                        $("#danger1").html('<h4 style="color:red"><strong>尚未輸入帳號</strong></h4>');
+                    }
+                    if($("#password").val()=="")
+                    {
+                        $("#danger2").html('<h4 style="color:red"><strong>尚未輸入密碼</strong></h4>');
+                    }
+                    else
+                    {
+                        $("#form1").submit();                
+                        
+                    }
+                })
+            </script>
         </div>
     </div><!--model end-->
 

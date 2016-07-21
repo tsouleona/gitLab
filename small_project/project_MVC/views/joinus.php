@@ -70,7 +70,7 @@
                             <h4><strong>廠商招募</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="https://lab1-srt459vn.c9users.io/project_MVC/joinus/joinus">
+                        <a class="page-scroll" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus">
                             <font color="#00ffff"><h4><strong>加入我們</strong></h4></a></font>
                     </li>
 <!--------------------------------------------登錄判斷------------------------------------------------------------------------>
@@ -104,7 +104,7 @@
 <!--------------------------------------------登錄帳號密碼------------------------------------------------------------------------>
     <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm" role="document">
-            <form action="https://lab1-srt459vn.c9users.io/project_MVC/index/login_in" method="POST" id="form1">
+            <form action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/login_in" method="POST" id="form1">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -112,16 +112,34 @@
                     </div>
                     <div class="modal-body">
 
-                        <h4><strong>帳號 </strong><input type="text" name="username" /></h4>
-                        <h4><strong>密碼 </strong><input  type="password" name="password" /></h4>
-
+                        <h4><strong>帳號 </strong><input type="text" name="username" id="username" /></h4>
+                        <div id="danger1"></div>
+                        <h4><strong>密碼 </strong><input  type="password" name="password" id="password"/></h4>
+                        <div id="danger2"></div>
                     </div>
                     <div class="modal-footer">
 
-                        <input type="submit" class="btn btn-primary" name="login" id="login" value="確認" />
+                        <input type="button" class="btn btn-primary" name="login" id="login" value="確認" />
                     </div>
                 </div>
             </form>
+            <script>
+                $("#login").on("click",function(){
+                    if($("#username").val()=="")
+                    {
+                        $("#danger1").html('<h4 style="color:red"><strong>尚未輸入帳號</strong></h4>');
+                    }
+                    if($("#password").val()=="")
+                    {
+                        $("#danger2").html('<h4 style="color:red"><strong>尚未輸入密碼</strong></h4>');
+                    }
+                    else
+                    {
+                        $("#form1").submit();                
+                        
+                    }
+                })
+            </script>
         </div>
     </div><!--model end-->
 
@@ -170,6 +188,7 @@
                             <tr>
                                 <td align="center">
                                     <h4><strong><font color="#ff94b6">您的姓名 </font></strong><input type="text" id="name" name="name" /></h4>
+                                    
                                 </td>
                             </tr>
                             <tr>
@@ -180,24 +199,26 @@
                             <tr>
                                 <td align="center">
                                     <h4><strong><font color="#ff94b6">連絡電話 </font></strong><input type="text" id="cellphone" name="cellphone" /></h4>
+                                    
                                 </td>
                             </tr>
 
                         </table>
                         <input class="btn btn-primary btn-xl" type="button" id="ok2" name="ok2" value="確認" />
-                        <div id="debug" ></div>
+                        <br><div><h3><strong style="color:red" id="debug"></strong></h3><br></div>
                     </form>
                     <script>
                         
                         $(document).ready(function() {
                             $("#ok2").on("click", function() {
-                                if ($("#name").val() == "" || $("#cellphone").val() == "" ) {
-                                    $("#debug").html("<br><h3><strong>粉色項目要輸入!!<strong></h3>");
+                                if ($("#name").val() == "" || $("#cellphone").val() == ""){
+                                    $("#debug").html("粉色項目要輸入!!");
                                 }
+                                
                                 else {
                                     $("#form2").submit();
                                 }
-
+                            
                             });
                         });
                     </script>

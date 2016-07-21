@@ -72,34 +72,28 @@
         function login_in(){
             $uname = $_POST["username"];
             $pwd = $_POST["password"];
-            //搜尋資料
-            if($uname == "" || $pwd== ""){
-                echo '<strong><h1 style="color:#ff94b6">尚未輸入帳號密碼</h1></strong>';
-                echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
-            }
             
-            if($uname != "" && $pwd != "")
-            {
-                if(preg_match("/'/",$uname) || strpos("/'/",$pwd)){
-                echo '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
-                echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+           
+            if(preg_match("/'/",$uname) || strpos("/'/",$pwd)){
+            echo '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
+            echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+            }
+            if(!preg_match("/'/",$uname) && !strpos("/'/",$pwd)){
+                $row = $this ->model("check_login");
+                $row2 = $row->login_data($uname);
+                //如果帳號密碼都對則登入並且記錄至SESSION
+                if($uname == $row2[0]['username'] && $pwd == $row2[0]['password'])
+                {
+                    $_SESSION["username"] = $uname;
+                    echo '<strong><h1 style="color:#ff94b6">登入成功</h1></strong>';
+                    echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
                 }
-                if(!preg_match("/'/",$uname) && !strpos("/'/",$pwd)){
-                    $row = $this ->model("check_login");
-                    $row2 = $row->login_data($uname);
-                    //如果帳號密碼都對則登入並且記錄至SESSION
-                    if($uname == $row2[0]['username'] && $pwd == $row2[0]['password'])
-                    {
-                        $_SESSION["username"] = $uname;
-                        echo '<strong><h1 style="color:#ff94b6">登入成功</h1></strong>';
-                        echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
-                    }
-                    else
-                    {
-                        echo '<strong><h1 style="color:#ff94b6">帳號密碼錯誤</h1></strong>';
-                        echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
-                    }
+                else
+                {
+                    echo '<strong><h1 style="color:#ff94b6">帳號密碼錯誤</h1></strong>';
+                    echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
                 }
+                
             }
         }
         

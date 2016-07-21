@@ -111,16 +111,34 @@
                     </div>
                     <div class="modal-body">
 
-                        <h4><strong>帳號 </strong><input type="text" name="username" /></h4>
-                        <h4><strong>密碼 </strong><input  type="password" name="password" /></h4>
-
+                        <h4><strong>帳號 </strong><input type="text" name="username" id="username" /></h4>
+                        <div id="danger1"></div>
+                        <h4><strong>密碼 </strong><input  type="password" name="password" id="password"/></h4>
+                        <div id="danger2"></div>
                     </div>
                     <div class="modal-footer">
 
-                        <input type="submit" class="btn btn-primary" name="login" id="login" value="確認" />
+                        <input type="button" class="btn btn-primary" name="login" id="login" value="確認" />
                     </div>
                 </div>
             </form>
+            <script>
+                $("#login").on("click",function(){
+                    if($("#username").val()=="")
+                    {
+                        $("#danger1").html('<h4 style="color:red"><strong>尚未輸入帳號</strong></h4>');
+                    }
+                    if($("#password").val()=="")
+                    {
+                        $("#danger2").html('<h4 style="color:red"><strong>尚未輸入密碼</strong></h4>');
+                    }
+                    else
+                    {
+                        $("#form1").submit();                
+                        
+                    }
+                })
+            </script>
         </div>
     </div><!--model end-->
     
@@ -218,7 +236,7 @@
                                 
                                 if ($("#name").val() == "" || $("#phone").val() == "" ||
                                     $("#people").val() == "" || $("#data").val() == "" || $("#cellphone").val() == "") {
-                                    $("#debug").html("<br><h3><strong>粉色項目要輸入!!<strong></h3>");
+                                    $("#debug").html('<br><h3 style="color:red"><strong>粉色項目要輸入!!<strong></h3>');
                                 }
                                 else {
                                     $("#form2").submit();
