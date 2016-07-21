@@ -75,13 +75,12 @@
                     </li>
 <!--------------------------------------------登錄判斷------------------------------------------------------------------------>
                     <?php 
-                        include_once("controllers/indexLeona.php");
+                    
                         $id = $_SESSION["username"];
-                        $check = new indexLeona();
-                        $row = $check->check_ck();
+                        
                     ?>
                     <?php 
-                        if( $id==$row[0] &&  $id!=NULL ) { 
+                        if($id!=NULL ) { 
                     ?>
                     <li>
                         <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/login_out">管理員登出</a></button>
@@ -89,7 +88,7 @@
                     <?php } ?>
 
                     <?php 
-                        if( $id==NULL || $id!=$row[0] ) { 
+                        if( $id==NULL) { 
                     ?>
                     <li>
                         <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal">管理員登錄</button>
@@ -140,7 +139,7 @@
 <!--------------------------------------------員工福利(顯示)------------------------------------------------------------------------>
     <?php 
         
-        if( $id==NULL || $id!=$row[0] ) { 
+        if( $id==NULL ) { 
     ?>
     <section id="joinus">
         <div class="container">
@@ -211,12 +210,13 @@
 <!--------------------------------------------管理員畫面[加入我們(顯示並可刪除)]------------------------------------------------------------------------>
     <?php } ?>
     <?php 
-        include_once("controllers/joinusLeona.php");
-        $r = new joinusLeona();
-        $result2 = $r->joinus_page2();
-        $pagecount = $r->joinus_page1();
         
-        if( $id==$row[0] && $id!=NULL) {
+        $pagecount = $data[0];
+        $row2 = $data[1];
+        $row4 = $data[2];
+        $row5 = $data[3];
+        
+        if( $id!=NULL) {
     ?>
     <section >
         
@@ -225,9 +225,6 @@
                 <div class="col-lg-1"></div>
                 <div class="col-lg-10  text-center">
                     <?php
-                    $result4 = $r->joinus_select($p);
-                    
-                    $row4 = mysql_fetch_assoc($result4);
                     if(empty($row4)){?>
                     <h3 style="color:#ff94b6"><strong>目前沒有資料</strong></h3>
                     <?php }?>
@@ -250,30 +247,46 @@
                                     <h4><strong><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>&nbsp;刪除</strong></h4>
                                 </td>
                             </thead>
-                            <?php while($row2 = mysql_fetch_array($result2)){ ?>
-                            <tr>
-                                <td align="center">
-                                    <h4><?php echo $row2[4];?></h4>
-                                </td>
-                                <td align="center">
-                                    <h4 type="text" name="name"><?php echo $row2[1];?></h4>
-                                </td>
-                            
-                            
-                                <td align="center">
-                                    <h4 type="text" name="email"><?php echo $row2[3];?></h4>
-                                </td>
-                            
-                            
-                                <td align="center">
-                                    <h4 type="text" name="cellphone"><?php echo $row2[2];?></h4>
-                                </td>
+                            <?php 
+                                 if($_GET['p']==NULL)
+                                {
+                                    $_GET['p'] = 0;
+                                }
+                                $page = (int)$_GET['p'];
+                                $page1 = $page + 1;
                                 
-                                <td align="center">
-                                    <button class="btn btn-warning" type="button" id="del" name="del"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus_delete?jo_id=<?php echo $row2['join_id'];?>&p=<?php echo $_GET['p'];?>">刪除</a></button>
-                                </td>
-                            </tr>
-                        <?php }?>    
+                                for($j = $page*9 ; $j < $page1*9 ;$j++){
+                                    
+                                    if($row2[$j]['join_id'] == NULL)
+                                        break;
+                                    
+                                    else{
+                            ?>
+                                        <tr>
+                                            <td align="center">
+                                                <h4><?php echo $row2[$j]['join_date'];?></h4>
+                                            </td>
+                                            <td align="center">
+                                                <h4 type="text" name="name"><?php echo $row2[$j]['join_name'];?></h4>
+                                            </td>
+                                        
+                                        
+                                            <td align="center">
+                                                <h4 type="text" name="email"><?php echo $row2[$j]['join_email'];?></h4>
+                                            </td>
+                                        
+                                        
+                                            <td align="center">
+                                                <h4 type="text" name="cellphone"><?php echo $row2[$j]['join_cellphone'];?></h4>
+                                            </td>
+                                            
+                                            <td align="center">
+                                                <button class="btn btn-warning" type="button" id="del" name="del"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus_delete?jo_id=<?php echo $row2[$j]['join_id'];?>&p=<?php echo $_GET['p'];?>">刪除</a></button>
+                                            </td>
+                                        </tr>
+                                        
+                                    <?php }?>
+                            <?php }?>    
                         </table>
                         <br>
                                 
@@ -295,9 +308,7 @@
 
 <!--------------------------------------------聯絡我們(顯示)------------------------------------------------------------------------>
     <?php
-        include_once("controllers/indexLeona.php");
-        $t = new indexLeona;
-        $row3 = $t->select_contact();
+        
     ?>
         <section class="bg-primary" id="contact">
             <div class="container">

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <?php 
     session_start();
-    // include_once("controllers/test.php");
-    // exit;
 ?>
 <html lang="en">
 
@@ -78,13 +76,8 @@
                     </li>
 <!--------------------------------------------登錄判斷------------------------------------------------------------------------>
                     <?php 
-                        include_once("controllers/indexLeona.php");
                         $id = $_SESSION["username"];
-                        $check = new indexLeona();
-                        $row = $check->check_ck();
-                    ?>
-                    <?php 
-                        if( $id==$row[0] &&  $id!=NULL ) { 
+                        if( $id!=NULL ) { 
                     ?>
                     <li>
                         <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="index/login_out">管理員登出</a></button>
@@ -92,7 +85,7 @@
                     <?php } ?>
 
                     <?php 
-                        if( $id==NULL || $id!=$row[0] ) { 
+                        if( $id==NULL ) { 
                     ?>
                     <li>
                         <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal">管理員登錄</button>
@@ -144,9 +137,7 @@
 <!--------------------------------------------公司簡介(顯示)------------------------------------------------------------------------>
     <?php
     
-        include_once("controllers/indexLeona.php");
-        $t = new indexLeona;
-        $row2 = $t->select_about();
+        $row2 = $data[0];
     ?>
     <section class="bg-primary" id="about">
         <div class="container">
@@ -155,12 +146,12 @@
                 <div class="col-lg-10 " align="center">
                     <h2 class="section-heading"><strong>公司簡介</strong></h2>
                     <hr>
-                    <h3><?php echo $row2[0];?></h3>
+                    <h3><?php echo $row2[0]["intro_data"];?></h3>
                     <br>
                     <br>
 <!--------------------------------------------管理員畫面[公司簡介(編輯)]------------------------------------------------------------------------>    
                     <?php 
-                        if( $id==$row[0] && $id!=NULL ) { 
+                        if( $id!=NULL ) { 
                     ?>
                     <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#about_modal" >編輯</button>
                     <?php }?>
@@ -181,7 +172,7 @@
                     <h3 class="section-heading"><strong>公司簡介</strong></h3>
                     <hr>
                     
-                    <textarea cols="50" class="form-control" name="about_data"><?php echo $row2[0];?></textarea>
+                    <textarea cols="50" class="form-control" name="about_data"><?php echo $row2[0]["intro_data"];?></textarea>
                     <br>
                     <br>
                   </div>
@@ -243,9 +234,7 @@
     
 <!--------------------------------------------聯絡我們(顯示)------------------------------------------------------------------------>    
     <?php
-        include_once("controllers/indexLeona.php");
-        $t = new indexLeona;
-        $row3 = $t->select_contact();
+        $row3 = $data[1];
         
     ?>
     <section class="bg-primary" id="contact">
@@ -269,26 +258,26 @@
             <div class="row">
                 <div class="col-lg-3  text-center">
                     <i class="fa  fa-3x sr-contact"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></i>
-                    <p><?php echo $row3[0];?></p>
+                    <p><?php echo $row3[0]["con_address"];?></p>
                 </div>
                 <div class="col-lg-3  text-center">
                     <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <p><?php echo $row3[1];?></p>
+                    <p><?php echo $row3[0]["con_phone"];?></p>
                 </div>
                 <div class="col-lg-3  text-center">
                     <i class="fa  fa-3x sr-contact"><span class="glyphicon glyphicon-print" aria-hidden="true"></span></i>
-                    <p><?php echo $row3[2];?></p>
+                    <p><?php echo $row3[0]["con_tax"];?></p>
                 </div>
                 <div class="col-lg-3 text-center">
                     <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                    <p><a  style="color:#FFFFFF" href="mailto:<?php echo $row3[3];?>"><?php echo $row3[3];?></a></p>
+                    <p><a  style="color:#FFFFFF" href="mailto:<?php echo $row3[0]["con_email"];?>"><?php echo $row3[0]["con_email"];?></a></p>
                 </div>
             </div>
             <div class="col-lg-5"></div>
             <div class="col-lg-5">
 <!--------------------------------------------管理員畫面[聯絡我們(編輯)]------------------------------------------------------------------------>    
                 <?php 
-                    if( $id==$row[0] && $id!=NULL ) { 
+                    if($id!=NULL ) { 
                 ?>
                 <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#contact_modal" >編輯</button>
                 <?php }?>
@@ -314,13 +303,13 @@
                     <h3 class="section-heading"><strong>聯絡我們</strong></h3>
                     <hr>
                     <h4>地址<h4>
-                    <input class="form-control" type="text" name="ab_address" value="<?php echo $row3[0];?>" />
+                    <input class="form-control" type="text" name="ab_address" value="<?php echo $row3[0]["con_address"];?>" />
                     <h4>電話<h4>
-                    <input class="form-control" type="text" name="ab_phone" value="<?php echo $row3[1];?>" />
+                    <input class="form-control" type="text" name="ab_phone" value="<?php echo $row3[0]["con_phone"];?>" />
                     <h4>傳真<h4>
-                    <input class="form-control" type="text" name="ab_tax" value="<?php echo $row3[2];?>" />
+                    <input class="form-control" type="text" name="ab_tax" value="<?php echo $row3[0]["con_tax"];?>" />
                     <h4>Email<h4>
-                    <input class="form-control" type="text" name="ab_email" value="<?php echo $row3[3];?>" />
+                    <input class="form-control" type="text" name="ab_email" value="<?php echo $row3[0]["con_email"];?>" />
                     <br>
                     <br>
                   </div>

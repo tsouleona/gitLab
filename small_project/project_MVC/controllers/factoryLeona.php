@@ -1,12 +1,20 @@
 <?php
     session_start();
     include_once("models/process_factory.php");
+    include_once("models/process_factory_select.php");
     header("Content-Type:text/html; charset=utf-8");
     
     class factoryLeona extends Controller{
         //回廠商招募-------------------------------------------------------------
         function factory(){
-            $this->view("factory");
+            $page = $_GET['p'];
+        
+            $t = $this->factory_page();
+            $row4 = $this->factory_select($page);
+            $row5 = $this->factory_select($page);
+            $p = $t[0];
+            $r = $t[1];
+            $this->view("factory",Array($p,$r,$row4,$row5));
         }
         //新增實績展示-------------------------------------------------------------
         function factory_insert(){
@@ -86,31 +94,20 @@
         }
         
         //顯示實績展示-------------------------------------------------------------
-        function factory_page1(){
+        function factory_page(){
                
-            $fa =$this->model("process_factory");
+            $fa =$this->model("process_factory_select");
             //搜尋全部資料共幾筆
-            $result = $fa->select_fa();
-            $total = mysql_num_rows($result);
+            $row = $fa->select_fa();
+            $total = count($row);
             //計算頁數
-            return $pagecount =  ceil($total/10);
-        }
-        
-        //顯示實績展示-------------------------------------------------------------
-        function factory_page2(){
-            $p = $_GET['p']; 
-            if($p=="")
-            {
-                $p = 0;
-            }
-            $fa = $this->model("process_factory");
-            //搜尋第幾筆資料開始，共10筆
-            return $result2 = $fa->select_limit($p);
+            $pagecount =  ceil($total/10);
+            return $t = array($pagecount,$row);
         }
         
         //搜尋實績展示-------------------------------------------------------------
         function factory_select($p){
-            $fa = $this->model("process_factory");
+            $fa = $this->model("process_factory_select");
             return $fa->select_limit($p);
         }
         

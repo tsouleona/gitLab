@@ -79,14 +79,10 @@
                             <h4><strong>加入我們</strong></h4></a>
                     </li>
 <!--------------------------------------------登錄判斷------------------------------------------------------------------------>
-                    <?php
-                        include_once("controllers/indexLeona.php");
-                        $id = $_SESSION["username"];
-                        $check = new indexLeona();
-                        $row = $check->check_ck();
-                    ?>
+                    
                     <?php 
-                        if( $id==$row[0] &&  $id!=NULL ) { 
+                    $id = $_SESSION['username'];
+                        if( $id!=NULL ) { 
                     ?>
                     <li>
                         <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/login_out">管理員登出</a></button>
@@ -94,7 +90,7 @@
                     <?php } ?>
 
                     <?php 
-                        if( $id==NULL || $id!=$row[0] ) { 
+                        if( $id==NULL ) { 
                     ?>
                     <li>
                         <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal">管理員登錄</button>
@@ -146,22 +142,32 @@
     </header>
     
 <!--------------------------------------------實績展示(顯示)------------------------------------------------------------------------>    
-    <?php 
-        include_once("controllers/displayLeona.php");
-        $r = new displayLeona();
-        $result2 = $r->display_page2();
-        $pagecount = $r->display_page1();
+    <?php
+        $pagecount = $data[0];
+        $row2 = $data[1];
     ?>
     
     <section class="no-padding" id="portfolio">
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
                 <?php
-                    while($row2 = mysql_fetch_row($result2)){
+                    if($_GET['p']==NULL)
+                    {
+                        $_GET['p'] = 0;
+                    }
+                    $page = (int)$_GET['p'];
+                    $page1 = $page + 1;
+                    
+                    for($j = $page*9 ; $j < $page1*9 ;$j++){
+                        
+                        if($row2[$j]['display_id'] == NULL)
+                            break;
+                        
+                        else{
                 ?>
                         <div class="col-lg-4 col-sm-6">
-                            <a href="/gitlab/small_project/project_MVC/views/ok_photo/<?php echo $row2[0];?>.jpg" class="portfolio-box" id="img_big">
-                                <img style="width:650px;height:320px" src="/gitlab/small_project/project_MVC/views/ok_photo/<?php echo $row2[0];?>.jpg" onerror="this.src='/gitlab/small_project/project_MVC/views/ok_photo/add2.jpg'" class="img-responsive" alt="">
+                            <a href="/gitlab/small_project/project_MVC/views/ok_photo/<?php echo $row2[$j]['display_id'];?>.jpg" class="portfolio-box" id="img_big">
+                                <img style="width:650px;height:320px" src="/gitlab/small_project/project_MVC/views/ok_photo/<?php echo $row2[$j]['display_id'];?>.jpg" onerror="this.src='/gitlab/small_project/project_MVC/views/ok_photo/add2.jpg'" class="img-responsive" alt="">
                                 
                                 <div class="portfolio-box-caption">
                                     <div class="portfolio-box-caption-content">
@@ -169,8 +175,8 @@
                                             
                                         </div>
                                         <div class="project-name">
-                                            <strong><?php echo $row2[2];?></strong><br>
-                                            <strong><?php echo $row2[1];?></strong>
+                                            <strong><?php echo $row2[$j]['display_date'];?></strong><br>
+                                            <strong><?php echo $row2[$j]['display_data'];?></strong>
                                         </div>
                                     </div>
                                 </div>
@@ -178,15 +184,15 @@
                             
 <!--------------------------------------------管理員畫面[實績展示(編輯)]------------------------------------------------------------------------>    
                              <?php 
-                                if( $id==$row[0] &&  $id!=NULL ) { 
+                                if($id!=NULL ) { 
                             ?>
                                 <div class="row" align="center">
-                                <button class="btn btn-warning btn-xl" data-toggle="modal" data-target="#change<?php echo $row2[0];?>">編輯</button>
-                                <button class="btn btn-warning btn-xl"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display_delete?dis_id=<?php echo $row2[0];?>&p=<?php echo $_GET['p'];?>">刪除</a></button>
+                                <button class="btn btn-warning btn-xl" data-toggle="modal" data-target="#change<?php echo $row2[$j]['display_id'];?>">編輯</button>
+                                <button class="btn btn-warning btn-xl"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display_delete?dis_id=<?php echo $row2[$j]['display_id'];?>&p=<?php echo $_GET['p'];?>">刪除</a></button>
                                 </div>
                             <?php }?>    
                         </div>
-                        <div class="modal fade" id="change<?php echo $row2[0];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="change<?php echo $row2[$j]['display_id'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <form enctype="multipart/form-data" accept="image/jpeg,image/jpg,image/gif,image/png" action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display_update" method="POST" id="form2">
                                     <div class="modal-content">
@@ -196,27 +202,33 @@
                                         </div>
                                         <div class="modal-body">
                                             
-                                            <input style="visibility:hidden" type="text" name="id" value="<?php echo $row2[0];?>"/><!-- 傳輸id-->
-                                            <input type="text" class="form-control" name="data" value="<?php echo $row2[1];?>" />  
+                                            <input style="visibility:hidden" type="text" name="id" value="<?php echo $row2[$j]['display_id'];?>"/><!-- 傳輸id-->
+                                            <input type="text" class="form-control" name="data" id ="update_data" value="<?php echo $row2[$j]['display_data'];?>" />
                                             <h4><strong>上傳檔案&nbsp;</strong><h4/><input id="file" name="file" type="file">
-                                            <p style="color:red"><strong>請使用jpeg、jpg檔</strong><p>
+                                            <p style="color:red"><strong>請使用jpeg、jpg檔、專案內容不能是空的</strong><p>
                                             <input style="visibility:hidden" name="page" value="<?php echo $_GET['p'];?>" />
+                                            
                                         </div>
                                         <div class="modal-footer">
-                    
-                                            <input type="submit" onclick="submit2();" class="btn btn-primary" name="login" value="確認">
+                                            
+                                            <input type="button" id="ok2" class="btn btn-primary"  value="確認">
                                         </div>
                                     </div>
                                 </form>
                                 <script>
-                                    function submit2(){
-                                        
-                                        form2.submit();
+                                $("#ok2").on("click",function(){
+                                    
+                                    if($("#update_data").val() != "")
+                                    {
+                                        $("#form2").submit();
                                     }
-                                </script>
+                                    
+                                })
+                            </script>
                             </div>
                         </div><!--model end-->
                 <?php  } ?>
+                <?php }?>
             </div>
             <br>
             
@@ -231,7 +243,7 @@
             <br>
 <!--------------------------------------------管理員畫面[實績展示(新增)]------------------------------------------------------------------------>    
             <?php 
-                    if( $id==$row[0] &&  $id!=NULL ) { 
+                    if($id!=NULL ) { 
                 ?>    
                     
                     <div class="row" align="center">
@@ -282,9 +294,7 @@
 
 <!--------------------------------------------聯絡我們(顯示)------------------------------------------------------------------------>
     <?php
-        include_once("controllers/indexLeona.php");
-        $t = new indexLeona;
-        $row3 = $t->select_contact();
+        
     ?>
         <section class="bg-primary" id="contact">
             <div class="container">

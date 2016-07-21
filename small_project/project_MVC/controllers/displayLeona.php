@@ -1,13 +1,17 @@
 <?php 
     session_start();
     include_once("models/process_display.php");
-    
+    include_once("models/process_display_select.php");
     
     class displayLeona extends Controller{
         
         //回實績展示-------------------------------------------------------------
         function display(){
-            $this->view("display");
+            $t = $this->display_page();
+            $p = $t[0];
+            $r = $t[1];
+            $this->view("display",Array($p,$r));
+            
         }
         
         //新增實績展示-------------------------------------------------------------
@@ -29,19 +33,19 @@
                 $date2 = date("Ymd");
                 
                 //搜尋當天資料由大排到小
-                $display =  $this->model("process_display");
+                $display =  $this->model("process_display_select");
                 $row = $display->select_desc($date2);
                 
                 $one="001";
                 
                 //圖片編號如果是當天第一筆則從1開始編號
-                if($row["display_id"] == NULL)
+                if($row[0]["display_id"] == NULL)
                 {
                     $ans = $date2.$one;
                 }
                 //圖片編號若不為第一筆則從當天的最後一筆+1
                 else{
-                    $ans = substr($row['display_id'],8,3);
+                    $ans = substr($row[0]['display_id'],8,3);
                     $ans = (int)($ans) + 1;
                     $ans = str_pad($ans,3, "0", STR_PAD_LEFT);
                     $ans = $date2.$ans;
@@ -68,13 +72,15 @@
                 
                 //如果檔案為空亦可上傳
                 else{
+                    
+                    $display2 =  $this->model("process_display");
+                    
+                    
                 
                     move_uploaded_file($_FILES['file']['tmp_name'],'views/ok_photo/'.$ans.".".$ex);//複製檔案
                     //新增專案內容與圖片編號
-                    $display->insert_dis($ans,$data,$date);
-                    echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/display_2?id={$ans}&p={$p}>";
-                    //$this->view("display_2");
-                    
+                    $display2->insert_dis($ans,$data,$date);
+                    echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/display_2?id={$ans}&p={$p}>";   
                 }
             }
         }
@@ -94,25 +100,17 @@
         
         //分頁實績展示-------------------------------------------------------------
         
-        function display_page1(){
+        function display_page(){
             
-            $table = $this->model("process_display");
+            $table = $this->model("process_display_select");
             //搜尋全部有幾筆資料
-            $result = $table->select_data();
-            $total = mysql_num_rows($result);
+            $row = $table->select_data();
+            $total = count($row);
             //計算頁數
-            return $pagecount = ceil($total/9);
-        }
-        
-        function display_page2(){
-            $p = $_GET['p'];
-            if($p=="")
-            {
-                $p = 0;
-            }
-            $table2 = $this->model("process_display");
-            //抓第幾筆到第幾筆
-            return $result2 = $table2->select_limit($p);
+            $pagecount = ceil($total/9);
+             
+            return $t= array($pagecount,$row);
+            
         }
         
         //更新實績展示-------------------------------------------------------------
@@ -160,7 +158,7 @@
                 
                 //如果檔案為空亦可上傳
                 else{
-        
+                    
                     move_uploaded_file($_FILES['file']['tmp_name'],'views/ok_photo/'.$id.".".$ex);//複製檔案
                     //更新專案內容
                     $display->update_dis($data,$id);

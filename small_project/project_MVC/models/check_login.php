@@ -1,21 +1,12 @@
 <?php
-    include_once("models/mysql_connect.inc.php");
-    header("Content-Type:text/html; charset=utf-8");
-    class check_login
+    include_once("mysql_getdata.php");
+    class check_login extends connect_two
     {
-        //搜尋資料
-        function check(){
-            $sql="select * from `signin`;";
-            $result = mysql_query($sql);
-            $row = mysql_fetch_row($result);
-            return $row;
-        }
         //搜尋該帳號的密碼
         function login_data($uname){
-            $sql="select * from `signin` where `username`='".$uname."';";
-            $result = mysql_query($sql);
-            
-            return $result;
+            $com ="select * from `signin` where `username`='".$uname."';";
+            $row = $this->connect_getdata($com);
+            return $row;
         }
         //清掉session
         function login_out(){

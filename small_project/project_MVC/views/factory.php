@@ -74,13 +74,12 @@
                     </li>
 <!--------------------------------------------登錄判斷------------------------------------------------------------------------>
                     <?php 
-                        include_once("controllers/indexLeona.php");
+                       
                         $id = $_SESSION["username"];
-                        $check = new indexLeona();
-                        $row = $check->check_ck();
+                        
                     ?>
                     <?php 
-                        if( $id==$row[0] &&  $id!=NULL ) { 
+                        if( $id!=NULL ) { 
                     ?>
                     <li>
                         <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/login_out">管理員登出</a></button>
@@ -88,7 +87,7 @@
                     <?php } ?>
 
                     <?php 
-                        if( $id==NULL || $id!=$row[0] ) { 
+                        if( $id==NULL ) { 
                     ?>
                     <li>
                         <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mymodal">管理員登錄</button>
@@ -139,7 +138,7 @@
     
 <!--------------------------------------------廠商招募(輸入資料)------------------------------------------------------------------------>    
     <?php 
-        if( $id==NULL || $id!=$row[0] ) { 
+        if( $id==NULL ) { 
     ?>
     <section>
         <div class="container">
@@ -236,13 +235,12 @@
 
 <!--------------------------------------------管理員畫面[廠商招募(顯示並且可以刪除)]------------------------------------------------------------------------>    
     <?php
-    include_once("controllers/factoryLeona.php");
-        $r = new factoryLeona();
-        
-        $result2 = $r->factory_page2();
-        $pagecount = $r->factory_page1();
+        $pagecount = $data[0];
+        $row2 = $data[1];
+        $row4 = $data[2];
+        $row5 = $data[3];
     
-    if( $id==$row[0] && $id!=NULL ) { 
+    if($id!=NULL ) { 
     ?>
         <section >
             
@@ -250,8 +248,7 @@
                 <div class="row">
                     <div class="col-lg-12  text-center" border="1">
                         <?php 
-                        $result4 = $r->factory_select($p); 
-                        $row4 = mysql_fetch_array($result4);
+                        
                         if(empty($row4)){ ?>
                             <h3 style="color:#ff94b6"><strong>目前沒有資料</strong></h3>
                         <?php }?>
@@ -281,85 +278,106 @@
                                     
                                 </thead>
                                 
-                                <?php while($row2 = mysql_fetch_assoc($result2)){ ?>
-                                    <tr>
-                                        <td align="center">
-                                           <h4><?php echo $row2['fac_date'];?></h4>
-                                        </td>
+                                <?php 
+                                     if($_GET['p']==NULL)
+                                    {
+                                        $_GET['p'] = 0;
+                                    }
+                                    $page = (int)$_GET['p'];
+                                    $page1 = $page + 1;
                                     
-                                        <td align="center">
-                                           <button class="btn btn-info" data-toggle="modal" data-target="#look<?php echo $row2['fac_id'];?>"><?php echo $row2['fac_name'];?></button>
-                                        </td>
-                                    
-                                        <td align="center">
-                                            <h4><?php echo $row2['fac_people'];?></h4>
-                                        </td>
-                                        <td align="center">
-                                            <h4><?php echo $row2['fac_cellphone'];?></h4>
-                                        </td>
-                                        <td align="center">
-                                            <h4><?php echo $row2['fac_phone'];?></h4>
-                                        </td>
-                                        <td align="center">
-                                            <button class="btn btn-warning " type="button" id="del" name="del"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory_delete?fa_id=<?php echo $row2['fac_id'];?>&p=<?php echo $_GET['p'];?>" >刪除</a></button>
+                                    for($j = $page*9 ; $j < $page1*9 ;$j++){
+                                        
+                                        if($row2[$j]['fac_id'] == NULL)
+                                            break;
+                                        
+                                        else{
+                                ?>
+                                            <tr>
+                                                <td align="center">
+                                                   <h4><?php echo $row2[$j]['fac_date'];?></h4>
+                                                </td>
                                             
-                                        </td>
-                                    </tr>
-                                <?php }?>
+                                                <td align="center">
+                                                   <button class="btn btn-info" data-toggle="modal" data-target="#look<?php echo $row2[$j]['fac_id'];?>"><?php echo $row2[$j]['fac_name'];?></button>
+                                                </td>
+                                            
+                                                <td align="center">
+                                                    <h4><?php echo $row2[$j]['fac_people'];?></h4>
+                                                </td>
+                                                <td align="center">
+                                                    <h4><?php echo $row2[$j]['fac_cellphone'];?></h4>
+                                                </td>
+                                                <td align="center">
+                                                    <h4><?php echo $row2[$j]['fac_phone'];?></h4>
+                                                </td>
+                                                <td align="center">
+                                                    <button class="btn btn-warning " type="button" id="del" name="del"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory_delete?fa_id=<?php echo $row2[$j]['fac_id'];?>&p=<?php echo $_GET['p'];?>" >刪除</a></button>
+                                                    
+                                                </td>
+                                            </tr>
+                                        <?php }?>
+                                    <?php }?>
                                 </table>
                                 
                                 
 <!--------------------------------------------管理員畫面[廠商招募(顯示細節 model)]------------------------------------------------------------------------>    
-                               <?php $result5 = $r->factory_select($p);
-                                     
-                                     while($row5 = mysql_fetch_array($result5)){?>
+                               <?php 
+                                     for($j = $page*9 ; $j < $page1*9 ;$j++){
+                                        
+                                        if($row5[$j]['fac_id'] == NULL)
+                                            break;
+                                        
+                                        else{
+                                     ?>
                                     
-                                <div class="modal fade" id="look<?php echo $row5['fac_id'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <h3 class="modal-title" ><strong>相關內容</strong></h3>
-                                            </div>
-                                            <div class="modal-body">
-                                                <table class="table table-hover">
-                                                    <thread>
-                                                        <td align="center">
-                                                            <h4><strong><?php echo $row5['fac_name'];?></strong></h4>
-                                                        </td>
-                                                    </thread>
-                                                    <tr>
-                                                        <td align="center">
-                                                            <h4><strong><span class="glyphicon glyphicon-print" aria-hidden="true"></span>&nbsp;公司傳真</strong></h4>
-                                                            <h4 name="tax2" id="tax2" ><?php echo $row5['fac_tax'];?></h4>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <h4><strong><span class="glyphicon glyphicon-road" aria-hidden="true"></span>&nbsp;公司地址</strong></h4>
-                                                            <h4 name="address2" id="address2" ><?php echo $row5['fac_address'];?></h4>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <h4><strong><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;公司網址</strong></h4>
-                                                            <h4 name="url2" id="url2" ><?php echo $row5['fac_url'];?></h4>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <h4><strong><font color="#ff94b6">經營項目 <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;</font></strong></h4>
-                                                            <textarea cols="50" cols="50" class="form-control" ><?php echo $row5['fac_data'];?></textarea>
-                                                        </td>
-                                                    </tr>
-                                                </table>    
-                        
-                                            </div>
-                                            <div class="modal-footer">    
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!--model end-->
+                                            <div class="modal fade" id="look<?php echo $row5[$j]['fac_id'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                            <h3 class="modal-title" ><strong>相關內容</strong></h3>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <table class="table table-hover">
+                                                                <thread>
+                                                                    <td align="center">
+                                                                        <h4><strong><?php echo $row5[$j]['fac_name'];?></strong></h4>
+                                                                    </td>
+                                                                </thread>
+                                                                <tr>
+                                                                    <td align="center">
+                                                                        <h4><strong><span class="glyphicon glyphicon-print" aria-hidden="true"></span>&nbsp;公司傳真</strong></h4>
+                                                                        <h4 name="tax2" id="tax2" ><?php echo $row5[$j]['fac_tax'];?></h4>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <h4><strong><span class="glyphicon glyphicon-road" aria-hidden="true"></span>&nbsp;公司地址</strong></h4>
+                                                                        <h4 name="address2" id="address2" ><?php echo $row5[$j]['fac_address'];?></h4>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <h4><strong><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;公司網址</strong></h4>
+                                                                        <h4 name="url2" id="url2" ><?php echo $row5[$j]['fac_url'];?></h4>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <h4><strong><font color="#ff94b6">經營項目 <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;</font></strong></h4>
+                                                                        <textarea cols="50" cols="50" class="form-control" ><?php echo $row5[$j]['fac_data'];?></textarea>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>    
+                                    
+                                                        </div>
+                                                        <div class="modal-footer">    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> <!--model end-->
+                                        <?php }?>
                                 <?php }?>
                             
                             <br>
@@ -386,9 +404,7 @@
         
 <!--------------------------------------------聯絡我們(顯示)------------------------------------------------------------------------>
         <?php
-        include_once("controllers/indexLeona.php");
-        $t = new indexLeona;
-        $row3 = $t->select_contact();
+        
     ?>
             <section class="bg-primary" id="contact">
                 <div class="container">
@@ -440,7 +456,7 @@
                     <div class="col-lg-5"></div>
                     <div class="col-lg-5">
                         <?php 
-                    if( $id==$row[0] && $id!=NULL ) { 
+                    if( $id!=NULL ) { 
                 ?>
                         <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#contact_modal">編輯</button>
                         <?php }?>

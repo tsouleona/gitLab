@@ -5,39 +5,34 @@
     class joinusLeona extends Controller{
         //回廠商招募-------------------------------------------------------------
         function joinus(){
-            $this->view("joinus");
+            $p = $_GET['p'];
+            $t = $this->joinus_page();
+            $row4 = $this->joinus_select($p);
+            $row5 = $this->joinus_select($p);
+            $page = $t[0];
+            $r = $t[1];
+            $this->view("joinus",Array($page,$r,$row4,$row5));
         }
         //搜尋加入我們-------------------------------------------------------------
         function joinus_select($p){
             
-            $jo = $this->model("process_joinus");
+            $jo = $this->model("process_joinus_select");
             return $jo->select_limit($p);
         }
         
         //顯示加入我們-------------------------------------------------------------
-        function joinus_page1(){
-            
+        function joinus_page(){
             
             //搜尋全部資料共幾筆
-            $jo = $this->model("process_joinus");
-            $result = $jo->select_jo();
-            $total = mysql_num_rows($result);
+            $jo = $this->model("process_joinus_select");
+            $row = $jo->select_jo();
+            $total = count($row);
             //計算頁數
-            return $pagecount = ceil($total/10);
+            $pagecount = ceil($total/10);
+            
+            return $t = array($pagecount,$row);
         }
         
-        //顯示加入我們-------------------------------------------------------------
-        function joinus_page2(){
-            //抓頁數
-            $p = $_GET['p'];
-            if($p=="")
-            {
-                $p = 0;
-            }
-            $jo = $this->model("process_joinus");
-            //搜尋第幾筆資料開始，共10筆
-            return $result2 = $jo->select_limit($p);
-        }
         //新增加入我們-------------------------------------------------------------
         function joinus_insert(){
             //接POST過來的資料

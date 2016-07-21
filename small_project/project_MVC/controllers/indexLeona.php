@@ -1,18 +1,21 @@
 <?php 
     session_start();
     include_once("models/process_index.php");
+    include_once("models/process_index_select.php");
     include_once("models/check_login.php");
     
     class indexLeona extends Controller{
         //回首頁-------------------------------------------------------------
         function index(){
-            $this->view("index");
+            $row = $this->select_about();
+            $row2 = $this->select_contact();
+            $this->view("index",Array($row,$row2));
         }
         
         //顯示公司簡介--------------------------------------------------------
         function select_about(){
-            $select_ab=$this->model("process_index");
-            return $select_ab->selest_ab();
+            $select=$this->model("process_index_select");
+            return $select->selest_ab();
         }
         
         //更新公司簡介--------------------------------------------------------
@@ -61,7 +64,7 @@
         //顯示聯絡我們--------------------------------------------------------
         function select_contact()
         {
-            $con = $this->model("process_index");
+            $con = $this->model("process_index_select");
             return $con->selest_con();
         }
         
@@ -83,10 +86,9 @@
                 }
                 if(!preg_match("/'/",$uname) && !strpos("/'/",$pwd)){
                     $row = $this ->model("check_login");
-                    $result2 = $row->login_data($uname);
-                    $row2 = mysql_fetch_array($result2);
+                    $row2 = $row->login_data($uname);
                     //如果帳號密碼都對則登入並且記錄至SESSION
-                    if($uname == $row2[0] && $pwd == $row2[1])
+                    if($uname == $row2[0]['username'] && $pwd == $row2[0]['password'])
                     {
                         $_SESSION["username"] = $uname;
                         echo '<strong><h1 style="color:#ff94b6">登入成功</h1></strong>';
@@ -110,10 +112,6 @@
             echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
         }
         
-        //檢查帳號密碼----------------------------------------------------------
-        function check_ck(){
-            $check = $this->model("check_login");
-            return $check->check();
-        }
+    
     }
 ?>
