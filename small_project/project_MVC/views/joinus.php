@@ -104,7 +104,7 @@
 
 <!--------------------------------------------登錄帳號密碼------------------------------------------------------------------------>
     <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-sm" role="document">
             <form action="https://lab1-srt459vn.c9users.io/project_MVC/index/login_in" method="POST" id="form1">
                 <div class="modal-content">
                     <div class="modal-header">

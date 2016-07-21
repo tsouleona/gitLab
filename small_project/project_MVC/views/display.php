@@ -109,7 +109,7 @@
 
 <!--------------------------------------------登錄帳號密碼------------------------------------------------------------------------>
     <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-sm" role="document">
             <form action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/login_in" method="POST" id="form1">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -118,16 +118,18 @@
                     </div>
                     <div class="modal-body">
 
-                        <h4><strong>帳號 </strong><input type="text" name="username" /></h4>
-                        <h4><strong>密碼 </strong><input  type="password" name="password" /></h4>
-
+                        <h4><strong>帳號 </strong><input type="text" name="username" id="username"/></h4>
+                        <h4><strong>密碼 </strong><input  type="password" name="password" id="password"/></h4>
+                        <div id="check"></div>
+                        <div id="check2"></div>
                     </div>
                     <div class="modal-footer">
-
+                    
                         <input type="submit" class="btn btn-primary" name="login" id="login" value="確認" />
                     </div>
                 </div>
             </form>
+           
         </div>
     </div><!--model end-->
 

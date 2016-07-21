@@ -3,11 +3,11 @@
 <head>
   <title>Live Cropping Demo</title>
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="js/jquery.Jcrop.js"></script>
-  <link rel="stylesheet" href="css/main.css" type="text/css" />
-  <link rel="stylesheet" href="css/demos.css" type="text/css" />
-  <link rel="stylesheet" href="css/jquery.Jcrop.css" type="text/css" />
+  <script src="/gitlab/small_project/project_MVC/views/vendor/jquery/jquery.js"></script>
+  <script src="/gitlab/small_project/project_MVC/views/js/jquery.Jcrop.js"></script>
+  <link rel="stylesheet" href="/gitlab/small_project/project_MVC/views/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="/gitlab/small_project/project_MVC/views/css/demos.css" type="text/css" />
+  <link rel="stylesheet" href="/gitlab/small_project/project_MVC/views/css/jquery.Jcrop.css" type="text/css" />
 
 <script type="text/javascript">
 
@@ -76,18 +76,13 @@ jQuery(function($){
 <body>
 
     <div class="container">
-        <div class="row" >
-          <button class="btn btn-large btn-inverse"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p=<?php echo $_GET['p'];?>">不需要裁切</button>
-        </div>
+        
         <div class="row">
           
             <div class="span12">
-                <!--<div class="jc-demo-box">-->
-        
-        
-        
+
             		<!-- This is the image we're attaching Jcrop to -->
-            		<img src="<?php echo 'ok_photo/'.$_GET['id'].'.jpg';?>" id="cropbox"  />
+            		<img src="<?php echo '/gitlab/small_project/project_MVC/views/ok_photo/'.$_GET['id'].'.jpg';?>" id="cropbox"  />
             
             		<!-- This is the form that our event handler fills -->
             		<form id = "coords"  action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/crop_photo" method="post" onsubmit="return checkCoords();">
@@ -99,10 +94,13 @@ jQuery(function($){
             			<input type="hidden" id="y2" name="y2" />
             			<input type="hidden" id="w" name="w" />
             			<input type="hidden" id="h" name="h" />
-            			<input type="submit" value="Crop Image" class="btn btn-large btn-inverse" />
+            			<input type="submit" id = "ok" value="Crop Image" class="btn btn-large btn-inverse" />
             		</form>
             	<!--</div>-->
         	</div>
+        	<div class="row" >
+            <button class="btn btn-large btn-inverse"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p=<?php echo $_GET['p'];?>">不需要裁切</button>
+          </div>
     	</div>
 	</div>
 </body>

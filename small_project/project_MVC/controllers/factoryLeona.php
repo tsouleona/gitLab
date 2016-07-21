@@ -2,6 +2,7 @@
     session_start();
     include_once("models/process_factory.php");
     header("Content-Type:text/html; charset=utf-8");
+    
     class factoryLeona extends Controller{
         //回廠商招募-------------------------------------------------------------
         function factory(){
