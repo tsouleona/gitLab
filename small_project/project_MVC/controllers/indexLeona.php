@@ -3,13 +3,14 @@
     include_once("models/process_index.php");
     include_once("models/process_index_select.php");
     include_once("models/check_login.php");
-    
+    header("Content-Type:text/html; charset=utf-8");
     class indexLeona extends Controller{
         //回首頁-------------------------------------------------------------
         function index(){
             $row = $this->select_about();
             $row2 = $this->select_contact();
             $this->view("index",Array($row,$row2));
+            
         }
         
         //顯示公司簡介--------------------------------------------------------
@@ -48,6 +49,7 @@
             
             if(str($address)==true || str($phone)==true || str($tax)==true || str($email)==true)
             {
+                
                 echo '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
                 echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
             }

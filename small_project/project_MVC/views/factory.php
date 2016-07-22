@@ -422,110 +422,98 @@
         
 <!--------------------------------------------聯絡我們(顯示)------------------------------------------------------------------------>
         <?php
-        
+        $row3 = $data[4];
     ?>
             <section class="bg-primary" id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12  text-center">
-                            <h2 class="section-heading">聯絡我們</h2>
-                            <hr class="light">
-                        </div>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12  text-center">
+                    <h2 class="section-heading">聯絡我們</h2>
+                    <hr class="light">
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-2"></div>
-                    <div class="col-lg-8" align="center">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.218590882442!2d121.07314621465075!3d24.753693339318758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346848016c097263%3A0x2a171f1f83f3bac7!2zMzEw5Y-w54Gj5paw56u557ij56u55p2x6Y6u5Lit6IiI6Lev5LiA5q61MTA45be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1467621946714"
-                            width="900" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">    
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8" align="center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.218590882442!2d121.07314621465075!3d24.753693339318758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346848016c097263%3A0x2a171f1f83f3bac7!2zMzEw5Y-w54Gj5paw56u557ij56u55p2x6Y6u5Lit6IiI6Lev5LiA5q61MTA45be3MTHomZ8!5e0!3m2!1szh-TW!2stw!4v1467621946714" width="900" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3  text-center">
+                    <i class="fa  fa-3x sr-contact"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></i>
+                    <p><?php echo $row3[0]["con_address"];?></p>
                 </div>
-                <br>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3  text-center">
-                            <i class="fa  fa-3x sr-contact"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></i>
-                            <p>
-                                <?php echo $row3[0];?>
-                            </p>
-                        </div>
-                        <div class="col-lg-3  text-center">
-                            <i class="fa fa-phone fa-3x sr-contact"></i>
-                            <p>
-                                <?php echo $row3[1];?>
-                            </p>
-                        </div>
-                        <div class="col-lg-3  text-center">
-                            <i class="fa  fa-3x sr-contact"><span class="glyphicon glyphicon-print" aria-hidden="true"></span></i>
-                            <p>
-                                <?php echo $row3[2];?>
-                            </p>
-                        </div>
-                        <div class="col-lg-3 text-center">
-                            <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                            <p>
-                                <a style="color:#FFFFFF" href="mailto:<?php echo $row3[3];?>">
-                                    <?php echo $row3[3];?>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-5"></div>
-                    <div class="col-lg-5">
-                        <?php 
+                <div class="col-lg-3  text-center">
+                    <i class="fa fa-phone fa-3x sr-contact"></i>
+                    <p><?php echo $row3[0]["con_phone"];?></p>
+                </div>
+                <div class="col-lg-3  text-center">
+                    <i class="fa  fa-3x sr-contact"><span class="glyphicon glyphicon-print" aria-hidden="true"></span></i>
+                    <p><?php echo $row3[0]["con_tax"];?></p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                    <p><a  style="color:#FFFFFF" href="mailto:<?php echo $row3[0]["con_email"];?>"><?php echo $row3[0]["con_email"];?></a></p>
+                </div>
+            </div>
+            <div class="col-lg-5"></div>
+            <div class="col-lg-5">
+<!--------------------------------------------管理員畫面[聯絡我們(編輯)]------------------------------------------------------------------------>    
+                    <?php 
                     if( $id!=NULL ) { 
                 ?>
-                        <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#contact_modal">編輯</button>
-                        <?php }?>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-3"></div>
-                        <div class="col-lg-6 text-center">
-                            <p>Chungyo Leona © 2016 / <a style="color:#FFFFFF" href="mailto:srt459vn31@gmail.com">srt459vn31@gmail.com</a></p>
-                        </div>
+                    <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#contact_modal">編輯</button>
+                    <?php }?>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6 text-center">
+                        <p>Chungyo Leona © 2016 / <a style="color:#FFFFFF" href="mailto:srt459vn31@gmail.com">srt459vn31@gmail.com</a></p>
                     </div>
                 </div>
-            </section>
-            
-<!--------------------------------------------管理員畫面[聯絡我們(編輯)]------------------------------------------------------------------------>
-            <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <form action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/insert_contact" method="POST" id="form3">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h3 class="modal-title" id="myModalLabel" style="color:#white"><strong>修改簡介</strong></h3>
-                            </div>
-                            <div class="modal-body">
-
-                                <h3 class="section-heading"><strong>聯絡我們</strong></h3>
-                                <hr>
-                                <h4>地址<h4>
-                                <input class="form-control" type="text" name="ab_address" value="<?php echo $row3[0];?>" />
-                                <h4>電話<h4>
-                                <input class="form-control" type="text" name="ab_phone" value="<?php echo $row3[1];?>" />
-                                <h4>傳真<h4>
-                                <input class="form-control" type="text" name="ab_tax" value="<?php echo $row3[2];?>" />
-                                <h4>Email<h4>
-                                <input class="form-control" type="text" name="ab_email" value="<?php echo $row3[3];?>" />
-                                <br>
-                                <br>
-                              </div>
-                              <div class="modal-footer">
-                                <button onclick="submit3();" class="btn btn-primary" >確認</button>
-                              </div>
-                            </div>
-                            
-                    </form>
-                    <script>
-                        function submit3(){
-                            
-                            form3.submit();
-                        }
-                    </script>
+            </div>
+        </section>
+        <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+           <form action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/insert_contact" method="POST" id="form3">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel" style="color:#white"><strong>修改簡介</strong></h3>
+                  </div>
+                  <div class="modal-body">
+                        
+                    <h3 class="section-heading"><strong>聯絡我們</strong></h3>
+                    <hr>
+                    <h4>地址<h4>
+                    <input class="form-control" type="text" name="ab_address" value="<?php echo $row3[0]["con_address"];?>" />
+                    <h4>電話<h4>
+                    <input class="form-control" type="text" name="ab_phone" value="<?php echo $row3[0]["con_phone"];?>" />
+                    <h4>傳真<h4>
+                    <input class="form-control" type="text" name="ab_tax" value="<?php echo $row3[0]["con_tax"];?>" />
+                    <h4>Email<h4>
+                    <input class="form-control" type="text" name="ab_email" value="<?php echo $row3[0]["con_email"];?>" />
+                    <br>
+                    <br>
+                  </div>
+                  <div class="modal-footer">
+                    <button onclick="submit3();" class="btn btn-primary" >確認</button>
+                  </div>
                 </div>
-            </div><!--model end-->
+                
+           </form>
+           <script>
+                    function submit3(){
+                        
+                        form3.submit();
+                    }
+                </script>
+      </div>
+    </div><!--model end-->
      <!-- Bootstrap Core JavaScript -->
     <script src="/gitlab/small_project/project_MVC/views/vendor/bootstrap/js/bootstrap.js"></script>
 

@@ -1,17 +1,21 @@
 <?php
     session_start();
     include_once("models/process_joinus.php");
-    
+    include_once("models/process_joinus_select.php");
+    include_once("models/process_index.php");
+    include_once("models/process_index_select.php");
+    header("Content-Type:text/html; charset=utf-8");
     class joinusLeona extends Controller{
         //回廠商招募-------------------------------------------------------------
         function joinus(){
             $p = $_GET['p'];
             $t = $this->joinus_page();
+            $row3 = $this->select_contact();
             $row4 = $this->joinus_select($p);
             $row5 = $this->joinus_select($p);
             $page = $t[0];
             $r = $t[1];
-            $this->view("joinus",Array($page,$r,$row4,$row5));
+            $this->view("joinus",Array($page,$r,$row4,$row5,$row3));
         }
         //搜尋加入我們-------------------------------------------------------------
         function joinus_select($p){
@@ -98,7 +102,49 @@
             
             echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus?p={$p}>";
         }
+        //更新聯絡我們--------------------------------------------------------
+        function insert_contact()
+        {
+            $address=$_POST["ab_address"];
+            $phone=$_POST["ab_phone"];
+            $tax=$_POST["ab_tax"];
+            $email=$_POST["ab_email"];
+            
+            $p = $_GET['p'];
+            if($p == "")
+            {
+                $p = 0 ;
+            }
+            function str($x){
+                if(preg_match("/'/",$x)){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+            
+            if(str($address)==true || str($phone)==true || str($tax)==true || str($email)==true)
+            {
+                echo '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
+                echo "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus?p={$p}>";
+            }
+            else
+            {
+                //更新資料
+                $index = $this->model("process_index");
+                $index->contact($address,$phone,$tax,$email);
+                
+                echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus?p={$p}>";
+            }
+        }
         
+        //顯示聯絡我們--------------------------------------------------------
+        function select_contact()
+        {
+            $con = $this->model("process_index_select");
+            return $con->selest_con();
+        }
         
         
         

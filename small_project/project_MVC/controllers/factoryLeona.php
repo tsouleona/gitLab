@@ -2,19 +2,21 @@
     session_start();
     include_once("models/process_factory.php");
     include_once("models/process_factory_select.php");
+    include_once("models/process_index.php");
+    include_once("models/process_index_select.php");
     header("Content-Type:text/html; charset=utf-8");
     
     class factoryLeona extends Controller{
         //回廠商招募-------------------------------------------------------------
         function factory(){
             $page = $_GET['p'];
-        
+            $row3 = $this->select_contact();
             $t = $this->factory_page();
             $row4 = $this->factory_select($page);
             $row5 = $this->factory_select($page);
             $p = $t[0];
             $r = $t[1];
-            $this->view("factory",Array($p,$r,$row4,$row5));
+            $this->view("factory",Array($p,$r,$row4,$row5,$row3));
         }
         //新增實績展示-------------------------------------------------------------
         function factory_insert(){
@@ -120,6 +122,49 @@
             $factory = $this->model("process_factory");
             $factory->delete_fa($id);
             echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory?p={$p}>";
+        }
+        //更新聯絡我們--------------------------------------------------------
+        function insert_contact()
+        {
+            $address=$_POST["ab_address"];
+            $phone=$_POST["ab_phone"];
+            $tax=$_POST["ab_tax"];
+            $email=$_POST["ab_email"];
+            
+            $p = $_GET['p'];
+            if($p == "")
+            {
+                $p = 0 ;
+            }
+            function str($x){
+                if(preg_match("/'/",$x)){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+            
+            if(str($address)==true || str($phone)==true || str($tax)==true || str($email)==true)
+            {
+                echo '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
+                echo "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory?p={$p}>";
+            }
+            else
+            {
+                //更新資料
+                $index = $this->model("process_index");
+                $index->contact($address,$phone,$tax,$email);
+                
+                echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory?p={$p}>";
+            }
+        }
+        
+        //顯示聯絡我們--------------------------------------------------------
+        function select_contact()
+        {
+            $con = $this->model("process_index_select");
+            return $con->selest_con();
         }
         
     }

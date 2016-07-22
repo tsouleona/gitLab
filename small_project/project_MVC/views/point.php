@@ -42,7 +42,11 @@
 
 </head>
 
-
+<body>
+    
+    
+    
+    
      <!-- Bootstrap Core JavaScript -->
     <script src="/gitlab/small_project/project_MVC/views/vendor/bootstrap/js/bootstrap.js"></script>
 
