@@ -8,13 +8,13 @@
         }
         
         function crop_photo(){
-     		echo $p = $_POST['page'];
+     		$p = $_POST['page'];
      		
-    	    echo $id = $_POST['id'];
+    	    $id = $_POST['id'];
     	    
-    		echo $targ_w = $_POST['w'];
+    		$targ_w = $_POST['w'];
     		
-    		echo $targ_h = $_POST['h'];
+    		$targ_h = $_POST['h'];
     		
     		$src = 'views/ok_photo/'.$id.'.jpg';
     		
