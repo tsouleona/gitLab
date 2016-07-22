@@ -1,19 +1,14 @@
 <?php
     session_start();
-    include_once("models/process_factory.php");
-    include_once("models/process_factory_select.php");
-    include_once("models/process_index.php");
-    include_once("models/process_index_select.php");
     header("Content-Type:text/html; charset=utf-8");
     
     class factoryLeona extends Controller{
         //回廠商招募-------------------------------------------------------------
         function factory(){
-            $page = $_GET['p'];
             $row3 = $this->select_contact();
             $t = $this->factory_page();
-            $row4 = $this->factory_select($page);
-            $row5 = $this->factory_select($page);
+            $row4 = $this->factory_select();
+            $row5 = $this->factory_select();
             $p = $t[0];
             $r = $t[1];
             $this->view("factory",Array($p,$r,$row4,$row5,$row3));
@@ -45,8 +40,10 @@
             str($url) == true || str($email) == true || 
             str($cellphone) == true || str($tax) == true)
             {
-                 echo '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
-                 echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory>';
+                $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
+                $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory>';
+            
+                $this->debug($a,$b);
             }
             else{
                 if($email == "")
@@ -66,7 +63,7 @@
                     $url = "沒有留下資料";
                 }
                 
-                $factory = $this->model("process_factory");
+                $factory = $this->model("process_factory_select");
                 
                 $date = date("Y-m-d");
                 $date2 = date("Ymd");
@@ -88,8 +85,10 @@
                     $ans = $date2.$ans;
                 }
                 
+                $factory2 = $this->model("process_factory");
+                
                 //新增資料
-                $factory->insert_fa($ans,$name,$people,$phone,$address,$url,$email,$cellphone,$tax,$data,$date);
+                $factory2->insert_fa($ans,$name,$people,$phone,$address,$url,$email,$cellphone,$tax,$data,$date);
                 
                 header("Location:https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory");
             }
@@ -108,9 +107,9 @@
         }
         
         //搜尋實績展示-------------------------------------------------------------
-        function factory_select($p){
+        function factory_select(){
             $fa = $this->model("process_factory_select");
-            return $fa->select_limit($p);
+            return $fa->select_fa();
         }
         
         //刪除實績展示-------------------------------------------------------------
@@ -121,7 +120,9 @@
             //刪除該筆資料
             $factory = $this->model("process_factory");
             $factory->delete_fa($id);
-            echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory?p={$p}>";
+            $a = "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory?p={$p}>";
+            $b = "";
+            $this->debug($a,$b);
         }
         //更新聯絡我們--------------------------------------------------------
         function insert_contact()
@@ -147,8 +148,10 @@
             
             if(str($address)==true || str($phone)==true || str($tax)==true || str($email)==true)
             {
-                echo '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
-                echo "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory?p={$p}>";
+                $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
+                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory?p={$p}>";
+                $this->debug($a,$b);
+                
             }
             else
             {
@@ -156,7 +159,9 @@
                 $index = $this->model("process_index");
                 $index->contact($address,$phone,$tax,$email);
                 
-                echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory?p={$p}>";
+                $a = "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory?p={$p}>";
+                $b = "";
+                $this->debug($a,$b);
             }
         }
         
@@ -165,6 +170,12 @@
         {
             $con = $this->model("process_index_select");
             return $con->selest_con();
+        }
+        
+        //顯示錯誤訊息------------------------------------------------------------
+        public function debug($a,$b){
+            
+            $this->view("point",Array($a,$b));
         }
         
     }

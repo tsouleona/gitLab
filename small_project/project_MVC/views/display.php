@@ -210,7 +210,7 @@
                         </div>
                         <div class="modal fade" id="change<?php echo $row2[$j]['display_id'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
-                                <form enctype="multipart/form-data" accept="image/jpeg,image/jpg,image/gif,image/png" action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display_update" method="POST" id="form2">
+                                <form enctype="multipart/form-data" accept="image/jpeg,image/jpg,image/gif,image/png" action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display_update?p=<?php echo $_GET['p'];?>" method="POST" id="form2">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -259,7 +259,7 @@
                     </div>
                     <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
-                            <form enctype="multipart/form-data"  action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display_add" method="POST" id="form4">
+                            <form enctype="multipart/form-data"  action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display_add?p=<?php echo $_GET['p'];?>" method="POST" id="form4">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -271,7 +271,6 @@
                                         <div id="danger"></div>
                                         <h4><strong>上傳檔案&nbsp;</strong><h4/><input id="file" name="file" type="file">
                                         <p style="color:red"><strong>請使用jpeg、jpg檔</strong><p>
-                                        <input style="visibility:hidden" name="page" value="<?php echo $_GET['p'];?>" />
                                     </div>
                                     <div class="modal-footer">
                 
@@ -347,7 +346,7 @@
         </section>
         <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-           <form action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/insert_contact" method="POST" id="form3">
+           <form action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/insert_contact?p=<?php echo $_GET['p'];?>" method="POST" id="form3">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>

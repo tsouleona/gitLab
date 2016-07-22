@@ -8,6 +8,7 @@ class Controller {
     
     public function view($view, $data = Array()) {
         require_once "../project_MVC/views/$view.php";
+        
     }
 }
 

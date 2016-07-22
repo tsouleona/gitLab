@@ -1,9 +1,6 @@
 <?php
     session_start();
-    include_once("models/process_joinus.php");
-    include_once("models/process_joinus_select.php");
-    include_once("models/process_index.php");
-    include_once("models/process_index_select.php");
+    
     header("Content-Type:text/html; charset=utf-8");
     class joinusLeona extends Controller{
         //回廠商招募-------------------------------------------------------------
@@ -54,12 +51,14 @@
             }
             if(str($name)==true || str($email)==true || str($phone)==true){
                 
-                echo '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
-                echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus>';
+                $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
+                $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus>';
+            
+                $this->debug($a,$b);
             }
             else
             {
-                $joinus = $this->model("process_joinus");
+                
                 //如果為空，則內容為"沒有留下資料"
                 if($email == "")
                 {
@@ -70,7 +69,7 @@
                 $date2 = date("Ymd");
                 
                 //搜尋當天資料由大排到小
-                $joinus = $this->model("process_joinus");
+                $joinus = $this->model("process_joinus_select");
                 $result = $joinus->select_desc($date2);
                 $row = mysql_fetch_array($result);
                 $one="0001";
@@ -85,8 +84,9 @@
                     $ans = str_pad($ans,4, "0", STR_PAD_LEFT);
                     $ans = $date2.$ans;
                 }
+                 $joinus2 = $this->model("process_joinus");
                 //新增資料
-                $joinus->insert_jo($ans,$name,$email,$phone,$date);
+                $joinus2->insert_jo($ans,$name,$email,$phone,$date);
                 header("Location:https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus");
             }
                     
@@ -100,7 +100,9 @@
             $joinus = $this->model("process_joinus");
             $joinus->delete_jo($id);
             
-            echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus?p={$p}>";
+            $a = "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus?p={$p}>";
+            $b ="";
+            $this->debug($a,$b);
         }
         //更新聯絡我們--------------------------------------------------------
         function insert_contact()
@@ -126,8 +128,10 @@
             
             if(str($address)==true || str($phone)==true || str($tax)==true || str($email)==true)
             {
-                echo '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
-                echo "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus?p={$p}>";
+                $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
+                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus?p={$p}>";
+            
+                $this->debug($a,$b);
             }
             else
             {
@@ -135,7 +139,9 @@
                 $index = $this->model("process_index");
                 $index->contact($address,$phone,$tax,$email);
                 
-                echo "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus?p={$p}>";
+                $a = "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus?p={$p}>";
+                $b ="";
+                $this->debug($a,$b);
             }
         }
         
@@ -145,7 +151,11 @@
             $con = $this->model("process_index_select");
             return $con->selest_con();
         }
-        
+        //顯示錯誤訊息------------------------------------------------------------
+        public function debug($a,$b){
+            
+            $this->view("point",Array($a,$b));
+        }
         
         
     }

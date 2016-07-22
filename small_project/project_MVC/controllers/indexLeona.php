@@ -1,8 +1,5 @@
 <?php 
     session_start();
-    include_once("models/process_index.php");
-    include_once("models/process_index_select.php");
-    include_once("models/check_login.php");
     header("Content-Type:text/html; charset=utf-8");
     class indexLeona extends Controller{
         //回首頁-------------------------------------------------------------
@@ -25,9 +22,20 @@
             $data = $_POST["about_data"];
             //更新資料
             $index = $this->model("process_index");
-            $index->about($data);
             
-            header("Location:https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index");
+            if(preg_match("/'/",$data)){
+                
+                $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
+                $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+            
+                $this->debug($a,$b);
+            }
+            else{
+                $index->about($data);
+                header("Location:https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index");
+            }
+                
+            
         }
         
         //更新聯絡我們--------------------------------------------------------
@@ -50,8 +58,11 @@
             if(str($address)==true || str($phone)==true || str($tax)==true || str($email)==true)
             {
                 
-                echo '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
-                echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+                $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
+                $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+            
+                $this->debug($a,$b);
+                
             }
             else
             {
@@ -77,8 +88,12 @@
             
            
             if(preg_match("/'/",$uname) || strpos("/'/",$pwd)){
-            echo '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
-            echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+                
+            $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
+            $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+            
+            $this->debug($a,$b);
+                
             }
             if(!preg_match("/'/",$uname) && !strpos("/'/",$pwd)){
                 $row = $this ->model("check_login");
@@ -87,13 +102,19 @@
                 if($uname == $row2[0]['username'] && $pwd == $row2[0]['password'])
                 {
                     $_SESSION["username"] = $uname;
-                    echo '<strong><h1 style="color:#ff94b6">登入成功</h1></strong>';
-                    echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+                    $a = '<strong><h1 style="color:#ff94b6">登入成功</h1></strong>';
+                    $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+                    
+                    $this->debug($a,$b);
+                    
                 }
                 else
                 {
-                    echo '<strong><h1 style="color:#ff94b6">帳號密碼錯誤</h1></strong>';
-                    echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+                    
+                    $a = '<strong><h1 style="color:#ff94b6">帳號密碼錯誤</h1></strong>';
+                    $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+                
+                    $this->debug($a,$b);
                 }
                 
             }
@@ -106,6 +127,11 @@
             $out->login_out();
             echo '<strong><h1 style="color:#ff94b6">登出中...</h1></strong>';
             echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+        }
+        //顯示錯誤訊息
+        public function debug($a,$b){
+            
+            $this->view("point",Array($a,$b));
         }
         
     

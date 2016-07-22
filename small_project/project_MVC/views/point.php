@@ -45,7 +45,9 @@
 <body>
     
     
-    
+    <?php echo $data[0];
+          echo $data[1];    
+    ?>
     
      <!-- Bootstrap Core JavaScript -->
     <script src="/gitlab/small_project/project_MVC/views/vendor/bootstrap/js/bootstrap.js"></script>
