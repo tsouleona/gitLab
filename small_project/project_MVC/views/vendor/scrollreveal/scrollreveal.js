@@ -198,10 +198,10 @@
                 elements = Array.prototype.slice.call(container.querySelectorAll(selector));
             }
 
-            if (!elements.length) {
-                console.log('ScrollReveal: reveal on "'+ selector + '" failed, no elements found.');
-                return sr
-            }
+            // if (!elements.length) {
+            //     console.log('ScrollReveal: reveal on "'+ selector + '" failed, no elements found.');
+            //     return sr
+            // }
 
             // No custom configuration was passed, but a sequence interval instead.
             // let’s shuffle things around to make sure everything works.

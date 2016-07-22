@@ -15,7 +15,7 @@
     <title>Creative - Start Bootstrap Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="views/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/gitlab/small_project/project_MVC/views/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="views/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -122,20 +122,41 @@
             </form>
             <script>
                 $("#login").on("click",function(){
-                    if($("#username").val()=="")
+                    if( $("#username").val() == "" )
                     {
                         $("#danger1").html('<h4 style="color:red"><strong>尚未輸入帳號</strong></h4>');
+                        
                     }
-                    if($("#password").val()=="")
+                    if( $("#password").val() == "")
                     {
                         $("#danger2").html('<h4 style="color:red"><strong>尚未輸入密碼</strong></h4>');
+                        
                     }
                     else
                     {
-                        $("#form1").submit();                
-                        
+                        $("#form1").submit();
                     }
                 })
+                    
+                    
+                    
+                    // $("#username").on("change",function(){
+                    //     $.get("/gitlab/small_project/project_MVC/compare/compare_string?data="+$("#username").val(),
+                    //     function(data){
+                    //         if(data == "one")
+                    //         {
+                    //             $("#danger1").html('<h4 style="color:red"><strong></strong></h4>');
+                    //         }
+                    //         if(data == "two")
+                    //         {
+                    //             $("#danger1").html('<h4 style="color:red"><strong>尚未輸入</strong></h4>');
+                    //         }
+                    //         if(data == "ok")
+                    //         {
+                    //             $("#danger1").html('');
+                    //         }
+                    //     })
+                    // })
             </script>
         </div>
     </div><!--model end-->
@@ -350,7 +371,7 @@
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="views/vendor/scrollreveal/scrollreveal.js"></script>
+    <script src="/gitlab/small_project/project_MVC/views/vendor/scrollreveal/scrollreveal.js"></script>
     
     <script src="views/vendor/magnific-popup/jquery.magnific-popup.js"></script>
 
