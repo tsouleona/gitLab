@@ -1,20 +1,27 @@
 <?php 
 include_once("mysql_connect.inc.php");
+
 class connect_two extends connect_one{
     
     function connect_getdata($com){
         
         $this->connect_mysql($com);
-        $g = 0 ;
-        while($tmp = mysql_fetch_assoc($this->result))
-        {
-            $i = $g;
+        $result2 = $this->result;
+        $row = $result2->fetchAll(PDO::FETCH_ASSOC);
+        
+        //法二
+        //$g = 0 ;
+        // while($tmp = mysql_fetch_assoc($this->result))
+        // {
+        //     $i = $g;
             
-            $row[$i] = $tmp;
+        //     $row[$i] = $tmp;
             
-            $g = $g + 1;
-        }
-            return $row;
+        //     $g = $g + 1;
+        // }
+        
+        
+        return $row;
         
     }
 }
