@@ -2,7 +2,7 @@
     session_start();
     header("Content-Type:text/html; charset=utf-8");
     class indexLeona extends Controller{
-        //回首頁-------------------------------------------------------------
+//-----------------------------------回首頁-------------------------------------------------------------
         function index(){
             $row = $this->select_about();
             $row2 = $this->select_contact();
@@ -10,21 +10,21 @@
             
         }
         
-        //顯示公司簡介--------------------------------------------------------
+//---------------------------------顯示公司簡介--------------------------------------------------------
         function select_about(){
             $select=$this->model("process_index_select");
             return $select->selest_ab();
         }
         
-        //更新公司簡介--------------------------------------------------------
+//---------------------------------更新公司簡介--------------------------------------------------------
         function insert_about(){
-            //接收POST的資料---------------------------------------------------
+//--------------------------------接收POST的資料--------------------------------------------------------
             $data = $_POST["about_data"];
             //更新資料
             $index = $this->model("process_index");
             
-            if(preg_match("/'/",$data)){
-                
+            if($this->str($data)){
+                //顯示錯誤訊息並導頁
                 $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
                 $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
             
@@ -38,7 +38,7 @@
             
         }
         
-        //更新聯絡我們--------------------------------------------------------
+//---------------------------------更新聯絡我們--------------------------------------------------------
         function insert_contact()
         {
             $address=$_POST["ab_address"];
@@ -46,18 +46,10 @@
             $tax=$_POST["ab_tax"];
             $email=$_POST["ab_email"];
             
-            function str($x){
-                if(preg_match("/'/",$x)){
-                    return true;
-                }
-                else{
-                    return false;
-                }
-            }
-            
-            if(str($address)==true || str($phone)==true || str($tax)==true || str($email)==true)
+            //比對有沒有輸入特殊字元
+            if($this->str($address)==true || $this->str($phone)==true || $this->str($tax)==true || $this->str($email)==true)
             {
-                
+                //顯示錯誤訊息與導頁
                 $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
                 $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
             
@@ -74,20 +66,20 @@
             }
         }
         
-        //顯示聯絡我們--------------------------------------------------------
+//--------------------------------顯示聯絡我們--------------------------------------------------------
         function select_contact()
         {
             $con = $this->model("process_index_select");
             return $con->selest_con();
         }
         
-        //登入----------------------------------------------------------------
+//-----------------------------------登入----------------------------------------------------------------
         function login_in(){
             $uname = $_POST["username"];
             $pwd = $_POST["password"];
             
-           
-            if(preg_match("/'/",$uname) || strpos("/'/",$pwd)){
+           //比對有沒有輸入特殊字元
+            if($this->str($uname) || $this->str($pwd)){
                 
             $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
             $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
@@ -98,7 +90,7 @@
             if(!preg_match("/'/",$uname) && !strpos("/'/",$pwd)){
                 $row = $this ->model("check_login");
                 $row2 = $row->login_data($uname);
-                //如果帳號密碼都對則登入並且記錄至SESSION
+                //如果登入成功並且記錄至SESSION
                 if($uname == $row2[0]['username'] && $pwd == $row2[0]['password'])
                 {
                     $_SESSION["username"] = $uname;
@@ -108,6 +100,7 @@
                     $this->debug($a,$b);
                     
                 }
+                //登入失敗
                 else
                 {
                     
@@ -120,7 +113,7 @@
             }
         }
         
-        //登出-----------------------------------------------------------------
+//------------------------------------登出-----------------------------------------------------------------
         function login_out(){
             $out = $this->model("check_login");
             //把session的值清掉
@@ -128,12 +121,20 @@
             echo '<strong><h1 style="color:#ff94b6">登出中...</h1></strong>';
             echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
         }
-        //顯示錯誤訊息
+//--------------------------顯示錯誤訊息或導頁-----------------------------------------------------------
         public function debug($a,$b){
             
             $this->view("point",Array($a,$b));
         }
-        
+//------------------------比對有沒有輸入特殊字元---------------------------------------------------
+        public function str($x){
+                if(preg_match("/'/",$x)){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
     
     }
 ?>

@@ -3,7 +3,7 @@
     header("Content-Type:text/html; charset=utf-8");
     
     class factoryLeona extends Controller{
-        //回廠商招募-------------------------------------------------------------
+//----------------------------回廠商招募-------------------------------------------------------------
         function factory(){
             $row3 = $this->select_contact();
             $t = $this->factory_page();
@@ -13,7 +13,7 @@
             $r = $t[1];
             $this->view("factory",Array($p,$r,$row4,$row5,$row3));
         }
-        //新增實績展示-------------------------------------------------------------
+//---------------------------新增實績展示-------------------------------------------------------------
         function factory_insert(){
             //接POST過來的資料
             $name = $_POST["name"];
@@ -25,26 +25,18 @@
             $cellphone = $_POST["cellphone"];
             $tax = $_POST["tax"];
             $data = $_POST["data"];
-            
-            //若為空，內容為"沒有留下資料"
-            function str($x){
-                if(preg_match("/'/",$x)){
-                    return true;
-                }
-                else{
-                    return false;
-                }
-            }
-            if(str($name) == true || str($people) == true || 
-            str($phone) == true || str($address) == true ||
-            str($url) == true || str($email) == true || 
-            str($cellphone) == true || str($tax) == true)
+            //比對特殊字元
+            if($this->str($name) == true || $this->str($people) == true || 
+            $this->str($phone) == true || $this->str($address) == true ||
+            $this->str($url) == true || $this->str($email) == true || 
+            $this->str($cellphone) == true || $this->str($tax) == true)
             {
                 $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
                 $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory>';
             
                 $this->debug($a,$b);
             }
+            //若為空，內容為"沒有留下資料"
             else{
                 if($email == "")
                 {
@@ -94,7 +86,7 @@
             }
         }
         
-        //顯示實績展示-------------------------------------------------------------
+//-------------------------------顯示實績展示-------------------------------------------------------------
         function factory_page(){
                
             $fa =$this->model("process_factory_select");
@@ -106,25 +98,26 @@
             return $t = array($pagecount,$row);
         }
         
-        //搜尋實績展示-------------------------------------------------------------
+//------------------------------搜尋實績展示-------------------------------------------------------------
         function factory_select(){
             $fa = $this->model("process_factory_select");
             return $fa->select_fa();
         }
         
-        //刪除實績展示-------------------------------------------------------------
+//------------------------------刪除實績展示-------------------------------------------------------------
         function factory_delete(){
             $p = $_GET['p'];
-            //街道傳過來的編號
+            //傳過來的編號
             $id = $_GET["fa_id"];
             //刪除該筆資料
             $factory = $this->model("process_factory");
             $factory->delete_fa($id);
+            //導頁
             $a = "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory?p={$p}>";
             $b = "";
             $this->debug($a,$b);
         }
-        //更新聯絡我們--------------------------------------------------------
+//-----------------------------更新聯絡我們--------------------------------------------------------
         function insert_contact()
         {
             $address=$_POST["ab_address"];
@@ -137,17 +130,11 @@
             {
                 $p = 0 ;
             }
-            function str($x){
-                if(preg_match("/'/",$x)){
-                    return true;
-                }
-                else{
-                    return false;
-                }
-            }
             
-            if(str($address)==true || str($phone)==true || str($tax)==true || str($email)==true)
+            
+            if($this->str($address)==true || $this->str($phone)==true || $this->str($tax)==true || $this->str($email)==true)
             {
+                //顯示錯誤訊息並導頁
                 $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
                 $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory?p={$p}>";
                 $this->debug($a,$b);
@@ -158,26 +145,34 @@
                 //更新資料
                 $index = $this->model("process_index");
                 $index->contact($address,$phone,$tax,$email);
-                
+                //導頁
                 $a = "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory?p={$p}>";
                 $b = "";
                 $this->debug($a,$b);
             }
         }
         
-        //顯示聯絡我們--------------------------------------------------------
+//----------------------------------顯示聯絡我們--------------------------------------------------------
         function select_contact()
         {
             $con = $this->model("process_index_select");
             return $con->selest_con();
         }
         
-        //顯示錯誤訊息------------------------------------------------------------
+//------------------------------顯示錯誤訊息或導頁------------------------------------------------------------
         public function debug($a,$b){
             
             $this->view("point",Array($a,$b));
         }
-        
+//----------------------------比對有沒有輸入特殊字元---------------------------------------------------
+        public function str($x){
+                if(preg_match("/'/",$x)){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+        }
     }
     
     

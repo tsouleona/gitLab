@@ -3,7 +3,7 @@
     
     header("Content-Type:text/html; charset=utf-8");
     class joinusLeona extends Controller{
-        //回廠商招募-------------------------------------------------------------
+//--------------------------------回廠商招募-------------------------------------------------------------
         function joinus(){
             $p = $_GET['p'];
             $t = $this->joinus_page();
@@ -14,14 +14,14 @@
             $r = $t[1];
             $this->view("joinus",Array($page,$r,$row4,$row5,$row3));
         }
-        //搜尋加入我們-------------------------------------------------------------
+//-----------------------------搜尋加入我們-------------------------------------------------------------
         function joinus_select($p){
             
             $jo = $this->model("process_joinus_select");
             return $jo->select_limit($p);
         }
         
-        //顯示加入我們-------------------------------------------------------------
+//---------------------------顯示加入我們-------------------------------------------------------------
         function joinus_page(){
             
             //搜尋全部資料共幾筆
@@ -34,22 +34,15 @@
             return $t = array($pagecount,$row);
         }
         
-        //新增加入我們-------------------------------------------------------------
+//---------------------------新增加入我們-------------------------------------------------------------
         function joinus_insert(){
             //接POST過來的資料
             $name = $_POST["name"];
             $email = $_POST["email"];
             $phone = $_POST["cellphone"];
             
-             function str($x){
-                if(preg_match("/'/",$x)){
-                    return true;
-                }
-                else{
-                    return false;
-                }
-            }
-            if(str($name)==true || str($email)==true || str($phone)==true){
+             //比對特殊字元
+            if($this->str($name)==true || str($email)==true || str($phone)==true){
                 
                 $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
                 $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus>';
@@ -64,7 +57,7 @@
                 {
                     $email = "沒有留下資料";
                 }
-                
+                //抓日期
                 $date = date("Y-m-d");
                 $date2 = date("Ymd");
                 
@@ -91,7 +84,7 @@
             }
                     
         }
-        //刪除加入我們-------------------------------------------------------------
+//------------------------------刪除加入我們-------------------------------------------------------------
         function joinus_delete(){
             $p = $_GET['p'];
             //抓GET過來的編號
@@ -99,12 +92,12 @@
             //刪除該筆資料
             $joinus = $this->model("process_joinus");
             $joinus->delete_jo($id);
-            
+            //導頁
             $a = "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus?p={$p}>";
             $b ="";
             $this->debug($a,$b);
         }
-        //更新聯絡我們--------------------------------------------------------
+//------------------------------更新聯絡我們--------------------------------------------------------
         function insert_contact()
         {
             $address=$_POST["ab_address"];
@@ -117,17 +110,10 @@
             {
                 $p = 0 ;
             }
-            function str($x){
-                if(preg_match("/'/",$x)){
-                    return true;
-                }
-                else{
-                    return false;
-                }
-            }
-            
-            if(str($address)==true || str($phone)==true || str($tax)==true || str($email)==true)
+            //比對特殊字元
+            if($this->str($address)==true || $this->str($phone)==true || $this->str($tax)==true || $this->str($email)==true)
             {
+                //顯示錯誤訊息並導頁
                 $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
                 $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus?p={$p}>";
             
@@ -145,18 +131,26 @@
             }
         }
         
-        //顯示聯絡我們--------------------------------------------------------
+//-----------------------------顯示聯絡我們--------------------------------------------------------
         function select_contact()
         {
             $con = $this->model("process_index_select");
             return $con->selest_con();
         }
-        //顯示錯誤訊息------------------------------------------------------------
+//-----------------------顯示錯誤訊息或導頁------------------------------------------------------------
         public function debug($a,$b){
             
             $this->view("point",Array($a,$b));
         }
-        
+//---------------------比對有沒有輸入特殊字元---------------------------------------------------
+        public function str($x){
+                if(preg_match("/'/",$x)){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
         
     }
     

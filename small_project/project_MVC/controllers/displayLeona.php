@@ -4,7 +4,7 @@
     header("Content-Type:text/html; charset=utf-8");
     class displayLeona extends Controller{
         
-        //回實績展示-------------------------------------------------------------
+//--------------------------------------回實績展示-------------------------------------------------------------
         function display(){
             $t = $this->display_page();
             $row3 = $this->select_contact();
@@ -14,7 +14,7 @@
             
         }
         
-        //新增實績展示-------------------------------------------------------------
+//--------------------------------------新增實績展示-------------------------------------------------------------
         function display_add()
         {
             $p = $_GET['p'];
@@ -24,6 +24,7 @@
             }
             //傳過來的專案內容
             $data = $_POST["add_data"];
+            //如果是空的不能上傳檔案
             if($data == "")
             {
                 $a = '<h1 style="color:#ff94b6">尚未輸入專案內容</h1>';
@@ -32,7 +33,8 @@
                 $this->debug($a,$b);
             }
             else{
-                if(preg_match("/'/",$data))
+                //比對特殊字元
+                if($this->str($data))
                 {
                     $a = '<h1 style="color:#ff94b6">不能輸入特殊字元</h1>';
                     $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
@@ -102,10 +104,11 @@
                         }
                         else{
                             
-                        
-                            move_uploaded_file($_FILES['file']['tmp_name'],'views/ok_photo/'.$ans.".".$ex);//複製檔案
+                            //上傳檔案到對的位置
+                            move_uploaded_file($_FILES['file']['tmp_name'],'views/ok_photo/'.$ans.".".$ex);
                             //新增專案內容與圖片編號
                             $display2->insert_dis($ans,$data,$date);
+                            //導頁
                             $a = "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/display_2?id={$ans}&p={$p}>";   
                             $b="";
                             $this->debug($a,$b);
@@ -118,7 +121,7 @@
             
             
         }
-        //刪除實績展示-------------------------------------------------------------
+//-----------------------------------刪除實績展示-------------------------------------------------------------
         function display_delete()
         {
             //抓送過來的圖片編號
@@ -133,13 +136,13 @@
             unlink("views/ok_photo/$id.jpg");
             $display->delete_dis($id);
             
-            
+            //導頁
             $a = "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
             $b = "";
             $this->debug($a,$b);
         }
         
-        //分頁實績展示-------------------------------------------------------------
+//------------------------------------分頁實績展示--------------------------------------------------------------
         
         function display_page(){
             
@@ -154,7 +157,7 @@
             
         }
         
-        //更新實績展示-------------------------------------------------------------
+//------------------------------------更新實績展示-------------------------------------------------------------
         function display_update()
         {
             $p = $_GET['p'];
@@ -166,6 +169,7 @@
             $data = $_POST["data"];
             //傳過來的圖片編號
             $id = $_POST["id"];
+            //專案內容不能為空
              if($data == "")
             {
                 $a = '<h1 style="color:#ff94b6">尚未輸入專案內容</h1>';
@@ -174,7 +178,8 @@
                 $this->debug($a,$b);
             }
             else{
-                if(preg_match("/'/",$data))
+                //比對特殊字元
+                if($this->str($data))
                 {
                     $a = '<h1 style="color:#ff94b6">不能輸入特殊字元</h1>';
                     $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
@@ -225,7 +230,7 @@
             }
             
         }
-        //更新聯絡我們--------------------------------------------------------
+//----------------------------------------更新聯絡我們--------------------------------------------------------
         function insert_contact()
         {
             $address=$_POST["ab_address"];
@@ -239,16 +244,8 @@
             {
                 $p = 0 ;
             }
-            function str($x){
-                if(preg_match("/'/",$x)){
-                    return true;
-                }
-                else{
-                    return false;
-                }
-            }
-            
-            if(str($address)==true || str($phone)==true || str($tax)==true || str($email)==true)
+            //比對特殊字元
+            if($this->str($address)==true || $this->str($phone)==true || $this->str($tax)==true || $this->str($email)==true)
             {
                 $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
                 $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
@@ -260,23 +257,32 @@
                 //更新資料
                 $index = $this->model("process_index");
                 $index->contact($address,$phone,$tax,$email);
-                
+                //導頁
                 $a = "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
                 $b="";
                 $this->debug($a,$b);
             }
         }
         
-        //顯示聯絡我們--------------------------------------------------------
+//--------------------------------------顯示聯絡我們--------------------------------------------------------
         function select_contact()
         {
             $con = $this->model("process_index_select");
             return $con->selest_con();
         }
-        //顯示錯誤訊息------------------------------------------------------------
+//-----------------------------------顯示錯誤訊息或導頁------------------------------------------------------------
         public function debug($a,$b){
             
             $this->view("point",Array($a,$b));
+        }
+//------------------------------------比對有沒有輸入特殊字元---------------------------------------------------
+        public function str($x){
+                if(preg_match("/'/",$x)){
+                    return true;
+                }
+                else{
+                    return false;
+                }
         }
     }
 
