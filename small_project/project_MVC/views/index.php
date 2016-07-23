@@ -140,23 +140,7 @@
                     
                     
                     
-                    // $("#username").on("change",function(){
-                    //     $.get("/gitlab/small_project/project_MVC/compare/compare_string?data="+$("#username").val(),
-                    //     function(data){
-                    //         if(data == "one")
-                    //         {
-                    //             $("#danger1").html('<h4 style="color:red"><strong></strong></h4>');
-                    //         }
-                    //         if(data == "two")
-                    //         {
-                    //             $("#danger1").html('<h4 style="color:red"><strong>尚未輸入</strong></h4>');
-                    //         }
-                    //         if(data == "ok")
-                    //         {
-                    //             $("#danger1").html('');
-                    //         }
-                    //     })
-                    // })
+                    
             </script>
         </div>
     </div><!--model end-->
