@@ -118,8 +118,10 @@
             $out = $this->model("check_login");
             //把session的值清掉
             $out->login_out();
-            echo '<strong><h1 style="color:#ff94b6">登出中...</h1></strong>';
-            echo '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+            $a = '<strong><h1 style="color:#ff94b6">登出中...</h1></strong>';
+            $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+            $this->debug($a,$b);
+            
         }
 //--------------------------顯示錯誤訊息或導頁-----------------------------------------------------------
         public function debug($a,$b){
