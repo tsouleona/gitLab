@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    header("Content-Type:text/html; charset=utf-8");
+    
     class joinusLeona extends Controller{
 //--------------------------------回廠商招募-------------------------------------------------------------
         function joinus(){
