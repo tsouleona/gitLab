@@ -188,7 +188,7 @@
                             <tr>
                                 <td align="center">
                                     <h4><strong><font color="#ff94b6">您的姓名 </font></strong><input type="text" id="name" name="name" /></h4>
-                                    
+                                    <div id="joinus1"></div>
                                 </td>
                             </tr>
                             <tr>
@@ -199,26 +199,28 @@
                             <tr>
                                 <td align="center">
                                     <h4><strong><font color="#ff94b6">連絡電話 </font></strong><input type="text" id="cellphone" name="cellphone" /></h4>
-                                    
+                                    <div id="joinus2"></div>
                                 </td>
                             </tr>
 
                         </table>
                         <input class="btn btn-primary btn-xl" type="button" id="ok2" name="ok2" value="確認" />
-                        <br><div><h3><strong style="color:red" id="debug"></strong></h3><br></div>
+                        
                     </form>
                     <script>
                         
-                        $(document).ready(function() {
+                         $(document).ready(function() {
                             $("#ok2").on("click", function() {
-                                if ($("#name").val() == "" || $("#cellphone").val() == ""){
-                                    $("#debug").html("粉色項目要輸入!!");
+                                if ($("#name").val() == ""){
+                                    $("#joinus1").html('<br><h4 style="color:red"><strong>您的姓名尚未輸入<strong></h4>');
                                 }
                                 
-                                else {
+                                if ($("#cellphone").val() == ""){
+                                    $("#joinus2").html('<br><h4 style="color:red"><strong>您的電話尚未輸入<strong></h4>');
+                                }
+                                else{
                                     $("#form2").submit();
                                 }
-                            
                             });
                         });
                     </script>

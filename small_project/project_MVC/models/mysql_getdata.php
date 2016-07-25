@@ -6,8 +6,7 @@ class connect_two extends connect_one{
     function connect_getdata($com){
         
         $this->connect_mysql($com);
-        $result2 = $this->result;
-        $row = $result2->fetchAll(PDO::FETCH_ASSOC);
+        $row = $this->result->fetchAll(PDO::FETCH_ASSOC);
         
         //法二
         //$g = 0 ;
@@ -19,7 +18,6 @@ class connect_two extends connect_one{
             
         //     $g = $g + 1;
         // }
-        
         
         return $row;
         

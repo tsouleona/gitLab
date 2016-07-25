@@ -173,6 +173,7 @@
                                 <td align="center">
                                     <h4><strong><font color="#ff94b6">公司名稱 </font></strong></h4>
                                     <input class="form-control" type="text" name="name" id="name" />
+                                    <div id="factory1"></div>
                                 </td>
                             </tr>
                             <tr>
@@ -185,6 +186,7 @@
                                 <td align="center">
                                     <h4><strong><font color="#ff94b6">公司電話 </font></strong></h4>
                                     <input class="form-control" type="text" name="phone" id="phone" />
+                                    <div id="factory2"></div>
                                 </td>
                             </tr>
                             <tr>
@@ -197,11 +199,13 @@
                                 <td align="center">
                                     <h4><strong><font color="#ff94b6">聯絡人 </font></strong></h4>
                                     <input class="form-control" type="text" name="people" id="people" />
+                                    <div id="factory3"></div>
                             </tr>
                             <tr>
                                 <td align="center">
                                     <h4><strong><font color="#ff94b6">聯絡電話 </font></strong></h4>
                                     <input class="form-control" type="text" name="cellphone" id="cellphone" />
+                                    <div id="factory4"></div>
                                 </td>
                             </tr>
                             <tr>
@@ -219,8 +223,8 @@
                             <tr>
                                 <td align="center">
                                     <h4><strong><font color="#ff94b6">經營項目 </font></strong></h4>
-                                    <!--<input class="form-control" type="text" name="data" id="data" />-->
                                     <textarea cols="50" class="form-control" name="data" id="data"></textarea>
+                                    <div id="factory5"></div>
                                 </td>
                             </tr>
                         </table>
@@ -229,21 +233,40 @@
                     </form>
     
     <!--------------------------------------------檢查必要的資料有沒有輸入------------------------------------------------------------------------>    
-                    <script>
-                        //alert("456");
+                    <script> 
                         $(document).ready(function() {
                             $("#ok").on("click", function() {
-                                
-                                if ($("#name").val() == "" || $("#phone").val() == "" ||
-                                    $("#people").val() == "" || $("#data").val() == "" || $("#cellphone").val() == "") {
-                                    $("#debug").html('<br><h3 style="color:red"><strong>粉色項目要輸入!!<strong></h3>');
+                                if ($("#name").val() == ""){
+                                    
+                                    $("#factory1").html('<br><h4 style="color:red"><strong>公司名稱尚未輸入<strong></h4>');
                                 }
-                                else {
+                                
+                                if ($("#phone").val() == ""){
+                                    
+                                    $("#factory2").html('<br><h4 style="color:red"><strong>公司電話尚未輸入<strong></h4>');
+                                }
+                                
+                                if ($("#people").val() == ""){
+                                    
+                                    $("#factory3").html('<br><h4 style="color:red"><strong>連絡人尚未輸入<strong></h4>');
+                                }
+                                
+                                if ($("#cellphone").val() == ""){
+                                    
+                                    $("#factory4").html('<br><h4 style="color:red"><strong>聯絡電話尚未輸入<strong></h4>');
+                                }
+                                
+                                if ($("#data").val() == ""){
+                                    
+                                    $("#factory5").html('<br><h4 style="color:red"><strong>經營項目尚未輸入<strong></h4>');
+                                }
+                                
+                                else{
                                     $("#form2").submit();
                                 }
-
-                            });
-                        });
+                            })
+                        })
+                        
                     </script>
                 </div>
             </div>

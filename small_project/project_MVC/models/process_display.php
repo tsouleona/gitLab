@@ -8,6 +8,7 @@
             $com = "insert into `display` (`display_id`,`display_data`,`display_date`) 
             VALUES ('".$ans."','".$data."','".$date."');";
             $row2 = $this->connect_mysql($com);
+            
         }
         //更新專案內容
         function update_dis($data,$id){
