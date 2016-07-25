@@ -26,7 +26,7 @@
     		//把圖片丟到要的位置
     		imagejpeg($dst_r,'views/ok_photo/'.$id.'.jpg');
     		//導頁並傳頁數
-    		$b = "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
+    		$b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
      	    $a = '<strong><h1 style="color:#ff94b6">裁切中...</h1></strong>';
             $this->debug($a,$b);
         }

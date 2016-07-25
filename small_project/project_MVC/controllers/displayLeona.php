@@ -95,7 +95,7 @@
                         if($_FILES['file']['error'] == 4)
                         {
                             $display2->insert_dis($ans,$data,$date);
-                            $b = "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";   
+                            $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";   
                         
                             $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
                             $this->debug($a,$b);
@@ -107,7 +107,7 @@
                             //新增專案內容與圖片編號
                             $display2->insert_dis($ans,$data,$date);
                             //導頁
-                            $b = "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/display_2?id={$ans}&p={$p}>";   
+                            $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/display_2?id={$ans}&p={$p}>";   
                             $a = '<strong><h1 style="color:#ff94b6">上傳中...</h1></strong>';
                             $this->debug($a,$b);
                         }
@@ -130,13 +130,14 @@
             }
             $id = $_GET["dis_id"];
             //刪除該圖片
-            if(@fopen($url, 'r')) {
+            if(is_file("views/ok_photo/$id.jpg")) {
+                
                 unlink("views/ok_photo/$id.jpg");
             } 
             $display =  $this->model("process_display");
             $display->delete_dis($id);
             //導頁
-            $b = "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
+            $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
             $a = '<strong><h1 style="color:#ff94b6">刪除中...</h1></strong>';
             $this->debug($a,$b);
         }
@@ -219,7 +220,7 @@
                         move_uploaded_file($_FILES['file']['tmp_name'],'views/ok_photo/'.$id.".".$ex);//複製檔案
                         //更新專案內容
                         $display->update_dis($data,$id);
-                        $b = "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/display_2?id={$id}&p={$p}>";
+                        $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/display_2?id={$id}&p={$p}>";
                         $a = '<strong><h1 style="color:#ff94b6">上傳中...</h1></strong>';
                         $this->debug($a,$b);
                         
@@ -257,7 +258,7 @@
                 $index = $this->model("process_index");
                 $index->contact($address,$phone,$tax,$email);
                 //導頁
-                $b = "<meta http-equiv=REFRESH CONTENT=0;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
+                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
                 $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
                 $this->debug($a,$b);
             }
