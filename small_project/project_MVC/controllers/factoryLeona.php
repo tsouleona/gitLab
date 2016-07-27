@@ -25,34 +25,34 @@
             $cellphone = $_POST["cellphone"];
             $tax = $_POST["tax"];
             $data = $_POST["data"];
+            
             //比對特殊字元
             if($this->str($name) == true || $this->str($people) == true || 
             $this->str($phone) == true || $this->str($address) == true ||
             $this->str($url) == true || $this->str($email) == true || 
             $this->str($cellphone) == true || $this->str($tax) == true)
             {
-                $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
-                $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory>';
-            
-                $this->debug($a,$b);
+                echo '<div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h3><strong>不能輸入特殊符號</strong></h3></div>';
             }
             //若為空，內容為"沒有留下資料"
             else{
                 if($email == "")
                 {
-                    $email = "沒有留下資料";
+                    $_POST['email'] = "沒有留下資料";
                 }
                 if($tax == "")
                 {
-                    $tax = "沒有留下資料";
+                    $_POST['tax'] = "沒有留下資料";
                 }
                 if($address == "")
                 {
-                    $address = "沒有留下資料";
+                    $_POST['address'] = "沒有留下資料";
                 }
                 if($url == "")
                 {
-                    $url = "沒有留下資料";
+                    $_POST['url'] = "沒有留下資料";
                 }
                 
                 $factory = $this->model("process_factory_select");
@@ -60,18 +60,18 @@
                 $date = date("Y-m-d");
                 $date2 = date("Ymd");
                 //搜尋當天資料
-                $result = $factory->select_desc($date2);
-                $row = mysql_fetch_array($result);
+                $row = $factory->select_desc($date2);
+                
                 $one="001";
                 //圖片編號若不為第一筆則從當天的最後一筆+1
-                if($row[0] == NULL)
+                if($row[0]['fac_id'] == NULL)
                 {
                     $ans = $date2.$one;
                     
                 }
                 //圖片編號若不為第一筆則從當天的最後一筆+1
                 else{
-                    $ans = substr($row[0],8,3);
+                    $ans = substr($row[0]['fac_id'],8,3);
                     $ans = (int)($ans) + 1;
                     $ans = str_pad($ans,3, "0", STR_PAD_LEFT);
                     $ans = $date2.$ans;
@@ -80,9 +80,10 @@
                 $factory2 = $this->model("process_factory");
                 
                 //新增資料
-                $factory2->insert_fa($ans,$name,$people,$phone,$address,$url,$email,$cellphone,$tax,$data,$date);
-                
-                header("Location:https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory");
+                $factory2->insert_fa($ans,$_POST,$date);
+                echo '<div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h3><strong>恭喜!!輸入成功</strong></h3></div>';
             }
         }
         
@@ -106,9 +107,9 @@
         
 //------------------------------刪除實績展示-------------------------------------------------------------
         function factory_delete(){
-            $p = $_GET['p'];
+            $p = $_POST['p'];
             //傳過來的編號
-            $id = $_GET["fa_id"];
+            $id = $_POST["fac_id"];
             //刪除該筆資料
             $factory = $this->model("process_factory");
             $factory->delete_fa($id);

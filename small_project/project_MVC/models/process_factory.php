@@ -5,12 +5,12 @@
     class process_factory extends connect_one{
         
         //新增資料
-        function insert_fa($ans,$name,$people,$phone,$address,$url,$email,$cellphone,$tax,$data,$date){
+        function insert_fa($ans,$factory,$date){
             $com = "INSERT INTO `factory` (`fac_id`,`fac_name`,`fac_people`,`fac_phone`,
             `fac_address`,`fac_url`,`fac_email`,`fac_cellphone`,
-            `fac_tax`,`fac_data`,`fac_date`) VALUES ('".$ans."','".$name."','".$people."',
-            '".$phone."','".$address."','".$url."','".$email."',
-            '".$cellphone."','".$tax."','".$data."','".$date."')";
+            `fac_tax`,`fac_data`,`fac_date`) VALUES ('".$ans."','".$factory['name']."','".$factory['people']."',
+            '".$factory['phone']."','".$factory['address']."','".$factory['url']."','".$factory['email']."',
+            '".$factory['cellphone']."','".$factory['tax']."','".$factory['data']."','".$date."')";
             $row = $this->connect_mysql($com);
         }
         
