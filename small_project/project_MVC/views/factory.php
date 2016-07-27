@@ -123,7 +123,7 @@
             </form>
             <script>
                 $("#login").on("click",function(){
-                        $.post("index/login_in",{
+                        $.post("https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/login_in",{
                             username:$("#username").val(),
                             password:$("#password").val()
                         },function(data){
