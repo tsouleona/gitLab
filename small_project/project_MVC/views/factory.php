@@ -110,11 +110,10 @@
                         <h3 class="modal-title" id="myModalLabel" style="color:#f05f40"><strong>管理員登錄</strong></h3>
                     </div>
                     <div class="modal-body">
-
-                        <h4><strong>帳號 </strong><input type="text" name="username" id="username" /></h4>
-                        <div id="danger1"></div>
-                        <h4><strong>密碼 </strong><input  type="password" name="password" id="password"/></h4>
                         <div id="danger2"></div>
+                        <h4><strong>帳號 </strong><input type="text" name="username" id="username" /></h4>
+                        
+                        <h4><strong>密碼 </strong><input  type="password" name="password" id="password"/></h4>
                     </div>
                     <div class="modal-footer">
 
@@ -124,20 +123,18 @@
             </form>
             <script>
                 $("#login").on("click",function(){
-                    if($("#username").val()=="")
-                    {
-                        $("#danger1").html('<h4 style="color:red"><strong>尚未輸入帳號</strong></h4>');
-                    }
-                    if($("#password").val()=="")
-                    {
-                        $("#danger2").html('<h4 style="color:red"><strong>尚未輸入密碼</strong></h4>');
-                    }
-                    else
-                    {
-                        $("#form1").submit();                
-                        
-                    }
+                        $.post("index/login_in",{
+                            username:$("#username").val(),
+                            password:$("#password").val()
+                        },function(data){
+                            $("#danger2").append(data);
+                        })
+                    
                 })
+                    
+                    
+                    
+                    
             </script>
         </div>
     </div><!--model end-->
@@ -238,27 +235,27 @@
                             $("#ok").on("click", function() {
                                 if ($("#name").val() == ""){
                                     
-                                    $("#factory1").html('<br><h4 style="color:red"><strong>公司名稱尚未輸入<strong></h4>');
+                                    $("#factory1").html('<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><h4><strong>公司名稱尚未輸入</strong></h4></div>');
                                 }
                                 
                                 if ($("#phone").val() == ""){
                                     
-                                    $("#factory2").html('<br><h4 style="color:red"><strong>公司電話尚未輸入<strong></h4>');
+                                    $("#factory2").html('<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><h4><strong>公司電話尚未輸入</strong></h4></div>');
                                 }
                                 
                                 if ($("#people").val() == ""){
                                     
-                                    $("#factory3").html('<br><h4 style="color:red"><strong>連絡人尚未輸入<strong></h4>');
+                                    $("#factory3").html('<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><h4><strong>連絡人尚未輸入</strong></h4></div>');
                                 }
                                 
                                 if ($("#cellphone").val() == ""){
                                     
-                                    $("#factory4").html('<br><h4 style="color:red"><strong>聯絡電話尚未輸入<strong></h4>');
+                                    $("#factory4").html('<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><h4><strong>連絡電話尚未輸入</strong></h4></div>');
                                 }
                                 
                                 if ($("#data").val() == ""){
                                     
-                                    $("#factory5").html('<br><h4 style="color:red"><strong>經營項目尚未輸入<strong></h4>');
+                                    $("#factory5").html('<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><h4><strong>經營項目尚未輸入</strong></h4></div>');
                                 }
                                 
                                 else{

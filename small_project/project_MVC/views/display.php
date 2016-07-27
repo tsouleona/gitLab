@@ -113,11 +113,10 @@
                         <h3 class="modal-title" id="myModalLabel" style="color:#f05f40"><strong>管理員登錄</strong></h3>
                     </div>
                     <div class="modal-body">
-
-                        <h4><strong>帳號 </strong><input type="text" name="username" id="username" /></h4>
-                        <div id="danger1"></div>
-                        <h4><strong>密碼 </strong><input  type="password" name="password" id="password"/></h4>
                         <div id="danger2"></div>
+                        <h4><strong>帳號 </strong><input type="text" name="username" id="username" /></h4>
+                        
+                        <h4><strong>密碼 </strong><input  type="password" name="password" id="password"/></h4>
                     </div>
                     <div class="modal-footer">
 
@@ -127,20 +126,18 @@
             </form>
             <script>
                 $("#login").on("click",function(){
-                    if($("#username").val()=="")
-                    {
-                        $("#danger1").html('<h4 style="color:red"><strong>尚未輸入帳號</strong></h4>');
-                    }
-                    if($("#password").val()=="")
-                    {
-                        $("#danger2").html('<h4 style="color:red"><strong>尚未輸入密碼</strong></h4>');
-                    }
-                    else
-                    {
-                        $("#form1").submit();                
-                        
-                    }
+                        $.post("index/login_in",{
+                            username:$("#username").val(),
+                            password:$("#password").val()
+                        },function(data){
+                            $("#danger2").append(data);
+                        })
+                    
                 })
+                    
+                    
+                    
+                    
             </script>
         </div>
     </div><!--model end-->

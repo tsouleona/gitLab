@@ -76,14 +76,19 @@
             $pwd = $_POST["password"];
             
            //比對有沒有輸入特殊字元
-            if($this->str($uname) || $this->str($pwd)){
+            if($uname=="" || $pwd=="")
+            {
+                $this->point_error("帳號密碼尚未輸入完整");
+                exit;
+            }
+            else if($this->str($uname) || $this->str($pwd)){
                 
             $this->point_error("不能輸入特殊符號");
                 
             }
-            if(!preg_match("/'/",$uname) && !strpos("/'/",$pwd)){
+            else{
                 $row = $this ->model("check_login");
-                $row2 = $row->login_data($uname);
+                $row2 = $row->login_data();
                 //如果登入成功並且記錄至SESSION
                 if($uname == $row2[0]['username'] && $pwd == $row2[0]['password'])
                 {
