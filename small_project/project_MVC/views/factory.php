@@ -262,12 +262,26 @@
                                 }
                                 
                                 else{
-                                    $("#form2").submit();
+                                    //$("#form2").submit();
+                                    $.post("https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory_insert",
+                                    {
+                                        name: $("#name").val(),
+                                        people: $("#people").val(),
+                                        phone: $("#phone").val(),
+                                        address: $("#address").val(),
+                                        url: $("#url").val(),
+                                        email: $("#email").val(),
+                                        cellphone: $("#cellphone").val(),
+                                        tax: $("#tax").val(),
+                                        data: $("#data").val()
+                                    },function(data){
+                                        $("#debug").append(data);
+                                    })
                                 }
                             })
                         })
-                        
                     </script>
+
                 </div>
             </div>
         </div>
