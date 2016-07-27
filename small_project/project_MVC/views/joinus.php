@@ -179,7 +179,7 @@
                 
 <!--------------------------------------------加入我們(輸入聯絡資訊)------------------------------------------------------------------------>
                 <div class="col-lg-5  text-center">
-                    <form action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus_insert" method="POST" id ="form2">
+                    <form id ="form2">
                         <table class="table table-hover">
                             <thead>
                                 <td align="center">
@@ -205,7 +205,7 @@
 
                         </table>
                         <input class="btn btn-primary btn-xl" type="button" id="ok2" name="ok2" value="確認" />
-                        
+                        <div id="debug"></div>
                     </form>
                     <script>
                         
@@ -219,7 +219,14 @@
                                     $("#joinus2").html('<br><h4 style="color:red"><strong>您的電話尚未輸入<strong></h4>');
                                 }
                                 else{
-                                    $("#form2").submit();
+                                    $.post("https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus_insert",
+                                    {
+                                        name: $("#name").val(), 
+                                        cellphone: $("#cellphone").val(),
+                                    },function(data){
+                                        
+                                        $("#debug").append(data);
+                                    })
                                 }
                             });
                         });
@@ -252,6 +259,7 @@
                     <h3 style="color:#ff94b6"><strong>目前沒有資料</strong></h3>
                     <?php }?>
                     <?php if(!empty($row4)){?>
+                        <div id="join_item_bug" ></div>
                         <table class="table table-hover">
                             <thead>
                                 <td align="center">
@@ -285,6 +293,7 @@
                                     
                                     else{
                             ?>
+                                        
                                         <tr>
                                             <td align="center">
                                                 <h4><?php echo $row2[$j]['join_date'];?></h4>
@@ -304,10 +313,24 @@
                                             </td>
                                             
                                             <td align="center">
-                                                <button class="btn btn-warning" type="button" id="del" name="del"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus_delete?jo_id=<?php echo $row2[$j]['join_id'];?>&p=<?php echo $_GET['p'];?>">刪除</a></button>
+                                                <input class="btn btn-warning" onclick="join_del(<?php echo $row2[$j]['join_id'];?>)" type="button" value="刪除" />
                                             </td>
                                         </tr>
-                                        
+                                        <input id="joinus_item_page<?php echo $row2[$j]['join_id'];?>" style="visibility:hidden" value="<?php echo $_GET['p'];?>" />
+                                            
+                                            <script>
+                                                function join_del(num){
+                        
+                                                $.post("https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus_delete",
+                                                {
+                                                    join_id:num,
+                                                    page:$("#joinus_item_page"+num).val()
+                                                    
+                                                },function(data){
+                                                    $("#join_item_bug").append(data);
+                                                })
+                                            }
+                                            </script>
                                     <?php }?>
                             <?php }?>    
                         </table>
@@ -388,7 +411,7 @@
         </section>
         <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-           <form action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/insert_contact" method="POST" id="form3">
+           <form  id="form3">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -398,29 +421,42 @@
                         
                     <h3 class="section-heading"><strong>聯絡我們</strong></h3>
                     <hr>
+                    <div id="contact_bug"></div>
                     <h4>地址<h4>
-                    <input class="form-control" type="text" name="ab_address" value="<?php echo $row3[0]["con_address"];?>" />
+                    <input class="form-control" type="text" id="ab_address" name="ab_address" value="<?php echo $row3[0]["con_address"];?>" />
                     <h4>電話<h4>
-                    <input class="form-control" type="text" name="ab_phone" value="<?php echo $row3[0]["con_phone"];?>" />
+                    <input class="form-control" type="text" id="ab_phone" name="ab_phone" value="<?php echo $row3[0]["con_phone"];?>" />
                     <h4>傳真<h4>
-                    <input class="form-control" type="text" name="ab_tax" value="<?php echo $row3[0]["con_tax"];?>" />
+                    <input class="form-control" type="text" id="ab_tax" name="ab_tax" value="<?php echo $row3[0]["con_tax"];?>" />
                     <h4>Email<h4>
-                    <input class="form-control" type="text" name="ab_email" value="<?php echo $row3[0]["con_email"];?>" />
-                    <br>
-                    <br>
+                    <input class="form-control" type="text" id="ab_email" name="ab_email" value="<?php echo $row3[0]["con_email"];?>" />
+                    
                   </div>
                   <div class="modal-footer">
-                    <button onclick="submit3();" class="btn btn-primary" >確認</button>
+                    <input id="contact_ok" type="button" class="btn btn-primary" value="確認" />
+                    
                   </div>
+                  
                 </div>
+                <input id="contact_page" style="visibility:hidden" value="<?php echo $_GET['p'];?>" />
                 
            </form>
            <script>
-                    function submit3(){
+                $("#contact_ok").on("click",function(){
+                    
+                    $.post("https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/insert_contact",
+                    {
+                        ab_address:$("#ab_address").val(),
+                        ab_phone:$("#ab_phone").val(),
+                        ab_tax:$("#ab_tax").val(),
+                        ab_email:$("#ab_email").val(),
+                        page:$("#contact_page").val()
                         
-                        form3.submit();
-                    }
-                </script>
+                    },function(data){
+                        $("#contact_bug").append(data);
+                    })
+                })
+            </script>
       </div>
     </div><!--model end-->
     <!-- Bootstrap Core JavaScript -->

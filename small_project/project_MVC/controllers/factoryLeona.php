@@ -32,9 +32,7 @@
             $this->str($url) == true || $this->str($email) == true || 
             $this->str($cellphone) == true || $this->str($tax) == true)
             {
-                echo '<div class="alert alert-danger alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h3><strong>不能輸入特殊符號</strong></h3></div>';
+                $this->point_error("不能輸入特殊符號");
             }
             //若為空，內容為"沒有留下資料"
             else{
@@ -81,9 +79,7 @@
                 
                 //新增資料
                 $factory2->insert_fa($ans,$_POST,$date);
-                echo '<div class="alert alert-success alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h3><strong>恭喜!!輸入成功</strong></h3></div>';
+                $this->success("輸入成功");
             }
         }
         
@@ -107,7 +103,7 @@
         
 //------------------------------刪除實績展示-------------------------------------------------------------
         function factory_delete(){
-            $p = $_POST['p'];
+            $p = $_POST['page'];
             //傳過來的編號
             $id = $_POST["fac_id"];
             //刪除該筆資料
@@ -126,7 +122,7 @@
             $tax=$_POST["ab_tax"];
             $email=$_POST["ab_email"];
             
-            $p = $_GET['p'];
+            $p = $_POST['page'];
             if($p == "")
             {
                 $p = 0 ;
@@ -135,10 +131,8 @@
             
             if($this->str($address)==true || $this->str($phone)==true || $this->str($tax)==true || $this->str($email)==true)
             {
-                //顯示錯誤訊息並導頁
-                $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory?p={$p}>";
-                $this->debug($a,$b);
+                //顯示錯誤訊息
+                $this->point_error("不能輸入特殊字元");
                 
             }
             else
@@ -174,6 +168,18 @@
                     return false;
                 }
         }
+        
+        public function point_error($error){
+            echo '<div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4><strong>'.$error.'</strong></h4></div>';
+        }
+        public function success($success){
+            echo '<div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4><strong>'.$success.'</strong></h4></div>';
+        }
+        
     }
     
     

@@ -210,7 +210,7 @@
                         </div>
                         <div class="modal fade" id="change<?php echo $row2[$j]['display_id'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
-                                <form enctype="multipart/form-data" accept="image/jpeg,image/jpg,image/gif,image/png" action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display_update?p=<?php echo $_GET['p'];?>" method="POST" id="form2">
+                                <form enctype="multipart/form-data" accept="image/jpeg,image/jpg,image/gif,image/png" action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display_update?p=<?php echo $_GET['p'];?>" method="POST" id="form2<?php echo $row2[$j]['display_id'];?>">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -219,20 +219,32 @@
                                         <div class="modal-body">
                                             
                                             <input style="visibility:hidden" type="text" name="id" value="<?php echo $row2[$j]['display_id'];?>"/><!-- 傳輸id-->
-                                            <input type="text" class="form-control" name="data" id ="update_data" value="<?php echo $row2[$j]['display_data'];?>" />
-                                            <div id="danger3"></div>
+                                            <input type="text" class="form-control" name="data" id ="update_data<?php echo $row2[$j]['display_id'];?>" value="<?php echo $row2[$j]['display_data'];?>" />
+                                            <div id="danger3<?php echo $row2[$j]['display_id'];?>"></div>
                                             <h4><strong>上傳檔案&nbsp;</strong><h4/><input id="file" name="file" type="file">
-                                            <p style="color:red"><strong>請使用jpeg、jpg檔、專案內容不能是空的</strong><p>
-                                            <input style="visibility:hidden" name="page" value="<?php echo $_GET['p'];?>" />
-                                            
+                                            <p style="color:red"><strong>請使用jpeg、jpg檔</strong><p>  
                                         </div>
                                         <div class="modal-footer">
                                             
-                                            <input type="submit" class="btn btn-primary" name="ok2" id="ok2" value="確認">
+                                            <input type="button" class="btn btn-primary" name="ok2" onclick="updata(<?php echo $row2[$j]['display_id'];?>)" value="確認" />
                                         </div>
                                     </div>
                                 </form>
+                                <script>
+                                function updata(num)
+                                {
+                                    if($("#update_data"+num).val()=="")
+                                    {
+                                        $("#danger3"+num).html('<h4 style="color:red"><strong>專案內容不能為空</strong></h4>')
+                                    }
+                                    else
+                                    {
+                                        $("#form2"+num).submit();
+                                    }
+                                }
                                 
+                                    
+                                </script>
                             </div>
                         </div><!--model end-->
                 <?php  } ?>
@@ -259,7 +271,7 @@
                     </div>
                     <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
-                            <form enctype="multipart/form-data"  action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display_add?p=<?php echo $_GET['p'];?>" method="POST" id="form4">
+                            <form enctype="multipart/form-data" method="POST" action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display_add?p=<?php echo $_GET['p'];?>" method="POST" id="form4" >
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -274,13 +286,25 @@
                                     </div>
                                     <div class="modal-footer">
                 
-                                        <input type="submit" class="btn btn-primary" name="ok" id="ok" value="確認">
+                                        <input type="button"  class="btn btn-primary" name="ok" id="add_ok" value="確認">
                                     </div>
                                 </div>
                             </form>
                             
                         </div>
                     </div><!--model end-->
+                    <script>
+                        $("#add_ok").on("click",function(){
+                            if($("#add_data").val()=="")
+                            {
+                                $("#danger").html('<h4 style="color:red"><strong>專案內容不能為空</strong></h4>')
+                            }
+                            else{
+                                $("#form4").submit();
+                            }
+                            
+                        })
+                    </script>
                 <?php }?>
         </div>
         
@@ -346,7 +370,7 @@
         </section>
         <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-           <form action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/insert_contact?p=<?php echo $_GET['p'];?>" method="POST" id="form3">
+           <form  id="form3">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -356,29 +380,42 @@
                         
                     <h3 class="section-heading"><strong>聯絡我們</strong></h3>
                     <hr>
+                    <div id="contact_bug"></div>
                     <h4>地址<h4>
-                    <input class="form-control" type="text" name="ab_address" value="<?php echo $row3[0]["con_address"];?>" />
+                    <input class="form-control" type="text" id="ab_address" name="ab_address" value="<?php echo $row3[0]["con_address"];?>" />
                     <h4>電話<h4>
-                    <input class="form-control" type="text" name="ab_phone" value="<?php echo $row3[0]["con_phone"];?>" />
+                    <input class="form-control" type="text" id="ab_phone" name="ab_phone" value="<?php echo $row3[0]["con_phone"];?>" />
                     <h4>傳真<h4>
-                    <input class="form-control" type="text" name="ab_tax" value="<?php echo $row3[0]["con_tax"];?>" />
+                    <input class="form-control" type="text" id="ab_tax" name="ab_tax" value="<?php echo $row3[0]["con_tax"];?>" />
                     <h4>Email<h4>
-                    <input class="form-control" type="text" name="ab_email" value="<?php echo $row3[0]["con_email"];?>" />
-                    <br>
-                    <br>
+                    <input class="form-control" type="text" id="ab_email" name="ab_email" value="<?php echo $row3[0]["con_email"];?>" />
+                    
                   </div>
                   <div class="modal-footer">
-                    <button onclick="submit3();" class="btn btn-primary" >確認</button>
+                    <input id="contact_ok" type="button" class="btn btn-primary" value="確認" />
+                    
                   </div>
+                  
                 </div>
+                <input id="contact_page" style="visibility:hidden" value="<?php echo $_GET['p'];?>" />
                 
            </form>
            <script>
-                    function submit3(){
+                $("#contact_ok").on("click",function(){
+                    
+                    $.post("https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/insert_contact",
+                    {
+                        ab_address:$("#ab_address").val(),
+                        ab_phone:$("#ab_phone").val(),
+                        ab_tax:$("#ab_tax").val(),
+                        ab_email:$("#ab_email").val(),
+                        page:$("#contact_page").val()
                         
-                        form3.submit();
-                    }
-                </script>
+                    },function(data){
+                        $("#contact_bug").append(data);
+                    })
+                })
+            </script>
       </div>
     </div><!--model end-->
     <!-- modal end-->

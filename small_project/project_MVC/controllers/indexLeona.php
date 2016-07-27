@@ -23,15 +23,15 @@
             $index = $this->model("process_index");
             
             if($this->str($data)){
-                //顯示錯誤訊息並導頁
-                $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
-                $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
-            
-                $this->debug($a,$b);
+                //顯示錯誤訊息
+                $this->point_error("不能輸入特殊符號");
             }
             else{
                 $index->about($data);
-                header("Location:https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index");
+                $a = '<strong><h1 style="color:#ff94b6">修改成功</h1></strong>';
+                $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+            
+                $this->debug($a,$b);
             }
                 
             
@@ -49,11 +49,7 @@
             if($this->str($address)==true || $this->str($phone)==true || $this->str($tax)==true || $this->str($email)==true)
             {
                 //顯示錯誤訊息與導頁
-                $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
-                $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
-            
-                $this->debug($a,$b);
-                
+                $this->point_error("不能輸入特殊符號");
             }
             else
             {
@@ -61,7 +57,9 @@
                 $index = $this->model("process_index");
                 $index->contact($address,$phone,$tax,$email);
                 
-                header("Location:https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index");
+                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>";
+                $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
+                $this->debug($a,$b);
             }
         }
         
@@ -80,10 +78,7 @@
            //比對有沒有輸入特殊字元
             if($this->str($uname) || $this->str($pwd)){
                 
-            $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
-            $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
-            
-            $this->debug($a,$b);
+            $this->point_error("不能輸入特殊符號");
                 
             }
             if(!preg_match("/'/",$uname) && !strpos("/'/",$pwd)){
@@ -135,7 +130,17 @@
                 else{
                     return false;
                 }
-            }
+        }
+        public function point_error($error){
+            echo '<div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4><strong>'.$error.'</strong></h4></div>';
+        }
+        public function success($success){
+            echo '<div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4><strong>'.$success.'</strong></h4></div>';
+        }
     
     }
 ?>

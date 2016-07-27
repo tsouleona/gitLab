@@ -184,32 +184,36 @@
     </section>
     <div class="modal fade" id="about_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-           <form action="index/insert_about" method="POST" id="form2">
+           <form id="form2">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h3 class="modal-title" id="myModalLabel" style="color:#white"><strong>修改簡介</strong></h3>
+                    <h3 class="modal-title" id="myModalLabel" style="color:#white"><strong>修改公司簡介</strong></h3>
                   </div>
                   <div class="modal-body">
-                        
+                       
                     <h3 class="section-heading"><strong>公司簡介</strong></h3>
-                    <hr>
-                    
-                    <textarea cols="50" class="form-control" name="about_data"><?php echo $row2[0]["intro_data"];?></textarea>
+                    <div id="debug_about"></div> 
+                    <textarea cols="50" class="form-control" id="about_data" name="about_data"><?php echo $row2[0]["intro_data"];?></textarea>
                     <br>
                     <br>
                   </div>
                   <div class="modal-footer">
-                    <button  onclick="submit();" class="btn btn-primary" name="login">確認</button>
+                    <input type="button" id="about_ok" class="btn btn-primary" value="確認" />
                   </div>
                 </div>
                 
            </form>
            <script>
-                    function submit(){
+                    $("#about_ok").on("click",function(){
                         
-                        form2.submit();
-                    }
+                        $.post("index/insert_about",
+                        {
+                            about_data:$("#about_data").val()
+                        },function(data){
+                            $("#debug_about").append(data);
+                        })
+                    })
                 </script>
       </div>
     </div><!--model end-->
@@ -299,23 +303,23 @@
             <div class="col-lg-5"></div>
             <div class="col-lg-5">
 <!--------------------------------------------管理員畫面[聯絡我們(編輯)]------------------------------------------------------------------------>    
-                <?php 
-                    if($id!=NULL ) { 
+                    <?php 
+                    if( $id!=NULL ) { 
                 ?>
-                <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#contact_modal" >編輯</button>
-                <?php }?>
-            </div>
-            <div class="row">
-                <div class="col-lg-3"></div>
-                <div class="col-lg-6 text-center">
-                <p>Chungyo Leona © 2016 / <a  style="color:#FFFFFF" href="mailto:srt459vn31@gmail.com">srt459vn31@gmail.com</a></p>
+                    <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#contact_modal">編輯</button>
+                    <?php }?>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6 text-center">
+                        <p>Chungyo Leona © 2016 / <a style="color:#FFFFFF" href="mailto:srt459vn31@gmail.com">srt459vn31@gmail.com</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        </section>
+        <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
-           <form action="index/insert_contact" method="POST" id="form3">
+           <form  id="form3">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -325,29 +329,42 @@
                         
                     <h3 class="section-heading"><strong>聯絡我們</strong></h3>
                     <hr>
+                    <div id="contact_bug"></div>
                     <h4>地址<h4>
-                    <input class="form-control" type="text" name="ab_address" value="<?php echo $row3[0]["con_address"];?>" />
+                    <input class="form-control" type="text" id="ab_address" name="ab_address" value="<?php echo $row3[0]["con_address"];?>" />
                     <h4>電話<h4>
-                    <input class="form-control" type="text" name="ab_phone" value="<?php echo $row3[0]["con_phone"];?>" />
+                    <input class="form-control" type="text" id="ab_phone" name="ab_phone" value="<?php echo $row3[0]["con_phone"];?>" />
                     <h4>傳真<h4>
-                    <input class="form-control" type="text" name="ab_tax" value="<?php echo $row3[0]["con_tax"];?>" />
+                    <input class="form-control" type="text" id="ab_tax" name="ab_tax" value="<?php echo $row3[0]["con_tax"];?>" />
                     <h4>Email<h4>
-                    <input class="form-control" type="text" name="ab_email" value="<?php echo $row3[0]["con_email"];?>" />
-                    <br>
-                    <br>
+                    <input class="form-control" type="text" id="ab_email" name="ab_email" value="<?php echo $row3[0]["con_email"];?>" />
+                    
                   </div>
                   <div class="modal-footer">
-                    <button onclick="submit3();" class="btn btn-primary" >確認</button>
+                    <input id="contact_ok" type="button" class="btn btn-primary" value="確認" />
+                    
                   </div>
+                  
                 </div>
+                <input id="contact_page" style="visibility:hidden" value="<?php echo $_GET['p'];?>" />
                 
            </form>
            <script>
-                    function submit3(){
+                $("#contact_ok").on("click",function(){
+                    
+                    $.post("https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/insert_contact",
+                    {
+                        ab_address:$("#ab_address").val(),
+                        ab_phone:$("#ab_phone").val(),
+                        ab_tax:$("#ab_tax").val(),
+                        ab_email:$("#ab_email").val(),
+                        page:$("#contact_page").val()
                         
-                        form3.submit();
-                    }
-                </script>
+                    },function(data){
+                        $("#contact_bug").append(data);
+                    })
+                })
+            </script>
       </div>
     </div><!--model end-->
     <!-- Bootstrap Core JavaScript -->

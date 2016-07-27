@@ -44,10 +44,7 @@
              //比對特殊字元
             if($this->str($name)==true || $this->str($email)==true || $this->str($phone)==true){
                 
-                $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
-                $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus>';
-            
-                $this->debug($a,$b);
+                $this->point_error("不能輸入特殊符號");
             }
             else
             {
@@ -63,16 +60,15 @@
                 
                 //搜尋當天資料由大排到小
                 $joinus = $this->model("process_joinus_select");
-                $result = $joinus->select_desc($date2);
-                $row = mysql_fetch_array($result);
+                $row = $joinus->select_desc($date2);
                 $one="0001";
                 //圖片編號若不為第一筆則從當天的最後一筆+1
-                if($row[0] == NULL)
+                if($row[0]['join_id'] == NULL)
                 {
                     $ans = $date2.$one;
                 }
                 else{
-                    $ans = substr($row[0],8,4);
+                    $ans = substr($row[0]['join_id'],8,4);
                     $ans = (int)($ans) + 1;
                     $ans = str_pad($ans,4, "0", STR_PAD_LEFT);
                     $ans = $date2.$ans;
@@ -80,15 +76,15 @@
                  $joinus2 = $this->model("process_joinus");
                 //新增資料
                 $joinus2->insert_jo($ans,$name,$email,$phone,$date);
-                header("Location:https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus");
+                $this->success("輸入成功");
             }
                     
         }
 //------------------------------刪除加入我們-------------------------------------------------------------
         function joinus_delete(){
-            $p = $_GET['p'];
+            $p = $_POST['page'];
             //抓GET過來的編號
-            $id = $_GET["jo_id"];
+            $id = $_POST["join_id"];
             //刪除該筆資料
             $joinus = $this->model("process_joinus");
             $joinus->delete_jo($id);
@@ -114,10 +110,7 @@
             if($this->str($address)==true || $this->str($phone)==true || $this->str($tax)==true || $this->str($email)==true)
             {
                 //顯示錯誤訊息並導頁
-                $a = '<strong><h1 style="color:#ff94b6">不能輸入特殊符號</h1></strong>';
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus?p={$p}>";
-            
-                $this->debug($a,$b);
+                $this->point_error("不能輸入特殊符號");
             }
             else
             {
@@ -151,7 +144,16 @@
                     return false;
                 }
             }
-        
+         public function point_error($error){
+            echo '<div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4><strong>'.$error.'</strong></h4></div>';
+        }
+        public function success($success){
+            echo '<div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4><strong>'.$success.'</strong></h4></div>';
+        }
     }
     
 ?>
