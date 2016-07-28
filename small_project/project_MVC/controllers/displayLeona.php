@@ -100,7 +100,7 @@
                         //新增專案內容與圖片編號
                         $display2->insert_dis($ans,$data,$date);
                         //導頁
-                        $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/display_2?id={$ans}&p={$p}>";   
+                        $b = "<meta http-equiv=REFRESH CONTENT=3;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/display_2?id={$ans}&p={$p}>";   
                         $a = '<strong><h1 style="color:#ff94b6">上傳中...</h1></strong>';
                         $this->debug($a,$b);
                     }
@@ -204,7 +204,7 @@
                     move_uploaded_file($_FILES['file']['tmp_name'],'views/ok_photo/'.$id.".".$ex);//複製檔案
                     //更新專案內容
                     $display->update_dis($data,$id);
-                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/display_2?id={$id}&p={$p}>";
+                    $b = "<meta http-equiv=REFRESH CONTENT=3;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/display_2?id={$id}&p={$p}>";
                     $a = '<strong><h1 style="color:#ff94b6">上傳中...</h1></strong>';
                     $this->debug($a,$b);
                     

@@ -1,13 +1,17 @@
 <!DOCTYPE html>
+<?php 
+    $connect = new connect_db();
+    $root = $connect->db();
+?>
 <html lang="en">
 <head>
   <title>Live Cropping Demo</title>
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-  <script src="/gitlab/small_project/project_MVC/views/vendor/jquery/jquery.js"></script>
-  <script src="/gitlab/small_project/project_MVC/views/js/jquery.Jcrop.js"></script>
-  <link rel="stylesheet" href="/gitlab/small_project/project_MVC/views/css/main.css" type="text/css" />
-  <link rel="stylesheet" href="/gitlab/small_project/project_MVC/views/css/demos.css" type="text/css" />
-  <link rel="stylesheet" href="/gitlab/small_project/project_MVC/views/css/jquery.Jcrop.css" type="text/css" />
+  <script src="<?php echo $root;?>views/vendor/jquery/jquery.js"></script>
+  <script src="<?php echo $root;?>views/js/jquery.Jcrop.js"></script>
+  <link rel="stylesheet" href="<?php echo $root;?>views/css/main.css" type="text/css" />
+  <link rel="stylesheet" href="<?php echo $root;?>views/css/demos.css" type="text/css" />
+  <link rel="stylesheet" href="<?php echo $root;?>views/css/jquery.Jcrop.css" type="text/css" />
 
 <script type="text/javascript">
 
@@ -82,10 +86,10 @@ jQuery(function($){
             <div class="span12">
 
             		<!-- This is the image we're attaching Jcrop to -->
-            		<img src="<?php echo '/gitlab/small_project/project_MVC/views/ok_photo/'.$_GET['id'].'.jpg';?>" id="cropbox"  />
+            		<img src="<?php echo  $root.'views/ok_photo/'.$_GET['id'].'.jpg';?>" id="cropbox"  />
             
             		<!-- This is the form that our event handler fills -->
-            		<form id = "coords"  action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/crop_photo" method="post" onsubmit="return checkCoords();">
+            		<form id = "coords"  action="<?php echo $root;?>display_2/crop_photo" method="post" onsubmit="return checkCoords();">
             			<input type="hidden" id="id" name="id" value="<?php echo $_GET['id'];?>" />
             			<input type="hidden" id="page" name="page" value="<?php echo $_GET['p'];?>" />
             			<input type="hidden" id="x1" name="x1" />
@@ -98,7 +102,7 @@ jQuery(function($){
             		</form>
             	<!--</div>-->
             	
-                <button class="btn btn-large btn-inverse"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p=<?php echo $_GET['p'];?>">不需要裁切</button>
+                <button class="btn btn-large btn-inverse"><a style="color:white" href="<?php echo $root;?>display/display?p=<?php echo $_GET['p'];?>">不需要裁切</button>
     	        
         	</div>
 	</div>

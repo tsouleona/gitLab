@@ -9,9 +9,9 @@ class connect_one{
                 //資料庫名稱
                 $db_name = "project";
                 //資料庫管理者帳號
-                $db_user = "root";
+                $db_user = "tsouleona";
                 //資料庫管理者密碼
-                $db_passwd = "";
+                $db_passwd = "830606";
                 //對資料庫連線
                 $dbconnect = "mysql:host=".$db_sever.";dbname=".$db_name;
                 $dbgo = new PDO($dbconnect, $db_user, $db_passwd);

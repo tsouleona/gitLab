@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<?php 
-    session_start();
-?>
 <html lang="en">
 
 <head>
@@ -15,7 +12,7 @@
     <title>Creative - Start Bootstrap Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/gitlab/small_project/project_MVC/views/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="views/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="views/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -51,7 +48,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index">沅淯駿營造有限公司</a>
+                <a class="navbar-brand page-scroll" href="index">沅淯駿營造有限公司</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -101,7 +98,7 @@
 <!--------------------------------------------登錄帳號密碼------------------------------------------------------------------------>
     <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm" role="document">
-            <form action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/login_in" method="POST" id="form1">
+            <form action="index/login_in" method="POST" id="form1">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -344,7 +341,7 @@
            <script>
                 $("#contact_ok").on("click",function(){
                     
-                    $.post("https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/insert_contact",
+                    $.post("index/insert_contact",
                     {
                         ab_address:$("#ab_address").val(),
                         ab_phone:$("#ab_phone").val(),
@@ -364,7 +361,7 @@
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="/gitlab/small_project/project_MVC/views/vendor/scrollreveal/scrollreveal.js"></script>
+    <script src="views/vendor/scrollreveal/scrollreveal.js"></script>
     
     <script src="views/vendor/magnific-popup/jquery.magnific-popup.js"></script>
 

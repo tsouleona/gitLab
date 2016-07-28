@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php 
-    session_start();
+    $connect = new connect_db();
+    $root = $connect->db();
 ?>
 <html lang="en">
 
@@ -15,21 +16,21 @@
     <title>Creative - Start Bootstrap Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/gitlab/small_project/project_MVC/views/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo $root;?>views/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/gitlab/small_project/project_MVC/views/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $root;?>views/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
-    <link href="/gitlab/small_project/project_MVC/views/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="<?php echo $root;?>views/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="/gitlab/small_project/project_MVC/views/css/creative.min.css" rel="stylesheet">
-    <link href="/gitlab/small_project/project_MVC/views/css/creative.css" rel="stylesheet">
+    <link href="<?php echo $root;?>views/css/creative.min.css" rel="stylesheet">
+    <link href="<?php echo $root;?>views/css/creative.css" rel="stylesheet">
     <!-- Jquery-->
-    <script src="/gitlab/small_project/project_MVC/views/vendor/jquery/jquery.js"></script>
+    <script src="<?php echo $root;?>views/vendor/jquery/jquery.js"></script>
     
      
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -50,7 +51,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index">沅淯駿營造有限公司</a>
+                <a class="navbar-brand page-scroll" href="<?php echo $root;?>index">沅淯駿營造有限公司</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -62,15 +63,15 @@
                             <h4><strong>聯絡我們</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display">
+                        <a class="page-scroll" href="<?php echo $root;?>display/display">
                             <h4><strong>實績展示</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory">
+                        <a class="page-scroll" href="<?php echo $root;?>factory/factory">
                             <h4><strong>廠商招募</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus">
+                        <a class="page-scroll" href="<?php echo $root;?>joinus/joinus">
                             <font color="#00ffff"><h4><strong>加入我們</strong></h4></a></font>
                     </li>
 <!--------------------------------------------登錄判斷------------------------------------------------------------------------>
@@ -83,7 +84,7 @@
                         if($id!=NULL ) { 
                     ?>
                     <li>
-                        <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/login_out">管理員登出</a></button>
+                        <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="<?php echo $root;?>index/login_out">管理員登出</a></button>
                     </li>
                     <?php } ?>
 
@@ -104,7 +105,7 @@
 <!--------------------------------------------登錄帳號密碼------------------------------------------------------------------------>
     <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm" role="document">
-            <form action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/login_in" method="POST" id="form1">
+            <form id="form1">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -124,7 +125,7 @@
             </form>
             <script>
                 $("#login").on("click",function(){
-                        $.post("https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/login_in",{
+                        $.post("<?php echo $root;?>index/login_in",{
                             username:$("#username").val(),
                             password:$("#password").val()
                         },function(data){
@@ -216,7 +217,7 @@
                                     $("#joinus2").html('<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><h4><strong>您的電話尚未輸入</strong></h4></div>');
                                 }
                                 else{
-                                    $.post("https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus_insert",
+                                    $.post("<?php echo $root;?>joinus/joinus_insert",
                                     {
                                         name: $("#name").val(), 
                                         cellphone: $("#cellphone").val(),
@@ -318,7 +319,7 @@
                                             <script>
                                                 function join_del(num){
                         
-                                                $.post("https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus_delete",
+                                                $.post("<?php echo $root;?>joinus/joinus_delete",
                                                 {
                                                     join_id:num,
                                                     page:$("#joinus_item_page"+num).val()
@@ -441,7 +442,7 @@
            <script>
                 $("#contact_ok").on("click",function(){
                     
-                    $.post("https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/insert_contact",
+                    $.post("<?php echo $root;?>joinus/insert_contact",
                     {
                         ab_address:$("#ab_address").val(),
                         ab_phone:$("#ab_phone").val(),
@@ -457,16 +458,16 @@
       </div>
     </div><!--model end-->
     <!-- Bootstrap Core JavaScript -->
-    <script src="/gitlab/small_project/project_MVC/views/vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="<?php echo $root;?>views/vendor/bootstrap/js/bootstrap.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="/gitlab/small_project/project_MVC/views/vendor/scrollreveal/scrollreveal.js"></script>
+    <script src="<?php echo $root;?>views/vendor/scrollreveal/scrollreveal.js"></script>
     
-    <script src="/gitlab/small_project/project_MVC/views/vendor/magnific-popup/jquery.magnific-popup.js"></script>
+    <script src="<?php echo $root;?>views/vendor/magnific-popup/jquery.magnific-popup.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="/gitlab/small_project/project_MVC/views/js/creative.js"></script>
+    <script src="<?php echo $root;?>views/js/creative.js"></script>
 
 </body>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php 
-    session_start();
-    
+    $connect = new connect_db();
+    $root = $connect->db();
 ?>
 <html lang="en">
 
@@ -16,21 +16,21 @@
     <title>Creative - Start Bootstrap Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/gitlab/small_project/project_MVC/views/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo $root;?>views/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/gitlab/small_project/project_MVC/views/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $root;?>views/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
-    <link href="/gitlab/small_project/project_MVC/views/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="<?php echo $root;?>views/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="/gitlab/small_project/project_MVC/views/css/creative.min.css" rel="stylesheet">
-    <link href="/gitlab/small_project/project_MVC/views/css/creative.css" rel="stylesheet">
+    <link href="<?php echo $root;?>views/css/creative.min.css" rel="stylesheet">
+    <link href="<?php echo $root;?>views/css/creative.css" rel="stylesheet">
     <!-- Jquery-->
-    <script src="/gitlab/small_project/project_MVC/views/vendor/jquery/jquery.js"></script>
+    <script src="<?php echo $root;?>views/vendor/jquery/jquery.js"></script>
     
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -62,15 +62,15 @@
                         <a class="page-scroll" href="#contact"><h4><strong>聯絡我們</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display"><h4><strong>實績展示</strong></h4></a>
+                        <a class="page-scroll" href="<?php echo $root;?>display/display"><h4><strong>實績展示</strong></h4></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory">
+                        <a class="page-scroll" href="<?php echo $root;?>factory/factory">
                             <font color="#00ffff"><h4><strong>廠商招募</strong></h4></font>
                         </a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus"><h4><strong>加入我們</strong></h4></a>
+                        <a class="page-scroll" href="<?php echo $root;?>joinus/joinus"><h4><strong>加入我們</strong></h4></a>
                     </li>
 <!--------------------------------------------登錄判斷------------------------------------------------------------------------>
                     <?php 
@@ -82,7 +82,7 @@
                         if( $id!=NULL ) { 
                     ?>
                     <li>
-                        <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/login_out">管理員登出</a></button>
+                        <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="<?php echo $root;?>index/login_out">管理員登出</a></button>
                     </li>
                     <?php } ?>
 
@@ -103,7 +103,7 @@
 <!--------------------------------------------登錄帳號密碼------------------------------------------------------------------------>
     <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm" role="document">
-            <form action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/login_in" method="POST" id="form1">
+            <form id="form1">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -123,7 +123,7 @@
             </form>
             <script>
                 $("#login").on("click",function(){
-                        $.post("https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index/login_in",{
+                        $.post("<?php echo $root;?>index/login_in",{
                             username:$("#username").val(),
                             password:$("#password").val()
                         },function(data){
@@ -160,7 +160,7 @@
             <div class="row">
                 <div class="col-lg-3"></div>
                 <div class="col-lg-6  text-center" border="1">
-                    <form action="https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory_insert" method="POST" id="form2">
+                    <form action="<?php echo $root;?>factory/factory_insert" method="POST" id="form2">
                         <table class="table table-hover">
                             <thead>
                                 <td align="center">
@@ -260,7 +260,7 @@
                                 
                                 else{
                                     
-                                    $.post("https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory_insert",
+                                    $.post("<?php echo $root;?>factory/factory_insert",
                                     {
                                         name: $("#name").val(),
                                         people: $("#people").val(),
@@ -374,7 +374,7 @@
                                             <script>
                                                 function fac_del(num){
                         
-                                                $.post("https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory_delete",
+                                                $.post("<?php echo $root;?>factory/factory_delete",
                                                 {
                                                     fac_id:num,
                                                     page:$("#fac_item_page"+num).val()
@@ -563,7 +563,7 @@
            <script>
                 $("#contact_ok").on("click",function(){
                     
-                    $.post("https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/insert_contact",
+                    $.post("<?php echo $root;?>factory/insert_contact",
                     {
                         ab_address:$("#ab_address").val(),
                         ab_phone:$("#ab_phone").val(),
@@ -579,16 +579,16 @@
       </div>
     </div><!--model end-->
      <!-- Bootstrap Core JavaScript -->
-    <script src="/gitlab/small_project/project_MVC/views/vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="<?php echo $root;?>views/vendor/bootstrap/js/bootstrap.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="/gitlab/small_project/project_MVC/views/vendor/scrollreveal/scrollreveal.js"></script>
+    <script src="<?php echo $root;?>views/vendor/scrollreveal/scrollreveal.js"></script>
     
-    <script src="/gitlab/small_project/project_MVC/views/vendor/magnific-popup/jquery.magnific-popup.js"></script>
+    <script src="<?php echo $root;?>views/vendor/magnific-popup/jquery.magnific-popup.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="/gitlab/small_project/project_MVC/views/js/creative.js"></script>
+    <script src="<?php echo $root;?>views/js/creative.js"></script>
     
     
 
