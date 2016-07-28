@@ -1,7 +1,11 @@
 <?php 
-    session_start();
-   
     class indexLeona extends Controller{
+        protected $result;
+        
+        function __construct(){
+            $con = new connect_db();
+            $this->result = $con->db();
+        }
 //-----------------------------------回首頁-------------------------------------------------------------
         function index(){
             $row = $this->select_about();
@@ -29,7 +33,7 @@
             else{
                 $index->about($data);
                 $a = '<strong><h1 style="color:#ff94b6">修改成功</h1></strong>';
-                $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
             
                 $this->debug($a,$b);
             }
@@ -57,7 +61,7 @@
                 $index = $this->model("process_index");
                 $index->contact($address,$phone,$tax,$email);
                 
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>";
+                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
                 $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
                 $this->debug($a,$b);
             }
@@ -94,7 +98,7 @@
                 {
                     $_SESSION["username"] = $uname;
                     $a = '<strong><h1 style="color:#ff94b6">登入成功</h1></strong>';
-                    $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
                     
                     $this->debug($a,$b);
                     
@@ -104,7 +108,7 @@
                 {
                     
                     $a = '<strong><h1 style="color:#ff94b6">帳號密碼錯誤</h1></strong>';
-                    $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
                 
                     $this->debug($a,$b);
                 }
@@ -118,7 +122,7 @@
             //把session的值清掉
             $out->login_out();
             $a = '<strong><h1 style="color:#ff94b6">登出中...</h1></strong>';
-            $b = '<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/index>';
+            $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
             $this->debug($a,$b);
             
         }

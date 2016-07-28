@@ -1,6 +1,5 @@
 <?php
-
-class Controller {
+class Controller{
     public function model($model) {
         require_once "../project_MVC/models/$model.php";
         return new $model ();
@@ -10,6 +9,12 @@ class Controller {
         require_once "../project_MVC/views/$view.php";
         
     }
+    
+    
+    
+    
+    
+    
 }
 
 ?>

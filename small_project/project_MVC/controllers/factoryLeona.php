@@ -1,8 +1,11 @@
 <?php
-    session_start();
-    
-    
     class factoryLeona extends Controller{
+        protected $result;
+        
+        function __construct(){
+            $con = new connect_db();
+            $this->result = $con->db();
+        }
 //----------------------------回廠商招募-------------------------------------------------------------
         function factory(){
             $row3 = $this->select_contact();
@@ -110,7 +113,7 @@
             $factory = $this->model("process_factory");
             $factory->delete_fa($id);
             //導頁
-            $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory?p={$p}>";
+            $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."factory/factory?p={$p}>";
             $a = '<strong><h1 style="color:#ff94b6">刪除中...</h1></strong>';
             $this->debug($a,$b);
         }
@@ -141,7 +144,7 @@
                 $index = $this->model("process_index");
                 $index->contact($address,$phone,$tax,$email);
                 //導頁
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/factory/factory?p={$p}>";
+                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."factory/factory?p={$p}>";
                 $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
                 $this->debug($a,$b);
             }

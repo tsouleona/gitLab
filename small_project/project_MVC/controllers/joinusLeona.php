@@ -1,8 +1,11 @@
 <?php
-    session_start();
-    
-    
     class joinusLeona extends Controller{
+        protected $result;
+        
+        function __construct(){
+            $con = new connect_db();
+            $this->result = $con->db();
+        }
 //--------------------------------回廠商招募-------------------------------------------------------------
         function joinus(){
             $p = $_GET['p'];
@@ -89,7 +92,7 @@
             $joinus = $this->model("process_joinus");
             $joinus->delete_jo($id);
             //導頁
-            $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus?p={$p}>";
+            $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."joinus/joinus?p={$p}>";
             $a = '<strong><h1 style="color:#ff94b6">刪除中...</h1></strong>';
             $this->debug($a,$b);
         }
@@ -118,7 +121,7 @@
                 $index = $this->model("process_index");
                 $index->contact($address,$phone,$tax,$email);
                 
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/joinus/joinus?p={$p}>";
+                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."joinus/joinus?p={$p}>";
                 $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
                 $this->debug($a,$b);
             }

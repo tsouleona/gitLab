@@ -1,9 +1,14 @@
 <?php 
-    session_start();
     class displayLeona extends Controller{
+        protected $result;
         
+        function __construct(){
+            $con = new connect_db();
+            $this->result = $con->db();
+        }
 //--------------------------------------回實績展示-------------------------------------------------------------
         function display(){
+            
             $t = $this->display_page();
             $row3 = $this->select_contact();
             $p = $t[0];
@@ -20,6 +25,7 @@
             {
                 $p = 0;
             }
+            
             //傳過來的專案內容
             $data = $_POST["add_data"];
             //如果是空的不能上傳檔案
@@ -28,7 +34,7 @@
             {
                 
                 $a = '<h1 style="color:#ff94b6">不能輸入特殊字元</h1>';
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
+                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
             
                 $this->debug($a,$b);
             }
@@ -67,7 +73,7 @@
                 {  
                     
                     $a = '<h1 style="color:#ff94b6">檔案上傳失敗</h1>';
-                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
+                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
                 
                     $this->debug($a,$b);
                 }
@@ -75,7 +81,7 @@
                 if(!in_array($ex,$path) && $_FILES['file']['error'] != 4)
                 {
                     $a = '<h1 style="color:#ff94b6">副檔名不合格</h1>';
-                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
+                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
                 
                     $this->debug($a,$b);
                 }
@@ -87,8 +93,9 @@
                     
                     if($_FILES['file']['error'] == 4)
                     {
+                        
                         $display2->insert_dis($ans,$data,$date);
-                        $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";   
+                        $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";   
                     
                         $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
                         $this->debug($a,$b);
@@ -100,7 +107,7 @@
                         //新增專案內容與圖片編號
                         $display2->insert_dis($ans,$data,$date);
                         //導頁
-                        $b = "<meta http-equiv=REFRESH CONTENT=3;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/display_2?id={$ans}&p={$p}>";   
+                        $b = "<meta http-equiv=REFRESH CONTENT=3;url=https://lab1-srt459vn.c9users.io".$this->result."display_2/display_2?id={$ans}&p={$p}>";   
                         $a = '<strong><h1 style="color:#ff94b6">上傳中...</h1></strong>';
                         $this->debug($a,$b);
                     }
@@ -130,7 +137,7 @@
             $display =  $this->model("process_display");
             $display->delete_dis($id);
             //導頁
-            $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
+            $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
             $a = '<strong><h1 style="color:#ff94b6">刪除中...</h1></strong>';
             $this->debug($a,$b);
         }
@@ -184,7 +191,7 @@
                 if($_FILES['file']['error'] > 0 && $_FILES['file']['error'] != 4 )
                 {
                     $a = '<h1 style="color:#ff94b6">檔案上傳失敗</h1>';
-                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
+                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
                 
                     $this->view("point",Array($a,$b));
                 }
@@ -192,7 +199,7 @@
                 if(!in_array($ex,$path) && $_FILES['file']['error'] != 4)
                 {
                     $a = '<h1 style="color:#ff94b6">副檔名不合格</h1>' ;
-                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
+                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
                     $this->debug($a,$b);
                     
                 }
@@ -204,7 +211,7 @@
                     move_uploaded_file($_FILES['file']['tmp_name'],'views/ok_photo/'.$id.".".$ex);//複製檔案
                     //更新專案內容
                     $display->update_dis($data,$id);
-                    $b = "<meta http-equiv=REFRESH CONTENT=3;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display_2/display_2?id={$id}&p={$p}>";
+                    $b = "<meta http-equiv=REFRESH CONTENT=3;url=https://lab1-srt459vn.c9users.io".$this->result."display_2/display_2?id={$id}&p={$p}>";
                     $a = '<strong><h1 style="color:#ff94b6">上傳中...</h1></strong>';
                     $this->debug($a,$b);
                     
@@ -238,7 +245,7 @@
                 $index = $this->model("process_index");
                 $index->contact($address,$phone,$tax,$email);
                 //導頁
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
+                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
                 $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
                 $this->debug($a,$b);
             }
@@ -274,6 +281,7 @@
                     <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                     <h4><strong>'.$success.'</strong></h4></div>';
         }
+        
     }
 
 ?>

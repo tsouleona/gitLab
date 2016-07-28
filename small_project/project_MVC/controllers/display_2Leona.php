@@ -1,7 +1,12 @@
 <?php
-    session_start();
-    
+
     class display_2Leona extends Controller{
+        protected $result;
+        
+        function __construct(){
+            $con = new connect_db();
+            $this->result = $con->db();
+        }
 //---------------------------------回裁切畫面----------------------------------------------------------------------
         function display_2(){
             $this->view("display_2");
@@ -26,7 +31,7 @@
     		//把圖片丟到要的位置
     		imagejpeg($dst_r,'views/ok_photo/'.$id.'.jpg');
     		//導頁並傳頁數
-    		$b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io/gitlab/small_project/project_MVC/display/display?p={$p}>";
+    		$b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
      	    $a = '<strong><h1 style="color:#ff94b6">裁切中...</h1></strong>';
             $this->debug($a,$b);
         }

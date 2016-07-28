@@ -7,12 +7,15 @@ class App {
         
         $controllerName = "{$url[0]}Leona";
         if (!file_exists("controllers/$controllerName.php"))
-            return;
+            $controllerName="indexLeona";
         require_once "controllers/$controllerName.php";
+        
         $controller = new $controllerName;
         $methodName = isset($url[1]) ? $url[1] : "index";
+        
         if (!method_exists($controller, $methodName))
-            return;
+            $methodName= "index";
+            
         unset($url[0]); unset($url[1]);
         $params = $url ? array_values($url) : Array();
         call_user_func_array(Array($controller, $methodName), $params);
