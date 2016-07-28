@@ -13,6 +13,12 @@
             $this->view("index",Array($row,$row2));
             
         }
+        function index_about(){
+            $row2 = $_POST['row2'];
+            $id = $_POST['id'];
+            $this->view("index_about",Array($row2,$id));
+            
+        }
         
 //---------------------------------顯示公司簡介--------------------------------------------------------
         function select_about(){
@@ -36,6 +42,7 @@
                 $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
             
                 $this->debug($a,$b);
+                
             }
                 
             
