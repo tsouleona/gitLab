@@ -1,5 +1,5 @@
 <?php
-    include_once("models/mysql_getdata.php");
+    include_once("mysql_getdata.php");
     
     class process_display_select extends connect_two
     {

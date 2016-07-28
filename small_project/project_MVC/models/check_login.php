@@ -1,5 +1,5 @@
 <?php
-    include_once("mysql_getdata.php");
+    require_once("mysql_getdata.php");
     class check_login extends connect_two
     {
         //搜尋該帳號的密碼

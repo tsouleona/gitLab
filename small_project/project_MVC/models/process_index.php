@@ -8,7 +8,7 @@
         function about($data){
             
             $com = "UPDATE `introduction` SET `intro_data`= '".$data."';";
-            $row = $this->connect_mysql($com);
+            $this->connect_mysql($com);
         }
        
         //更新聯絡我們的資料
@@ -18,7 +18,7 @@
             `con_phone`= '".$phone."',
             `con_tax`= '".$tax."',
             `con_email`= '".$email."';";
-            $row = $this->connect_mysql($com);
+            $this->connect_mysql($com);
             
         }
     }

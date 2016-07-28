@@ -1,5 +1,5 @@
 <?php 
-include_once("mysql_connect.inc.php");
+require_once("mysql_connect.inc.php");
 
 class connect_two extends connect_one{
     

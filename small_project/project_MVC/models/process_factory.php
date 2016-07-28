@@ -1,7 +1,5 @@
 <?php 
-    include_once("models/mysql_connect.inc.php");
-    
-    
+    require_once("mysql_connect.inc.php");
     class process_factory extends connect_one{
         
         //新增資料
@@ -11,13 +9,13 @@
             `fac_tax`,`fac_data`,`fac_date`) VALUES ('".$ans."','".$factory['name']."','".$factory['people']."',
             '".$factory['phone']."','".$factory['address']."','".$factory['url']."','".$factory['email']."',
             '".$factory['cellphone']."','".$factory['tax']."','".$factory['data']."','".$date."')";
-            $row = $this->connect_mysql($com);
+            $this->connect_mysql($com);
         }
         
         //刪除該筆資料
         function delete_fa($id){
             $com=" DELETE FROM `factory` where `fac_id` = '".$id."';";
-            $row = $this->connect_mysql($com);
+            $this->connect_mysql($com);
         }
     }
     

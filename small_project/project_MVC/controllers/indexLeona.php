@@ -83,11 +83,11 @@
             if($uname=="" || $pwd=="")
             {
                 $this->point_error("帳號密碼尚未輸入完整");
-                exit;
+                
             }
             else if($this->str($uname) || $this->str($pwd)){
                 
-            $this->point_error("不能輸入特殊符號");
+                $this->point_error("不能輸入特殊符號");
                 
             }
             else{
