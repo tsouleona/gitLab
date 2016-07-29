@@ -1,8 +1,6 @@
 <?php 
-    include_once("mysql_connect.inc.php");
     
-    
-    class process_index extends connect_one{
+    class process_index extends connect_two{
         
         //更新公司簡介的資料
         function about($data){
@@ -21,6 +19,20 @@
             $this->connect_mysql($com);
             
         }
+        //搜尋公司簡介的資料
+        function selest_ab(){
+            $com="SELECT * FROM introduction";
+            $row = $this->connect_getdata($com);
+            return $row;
+        }
+        
+        //搜尋聯絡我們的資料
+        function selest_con(){
+            $com="SELECT * FROM contact";
+            $row = $this->connect_getdata($com);
+            return $row;
+        }
+        
     }
         
     

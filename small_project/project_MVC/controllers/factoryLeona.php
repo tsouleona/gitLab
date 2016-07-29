@@ -56,7 +56,7 @@
                     $_POST['url'] = "沒有留下資料";
                 }
                 
-                $factory = $this->model("process_factory_select");
+                $factory = $this->model("process_factory");
                 
                 $date = date("Y-m-d");
                 $date2 = date("Ymd");
@@ -89,7 +89,7 @@
 //-------------------------------顯示實績展示-------------------------------------------------------------
         function factory_page(){
                
-            $fa =$this->model("process_factory_select");
+            $fa =$this->model("process_factory");
             //搜尋全部資料共幾筆
             $row = $fa->select_fa();
             $total = count($row);
@@ -100,7 +100,7 @@
         
 //------------------------------搜尋實績展示-------------------------------------------------------------
         function factory_select(){
-            $fa = $this->model("process_factory_select");
+            $fa = $this->model("process_factory");
             return $fa->select_fa();
         }
         
@@ -153,7 +153,7 @@
 //----------------------------------顯示聯絡我們--------------------------------------------------------
         function select_contact()
         {
-            $con = $this->model("process_index_select");
+            $con = $this->model("process_index");
             return $con->selest_con();
         }
         

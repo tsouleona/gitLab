@@ -20,7 +20,7 @@
 //-----------------------------搜尋加入我們-------------------------------------------------------------
         function joinus_select($p){
             
-            $jo = $this->model("process_joinus_select");
+            $jo = $this->model("process_joinus");
             return $jo->select_limit($p);
         }
         
@@ -28,7 +28,7 @@
         function joinus_page(){
             
             //搜尋全部資料共幾筆
-            $jo = $this->model("process_joinus_select");
+            $jo = $this->model("process_joinus");
             $row = $jo->select_jo();
             $total = count($row);
             //計算頁數
@@ -62,7 +62,7 @@
                 $date2 = date("Ymd");
                 
                 //搜尋當天資料由大排到小
-                $joinus = $this->model("process_joinus_select");
+                $joinus = $this->model("process_joinus");
                 $row = $joinus->select_desc($date2);
                 $one="0001";
                 //圖片編號若不為第一筆則從當天的最後一筆+1
@@ -130,7 +130,7 @@
 //-----------------------------顯示聯絡我們--------------------------------------------------------
         function select_contact()
         {
-            $con = $this->model("process_index_select");
+            $con = $this->model("process_index");
             return $con->selest_con();
         }
 //-----------------------顯示錯誤訊息或導頁------------------------------------------------------------

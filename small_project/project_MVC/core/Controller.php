@@ -1,7 +1,9 @@
 <?php
 class Controller{
     public function model($model) {
+        require_once "../project_MVC/models/mysql_getdata.php";
         require_once "../project_MVC/models/$model.php";
+        
         return new $model ();
     }
     

@@ -22,7 +22,7 @@
         
 //---------------------------------顯示公司簡介--------------------------------------------------------
         function select_about(){
-            $select=$this->model("process_index_select");
+            $select=$this->model("process_index");
             return $select->selest_ab();
         }
         
@@ -77,7 +77,7 @@
 //--------------------------------顯示聯絡我們--------------------------------------------------------
         function select_contact()
         {
-            $con = $this->model("process_index_select");
+            $con = $this->model("process_index");
             return $con->selest_con();
         }
         

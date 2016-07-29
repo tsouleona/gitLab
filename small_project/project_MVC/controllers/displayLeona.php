@@ -45,7 +45,7 @@
                 $date2 = date("Ymd");
                 
                 //搜尋當天資料由大排到小
-                $display =  $this->model("process_display_select");
+                $display =  $this->model("process_display");
                 $row = $display->select_desc($date2);
                 
                 $one="001";
@@ -146,7 +146,7 @@
         
         function display_page(){
             
-            $table = $this->model("process_display_select");
+            $table = $this->model("process_display");
             //搜尋全部有幾筆資料
             $row = $table->select_data();
             $total = count($row);
@@ -254,7 +254,7 @@
 //--------------------------------------顯示聯絡我們--------------------------------------------------------
         function select_contact()
         {
-            $con = $this->model("process_index_select");
+            $con = $this->model("process_index");
             return $con->selest_con();
         }
 //-----------------------------------顯示錯誤訊息或導頁------------------------------------------------------------
