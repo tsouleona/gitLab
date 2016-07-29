@@ -4,7 +4,7 @@
     {
         //搜尋該帳號的密碼
         function login_data(){
-            $com ="select * from `signin`";
+            $com ="SELECT * FROM `signin`";
             $row = $this->connect_getdata($com);
             return $row;
         }

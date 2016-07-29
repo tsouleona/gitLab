@@ -14,7 +14,7 @@
         
         //刪除該筆資料
         function delete_fa($id){
-            $com=" DELETE FROM `factory` where `fac_id` = '".$id."';";
+            $com=" DELETE FROM `factory` WHERE `fac_id` = '".$id."';";
             $this->connect_mysql($com);
         }
     }

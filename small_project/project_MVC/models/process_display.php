@@ -5,7 +5,7 @@
     class process_display extends connect_one{
         
         function insert_dis($ans,$data,$date){
-            $com = "insert into `display` (`display_id`,`display_data`,`display_date`) 
+            $com = "INSERT INTO `display` (`display_id`,`display_data`,`display_date`) 
             VALUES ('".$ans."','".$data."','".$date."');";
             $this->connect_mysql($com);
             
@@ -18,7 +18,7 @@
         }
         //刪除該筆資料
         function delete_dis($id){
-            $com="delete from `display` where `display_id` = '".$id."'";
+            $com="DELETE FROM `display` WHERE `display_id` = '".$id."'";
             $this->connect_mysql($com);
         }
     }

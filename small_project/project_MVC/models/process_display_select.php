@@ -6,14 +6,14 @@
         
         //搜尋實績展示的資料表
         function select_data(){
-            $com="select * from display;";
+            $com="SELECT * FREM display;";
             $row2= $this->connect_getdata($com);
             return $row2;
         }
         
         //搜尋第幾筆開始，有九筆的資料
         function select_limit($p){
-            $com="select * from `display`  limit ". ($p*9).",9";
+            $com="SELECT * FROM `display`  LIMIT ". ($p*9).",9";
             $row2 = $this->connect_getdata($com);
             return $row2;
         }
@@ -21,7 +21,7 @@
         
         //搜尋由大排到小的圖片編號
         function select_desc($date2){
-            $com="select `display_id` from `display` where `display_id` like '%$date2%' ORDER BY `display_id` DESC limit 0,1";
+            $com="SELECT `display_id` FROM `display` WHERE `display_id` like '%$date2%' ORDER BY `display_id` DESC LIMIT 0,1";
             $row2 = $this->connect_getdata($com);
             return $row2;
         }

@@ -6,7 +6,7 @@
         
         //刪除資料
         function delete_jo($id){
-            $com=" DELETE FROM `joinus` where `join_id` = '".$id."';";
+            $com=" DELETE FROM `joinus` WHERE `join_id` = '".$id."';";
             $this->connect_mysql($com);
         }
         //新增資料
