@@ -51,35 +51,22 @@
             }
             else
             {
-                
-                //如果為空，則內容為"沒有留下資料"
-                if($email == "")
-                {
-                    $email = "沒有留下資料";
-                }
                 //抓日期
                 $date = date("Y-m-d");
                 $date2 = date("Ymd");
-                
-                //搜尋當天資料由大排到小
                 $joinus = $this->model("process_joinus");
-                $row = $joinus->select_desc($date2);
-                $one="0001";
-                //圖片編號若不為第一筆則從當天的最後一筆+1
-                if($row[0]['join_id'] == NULL)
+                $ans = $joinus->select_desc($date2);
+                if($_POST["email"] == "")
                 {
-                    $ans = $date2.$one;
+                    $_POST["email"] = "沒有留下資料";
                 }
-                else{
-                    $ans = substr($row[0]['join_id'],8,4);
-                    $ans = (int)($ans) + 1;
-                    $ans = str_pad($ans,4, "0", STR_PAD_LEFT);
-                    $ans = $date2.$ans;
-                }
-                 $joinus2 = $this->model("process_joinus");
                 //新增資料
-                $joinus2->insert_jo($ans,$name,$email,$phone,$date);
-                $this->success("輸入成功");
+                $op = $joinus->insert_jo($ans,$_POST,$date);
+                if($op == 'go')
+                {
+                    $this->success("輸入成功");
+                }
+                
             }
                     
         }
@@ -90,11 +77,15 @@
             $id = $_POST["join_id"];
             //刪除該筆資料
             $joinus = $this->model("process_joinus");
-            $joinus->delete_jo($id);
+            $op = $joinus->delete_jo($id);
             //導頁
-            $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."joinus/joinus?p={$p}>";
-            $a = '<strong><h1 style="color:#ff94b6">刪除中...</h1></strong>';
-            $this->debug($a,$b);
+            if($op == 'go')
+            {
+                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."joinus/joinus?p={$p}>";
+                $a = '<strong><h1 style="color:#ff94b6">刪除中...</h1></strong>';
+                $this->debug($a,$b);
+            }
+            
         }
 //------------------------------更新聯絡我們--------------------------------------------------------
         function insert_contact()
@@ -119,11 +110,13 @@
             {
                 //更新資料
                 $index = $this->model("process_index");
-                $index->contact($address,$phone,$tax,$email);
-                
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."joinus/joinus?p={$p}>";
-                $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
-                $this->debug($a,$b);
+                $op = $index->contact($address,$phone,$tax,$email);
+                if($op == 'go')
+                {
+                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."joinus/joinus?p={$p}>";
+                    $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
+                    $this->debug($a,$b);
+                }
             }
         }
         

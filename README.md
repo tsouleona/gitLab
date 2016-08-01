@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # gitLab
 
 010-190 註解作業，了解php指令使用方法
@@ -6,3 +7,6 @@ Leona-coach 描述coach的網頁(寫一個描述一項人、事、物的網頁)
 hw03.php 樂透作業 (三種作法，開出6個1-49的號碼)
 sql_hw.txt SQL 指令練習 從創建database開始
 small_project  小專題:加上MVC架構
+=======
+# chongyo_HW
+>>>>>>> 2bb308309c72c84f78b602f78c2dcd0de2f33140

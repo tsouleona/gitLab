@@ -13,12 +13,7 @@
             $this->view("index",Array($row,$row2));
             
         }
-        function index_about(){
-            $row2 = $_POST['row2'];
-            $id = $_POST['id'];
-            $this->view("index_about",Array($row2,$id));
-            
-        }
+        
         
 //---------------------------------顯示公司簡介--------------------------------------------------------
         function select_about(){
@@ -37,11 +32,15 @@
                 $this->point_error("不能輸入特殊符號");
             }
             else{
-                $index->about($data);
-                $a = '<strong><h1 style="color:#ff94b6">修改成功</h1></strong>';
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
+                $op = $index->about($data);
+                if($op == 'go')
+                {
+                    $a = '<strong><h1 style="color:#ff94b6">修改成功</h1></strong>';
+                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
             
-                $this->debug($a,$b);
+                    $this->debug($a,$b);
+                }
+                
                 
             }
                 
@@ -66,11 +65,15 @@
             {
                 //更新資料
                 $index = $this->model("process_index");
-                $index->contact($address,$phone,$tax,$email);
+                $op = $index->contact($address,$phone,$tax,$email);
+                if($op == 'go')
+                {
+                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
+                    $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
+                    $this->debug($a,$b);
+                }
                 
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
-                $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
-                $this->debug($a,$b);
+                
             }
         }
         
@@ -99,11 +102,11 @@
             }
             else{
                 $row = $this ->model("check_login");
-                $row2 = $row->login_data();
+                $op = $row->login_data($uname,$pwd);
                 //如果登入成功並且記錄至SESSION
-                if($uname == $row2[0]['username'] && $pwd == $row2[0]['password'])
+                if($op == 'go')
                 {
-                    $_SESSION["username"] = $uname;
+                    
                     $a = '<strong><h1 style="color:#ff94b6">登入成功</h1></strong>';
                     $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
                     
@@ -111,7 +114,7 @@
                     
                 }
                 //登入失敗
-                else
+                if($op == 'error')
                 {
                     
                     $a = '<strong><h1 style="color:#ff94b6">帳號密碼錯誤</h1></strong>';
@@ -127,10 +130,14 @@
         function login_out(){
             $out = $this->model("check_login");
             //把session的值清掉
-            $out->login_out();
-            $a = '<strong><h1 style="color:#ff94b6">登出中...</h1></strong>';
-            $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
-            $this->debug($a,$b);
+            $op = $out->login_out();
+            if($op == 'go')
+            {
+                $a = '<strong><h1 style="color:#ff94b6">登出中...</h1></strong>';
+                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
+                $this->debug($a,$b);
+            }
+            
             
         }
 //--------------------------顯示錯誤訊息或導頁-----------------------------------------------------------

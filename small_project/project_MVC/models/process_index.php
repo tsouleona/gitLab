@@ -7,6 +7,7 @@
             
             $com = "UPDATE `introduction` SET `intro_data`= '".$data."';";
             $this->connect_mysql($com);
+            return 'go';
         }
        
         //更新聯絡我們的資料
@@ -17,6 +18,7 @@
             `con_tax`= '".$tax."',
             `con_email`= '".$email."';";
             $this->connect_mysql($com);
+            return 'go';
             
         }
         //搜尋公司簡介的資料

@@ -35,7 +35,6 @@
                 
                 $a = '<h1 style="color:#ff94b6">不能輸入特殊字元</h1>';
                 $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
-            
                 $this->debug($a,$b);
             }
             else
@@ -46,22 +45,9 @@
                 
                 //搜尋當天資料由大排到小
                 $display =  $this->model("process_display");
-                $row = $display->select_desc($date2);
+                $ans = $display->select_desc($date2);
                 
-                $one="001";
                 
-                //圖片編號如果是當天第一筆則從1開始編號
-                if($row[0]["display_id"] == NULL)
-                {
-                    $ans = $date2.$one;
-                }
-                //圖片編號若不為第一筆則從當天的最後一筆+1
-                else{
-                    $ans = substr($row[0]['display_id'],8,3);
-                    $ans = (int)($ans) + 1;
-                    $ans = str_pad($ans,3, "0", STR_PAD_LEFT);
-                    $ans = $date2.$ans;
-                }
                 //抓副檔名
                 $ex = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
                 //存可以上傳的檔案類型
@@ -94,11 +80,13 @@
                     if($_FILES['file']['error'] == 4)
                     {
                         
-                        $display2->insert_dis($ans,$data,$date);
-                        $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";   
-                    
+                        $op = $display2->insert_dis($ans,$data,$date);
+                        if($op == 'go')
+                        {
+                            $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";   
                         $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
                         $this->debug($a,$b);
+                        }
                     }
                     else{
                         
@@ -107,9 +95,12 @@
                         //新增專案內容與圖片編號
                         $display2->insert_dis($ans,$data,$date);
                         //導頁
-                        $b = "<meta http-equiv=REFRESH CONTENT=3;url=https://lab1-srt459vn.c9users.io".$this->result."display_2/display_2?id={$ans}&p={$p}>";   
-                        $a = '<strong><h1 style="color:#ff94b6">上傳中...</h1></strong>';
-                        $this->debug($a,$b);
+                        if($op == 'go')
+                        {
+                            $b = "<meta http-equiv=REFRESH CONTENT=3;url=https://lab1-srt459vn.c9users.io".$this->result."display_2/display_2?id={$ans}&p={$p}>";   
+                            $a = '<strong><h1 style="color:#ff94b6">上傳中...</h1></strong>';
+                            $this->debug($a,$b);
+                        }
                     }
                     
                     
@@ -137,9 +128,13 @@
             $display =  $this->model("process_display");
             $display->delete_dis($id);
             //導頁
-            $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
-            $a = '<strong><h1 style="color:#ff94b6">刪除中...</h1></strong>';
-            $this->debug($a,$b);
+            if($op == 'go')
+            {
+                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
+                $a = '<strong><h1 style="color:#ff94b6">刪除中...</h1></strong>';
+                $this->debug($a,$b);
+            }
+            
         }
         
 //------------------------------------分頁實績展示--------------------------------------------------------------
@@ -210,10 +205,13 @@
                     
                     move_uploaded_file($_FILES['file']['tmp_name'],'views/ok_photo/'.$id.".".$ex);//複製檔案
                     //更新專案內容
-                    $display->update_dis($data,$id);
-                    $b = "<meta http-equiv=REFRESH CONTENT=3;url=https://lab1-srt459vn.c9users.io".$this->result."display_2/display_2?id={$id}&p={$p}>";
-                    $a = '<strong><h1 style="color:#ff94b6">上傳中...</h1></strong>';
-                    $this->debug($a,$b);
+                    $op = $display->update_dis($data,$id);
+                    if($op == 'go')
+                    {
+                        $b = "<meta http-equiv=REFRESH CONTENT=3;url=https://lab1-srt459vn.c9users.io".$this->result."display_2/display_2?id={$id}&p={$p}>";
+                        $a = '<strong><h1 style="color:#ff94b6">上傳中...</h1></strong>';
+                        $this->debug($a,$b);
+                    }
                     
                 }
                 
@@ -243,11 +241,15 @@
             {
                 //更新資料
                 $index = $this->model("process_index");
-                $index->contact($address,$phone,$tax,$email);
+                $op = $index->contact($address,$phone,$tax,$email);
                 //導頁
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
-                $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
-                $this->debug($a,$b);
+                if($op == 'go')
+                {
+                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
+                    $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
+                    $this->debug($a,$b);
+                }
+                
             }
         }
         

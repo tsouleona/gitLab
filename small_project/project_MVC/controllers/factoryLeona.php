@@ -39,50 +39,24 @@
             }
             //若為空，內容為"沒有留下資料"
             else{
-                if($email == "")
-                {
-                    $_POST['email'] = "沒有留下資料";
-                }
-                if($tax == "")
-                {
-                    $_POST['tax'] = "沒有留下資料";
-                }
-                if($address == "")
-                {
-                    $_POST['address'] = "沒有留下資料";
-                }
-                if($url == "")
-                {
-                    $_POST['url'] = "沒有留下資料";
-                }
+                
                 
                 $factory = $this->model("process_factory");
                 
                 $date = date("Y-m-d");
                 $date2 = date("Ymd");
                 //搜尋當天資料
-                $row = $factory->select_desc($date2);
+                $ans = $factory->select_desc($date2);
                 
-                $one="001";
-                //圖片編號若不為第一筆則從當天的最後一筆+1
-                if($row[0]['fac_id'] == NULL)
-                {
-                    $ans = $date2.$one;
-                    
-                }
-                //圖片編號若不為第一筆則從當天的最後一筆+1
-                else{
-                    $ans = substr($row[0]['fac_id'],8,3);
-                    $ans = (int)($ans) + 1;
-                    $ans = str_pad($ans,3, "0", STR_PAD_LEFT);
-                    $ans = $date2.$ans;
-                }
                 
-                $factory2 = $this->model("process_factory");
                 
                 //新增資料
-                $factory2->insert_fa($ans,$_POST,$date);
-                $this->success("輸入成功");
+                $op = $factory->insert_fa($ans,$_POST,$date);
+                if($op == 'go')
+                {
+                    $this->success("輸入成功");
+                }
+                
             }
         }
         
@@ -111,11 +85,15 @@
             $id = $_POST["fac_id"];
             //刪除該筆資料
             $factory = $this->model("process_factory");
-            $factory->delete_fa($id);
+            $op = $factory->delete_fa($id);
             //導頁
-            $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."factory/factory?p={$p}>";
-            $a = '<strong><h1 style="color:#ff94b6">刪除中...</h1></strong>';
-            $this->debug($a,$b);
+            if($op == 'go')
+            {
+                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."factory/factory?p={$p}>";
+                $a = '<strong><h1 style="color:#ff94b6">刪除中...</h1></strong>';
+                $this->debug($a,$b);
+            }
+            
         }
 //-----------------------------更新聯絡我們--------------------------------------------------------
         function insert_contact()
@@ -142,11 +120,15 @@
             {
                 //更新資料
                 $index = $this->model("process_index");
-                $index->contact($address,$phone,$tax,$email);
+                $op = $index->contact($address,$phone,$tax,$email);
                 //導頁
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."factory/factory?p={$p}>";
-                $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
-                $this->debug($a,$b);
+                if($op == 'go')
+                {
+                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."factory/factory?p={$p}>";
+                    $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
+                    $this->debug($a,$b);
+                }
+                
             }
         }
         
