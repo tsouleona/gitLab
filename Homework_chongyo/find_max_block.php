@@ -120,7 +120,7 @@
     {
         for($j=0;$j<10;$j++)
         {
-            $ans[$i][$j]=0;
+            $origin[$i][$j]=0;
         }
     }
     //檢查有幾個陣列一樣大
@@ -139,12 +139,12 @@
             
             $x = substr($array[$t][$i],0,1);
             $y = substr($array[$t][$i],1,1);
-            $ans[$x][$y] = 1;
+            $origin[$x][$y] = 1;
         }
     }
     
     //跑結果
-    foreach($ans as $key)
+    foreach($origin as $key)
     {
         foreach($key as $value){
           echo $value." ";
