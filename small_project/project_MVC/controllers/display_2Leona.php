@@ -1,12 +1,7 @@
 <?php
 
     class display_2Leona extends Controller{
-        protected $result;
         
-        function __construct(){
-            $con = new connect_db();
-            $this->result = $con->db();
-        }
 //---------------------------------回裁切畫面----------------------------------------------------------------------
         function display_2(){
             $this->view("display_2");

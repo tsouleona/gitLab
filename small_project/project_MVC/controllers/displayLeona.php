@@ -1,11 +1,6 @@
 <?php 
     class displayLeona extends Controller{
-        protected $result;
         
-        function __construct(){
-            $con = new connect_db();
-            $this->result = $con->db();
-        }
 //--------------------------------------回實績展示-------------------------------------------------------------
         function display(){
             

@@ -1,11 +1,6 @@
 <?php
     class joinusLeona extends Controller{
-        protected $result;
         
-        function __construct(){
-            $con = new connect_db();
-            $this->result = $con->db();
-        }
 //--------------------------------回廠商招募-------------------------------------------------------------
         function joinus(){
             $p = $_GET['p'];

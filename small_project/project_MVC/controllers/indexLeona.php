@@ -1,11 +1,6 @@
 <?php 
     class indexLeona extends Controller{
-        protected $result;
         
-        function __construct(){
-            $con = new connect_db();
-            $this->result = $con->db();
-        }
 //-----------------------------------回首頁-------------------------------------------------------------
         function index(){
             $row = $this->select_about();

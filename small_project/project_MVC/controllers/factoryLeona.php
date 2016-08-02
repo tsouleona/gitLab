@@ -1,11 +1,6 @@
 <?php
     class factoryLeona extends Controller{
-        protected $result;
         
-        function __construct(){
-            $con = new connect_db();
-            $this->result = $con->db();
-        }
 //----------------------------回廠商招募-------------------------------------------------------------
         function factory(){
             $row3 = $this->select_contact();
