@@ -47,7 +47,7 @@
         }
         //搜尋當天資料由大排到小
         function select_desc($date2){
-            $com="SELECT `fac_id` FROM `factory` WHERE `fac_id` like '%$date2%' ORDER BY `fac_id` DESC LIMIT 0,1";
+            $com="SELECT `fac_id` FROM `factory` WHERE `fac_id` LIKE '%$date2%' ORDER BY `fac_id` DESC LIMIT 0,1";
             $row = $this->connect_getdata($com);
             $one="001";
             //圖片編號若不為第一筆則從當天的最後一筆+1

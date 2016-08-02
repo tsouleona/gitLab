@@ -38,7 +38,7 @@
         
         //搜尋由大排到小的圖片編號
         function select_desc($date2){
-            $com="SELECT `display_id` FROM `display` WHERE `display_id` like '%$date2%' ORDER BY `display_id` DESC LIMIT 0,1";
+            $com="SELECT `display_id` FROM `display` WHERE `display_id` LIKE '%$date2%' ORDER BY `display_id` DESC LIMIT 0,1";
             $row2 = $this->connect_getdata($com);
             $one="001";
                 

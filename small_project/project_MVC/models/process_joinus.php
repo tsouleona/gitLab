@@ -30,7 +30,7 @@
         
         //搜尋當天資料由大排到小
         function select_desc($date2){
-            $com="SELECT `join_id` FROM `joinus` WHERE `join_id` like '%$date2%' ORDER BY `join_id` DESC LIMIT 0,1";
+            $com="SELECT `join_id` FROM `joinus` WHERE `join_id` LIKE '%$date2%' ORDER BY `join_id` DESC LIMIT 0,1";
             $row = $this->connect_getdata($com);
             //如果為空，則內容為"沒有留下資料"
                 $one="0001";
