@@ -150,14 +150,18 @@
                 }
         }
         public function point_error($error){
-            echo '<div class="alert alert-danger alert-dismissible" role="alert">
+            $a = '<div class="alert alert-danger alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                     <h4><strong>'.$error.'</strong></h4></div>';
+            $b='';
+            $this->debug($a,$b);
         }
         public function success($success){
-            echo '<div class="alert alert-success alert-dismissible" role="alert">
+            $a = '<div class="alert alert-success alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                     <h4><strong>'.$success.'</strong></h4></div>';
+            $b='';
+            $this->debug($a,$b);
         }
     
     }
