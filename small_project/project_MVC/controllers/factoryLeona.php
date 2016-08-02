@@ -81,13 +81,7 @@
             //刪除該筆資料
             $factory = $this->model("process_factory");
             $op = $factory->delete_fa($id);
-            //導頁
-            if($op == 'go')
-            {
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."factory/factory?p={$p}>";
-                $a = '<strong><h1 style="color:#ff94b6">刪除中...</h1></strong>';
-                $this->debug($a,$b);
-            }
+            
             
         }
 //-----------------------------更新聯絡我們--------------------------------------------------------
@@ -98,11 +92,6 @@
             $tax=$_POST["ab_tax"];
             $email=$_POST["ab_email"];
             
-            $p = $_POST['page'];
-            if($p == "")
-            {
-                $p = 0 ;
-            }
             
             
             if($this->str($address)==true || $this->str($phone)==true || $this->str($tax)==true || $this->str($email)==true)
@@ -116,13 +105,7 @@
                 //更新資料
                 $index = $this->model("process_index");
                 $op = $index->contact($address,$phone,$tax,$email);
-                //導頁
-                if($op == 'go')
-                {
-                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."factory/factory?p={$p}>";
-                    $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
-                    $this->debug($a,$b);
-                }
+                
                 
             }
         }

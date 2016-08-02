@@ -32,7 +32,7 @@
         function delete_fa($id){
             $com=" DELETE FROM `factory` WHERE `fac_id` = '".$id."';";
             $this->connect_mysql($com);
-            return 'go';
+            
         }
         function select_fa(){
             $com="SELECT * FROM factory;";

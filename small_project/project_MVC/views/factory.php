@@ -127,7 +127,7 @@
                             username:$("#username").val(),
                             password:$("#password").val()
                         },function(data){
-                            $("#danger2").append(data);
+                            window.location="<?php echo $root;?>factory/factory?p=<?php echo $_GET['p'] ?>"
                         })
                     
                 })
@@ -306,7 +306,6 @@
                         <?php }?>
                         <?php 
                             if(!empty($row4)){?>
-                            <div id="fac_item_bug"></div>
                             <table class="table table-hover">
                                 <thead>
                                     <td align="center">
@@ -369,7 +368,7 @@
                                                     
                                                 </td>
                                             </tr>
-                                            <input id="fac_item_page<?php echo $row2[$j]['fac_id'];?>" style="visibility:hidden" value="<?php echo $_GET['p'];?>" />
+                                            
                                             
                                             <script>
                                                 function fac_del(num){
@@ -380,7 +379,7 @@
                                                     page:$("#fac_item_page"+num).val()
                                                     
                                                 },function(data){
-                                                    $("#fac_item_bug").append(data);
+                                                    window.location="<?php echo $root;?>factory/factory?p=<?php echo $_GET['p'] ?>"
                                                 })
                                             }
                                             </script>
@@ -540,7 +539,6 @@
                         
                     <h3 class="section-heading"><strong>聯絡我們</strong></h3>
                     <hr>
-                    <div id="contact_bug"></div>
                     <h4>地址<h4>
                     <input class="form-control" type="text" id="ab_address" name="ab_address" value="<?php echo $row3[0]["con_address"];?>" />
                     <h4>電話<h4>
@@ -572,7 +570,7 @@
                         page:$("#contact_page").val()
                         
                     },function(data){
-                        $("#contact_bug").append(data);
+                        window.location="<?php echo $root;?>factory/factory?p=<?php echo $_GET['p'] ?>"
                     })
                 })
             </script>
