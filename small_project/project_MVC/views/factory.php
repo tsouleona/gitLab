@@ -160,7 +160,7 @@
             <div class="row">
                 <div class="col-lg-3"></div>
                 <div class="col-lg-6  text-center" border="1">
-                    <form action="<?php echo $root;?>factory/factory_insert" method="POST" id="form2">
+                    <form id="form2">
                         <table class="table table-hover">
                             <thead>
                                 <td align="center">
@@ -555,7 +555,6 @@
                   </div>
                   
                 </div>
-                <input id="contact_page" style="visibility:hidden" value="<?php echo $_GET['p'];?>" />
                 
            </form>
            <script>

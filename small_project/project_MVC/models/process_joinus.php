@@ -6,7 +6,7 @@
         function delete_jo($id){
             $com=" DELETE FROM `joinus` WHERE `join_id` = '".$id."';";
             $this->connect_mysql($com);
-            return 'go';
+            
         }
         //新增資料
         function insert_jo($ans,$joinus,$date){

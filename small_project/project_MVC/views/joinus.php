@@ -112,7 +112,6 @@
                         <h3 class="modal-title" id="myModalLabel" style="color:#f05f40"><strong>管理員登錄</strong></h3>
                     </div>
                     <div class="modal-body">
-                        <div id="danger2"></div>
                         <h4><strong>帳號 </strong><input type="text" name="username" id="username" /></h4>
                         
                         <h4><strong>密碼 </strong><input  type="password" name="password" id="password"/></h4>
@@ -129,7 +128,7 @@
                             username:$("#username").val(),
                             password:$("#password").val()
                         },function(data){
-                            $("#danger2").append(data);
+                            window.location="<?php echo $root;?>joinus/joinus?p=<?php echo $_GET['p'] ?>"
                         })
                     
                 })
@@ -257,7 +256,6 @@
                     <h3 style="color:#ff94b6"><strong>目前沒有資料</strong></h3>
                     <?php }?>
                     <?php if(!empty($row4)){?>
-                        <div id="join_item_bug" ></div>
                         <table class="table table-hover">
                             <thead>
                                 <td align="center">
@@ -314,7 +312,6 @@
                                                 <input class="btn btn-warning" onclick="join_del(<?php echo $row2[$j]['join_id'];?>)" type="button" value="刪除" />
                                             </td>
                                         </tr>
-                                        <input id="joinus_item_page<?php echo $row2[$j]['join_id'];?>" style="visibility:hidden" value="<?php echo $_GET['p'];?>" />
                                             
                                             <script>
                                                 function join_del(num){
@@ -325,7 +322,7 @@
                                                     page:$("#joinus_item_page"+num).val()
                                                     
                                                 },function(data){
-                                                    $("#join_item_bug").append(data);
+                                                    window.location="<?php echo $root;?>joinus/joinus?p=<?php echo $_GET['p'] ?>"
                                                 })
                                             }
                                             </script>
@@ -419,7 +416,6 @@
                         
                     <h3 class="section-heading"><strong>聯絡我們</strong></h3>
                     <hr>
-                    <div id="contact_bug"></div>
                     <h4>地址<h4>
                     <input class="form-control" type="text" id="ab_address" name="ab_address" value="<?php echo $row3[0]["con_address"];?>" />
                     <h4>電話<h4>
@@ -436,7 +432,6 @@
                   </div>
                   
                 </div>
-                <input id="contact_page" style="visibility:hidden" value="<?php echo $_GET['p'];?>" />
                 
            </form>
            <script>
@@ -451,7 +446,7 @@
                         page:$("#contact_page").val()
                         
                     },function(data){
-                        $("#contact_bug").append(data);
+                        window.location="<?php echo $root;?>joinus/joinus?p=<?php echo $_GET['p'] ?>"
                     })
                 })
             </script>

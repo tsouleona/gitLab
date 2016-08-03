@@ -9,18 +9,13 @@
             if($uname == $row[0]['username'] && $pwd == $row[0]['password'])
             {
                 $_SESSION["username"] = $uname;
-                return 'go';
-            }
-            else
-            {
-                return 'error';
+                
             }
         }
         //清掉session
         function login_out(){
             unset($_SESSION["username"]);
             session_destroy();
-            return 'go';
         }
     }
     

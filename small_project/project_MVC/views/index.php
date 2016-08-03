@@ -126,7 +126,7 @@
                             username:$("#username").val(),
                             password:$("#password").val()
                         },function(data){
-                            $("#danger2").append(data);
+                            window.location="<?php echo $root;?>index"
                         })
                     
                 })
@@ -185,8 +185,7 @@
                   </div>
                   <div class="modal-body">
                        
-                    <h3 class="section-heading"><strong>公司簡介</strong></h3>
-                    <div id="debug_about"></div> 
+                    <h3 class="section-heading"><strong>公司簡介</strong></h3> 
                     <textarea cols="50" class="form-control" id="about_data" name="about_data"><?php echo $row2[0]["intro_data"];?></textarea>
                     <br>
                     <br>
@@ -204,7 +203,7 @@
                         {
                             about_data:$("#about_data").val()
                         },function(data){
-                            $("#debug_about").append(data);
+                            window.location="<?php echo $root;?>index"
                         })
                     })
                 </script>
@@ -354,7 +353,7 @@
                         page:$("#contact_page").val()
                         
                     },function(data){
-                        $("#contact_bug").append(data);
+                        window.location="<?php echo $root;?>index"
                     })
                 })
             </script>

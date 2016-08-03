@@ -28,9 +28,7 @@
             if($this->str($data))
             {
                 
-                $a = '<h1 style="color:#ff94b6">不能輸入特殊字元</h1>';
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
-                $this->debug($a,$b);
+                header("location:".$this->result."display/display?p={$p}>");
             }
             else
             {
@@ -53,18 +51,12 @@
                 if( $_FILES['file']['error'] > 0 && $_FILES['file']['error'] != 4)
                 {  
                     
-                    $a = '<h1 style="color:#ff94b6">檔案上傳失敗</h1>';
-                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
-                
-                    $this->debug($a,$b);
+                   header("location:".$this->result."display/display?p={$p}>");
                 }
                 //如果不是jpg png jepg檔案類型不能上傳
                 if(!in_array($ex,$path) && $_FILES['file']['error'] != 4)
                 {
-                    $a = '<h1 style="color:#ff94b6">副檔名不合格</h1>';
-                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
-                
-                    $this->debug($a,$b);
+                    header("location:".$this->result."display/display?p={$p}>");
                 }
                 
                 
@@ -78,9 +70,8 @@
                         $op = $display2->insert_dis($ans,$data,$date);
                         if($op == 'go')
                         {
-                            $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";   
-                        $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
-                        $this->debug($a,$b);
+                            header("location:".$this->result."display/display?p={$p}>");
+                            
                         }
                     }
                     else{
@@ -92,9 +83,8 @@
                         //導頁
                         if($op == 'go')
                         {
-                            $b = "<meta http-equiv=REFRESH CONTENT=3;url=https://lab1-srt459vn.c9users.io".$this->result."display_2/display_2?id={$ans}&p={$p}>";   
-                            $a = '<strong><h1 style="color:#ff94b6">上傳中...</h1></strong>';
-                            $this->debug($a,$b);
+                            header("location:".$this->result."display_2/display_2?id={$ans}&p={$p}>");
+                            
                         }
                     }
                     
@@ -121,13 +111,11 @@
                 unlink("views/ok_photo/$id.jpg");
             } 
             $display =  $this->model("process_display");
-            $display->delete_dis($id);
+            $op = $display->delete_dis($id);
             //導頁
             if($op == 'go')
             {
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
-                $a = '<strong><h1 style="color:#ff94b6">刪除中...</h1></strong>';
-                $this->debug($a,$b);
+                header("location:".$this->result."display/display?p={$p}");
             }
             
         }
@@ -203,9 +191,8 @@
                     $op = $display->update_dis($data,$id);
                     if($op == 'go')
                     {
-                        $b = "<meta http-equiv=REFRESH CONTENT=3;url=https://lab1-srt459vn.c9users.io".$this->result."display_2/display_2?id={$id}&p={$p}>";
-                        $a = '<strong><h1 style="color:#ff94b6">上傳中...</h1></strong>';
-                        $this->debug($a,$b);
+                        header("location:".$this->result."display_2/display_2?id={$id}&p={$p}>");
+                       
                     }
                     
                 }
@@ -240,9 +227,8 @@
                 //導頁
                 if($op == 'go')
                 {
-                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
-                    $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
-                    $this->debug($a,$b);
+                    header("location:".$this->result."display/display?p={$p}");
+
                 }
                 
             }

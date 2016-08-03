@@ -3,7 +3,6 @@
         
 //--------------------------------回廠商招募-------------------------------------------------------------
         function joinus(){
-            $p = $_GET['p'];
             $t = $this->joinus_page();
             $row3 = $this->select_contact();
             $row4 = $this->joinus_select($p);
@@ -73,13 +72,7 @@
             //刪除該筆資料
             $joinus = $this->model("process_joinus");
             $op = $joinus->delete_jo($id);
-            //導頁
-            if($op == 'go')
-            {
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."joinus/joinus?p={$p}>";
-                $a = '<strong><h1 style="color:#ff94b6">刪除中...</h1></strong>';
-                $this->debug($a,$b);
-            }
+            
             
         }
 //------------------------------更新聯絡我們--------------------------------------------------------
@@ -106,12 +99,7 @@
                 //更新資料
                 $index = $this->model("process_index");
                 $op = $index->contact($address,$phone,$tax,$email);
-                if($op == 'go')
-                {
-                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."joinus/joinus?p={$p}>";
-                    $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
-                    $this->debug($a,$b);
-                }
+                
             }
         }
         

@@ -61,12 +61,7 @@
                 //更新資料
                 $index = $this->model("process_index");
                 $op = $index->contact($address,$phone,$tax,$email);
-                if($op == 'go')
-                {
-                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
-                    $a = '<strong><h1 style="color:#ff94b6">更新中...</h1></strong>';
-                    $this->debug($a,$b);
-                }
+                
                 
                 
             }
@@ -98,25 +93,6 @@
             else{
                 $row = $this ->model("check_login");
                 $op = $row->login_data($uname,$pwd);
-                //如果登入成功並且記錄至SESSION
-                if($op == 'go')
-                {
-                    
-                    $a = '<strong><h1 style="color:#ff94b6">登入成功</h1></strong>';
-                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
-                    
-                    $this->debug($a,$b);
-                    
-                }
-                //登入失敗
-                if($op == 'error')
-                {
-                    
-                    $a = '<strong><h1 style="color:#ff94b6">帳號密碼錯誤</h1></strong>';
-                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
-                
-                    $this->debug($a,$b);
-                }
                 
             }
         }
@@ -126,13 +102,8 @@
             $out = $this->model("check_login");
             //把session的值清掉
             $op = $out->login_out();
-            if($op == 'go')
-            {
-                $a = '<strong><h1 style="color:#ff94b6">登出中...</h1></strong>';
-                $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
-                $this->debug($a,$b);
-            }
-            
+           
+            header("location:".$this->result);
             
         }
 //--------------------------顯示錯誤訊息或導頁-----------------------------------------------------------

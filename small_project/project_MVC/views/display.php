@@ -112,9 +112,7 @@
                         <h3 class="modal-title" id="myModalLabel" style="color:#f05f40"><strong>管理員登錄</strong></h3>
                     </div>
                     <div class="modal-body">
-                        <div id="danger2"></div>
                         <h4><strong>帳號 </strong><input type="text" name="username" id="username" /></h4>
-                        
                         <h4><strong>密碼 </strong><input  type="password" name="password" id="password"/></h4>
                     </div>
                     <div class="modal-footer">
@@ -130,7 +128,7 @@
                             username:$("#username").val(),
                             password:$("#password").val()
                         },function(data){
-                            $("#danger2").append(data);
+                            window.location="<?php echo $root;?>display/display?p=<?php echo $_GET['p'] ?>"
                         })
                     
                 })
@@ -217,9 +215,10 @@
                                             
                                             <input style="visibility:hidden" type="text" name="id" value="<?php echo $row2[$j]['display_id'];?>"/><!-- 傳輸id-->
                                             <input type="text" class="form-control" name="data" id ="update_data<?php echo $row2[$j]['display_id'];?>" value="<?php echo $row2[$j]['display_data'];?>" />
+                                            <p style="color:red"><strong>請勿打入單引號否則會新增失敗</strong><p>
                                             <div id="danger3<?php echo $row2[$j]['display_id'];?>"></div>
                                             <h4><strong>上傳檔案&nbsp;</strong><h4/><input id="file" name="file" type="file">
-                                            <p style="color:red"><strong>請使用jpeg、jpg檔</strong><p>  
+                                            <p style="color:red"><strong>請使用jpeg、jpg檔，否則會上傳失敗</strong><p>  
                                         </div>
                                         <div class="modal-footer">
                                             
@@ -278,8 +277,9 @@
                                         
                                         <h4><strong>專案內容&nbsp;</strong><h4/><input type="text" class="form-control" name="add_data" id="add_data"/>
                                         <div id="danger"></div>
+                                        <p style="color:red"><strong>請勿打入單引號否則會新增失敗</strong><p>
                                         <h4><strong>上傳檔案&nbsp;</strong><h4/><input id="file" name="file" type="file">
-                                        <p style="color:red"><strong>請使用jpeg、jpg檔</strong><p>
+                                        <p style="color:red"><strong>請使用jpeg、jpg檔，否則會上傳失敗</strong><p>
                                     </div>
                                     <div class="modal-footer">
                 
@@ -409,7 +409,7 @@
                         page:$("#contact_page").val()
                         
                     },function(data){
-                        $("#contact_bug").append(data);
+                        window.location="<?php echo $root;?>display/display?p=<?php echo $_GET['p'] ?>"
                     })
                 })
             </script>
