@@ -14,7 +14,7 @@
 //-----------------------------搜尋加入我們-------------------------------------------------------------
         function joinus_select($p){
             
-            $jo = $this->model("process_joinus");
+            $jo = $this->model("joinus");
             return $jo->select_limit($p);
         }
         
@@ -22,7 +22,7 @@
         function joinus_page(){
             
             //搜尋全部資料共幾筆
-            $jo = $this->model("process_joinus");
+            $jo = $this->model("joinus");
             $row = $jo->select_jo();
             $total = count($row);
             //計算頁數
@@ -48,7 +48,7 @@
                 //抓日期
                 $date = date("Y-m-d");
                 $date2 = date("Ymd");
-                $joinus = $this->model("process_joinus");
+                $joinus = $this->model("joinus");
                 $ans = $joinus->select_desc($date2);
                 if($_POST["email"] == "")
                 {
@@ -70,7 +70,7 @@
             //抓GET過來的編號
             $id = $_POST["join_id"];
             //刪除該筆資料
-            $joinus = $this->model("process_joinus");
+            $joinus = $this->model("joinus");
             $op = $joinus->delete_jo($id);
             
             
@@ -97,7 +97,7 @@
             else
             {
                 //更新資料
-                $index = $this->model("process_index");
+                $index = $this->model("contact");
                 $op = $index->contact($address,$phone,$tax,$email);
                 
             }
@@ -106,7 +106,7 @@
 //-----------------------------顯示聯絡我們--------------------------------------------------------
         function select_contact()
         {
-            $con = $this->model("process_index");
+            $con = $this->model("contact");
             return $con->selest_con();
         }
 //-----------------------顯示錯誤訊息或導頁------------------------------------------------------------

@@ -1,15 +1,8 @@
 <?php 
     
-    class process_index extends connect_two{
+    class contact extends connect{
         
-        //更新公司簡介的資料
-        function about($data){
-            
-            $com = "UPDATE `introduction` SET `intro_data`= '".$data."';";
-            $this->connect_mysql($com);
-            
-        }
-       
+        
         //更新聯絡我們的資料
         function contact($address,$phone,$tax,$email){
         
@@ -20,12 +13,6 @@
             $this->connect_mysql($com);
             
             
-        }
-        //搜尋公司簡介的資料
-        function selest_ab(){
-            $com="SELECT * FROM introduction";
-            $row = $this->connect_getdata($com);
-            return $row;
         }
         
         //搜尋聯絡我們的資料

@@ -1,6 +1,6 @@
 <?php
-    require_once("mysql_getdata.php");
-    class check_login extends connect_two
+
+    class signin extends connect
     {
         //搜尋該帳號的密碼
         function login_data($uname,$pwd){
@@ -8,7 +8,7 @@
             $row = $this->connect_getdata($com);
             if($uname == $row[0]['username'] && $pwd == $row[0]['password'])
             {
-                $_SESSION["username"] = $uname;
+                return 'ok';
                 
             }
         }

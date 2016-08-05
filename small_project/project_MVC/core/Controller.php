@@ -7,7 +7,7 @@ class Controller{
         $this->result = $con->db();
     }
     public function model($model) {
-        require_once "../project_MVC/models/mysql_getdata.php";
+        require_once "../project_MVC/models/mysql_connect.inc.php";
         require_once "../project_MVC/models/$model.php";
         
         return new $model ();

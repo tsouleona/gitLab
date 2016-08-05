@@ -1,6 +1,6 @@
 <?php
     
-    class process_display extends connect_two{
+    class display extends connect{
         
         function insert_dis($ans,$data,$date){
             $com = "INSERT INTO `display` (`display_id`,`display_data`,`display_date`) 

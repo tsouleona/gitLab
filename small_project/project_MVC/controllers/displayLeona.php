@@ -37,7 +37,7 @@
                 $date2 = date("Ymd");
                 
                 //搜尋當天資料由大排到小
-                $display =  $this->model("process_display");
+                $display =  $this->model("display");
                 $ans = $display->select_desc($date2);
                 
                 
@@ -62,7 +62,7 @@
                 
                 //如果檔案為空亦可上傳
                 else{
-                    $display2 =  $this->model("process_display");
+                    $display2 =  $this->model("display");
                     
                     if($_FILES['file']['error'] == 4)
                     {
@@ -110,7 +110,7 @@
                 
                 unlink("views/ok_photo/$id.jpg");
             } 
-            $display =  $this->model("process_display");
+            $display =  $this->model("display");
             $op = $display->delete_dis($id);
             //導頁
             if($op == 'go')
@@ -124,7 +124,7 @@
         
         function display_page(){
             
-            $table = $this->model("process_display");
+            $table = $this->model("display");
             //搜尋全部有幾筆資料
             $row = $table->select_data();
             $total = count($row);
@@ -156,7 +156,7 @@
             }
             else
             {
-                $display = $this->model("process_display");
+                $display = $this->model("display");
             
                 //抓副檔名
                 $ex = pathinfo($_FILES['file']['name'],PATHINFO_EXTENSION);
@@ -222,7 +222,7 @@
             else
             {
                 //更新資料
-                $index = $this->model("process_index");
+                $index = $this->model("contact");
                 $op = $index->contact($address,$phone,$tax,$email);
                 //導頁
                 if($op == 'go')
@@ -237,7 +237,7 @@
 //--------------------------------------顯示聯絡我們--------------------------------------------------------
         function select_contact()
         {
-            $con = $this->model("process_index");
+            $con = $this->model("contact");
             return $con->selest_con();
         }
 //-----------------------------------顯示錯誤訊息或導頁------------------------------------------------------------

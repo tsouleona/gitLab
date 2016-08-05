@@ -1,5 +1,5 @@
 <?php
-    class process_joinus extends connect_two{
+    class joinus extends connect{
         
         
         //刪除資料

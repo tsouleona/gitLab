@@ -12,7 +12,7 @@
         
 //---------------------------------顯示公司簡介--------------------------------------------------------
         function select_about(){
-            $select=$this->model("process_index");
+            $select=$this->model("introduction");
             return $select->selest_ab();
         }
         
@@ -20,7 +20,7 @@
         function insert_about(){
             $data = $_POST["about_data"];
             //更新資料
-            $index = $this->model("process_index");
+            $index = $this->model("introduction");
             
             if($this->str($data)){
                 //顯示錯誤訊息
@@ -80,19 +80,20 @@
             $pwd = $_POST["password"];
             
            //比對有沒有輸入特殊字元
-            if($uname=="" || $pwd=="")
+            if($uname!="" && $pwd!="" && $this->str($uname)!=true && $this->str($pwd)!=true)
             {
-                $this->point_error("帳號密碼尚未輸入完整");
-                
-            }
-            else if($this->str($uname) || $this->str($pwd)){
-                
-                $this->point_error("不能輸入特殊符號");
-                
-            }
-            else{
                 $row = $this ->model("check_login");
                 $op = $row->login_data($uname,$pwd);
+                if($op == 'ok')
+                {
+                    $session = $this ->model("session");
+                    $op2 = $session->username($uname);
+                    exit;
+                }
+                if(!$op2)
+                {
+                    header("location:".$this->result);
+                }
                 
             }
         }

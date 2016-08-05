@@ -36,7 +36,7 @@
             else{
                 
                 
-                $factory = $this->model("process_factory");
+                $factory = $this->model("factory");
                 
                 $date = date("Y-m-d");
                 $date2 = date("Ymd");
@@ -58,7 +58,7 @@
 //-------------------------------顯示實績展示-------------------------------------------------------------
         function factory_page(){
                
-            $fa =$this->model("process_factory");
+            $fa =$this->model("factory");
             //搜尋全部資料共幾筆
             $row = $fa->select_fa();
             $total = count($row);
@@ -69,7 +69,7 @@
         
 //------------------------------搜尋實績展示-------------------------------------------------------------
         function factory_select(){
-            $fa = $this->model("process_factory");
+            $fa = $this->model("factory");
             return $fa->select_fa();
         }
         
@@ -79,7 +79,7 @@
             //傳過來的編號
             $id = $_POST["fac_id"];
             //刪除該筆資料
-            $factory = $this->model("process_factory");
+            $factory = $this->model("factory");
             $op = $factory->delete_fa($id);
             
             
@@ -103,7 +103,7 @@
             else
             {
                 //更新資料
-                $index = $this->model("process_index");
+                $index = $this->model("contact");
                 $op = $index->contact($address,$phone,$tax,$email);
                 
                 
@@ -113,7 +113,7 @@
 //----------------------------------顯示聯絡我們--------------------------------------------------------
         function select_contact()
         {
-            $con = $this->model("process_index");
+            $con = $this->model("contact");
             return $con->selest_con();
         }
         

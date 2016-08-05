@@ -1,5 +1,5 @@
 <?php 
-    class process_factory extends connect_two{
+    class factory extends connect{
         
         //新增資料
         function insert_fa($ans,$factory,$date){
