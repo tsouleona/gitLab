@@ -10,7 +10,7 @@ class Controller{
         require_once "../project_MVC/models/mysql_connect.inc.php";
         require_once "../project_MVC/models/$model.php";
         
-        return new $model ();
+        return new $model();
     }
     
     public function view($view, $data = Array()) {

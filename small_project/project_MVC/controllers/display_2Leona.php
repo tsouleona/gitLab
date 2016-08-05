@@ -26,14 +26,8 @@
     		//把圖片丟到要的位置
     		imagejpeg($dst_r,'views/ok_photo/'.$id.'.jpg');
     		//導頁並傳頁數
-    		$b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."display/display?p={$p}>";
-     	    $a = '<strong><h1 style="color:#ff94b6">裁切中...</h1></strong>';
-            $this->debug($a,$b);
+    		header("location:".$this->result."display/display?p={$p}");
         }
-//--------------------------------顯示錯誤訊息或導頁----------------------------------------------------------------
-        public function debug($a,$b){
-            
-            $this->view("point",Array($a,$b));
-        }
+
     }
 ?>

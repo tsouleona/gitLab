@@ -4,21 +4,19 @@
         
         
         //更新聯絡我們的資料
-        function contact($address,$phone,$tax,$email){
-        
-            $com  = "UPDATE `contact` SET `con_address`= '".$address."',
-            `con_phone`= '".$phone."',
-            `con_tax`= '".$tax."',
-            `con_email`= '".$email."';";
-            $this->connect_mysql($com);
+        function contact_update($address,$phone,$tax,$email){
+            $array = array($address,$phone,$tax,$email);
+            $com  = "UPDATE `contact` SET `con_address`= ?,`con_phone`= ?,`con_tax`= ?,`con_email`= ?;";
+            $this->connect_mysql($com,$array);
             
             
         }
         
         //搜尋聯絡我們的資料
         function selest_con(){
-            $com="SELECT * FROM contact";
-            $row = $this->connect_getdata($com);
+            $array = array();
+            $com="SELECT * FROM `contact`";
+            $row = $this->connect_getdata($com,$array);
             return $row;
         }
         

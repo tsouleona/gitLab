@@ -1,4 +1,4 @@
-<?php 
+<?php
     class displayLeona extends Controller{
         
 //--------------------------------------回實績展示-------------------------------------------------------------
@@ -24,11 +24,11 @@
             //傳過來的專案內容
             $data = $_POST["add_data"];
             //如果是空的不能上傳檔案
-                //比對特殊字元
+            //比對特殊字元
             if($this->str($data))
             {
                 
-                header("location:".$this->result."display/display?p={$p}>");
+                header("location:".$this->result."display/display?p={$p}");
             }
             else
             {
@@ -37,9 +37,8 @@
                 $date2 = date("Ymd");
                 
                 //搜尋當天資料由大排到小
-                $display =  $this->model("display");
+                $display = $this->model("display");
                 $ans = $display->select_desc($date2);
-                
                 
                 //抓副檔名
                 $ex = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
@@ -51,12 +50,12 @@
                 if( $_FILES['file']['error'] > 0 && $_FILES['file']['error'] != 4)
                 {  
                     
-                   header("location:".$this->result."display/display?p={$p}>");
+                   header("location:".$this->result."display/display?p={$p}");
                 }
                 //如果不是jpg png jepg檔案類型不能上傳
                 if(!in_array($ex,$path) && $_FILES['file']['error'] != 4)
                 {
-                    header("location:".$this->result."display/display?p={$p}>");
+                    header("location:".$this->result."display/display?p={$p}");
                 }
                 
                 
@@ -70,7 +69,7 @@
                         $op = $display2->insert_dis($ans,$data,$date);
                         if($op == 'go')
                         {
-                            header("location:".$this->result."display/display?p={$p}>");
+                            header("location:".$this->result."display/display?p={$p}");
                             
                         }
                     }
@@ -81,11 +80,11 @@
                         //新增專案內容與圖片編號
                         $display2->insert_dis($ans,$data,$date);
                         //導頁
-                        if($op == 'go')
-                        {
-                            header("location:".$this->result."display_2/display_2?id={$ans}&p={$p}>");
+                        
+                        
+                        header("location:".$this->result."display_2/display_2?id={$ans}&p={$p}");
                             
-                        }
+                        
                     }
                     
                     
@@ -191,7 +190,7 @@
                     $op = $display->update_dis($data,$id);
                     if($op == 'go')
                     {
-                        header("location:".$this->result."display_2/display_2?id={$id}&p={$p}>");
+                        header("location:".$this->result."display_2/display_2?id={$id}&p={$p}");
                        
                     }
                     

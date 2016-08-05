@@ -3,45 +3,50 @@
     class display extends connect{
         
         function insert_dis($ans,$data,$date){
+            $array = array($ans,$data,$date);
             $com = "INSERT INTO `display` (`display_id`,`display_data`,`display_date`) 
-            VALUES ('".$ans."','".$data."','".$date."');";
-            $this->connect_mysql($com);
+            VALUES (?,?,?);";
+            $this->connect_mysql($com,$array);
             return 'go';
         }
         //更新專案內容
         function update_dis($data,$id){
-            $com = "UPDATE `display` SET `display_data`='".$data."' 
-            where `display_id`='".$id."';";
-            $this->connect_mysql($com);
+            $array = array($data,$id);
+            $com = "UPDATE `display` SET `display_data`=? where `display_id`=?;";
+            $this->connect_mysql($com,$array);
             return 'go';
         }
         //刪除該筆資料
         function delete_dis($id){
-            $com="DELETE FROM `display` WHERE `display_id` = '".$id."'";
-            $this->connect_mysql($com);
+            $array = array($id);
+            $com="DELETE FROM `display` WHERE `display_id` = ?";
+            $this->connect_mysql($com,$array);
             return 'go';
         }
         //搜尋實績展示的資料表
         function select_data(){
+            $array = array();
             $com="SELECT * FROM display;";
-            $row2= $this->connect_getdata($com);
+            $row2= $this->connect_getdata($com,$array);
             return $row2;
         }
         
         //搜尋第幾筆開始，有九筆的資料
         function select_limit($p){
-            $com="SELECT * FROM `display`  LIMIT ". ($p*9).",9";
-            $row2 = $this->connect_getdata($com);
+            $p = $p*9;
+            $array = array($p);
+            $com="SELECT * FROM `display`  LIMIT ?,9";
+            $row2 = $this->connect_getdata($com,$array);
             return $row2;
         }
         
         
         //搜尋由大排到小的圖片編號
         function select_desc($date2){
-            $com="SELECT `display_id` FROM `display` WHERE `display_id` LIKE '%$date2%' ORDER BY `display_id` DESC LIMIT 0,1";
-            $row2 = $this->connect_getdata($com);
+            $array = array('%'.$date2.'%');
+            $com="SELECT `display_id` FROM `display` WHERE `display_id` LIKE  ?  ORDER BY `display_id` DESC LIMIT 0,1";
+            $row = $this->connect_getdata($com,$array);
             $one="001";
-                
             //圖片編號如果是當天第一筆則從1開始編號
             if($row[0]["display_id"] == NULL)
             {

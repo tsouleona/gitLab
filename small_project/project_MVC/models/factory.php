@@ -19,36 +19,38 @@
                 {
                     $factory['url'] = "沒有留下資料";
                 }
-            $com = "INSERT INTO `factory` (`fac_id`,`fac_name`,`fac_people`,`fac_phone`,
-            `fac_address`,`fac_url`,`fac_email`,`fac_cellphone`,
-            `fac_tax`,`fac_data`,`fac_date`) VALUES ('".$ans."','".$factory['name']."','".$factory['people']."',
-            '".$factory['phone']."','".$factory['address']."','".$factory['url']."','".$factory['email']."',
-            '".$factory['cellphone']."','".$factory['tax']."','".$factory['data']."','".$date."')";
-            $this->connect_mysql($com);
+            $array = array($ans,$factory['name'],$factory['people'],$factory['phone'],$factory['address'],$factory['url'],$factory['email'],$factory['cellphone'],$factory['tax'],$factory['data'],$date);
+            $com = "INSERT INTO `factory` (`fac_id`,`fac_name`,`fac_people`,`fac_phone`,`fac_address`,`fac_url`,`fac_email`,`fac_cellphone`,`fac_tax`,`fac_data`,`fac_date`) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+            $this->connect_mysql($com,$array);
             return 'go';
         }
         
         //刪除該筆資料
         function delete_fa($id){
-            $com=" DELETE FROM `factory` WHERE `fac_id` = '".$id."';";
-            $this->connect_mysql($com);
+            $array = array($id);
+            $com=" DELETE FROM `factory` WHERE `fac_id` = ?;";
+            $this->connect_mysql($com,$array);
             
         }
         function select_fa(){
+            $array = array();
             $com="SELECT * FROM factory;";
-            $row = $this->connect_getdata($com);
+            $row = $this->connect_getdata($com,$array);
             return $row;
         }
         //搜尋第幾筆開始，共10筆
         function select_limit($p){
-            $com="SELECT * FROM `factory` LIMIT ". ($p*10).",10";
-            $row = $this->connect_getdata($com);
+            $p = $p*10;
+            $array = array($p);
+            $com="SELECT * FROM `factory` LIMIT ?,10";
+            $row = $this->connect_getdata($com,$array);
             return $row;
         }
         //搜尋當天資料由大排到小
         function select_desc($date2){
-            $com="SELECT `fac_id` FROM `factory` WHERE `fac_id` LIKE '%$date2%' ORDER BY `fac_id` DESC LIMIT 0,1";
-            $row = $this->connect_getdata($com);
+            $array = array('%'.$date2.'%');
+            $com="SELECT `fac_id` FROM `factory` WHERE `fac_id` LIKE ? ORDER BY `fac_id` DESC LIMIT 0,1";
+            $row = $this->connect_getdata($com,$array);
             $one="001";
             //圖片編號若不為第一筆則從當天的最後一筆+1
             if($row[0]['fac_id'] == NULL)

@@ -3,13 +3,15 @@
         
 //--------------------------------回廠商招募-------------------------------------------------------------
         function joinus(){
+
             $t = $this->joinus_page();
             $row3 = $this->select_contact();
             $row4 = $this->joinus_select($p);
             $row5 = $this->joinus_select($p);
             $page = $t[0];
             $r = $t[1];
-            $this->view("joinus",Array($page,$r,$row4,$row5,$row3));
+            $row3 =$r;
+            $this->view("joinus",Array($page,$r,$row3));
         }
 //-----------------------------搜尋加入我們-------------------------------------------------------------
         function joinus_select($p){

@@ -12,28 +12,26 @@
         
 //---------------------------------顯示公司簡介--------------------------------------------------------
         function select_about(){
-            $select=$this->model("introduction");
-            return $select->selest_ab();
+            $introduction = $this->model("introduction");
+            return $introduction->selest_ab();
         }
         
 //---------------------------------更新公司簡介--------------------------------------------------------
         function insert_about(){
             $data = $_POST["about_data"];
             //更新資料
-            $index = $this->model("introduction");
+            $introduction = $this->model("introduction");
             
             if($this->str($data)){
                 //顯示錯誤訊息
                 $this->point_error("不能輸入特殊符號");
             }
             else{
-                $op = $index->about($data);
+                $op = $introduction->about($data);
                 if($op == 'go')
                 {
-                    $a = '<strong><h1 style="color:#ff94b6">修改成功</h1></strong>';
-                    $b = "<meta http-equiv=REFRESH CONTENT=1;url=https://lab1-srt459vn.c9users.io".$this->result."index>";
-            
-                    $this->debug($a,$b);
+                    header("location:".$this->result."index");
+                    
                 }
                 
                 
@@ -59,8 +57,8 @@
             else
             {
                 //更新資料
-                $index = $this->model("process_index");
-                $op = $index->contact($address,$phone,$tax,$email);
+                $index = $this->model("contact");
+                $op = $index->contact_update($address,$phone,$tax,$email);
                 
                 
                 
@@ -70,7 +68,7 @@
 //--------------------------------顯示聯絡我們--------------------------------------------------------
         function select_contact()
         {
-            $con = $this->model("process_index");
+            $con = $this->model("contact");
             return $con->selest_con();
         }
         
@@ -82,7 +80,7 @@
            //比對有沒有輸入特殊字元
             if($uname!="" && $pwd!="" && $this->str($uname)!=true && $this->str($pwd)!=true)
             {
-                $row = $this ->model("check_login");
+                $row = $this ->model("signin");
                 $op = $row->login_data($uname,$pwd);
                 if($op == 'ok')
                 {
@@ -100,9 +98,10 @@
         
 //------------------------------------登出-----------------------------------------------------------------
         function login_out(){
-            $out = $this->model("check_login");
+            $out = $this->model("session");
             //把session的值清掉
-            $op = $out->login_out();
+            
+            $op = $out->unset_username();
            
             header("location:".$this->result);
             

@@ -1,13 +1,13 @@
 <?php
 
-class connect_one{
+class connect{
         protected $result;
         function connect_mysql($com,$array){
                //資料庫設定
                 //資料庫位置
                 $db_server = "localhost";
                 //資料庫名稱
-                $db_name = "Booking";
+                $db_name = "project";
                 //資料庫管理者帳號
                 $db_user = "tsouleona";
                 //資料庫管理者密碼
